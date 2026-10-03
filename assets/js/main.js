@@ -179,3 +179,67 @@
     }
   });
 })();
+
+/* dental articles index: category filter and pager.
+   The cards are already in the HTML, so this only ever hides and shows them.
+   With scripting off the page still lists every article, which is why the
+   filter and pager markup is built here rather than shipped in the page. */
+(function(){
+  var grid=document.querySelector('.art-grid');
+  if(!grid)return;
+  var cards=[].slice.call(grid.querySelectorAll('.art-card'));
+  var chips=[].slice.call(document.querySelectorAll('.art-chip'));
+  var pager=document.querySelector('.art-pager');
+  var count=document.querySelector('.art-count');
+  var PER=12, cat='all', page=1;
+
+  function matching(){
+    if(cat==='all')return cards;
+    return cards.filter(function(c){
+      return (c.getAttribute('data-cats')||'').split('|').indexOf(cat)>-1;
+    });
+  }
+
+  function render(){
+    var list=matching(), pages=Math.max(1,Math.ceil(list.length/PER));
+    if(page>pages)page=pages;
+    var from=(page-1)*PER, to=from+PER;
+
+    cards.forEach(function(c){c.hidden=true;});
+    list.slice(from,to).forEach(function(c){c.hidden=false;});
+
+    if(count){
+      count.textContent=list.length
+        ? 'Showing '+(from+1)+' to '+Math.min(to,list.length)+' of '+list.length+
+          ' article'+(list.length===1?'':'s')
+        : 'No articles in this category yet.';
+    }
+
+    pager.innerHTML='';
+    if(pages<2)return;
+    function btn(label,target,on,disabled){
+      var b=document.createElement('button');
+      b.type='button'; b.textContent=label;
+      if(on){b.className='is-on'; b.setAttribute('aria-current','page');}
+      if(disabled)b.disabled=true;
+      b.addEventListener('click',function(){
+        page=target; render();
+        grid.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+      return b;
+    }
+    pager.appendChild(btn('Previous',page-1,false,page===1));
+    for(var i=1;i<=pages;i++)pager.appendChild(btn(String(i),i,i===page,false));
+    pager.appendChild(btn('Next',page+1,false,page===pages));
+  }
+
+  chips.forEach(function(ch){
+    ch.addEventListener('click',function(){
+      chips.forEach(function(o){o.classList.remove('is-on');o.setAttribute('aria-pressed','false');});
+      ch.classList.add('is-on'); ch.setAttribute('aria-pressed','true');
+      cat=ch.getAttribute('data-cat'); page=1; render();
+    });
+  });
+
+  render();
+})();

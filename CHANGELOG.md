@@ -1,5 +1,44 @@
 # Changelog
 
+## 2026-10-02 - Client photography replaces the blog placeholders
+
+- **All 69 article placeholders replaced** with the client's supplied photographs. Each image was matched to its article on the filename against the article title; all 69 matched exactly, nothing was ambiguous, no image went unused and no article was left on a placeholder.
+- **One image per article now serves the card, the article header and the social share.** The card is 1200x630 and the header is the same 1.905 shape, so the separate `-wide` header files were removed rather than upscaling a 1000px source to 1600px for a header that displays at about 1240px. The 69 `-wide.webp` files are deleted.
+- **Cropped to 1200x630 with face-aware focal points.** Most sources are 3:2, so about a fifth of the height has to go. A centred crop was the default, but faces were detected first and the window moved to keep them whole with headroom above. 52 images had their focal point moved for faces; 17 were centred.
+- **Compressed to WebP** at the highest quality that stays under the client's 150 KB ceiling. Average 44 KB, largest 91 KB, 2.95 MB for all 69.
+- **Alt text written per article** for the header image, describing what each photograph actually shows rather than restating the headline. Card images stay decorative with `alt=""`, since the card link is `aria-hidden` and the title sits beside it in text.
+- **The "Placeholder image" figcaption is gone** from all 69 article headers.
+- `width`, `height` and `loading="lazy"` are unchanged on the cards. The header `img` moves from 1200x630 in place of 1600x840; the CSS `aspect-ratio` of `1600/840` is the identical ratio, so there is no layout shift and no stylesheet change.
+
+Unchanged, as requested: layout, card design, filters, paging, typography, colours, copy, the Revision 1 mobile hero work, the mega menu thumbnails and every non-blog image.
+
+Verified after the swap: 69 of 69 posts still pass the verbatim copy, schema, link and disclaimer checks; no console errors, no failed requests and no horizontal scrolling at 390, 768 or 1440 across all 124 pages.
+
+## 2026-10-02 - Dental articles: 69 posts, index and QA pass
+
+### Blog
+- **69 rewritten articles published at their existing root level URLs**, each at the exact slug from its DEV document and with a trailing slash. No `/blog/` prefix and no redirects, so the current ranking history and backlinks carry across unchanged.
+- **Copy published verbatim** from the supplied documents. One H1 per post, headings at the levels given, FAQ section retained, Australian English intact. Nothing rewritten, shortened or padded.
+- **Three global components**, so the wording can be changed once for all 69 posts: the CTA button pair, the general information disclaimer, and the surgical risk statement.
+- **CTA is two buttons, not text.** The bold "Book Online | Call (07) 3852 1160" line renders as Book Online (booking system, new tab) and Call (07) 3852 1160 (`tel:0738521160`).
+- **Risk statement on the 20 posts** whose DEV document requires one: 01, 03, 06, 07, 08, 09, 16, 17, 29, 33, 34, 35, 36, 37, 38, 42, 45, 52, 53, 54. The general disclaimer is on all 69.
+- **Internal links** from each post's own anchor table, on the first occurrence only, same tab, followed. Never inside a heading or the button line, and no copy was altered to make a link fit. All 39 distinct targets resolve to pages that exist.
+- **Schema**: BlogPosting with headline, description, datePublished, dateModified, author, publisher and image, plus BreadcrumbList (Home > Dental Articles > post) and FAQPage. No review or rating markup anywhere on a post.
+- **Publish dates and categories taken from the live site**, post by post, and cross checked against the published sitemap. No date was invented.
+- **New featured images.** Nothing from the old site or the former agency is reused. Each post has a branded placeholder, named from its slug, with alt text from its new title, and a visible marker so it is not mistaken for supplied photography.
+
+### Dental Articles index
+- `/blog/` rebuilt as the Dental Articles index: 69 cards with image, category, title, excerpt, date and read time.
+- Category filters and pagination at 12 per page. All 69 cards are in the HTML, so the page is complete for crawlers and with scripting off; the filter and pager only hide and show them.
+- Related Articles module at the foot of every post, matched on shared internal link targets and category rather than at random.
+- `sitemap.xml` rebuilt from the pages actually on disk: 124 URLs, with each article carrying its real publish date as lastmod. The HTML sitemap gains a Dental Articles column.
+
+### QA pass on the existing build
+- **Fixed:** `index.html` was the only page using relative asset paths while the other 55 used root relative ones. Normalised to root relative. This is what made the homepage render and every inner page break when the folder was opened from Finder.
+- **Fixed:** `.art-card[hidden]` rule added, because `display:flex` was overriding the browser's `[hidden]` rule and the pager could not hide a card.
+- **Checked clean:** no broken links or missing assets; header and footer identical on all pages; one phone number and one `tel:` href throughout; a single booking URL; one H1 per page; titles, meta descriptions and canonicals present; no em dashes; no console errors; no failed requests; no horizontal scrolling at 390, 768 or 1440.
+- **Needs client input:** the five footer social links are still `href="#"`; the disclaimer, privacy policy and treatment risks pages are still marked placeholders.
+
 ## 2026-09-30 - Caching headers fixed
 
 `vercel.json` was telling browsers to cache everything under `/assets/` for a year
