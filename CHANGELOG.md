@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-03 - Blog added to the main navigation
+
+- **Blog is now a top-level item in the main navigation**, between Patients and Contact, linking to the Dental Articles index at `/blog/`. Added to both the desktop bar and the mobile menu, on every page.
+- The existing "Dental Articles and Videos" entry in the Patients menu and the footer link are unchanged.
+- No CSS change. The desktop bar still fits on one line at every width above the 1120px burger breakpoint, with the header height unchanged at 78px and 44px of clearance either side at the narrowest width.
+- Two lines added per page across 124 pages (404 has no site header), and nothing else touched. `index.html` is the source the build lifts the header from, so future rebuilds carry it too; regenerating the 70 blog pages from it reproduces the deployed files byte for byte.
+
+Verified: 69 of 69 articles still pass the verbatim copy, schema and link checks; no console errors, no failed requests and no horizontal scrolling at 390, 768 or 1440 across all 124 pages.
+
 ## 2026-10-02 - Client photography replaces the blog placeholders
 
 - **All 69 article placeholders replaced** with the client's supplied photographs. Each image was matched to its article on the filename against the article title; all 69 matched exactly, nothing was ambiguous, no image went unused and no article was left on a placeholder.
