@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-10-09 - Dr Billy Choi's feedback, and a virtual tour on the Contact page
+
+- **Laser Dentistry membership removed.** Dr Choi is no longer a member of The Australian Association of Laser Dentistry. Removed from his credentials panel and from the Professional Memberships list on his page, which now lists the Australian Dental Association and the Australian Society of Implant Dentistry. It appeared nowhere else on the site, including structured data and meta descriptions.
+- **DentiCare: "no deposit" removed.** DentiCare has a deposit policy and a small set-up fee; the advantage is no interest. Corrected on the homepage Patient Benefits card, Prices and Payment Options, the Bowen Hills and Hamilton suburb pages, and the article on extras cover. No deposit or fee amounts are stated.
+- **SuperCare: restorative treatment added** to the list on Prices and Payment Options, with links to the white fillings and crowns pages, and a line that treatment helping restore everyday function may be considered. The existing wording that approval is not assured is kept.
+- **Virtual tour** added to the Contact page as its own section after Getting Here and Parking: Dr Choi's Matterport walkthrough in a responsive 16:9 frame, with fullscreen and VR left enabled. Every other section on the page keeps its background and size.
+- `sitemap.xml` lastmod moves only on the six pages that changed.
+- Meet the Team is unchanged, pending new staff photos and introductions from the practice.
+
+Verified: no outdated wording left in the site or the build sources; 69 of 69 articles still pass; no console errors, failed requests or horizontal scrolling at 390, 768 or 1440 across all 124 pages.
+
 ## 2026-10-03 - Blog added to the main navigation
 
 - **Blog is now a top-level item in the main navigation**, between Patients and Contact, linking to the Dental Articles index at `/blog/`. Added to both the desktop bar and the mobile menu, on every page.
