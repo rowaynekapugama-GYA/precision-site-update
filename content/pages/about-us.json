@@ -1,0 +1,365 @@
+{
+  "key": "about-us",
+  "file": "about-us.html",
+  "url": "/about-us/",
+  "label": "About Precision Dental",
+  "group": "Main pages",
+  "seo": {
+    "title": "About Us | Precision Dental Fortitude Valley",
+    "description": "Get to know Precision Dental in Fortitude Valley. Honest advice, a calm experience and considered dental care from Dr Billy Choi and our caring team.",
+    "ogImage": "",
+    "canonical": "",
+    "noindex": false
+  },
+  "lastmod": "2026-10-02",
+  "layout": {
+    "head": "std",
+    "pre": "std",
+    "post": "std",
+    "schema": "gen"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "breadcrumbs",
+      "before": "",
+      "label": "Breadcrumb trail",
+      "pinned": true,
+      "template": "<nav class=\"breadcrumbs\" aria-label=\"Breadcrumb\"><div class=\"container\"><ol><li><a href=\"{{f1}}\">{{f2}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><span aria-current=\"page\">{{f3}}</span></li></ol></div></nav>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1"
+        },
+        {
+          "id": "f2",
+          "label": "Link text",
+          "type": "text",
+          "value": "Home",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "List item",
+          "type": "text",
+          "value": "About Precision Dental"
+        }
+      ]
+    },
+    {
+      "key": "s2",
+      "kind": "header",
+      "before": "\n",
+      "label": "Page header: About Precision Dental",
+      "pinned": true,
+      "template": "<section class=\"page-hero\"><div class=\"container page-hero-grid\"><div class=\"hero-up\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h1>{{f2}}</h1><p class=\"sub\">{{f3}}</p><p class=\"lede\">{{f4}}</p><p class=\"lede\">{{f5}}</p><div class=\"btn-group\"><a class=\"btn btn-dark\" href=\"{{site:booking}}\" target=\"_blank\" rel=\"noopener\" data-track=\"book\">{{f6}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a><a class=\"btn btn-white btn-plain\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{f7}}</a></div></div><div class=\"page-hero-img hero-up d2\"><img src=\"{{f8}}\" alt=\"{{f9}}\" width=\"900\" height=\"675\"></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "About Us"
+        },
+        {
+          "id": "f2",
+          "label": "Main heading",
+          "type": "text",
+          "value": "About Precision Dental"
+        },
+        {
+          "id": "f3",
+          "label": "Line under the heading",
+          "type": "text",
+          "value": "A Fortitude Valley Dental Practice Built on Trust"
+        },
+        {
+          "id": "f4",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "Precision Dental began with a simple idea: that visiting the dentist should feel reassuring, not intimidating. Our principal dentist, Dr Billy Choi, spent many years providing dental care across Brisbane before establishing a practice of his own alongside a team of like-minded professionals. Today, we care for patients from Fortitude Valley and the surrounding inner-city suburbs, as well as families who travel from further across Brisbane."
+        },
+        {
+          "id": "f5",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "We are a general and cosmetic dental practice, which means we can look after most of your family&#x27;s dental needs under one roof. From a child&#x27;s first check-up to restoring a worn smile, our focus remains the same: listen carefully, explain clearly and provide considered care."
+        },
+        {
+          "id": "f6",
+          "label": "Button text",
+          "type": "text",
+          "value": "Book Online"
+        },
+        {
+          "id": "f7",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        },
+        {
+          "id": "f8",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/about-main.webp"
+        },
+        {
+          "id": "f9",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Dr Billy Choi with a patient and assistant at Precision Dental"
+        }
+      ]
+    },
+    {
+      "key": "s3",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Our Philosophy",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container media-split reveal\"><div><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<h3>{{f3}}</h3>\n<p>{{f4}}</p>\n<h3>{{f5}}</h3>\n<p>{{f6}}</p>\n<h3>{{f7}}</h3>\n<p>{{f8}}</p></div></div><div class=\"media-img portrait\"><img src=\"{{f9}}\" alt=\"{{f10}}\" loading=\"lazy\" width=\"1200\" height=\"900\"></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Our Philosophy"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Three principles shape the way we work, and they guide every conversation, every treatment plan and every appointment."
+        },
+        {
+          "id": "f3",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Honesty"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "No shortcuts, no surprises and no compromise on materials. A trusting relationship between patient and dentist is the foundation of successful care, and it starts with honest, balanced information. We show you what we see, explain your options, including the option to wait or monitor, and discuss expected costs before any treatment begins."
+        },
+        {
+          "id": "f5",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Patient Comfort"
+        },
+        {
+          "id": "f6",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We understand that many people carry uneasy memories of past dental visits, or simply dislike the feeling of instruments in their mouth. Our team takes the time to put you at ease. We work gently, check in with you throughout, and offer extras such as noise-cancelling headphones, ceiling-mounted televisions, memory-foam chairs and happy gas. Our anxious patients are always welcome to take things one step at a time."
+        },
+        {
+          "id": "f7",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Considered, High-Quality Treatment"
+        },
+        {
+          "id": "f8",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "You are an individual, and your dental care should reflect that. We take time to reach an accurate diagnosis, plan carefully, use quality materials and keep you informed at every stage."
+        },
+        {
+          "id": "f9",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/philosophy.webp"
+        },
+        {
+          "id": "f10",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Patient having a scan taken in the treatment room at Precision Dental"
+        }
+      ]
+    },
+    {
+      "key": "s4",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Our Team",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container media-split flip reveal\"><div><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div><div class=\"media-img landscape\"><img src=\"{{f3}}\" alt=\"{{f4}}\" loading=\"lazy\" width=\"1200\" height=\"900\"></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Our Team"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Behind every appointment is a close-knit team of clinicians and support staff who genuinely care about your experience. You can read more about Dr Billy Choi or meet our team, including our oral health therapist, coordinators and dental assistants."
+        },
+        {
+          "id": "f3",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/team-photo.webp"
+        },
+        {
+          "id": "f4",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Dr Billy Choi and the Precision Dental team with a patient"
+        }
+      ]
+    },
+    {
+      "key": "s5",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Accreditation and Safety",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container media-split reveal\"><div><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div><div class=\"media-img landscape\"><img src=\"{{f3}}\" alt=\"{{f4}}\" loading=\"lazy\" width=\"1200\" height=\"900\"></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Accreditation and Safety"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Precision Dental is an accredited practice, independently assessed against the National Safety and Quality Health Service Standards. We follow strict infection prevention and control protocols, including thorough decontamination of treatment areas between patients and sterilisation of reusable instruments."
+        },
+        {
+          "id": "f3",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/surgery.webp"
+        },
+        {
+          "id": "f4",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "A treatment room prepared for the next patient at Precision Dental"
+        }
+      ]
+    },
+    {
+      "key": "s6",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Technology That Supports Better Conversations",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container media-split flip reveal\"><div><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div><div class=\"media-img landscape\"><img src=\"{{f3}}\" alt=\"{{f4}}\" loading=\"lazy\" width=\"1200\" height=\"900\"></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Technology That Supports Better Conversations"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Our dental technology includes an intra-oral camera, digital X-rays, a digital OPG, DiagnoCam imaging, a 3D intra-oral scanner and CEREC for same-day restorations. These tools help us diagnose accurately, plan precisely and, just as importantly, show you exactly what we are seeing."
+        },
+        {
+          "id": "f3",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/about-home.webp"
+        },
+        {
+          "id": "f4",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Dentist showing a patient their intra-oral scan on screen"
+        }
+      ]
+    },
+    {
+      "key": "s7",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Transparent Fees and Flexible Payment",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Transparent Fees and Flexible Payment"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We believe you should understand the cost of your care before you commit to it. You can explore our Prices and Payment Options, including HICAPS claiming, preferred provider arrangements and interest-free payment plans."
+        }
+      ]
+    },
+    {
+      "key": "s8",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Visit Us",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container media-split flip reveal\"><div><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div><div class=\"media-img landscape\"><img src=\"{{f3}}\" alt=\"{{f4}}\" loading=\"lazy\" width=\"1200\" height=\"900\"></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Visit Us"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "You will find Precision Dental at {{site:addressStreet}}, Fortitude Valley, with free on-site parking available for patients."
+        },
+        {
+          "id": "f3",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/front-desk.webp"
+        },
+        {
+          "id": "f4",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "The front desk at Precision Dental, HQ South Tower, Fortitude Valley"
+        }
+      ]
+    },
+    {
+      "key": "s9",
+      "kind": "cta",
+      "before": "\n",
+      "shared": "cta",
+      "label": "Book Your Visit band"
+    }
+  ]
+}

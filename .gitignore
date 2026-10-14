@@ -1,6 +1,19 @@
 node_modules/
+.next/
 .vercel/
 .env
-.env.local
+.env.*
+!.env.example
 .DS_Store
 Thumbs.db
+/media/
+/media-documents/
+# written by the build (scripts/render-site.ts)
+/public/*.html
+/public/service/
+/public/our-team/
+/public/sitemap.xml
+/public/robots.txt
+/public/.generated.json
+*.tsbuildinfo
+next-env.d.ts

@@ -1,0 +1,369 @@
+{
+  "key": "price-list",
+  "file": "price-list.html",
+  "url": "/price-list/",
+  "label": "Prices and Payment Options",
+  "group": "Main pages",
+  "seo": {
+    "title": "Dental Prices and Payment Options | Precision Dental",
+    "description": "Transparent dental fees in Fortitude Valley. HICAPS claiming, preferred provider benefits, DentiCare payment plans and SuperCare information.",
+    "ogImage": "",
+    "canonical": "",
+    "noindex": false
+  },
+  "lastmod": "2026-10-14",
+  "layout": {
+    "head": "std",
+    "pre": "std",
+    "post": "std",
+    "schema": "gen"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "breadcrumbs",
+      "before": "",
+      "label": "Breadcrumb trail",
+      "pinned": true,
+      "template": "<nav class=\"breadcrumbs\" aria-label=\"Breadcrumb\"><div class=\"container\"><ol><li><a href=\"{{f1}}\">{{f2}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><span aria-current=\"page\">{{f3}}</span></li></ol></div></nav>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1"
+        },
+        {
+          "id": "f2",
+          "label": "Link text",
+          "type": "text",
+          "value": "Home",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "List item",
+          "type": "text",
+          "value": "Prices and Payment Options"
+        }
+      ]
+    },
+    {
+      "key": "s2",
+      "kind": "header",
+      "before": "\n",
+      "label": "Page header: Prices and Payment Options",
+      "pinned": true,
+      "template": "<section class=\"page-hero\"><div class=\"container page-hero-grid\"><div class=\"hero-up\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h1>{{f2}}</h1><p class=\"sub\">{{f3}}</p><p class=\"lede\">{{f4}}</p><div class=\"btn-group\"><a class=\"btn btn-dark\" href=\"{{site:booking}}\" target=\"_blank\" rel=\"noopener\" data-track=\"book\">{{f5}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a><a class=\"btn btn-white btn-plain\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{f6}}</a></div></div><div class=\"page-hero-img hero-up d2\"><img src=\"{{f7}}\" alt=\"{{f8}}\" width=\"900\" height=\"675\"></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Patients"
+        },
+        {
+          "id": "f2",
+          "label": "Main heading",
+          "type": "text",
+          "value": "Prices and Payment Options"
+        },
+        {
+          "id": "f3",
+          "label": "Line under the heading",
+          "type": "text",
+          "value": "Transparent Fees, Explained Clearly"
+        },
+        {
+          "id": "f4",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "Being open about fees is part of our commitment to honesty. We want you to understand the cost of your care before you decide to go ahead, and we are always happy to talk through your options, including ways to spread payments over time."
+        },
+        {
+          "id": "f5",
+          "label": "Button text",
+          "type": "text",
+          "value": "Book Online"
+        },
+        {
+          "id": "f6",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        },
+        {
+          "id": "f7",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/fees.webp"
+        },
+        {
+          "id": "f8",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Talking a patient through treatment fees at Precision Dental"
+        }
+      ]
+    },
+    {
+      "key": "s3",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Download Our Price List",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\" id=\"price-list\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<p>{{f3}}</p>\n<div class=\"form-card pl-card\" data-pl-location=\"price-list\">{{site:priceListForm}}</div></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Download Our Price List"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Our price list outlines the fees for many of our most common treatments, from a dental check-up and clean through to restorative and cosmetic care. Request a copy using the form on this page, and we will send it to your mobile and email."
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Because every mouth is different, the final cost of your treatment depends on your individual needs. After your examination, we will provide a written treatment plan and quote so you know what to expect."
+        }
+      ]
+    },
+    {
+      "key": "s4",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Health Fund Claims with HICAPS",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Health Fund Claims with HICAPS"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We accept most major private health funds. Claims are processed electronically at the time of your appointment using HICAPS, so there is no need to lodge paperwork later. You simply pay any gap on the day."
+        }
+      ]
+    },
+    {
+      "key": "s5",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Preferred Provider for {{site:preferredFunds}}",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Preferred Provider for {{site:preferredFunds}}"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Precision Dental is a preferred provider for {{site:preferredFunds}}. Members of these funds may receive higher rebates on eligible treatments, depending on their level of cover. If you are with another fund, please ask us about your policy, and we will help where we can."
+        }
+      ]
+    },
+    {
+      "key": "s6",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Payment Methods",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Payment Methods"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We accept EFTPOS, Visa, Mastercard, American Express and cash."
+        }
+      ]
+    },
+    {
+      "key": "s7",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Interest-Free Payment Plans with DentiCare",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Interest-Free Payment Plans with DentiCare"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "If you would prefer to spread the cost of treatment, DentiCare offers payment plans with no interest and no credit check, for amounts up to your approved DentiCare limit. A deposit and a small set-up fee apply. Eligibility criteria, terms and conditions apply. Our team can explain how the plan works and help you apply."
+        }
+      ]
+    },
+    {
+      "key": "s8",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Accessing Your Superannuation with SuperCare",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Accessing Your Superannuation with SuperCare"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "rich",
+          "value": "For some patients, early release of superannuation on compassionate grounds may be an option for treatment such as dental implants, root canal therapy, gum treatment, and restorative treatment for tooth decay, erosion and other damage using <a href=\"/service/white-tooth-filling-restorations/\">composite resin fillings</a> or <a href=\"/service/dental-crowns-and-bridges/\">crowns</a>. Treatment that helps restore everyday function, such as eating and speaking comfortably, may be considered. SuperCare is an independent service that guides eligible patients through the application process. Eligibility is determined under Australian Taxation Office criteria, and approval is not assured. We recommend seeking independent financial advice before accessing your super."
+        }
+      ]
+    },
+    {
+      "key": "s9",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Child Dental Benefits Schedule",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<p><a href=\"{{f3}}\">{{f4}}</a></p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Child Dental Benefits Schedule"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "The Medicare Child Dental Benefits Schedule provides benefits towards basic dental services, such as check-ups, X-rays, cleans and fillings, for eligible children and teenagers. Our team can help you confirm your child&#x27;s eligibility and remaining benefit before their appointment."
+        },
+        {
+          "id": "f3",
+          "label": "Link address",
+          "type": "link",
+          "value": "/health-funds/",
+          "group": "more"
+        },
+        {
+          "id": "f4",
+          "label": "Link text",
+          "type": "text",
+          "value": "More about the Child Dental Benefits Schedule",
+          "group": "more"
+        }
+      ]
+    },
+    {
+      "key": "s10",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Department of Veterans' Affairs",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<p><a href=\"{{f3}}\">{{f4}}</a></p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Department of Veterans&#x27; Affairs"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We welcome Department of Veterans&#x27; Affairs card holders. Please contact our team before your appointment so we can confirm what your card covers."
+        },
+        {
+          "id": "f3",
+          "label": "Link address",
+          "type": "link",
+          "value": "/health-funds/",
+          "group": "more"
+        },
+        {
+          "id": "f4",
+          "label": "Link text",
+          "type": "text",
+          "value": "More about DVA dental care",
+          "group": "more"
+        }
+      ]
+    },
+    {
+      "key": "s11",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Questions About Fees?",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Questions About Fees?"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "If you would like to understand the likely cost of a particular treatment, such as Invisalign or dental implants, please contact our team. We are always happy to help."
+        }
+      ]
+    },
+    {
+      "key": "s12",
+      "kind": "cta",
+      "before": "\n",
+      "shared": "cta",
+      "label": "Book Your Visit band"
+    }
+  ]
+}

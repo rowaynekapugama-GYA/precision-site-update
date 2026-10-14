@@ -1,0 +1,555 @@
+{
+  "key": "service/toothache-or-dental-pain",
+  "file": "service/toothache-or-dental-pain.html",
+  "url": "/service/toothache-or-dental-pain/",
+  "label": "Toothache and Dental Pain Care in Fortitude Valley",
+  "group": "Treatments and services",
+  "seo": {
+    "title": "Toothache Dentist Fortitude Valley | Precision Dental",
+    "description": "Toothache or dental pain? Precision Dental in Fortitude Valley offers urgent appointments to find the cause and relieve pain. Call {{site:phone}}.",
+    "ogImage": "",
+    "canonical": "",
+    "noindex": false
+  },
+  "lastmod": "2026-10-02",
+  "layout": {
+    "head": "std",
+    "pre": "std",
+    "post": "std",
+    "schema": "gen"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "breadcrumbs",
+      "before": "",
+      "label": "Breadcrumb trail",
+      "pinned": true,
+      "template": "<nav class=\"breadcrumbs\" aria-label=\"Breadcrumb\"><div class=\"container\"><ol><li><a href=\"{{f1}}\">{{f2}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><a href=\"{{f3}}\">{{f4}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><span aria-current=\"page\">{{f5}}</span></li></ol></div></nav>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1"
+        },
+        {
+          "id": "f2",
+          "label": "Link text",
+          "type": "text",
+          "value": "Home",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-emergency/",
+          "group": "2"
+        },
+        {
+          "id": "f4",
+          "label": "Link text",
+          "type": "text",
+          "value": "Emergency Dentistry",
+          "group": "2"
+        },
+        {
+          "id": "f5",
+          "label": "List item",
+          "type": "text",
+          "value": "Toothache or Dental Pain"
+        }
+      ]
+    },
+    {
+      "key": "s2",
+      "kind": "header",
+      "before": "\n",
+      "label": "Page header: Toothache and Dental Pain Care in Fortitude Valley",
+      "pinned": true,
+      "template": "<section class=\"page-hero\"><div class=\"container page-hero-grid\"><div class=\"hero-up\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h1>{{f2}}</h1><p class=\"lede\">{{f3}}</p><div class=\"btn-group\"><a class=\"btn btn-dark\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{f4}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a><a class=\"btn btn-white btn-plain\" href=\"{{site:booking}}\" target=\"_blank\" rel=\"noopener\" data-track=\"book\">{{f5}}</a></div></div><div class=\"page-hero-img hero-up d2\"><img src=\"{{f6}}\" alt=\"{{f7}}\" width=\"900\" height=\"675\"></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Emergency Dentistry"
+        },
+        {
+          "id": "f2",
+          "label": "Main heading",
+          "type": "text",
+          "value": "Toothache and Dental Pain Care in Fortitude Valley"
+        },
+        {
+          "id": "f3",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "A toothache can make it difficult to eat, sleep or concentrate. Whether your pain is a dull ache, sharp sensitivity or an intense throbbing, it is your body&#x27;s way of telling you something needs attention. At Precision Dental, we offer urgent appointments to find the cause of your pain and help you feel comfortable again."
+        },
+        {
+          "id": "f4",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        },
+        {
+          "id": "f5",
+          "label": "Button text",
+          "type": "text",
+          "value": "Book Online"
+        },
+        {
+          "id": "f6",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/why-choose.webp"
+        },
+        {
+          "id": "f7",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "The Precision Dental team caring for a patient"
+        }
+      ]
+    },
+    {
+      "key": "s3",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "What Is a Toothache?",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<p>{{f3}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "What Is a Toothache?"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "A toothache is pain in or around a tooth. It can have many causes, including tooth decay, a cracked tooth, a lost or broken filling, gum inflammation, an infection within the tooth or an erupting wisdom tooth. Sometimes, pain felt in the teeth originates elsewhere, such as the sinuses or jaw muscles, particularly in people who grind or clench."
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "The type of pain can offer clues. Brief sensitivity to cold may point to exposed dentine or early decay, while lingering pain, throbbing or pain that wakes you at night may suggest inflammation or infection of the nerve."
+        }
+      ]
+    },
+    {
+      "key": "s4",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "When to Seek Care",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><div class=\"callout urgent reveal\"><span class=\"cw\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z\"/></svg>{{f1}}</span><h2>{{f2}}</h2><p>{{f3}}</p>\n<ul class=\"check-list\"><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f4}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f5}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f6}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f7}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f8}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f9}}</span></li></ul>\n<p>{{f10}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Text",
+          "type": "text",
+          "value": "Important"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "When to Seek Care"
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Please contact us promptly if you have:"
+        },
+        {
+          "id": "f4",
+          "label": "List item",
+          "type": "text",
+          "value": "Pain lasting more than a day or two"
+        },
+        {
+          "id": "f5",
+          "label": "List item",
+          "type": "text",
+          "value": "Throbbing pain or pain that keeps you awake"
+        },
+        {
+          "id": "f6",
+          "label": "List item",
+          "type": "text",
+          "value": "Pain when biting or chewing"
+        },
+        {
+          "id": "f7",
+          "label": "List item",
+          "type": "text",
+          "value": "Sensitivity that lingers after hot or cold food and drink"
+        },
+        {
+          "id": "f8",
+          "label": "List item",
+          "type": "text",
+          "value": "Swelling in the gums or face"
+        },
+        {
+          "id": "f9",
+          "label": "List item",
+          "type": "text",
+          "value": "Fever or a bad taste in your mouth"
+        },
+        {
+          "id": "f10",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "If you have facial swelling affecting your breathing or swallowing, or swelling spreading towards your eye or neck, call 000 or go to your nearest hospital emergency department."
+        }
+      ]
+    },
+    {
+      "key": "s5",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "What to Do Before Your Appointment",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><div class=\"callout firstaid reveal\"><h2>{{f1}}</h2><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "What to Do Before Your Appointment"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Rinse your mouth with warm water and gently floss around the sore tooth to remove any trapped food. Take over-the-counter pain relief as directed on the packaging if it is suitable for you. A cold compress on the outside of your cheek may help. Avoid placing aspirin or other tablets directly on the gum, and avoid very hot, cold or sugary foods."
+        }
+      ]
+    },
+    {
+      "key": "s6",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "What Happens at Your Appointment",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "What Happens at Your Appointment"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We ask about your pain, including when it started, what triggers it and how long it lasts. We then examine the area, perform simple sensitivity tests and take digital X-rays to identify the cause. Once we understand what is happening, we explain our findings and focus on relieving your discomfort. Depending on the cause, this may involve placing a filling, adjusting your bite, treating inflamed gums, beginning root canal therapy or managing an infection. If further care is needed, we discuss your options and costs before planning your next visit."
+        }
+      ]
+    },
+    {
+      "key": "s7",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Aftercare and Ongoing Care",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Aftercare and Ongoing Care"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "After treatment, some tenderness is common for a few days. Follow any specific instructions we provide, and complete any recommended follow-up treatment so the underlying cause is fully addressed. Regular check-ups help detect decay and other concerns before they cause pain."
+        }
+      ]
+    },
+    {
+      "key": "s8",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Why Choose Precision Dental for Toothache",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Why Choose Precision Dental for Toothache"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We set aside time for urgent appointments and use digital X-rays and an intra-oral camera to diagnose efficiently. Our team explains the cause of your pain clearly and offers happy gas for patients who feel anxious. Free on-site parking also makes getting to us easier when you are uncomfortable."
+        }
+      ]
+    },
+    {
+      "key": "s9",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Fees, Health Funds and Payment Options",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Fees, Health Funds and Payment Options"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "The cost of your treatment depends on your individual needs. After your examination, we talk you through your options and the expected fees before any treatment begins. We accept most major health funds, process claims on the spot through HICAPS and are a preferred provider for {{site:preferredFunds}}. Interest-free payment plans are available through DentiCare for eligible patients, subject to terms and conditions. You can learn more on our Prices and Payment Options page."
+        }
+      ]
+    },
+    {
+      "key": "s10",
+      "kind": "faq",
+      "before": "\n",
+      "label": "Questions and answers",
+      "pinned": false,
+      "template": "<section class=\"body-section section-alt\" id=\"faq\"><div class=\"container\"><div class=\"section-head center\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h2>{{f2}}</h2></div><div class=\"faq-list\"><div class=\"faq-item open\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"true\" aria-controls=\"faq1\"><span class=\"num\">1</span><span class=\"q\">{{f3}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq1\"><div><p>{{f4}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq2\"><span class=\"num\">2</span><span class=\"q\">{{f5}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq2\"><div><p>{{f6}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq3\"><span class=\"num\">3</span><span class=\"q\">{{f7}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq3\"><div><p>{{f8}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq4\"><span class=\"num\">4</span><span class=\"q\">{{f9}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq4\"><div><p>{{f10}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq5\"><span class=\"num\">5</span><span class=\"q\">{{f11}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq5\"><div><p>{{f12}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq6\"><span class=\"num\">6</span><span class=\"q\">{{f13}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq6\"><div><p>{{f14}}</p></div></div></div></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "FAQ"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "Frequently Asked Questions"
+        },
+        {
+          "id": "f3",
+          "label": "Question",
+          "type": "text",
+          "value": "Can a toothache go away on its own?",
+          "group": "1"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Sometimes pain eases temporarily, but the underlying cause often remains. Pain that disappears after being severe can indicate a nerve has died, so an assessment is still important.",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Question",
+          "type": "text",
+          "value": "Why does my toothache get worse at night?",
+          "group": "2"
+        },
+        {
+          "id": "f6",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Lying down increases blood flow to the head, which may intensify pressure and pain. There are also fewer distractions at night.",
+          "group": "2"
+        },
+        {
+          "id": "f7",
+          "label": "Question",
+          "type": "text",
+          "value": "Should I go to hospital for a toothache?",
+          "group": "3"
+        },
+        {
+          "id": "f8",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Most toothaches should be seen by a dentist. Go to hospital if you have swelling affecting breathing or swallowing, a high fever or swelling spreading towards your eye or neck.",
+          "group": "3"
+        },
+        {
+          "id": "f9",
+          "label": "Question",
+          "type": "text",
+          "value": "Can sinus problems cause tooth pain?",
+          "group": "4"
+        },
+        {
+          "id": "f10",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Yes. Sinus congestion can cause pain in the upper back teeth. We can help determine whether the pain is dental.",
+          "group": "4"
+        },
+        {
+          "id": "f11",
+          "label": "Question",
+          "type": "text",
+          "value": "Will I need a root canal?",
+          "group": "5"
+        },
+        {
+          "id": "f12",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Not necessarily. Many toothaches are caused by decay or sensitivity that can be treated with a filling. We will explain the options after examining your tooth.",
+          "group": "5"
+        },
+        {
+          "id": "f13",
+          "label": "Question",
+          "type": "text",
+          "value": "How soon can I be seen?",
+          "group": "6"
+        },
+        {
+          "id": "f14",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We keep time available for urgent care and will do our best to see you on the day you call.",
+          "group": "6"
+        }
+      ]
+    },
+    {
+      "key": "s11",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "You may also be looking for",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><div class=\"section-head\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h2>{{f2}}</h2></div><div class=\"related-grid\"><a class=\"related-card\" href=\"{{f3}}\"><span class=\"mi-img\"><img src=\"/assets/img/menu/broken.webp\" alt=\"\" loading=\"lazy\" width=\"120\" height=\"120\"></span><span><strong>{{f4}}</strong><small>{{f5}}</small></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></a><a class=\"related-card\" href=\"{{f6}}\"><span class=\"mi-img\"><img src=\"/assets/img/menu/kidemerg.webp\" alt=\"\" loading=\"lazy\" width=\"120\" height=\"120\"></span><span><strong>{{f7}}</strong><small>{{f8}}</small></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></a><a class=\"related-card\" href=\"{{f9}}\"><span class=\"mi-img\"><img src=\"/assets/img/menu/abscess.webp\" alt=\"\" loading=\"lazy\" width=\"120\" height=\"120\"></span><span><strong>{{f10}}</strong><small>{{f11}}</small></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></a></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Related Services"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "You may also be looking for"
+        },
+        {
+          "id": "f3",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/broken-tooth/"
+        },
+        {
+          "id": "f4",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Broken Tooth",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Small print",
+          "type": "text",
+          "value": "Emergency Dentistry",
+          "group": "1"
+        },
+        {
+          "id": "f6",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/childrens-dental-emergencies-fortitude-valley/"
+        },
+        {
+          "id": "f7",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Children&#x27;s Dental Emergencies",
+          "group": "2"
+        },
+        {
+          "id": "f8",
+          "label": "Small print",
+          "type": "text",
+          "value": "Emergency Dentistry",
+          "group": "2"
+        },
+        {
+          "id": "f9",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-abscess/"
+        },
+        {
+          "id": "f10",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Dental Abscess",
+          "group": "3"
+        },
+        {
+          "id": "f11",
+          "label": "Small print",
+          "type": "text",
+          "value": "Emergency Dentistry",
+          "group": "3"
+        }
+      ]
+    },
+    {
+      "key": "s12",
+      "kind": "cta",
+      "before": "\n",
+      "shared": "cta",
+      "label": "Book Your Visit band"
+    },
+    {
+      "key": "s13",
+      "kind": "disclaimer",
+      "before": "\n",
+      "label": "Disclaimer",
+      "pinned": false,
+      "template": "<section class=\"disclaimer-section\"><div class=\"container\"><p class=\"disclaimer\">{{f1}}</p></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Disclaimer wording",
+          "type": "text",
+          "value": "The information on this page is general in nature and is not a substitute for personalised advice from a registered dental practitioner. Individual needs, experiences and results vary."
+        }
+      ]
+    }
+  ]
+}

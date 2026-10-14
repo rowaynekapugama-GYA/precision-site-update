@@ -1,0 +1,420 @@
+{
+  "key": "service/cosmetic-dentistry",
+  "file": "service/cosmetic-dentistry.html",
+  "url": "/service/cosmetic-dentistry/",
+  "label": "Cosmetic Dentistry in Fortitude Valley",
+  "group": "Treatments and services",
+  "seo": {
+    "title": "Cosmetic Dentistry Fortitude Valley | Precision Dental",
+    "description": "Cosmetic dentistry in Fortitude Valley, including porcelain and composite veneers, teeth whitening and Invisalign. Book a consultation.",
+    "ogImage": "",
+    "canonical": "",
+    "noindex": false
+  },
+  "lastmod": "2026-10-02",
+  "layout": {
+    "head": "std",
+    "pre": "std",
+    "post": "std",
+    "schema": "gen"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "breadcrumbs",
+      "before": "",
+      "label": "Breadcrumb trail",
+      "pinned": true,
+      "template": "<nav class=\"breadcrumbs\" aria-label=\"Breadcrumb\"><div class=\"container\"><ol><li><a href=\"{{f1}}\">{{f2}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><span aria-current=\"page\">{{f3}}</span></li></ol></div></nav>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1"
+        },
+        {
+          "id": "f2",
+          "label": "Link text",
+          "type": "text",
+          "value": "Home",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "List item",
+          "type": "text",
+          "value": "Cosmetic Dentistry"
+        }
+      ]
+    },
+    {
+      "key": "s2",
+      "kind": "header",
+      "before": "\n",
+      "label": "Page header: Cosmetic Dentistry in Fortitude Valley",
+      "pinned": true,
+      "template": "<section class=\"page-hero\"><div class=\"container page-hero-grid\"><div class=\"hero-up\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h1>{{f2}}</h1><p class=\"sub\">{{f3}}</p><p class=\"lede\">{{f4}}</p><p class=\"lede\">{{f5}}</p><div class=\"btn-group\"><a class=\"btn btn-dark\" href=\"{{site:booking}}\" target=\"_blank\" rel=\"noopener\" data-track=\"book\">{{f6}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a><a class=\"btn btn-white btn-plain\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{f7}}</a></div></div><div class=\"page-hero-img hero-up d2\"><img src=\"{{f8}}\" alt=\"{{f9}}\" width=\"900\" height=\"675\"></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Our Services"
+        },
+        {
+          "id": "f2",
+          "label": "Main heading",
+          "type": "text",
+          "value": "Cosmetic Dentistry in Fortitude Valley"
+        },
+        {
+          "id": "f3",
+          "label": "Line under the heading",
+          "type": "text",
+          "value": "Thoughtful Care for the Smile You Want"
+        },
+        {
+          "id": "f4",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "Your smile is personal. Some people want to brighten teeth that have darkened over time, while others would like to address chips, gaps or crowding that have bothered them for years. Cosmetic dentistry offers a range of options, and the right approach depends on your oral health, your goals and your preferences."
+        },
+        {
+          "id": "f5",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "At Precision Dental, every cosmetic plan starts with a comprehensive examination. Healthy teeth and gums come first, so we make sure any underlying concerns are addressed before cosmetic treatment begins. We then talk through what is achievable, the benefits and limitations of each option, and the likely costs, so you can make a considered decision without pressure."
+        },
+        {
+          "id": "f6",
+          "label": "Button text",
+          "type": "text",
+          "value": "Book Online"
+        },
+        {
+          "id": "f7",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        },
+        {
+          "id": "f8",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/smile-mirror.webp"
+        },
+        {
+          "id": "f9",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "A patient looking at her smile in the mirror at Precision Dental"
+        }
+      ]
+    },
+    {
+      "key": "s3",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Thoughtful Care for the Smile You Want",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Thoughtful Care for the Smile You Want"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Where appropriate, we use Digital Smile Design and digital scanning to help you visualise possible changes and to plan treatment precisely."
+        }
+      ]
+    },
+    {
+      "key": "s4",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Our Cosmetic Dentistry Services",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><h2>{{f1}}</h2><div class=\"svc-cards\"><a class=\"svc-card reveal\" href=\"{{f2}}\"><h3>{{f3}}</h3><p>{{f4}}</p><span class=\"explore\">{{f5}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f6}}\"><h3>{{f7}}</h3><p>{{f8}}</p><span class=\"explore\">{{f9}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><div class=\"svc-card reveal\"><h3>{{f10}}</h3><p>{{f11}}</p></div><a class=\"svc-card reveal\" href=\"{{f12}}\"><h3>{{f13}}</h3><p>{{f14}}</p><span class=\"explore\">{{f15}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Our Cosmetic Dentistry Services"
+        },
+        {
+          "id": "f2",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/porcelain-veneers/"
+        },
+        {
+          "id": "f3",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Porcelain Veneers",
+          "group": "1"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Porcelain veneers are thin, custom-made shells bonded to the front of teeth to change their colour, shape or size.",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Porcelain Veneers",
+          "group": "1"
+        },
+        {
+          "id": "f6",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/composite-resin-veneers/"
+        },
+        {
+          "id": "f7",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Composite Resin Veneers",
+          "group": "2"
+        },
+        {
+          "id": "f8",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Composite resin veneers use tooth-coloured material, shaped by hand directly onto your teeth, often with minimal preparation.",
+          "group": "2"
+        },
+        {
+          "id": "f9",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Composite Resin Veneers",
+          "group": "2"
+        },
+        {
+          "id": "f10",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Invisalign Clear Aligners"
+        },
+        {
+          "id": "f11",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Invisalign uses a series of removable, clear aligners to gradually move teeth into a new position."
+        },
+        {
+          "id": "f12",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/teeth-whitening/"
+        },
+        {
+          "id": "f13",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Teeth Whitening",
+          "group": "3"
+        },
+        {
+          "id": "f14",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Professional teeth whitening, supervised by our dental team, can lighten natural tooth colour and help reduce surface staining.",
+          "group": "3"
+        },
+        {
+          "id": "f15",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Teeth Whitening",
+          "group": "3"
+        }
+      ]
+    },
+    {
+      "key": "s5",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Preview a Straighter Smile",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Preview a Straighter Smile"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Considering clear aligners? Try Invisalign SmileView, a complimentary online simulation tool, before your consultation."
+        }
+      ]
+    },
+    {
+      "key": "s9",
+      "kind": "content",
+      "before": "\n",
+      "label": "Before and after gallery (shows only once a case is ready under Before & After)",
+      "pinned": false,
+      "generated": "beforeAfter",
+      "ref": "before-after",
+      "template": "<section class=\"ba-section\" id=\"before-after\"><div class=\"container reveal\"><details class=\"ba-gallery\"><summary><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><span class=\"ba-sum\"><b>{{f2}}</b><span class=\"ba-count\">{{gen:beforeAfterCount}}</span></span><span class=\"ba-chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></summary><div class=\"ba-body\"><p class=\"ba-intro\">{{f3}}</p><div class=\"ba-grid\">{{gen:beforeAfter}}</div><p class=\"ba-disclaimer\">{{f4}}</p></div></details></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Before &amp; After"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "Cosmetic Dentistry before and after photos"
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "These photographs show patients treated at Precision Dental, shared with their written consent. The photos have not been edited. Every patient&#x27;s situation is different, and a consultation is needed to know whether a treatment is suitable for you."
+        },
+        {
+          "id": "f4",
+          "label": "Risk statement (always shown with the photos)",
+          "type": "text",
+          "value": "Any invasive procedure carries risks. Results vary between individuals. Seek a second opinion from an appropriately qualified health practitioner before proceeding."
+        }
+      ]
+    },
+    {
+      "key": "s6",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "You may also be looking for",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><div class=\"section-head\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h2>{{f2}}</h2></div><div class=\"related-grid\"><a class=\"related-card\" href=\"{{f3}}\"><span class=\"mi-img\"><img src=\"/assets/img/menu/composite.webp\" alt=\"\" loading=\"lazy\" width=\"120\" height=\"120\"></span><span><strong>{{f4}}</strong><small>{{f5}}</small></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></a><a class=\"related-card\" href=\"{{f6}}\"><span class=\"mi-img\"><img src=\"/assets/img/menu/aligner.webp\" alt=\"\" loading=\"lazy\" width=\"120\" height=\"120\"></span><span><strong>{{f7}}</strong><small>{{f8}}</small></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></a><a class=\"related-card\" href=\"{{f9}}\"><span class=\"mi-img\"><img src=\"/assets/img/menu/veneer.webp\" alt=\"\" loading=\"lazy\" width=\"120\" height=\"120\"></span><span><strong>{{f10}}</strong><small>{{f11}}</small></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></a></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Related Services"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "You may also be looking for"
+        },
+        {
+          "id": "f3",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/composite-resin-veneers/"
+        },
+        {
+          "id": "f4",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Composite Resin Veneers",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Small print",
+          "type": "text",
+          "value": "Cosmetic Dentistry",
+          "group": "1"
+        },
+        {
+          "id": "f6",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/invisalign/"
+        },
+        {
+          "id": "f7",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Invisalign®",
+          "group": "2"
+        },
+        {
+          "id": "f8",
+          "label": "Small print",
+          "type": "text",
+          "value": "Cosmetic Dentistry",
+          "group": "2"
+        },
+        {
+          "id": "f9",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/porcelain-veneers/"
+        },
+        {
+          "id": "f10",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Porcelain Veneers",
+          "group": "3"
+        },
+        {
+          "id": "f11",
+          "label": "Small print",
+          "type": "text",
+          "value": "Cosmetic Dentistry",
+          "group": "3"
+        }
+      ]
+    },
+    {
+      "key": "s7",
+      "kind": "cta",
+      "before": "\n",
+      "shared": "cta",
+      "label": "Book Your Visit band"
+    },
+    {
+      "key": "s8",
+      "kind": "disclaimer",
+      "before": "\n",
+      "label": "Disclaimer",
+      "pinned": false,
+      "template": "<section class=\"disclaimer-section\"><div class=\"container\"><p class=\"disclaimer\">{{f1}}</p></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Disclaimer wording",
+          "type": "text",
+          "value": "The information on this page is general in nature and is not a substitute for personalised advice from a registered dental practitioner. Individual needs, experiences and results vary."
+        }
+      ]
+    }
+  ]
+}

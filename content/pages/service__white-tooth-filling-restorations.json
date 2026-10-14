@@ -1,0 +1,591 @@
+{
+  "key": "service/white-tooth-filling-restorations",
+  "file": "service/white-tooth-filling-restorations.html",
+  "url": "/service/white-tooth-filling-restorations/",
+  "label": "White Tooth Fillings in Fortitude Valley",
+  "group": "Treatments and services",
+  "seo": {
+    "title": "White Fillings Fortitude Valley | Precision Dental",
+    "description": "Tooth-coloured white fillings in Fortitude Valley to repair decay, chips and worn teeth. Early detection with DiagnoCam imaging. Book with Precision Dental.",
+    "ogImage": "",
+    "canonical": "",
+    "noindex": false
+  },
+  "lastmod": "2026-10-02",
+  "layout": {
+    "head": "std",
+    "pre": "std",
+    "post": "std",
+    "schema": "gen"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "breadcrumbs",
+      "before": "",
+      "label": "Breadcrumb trail",
+      "pinned": true,
+      "template": "<nav class=\"breadcrumbs\" aria-label=\"Breadcrumb\"><div class=\"container\"><ol><li><a href=\"{{f1}}\">{{f2}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><a href=\"{{f3}}\">{{f4}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><span aria-current=\"page\">{{f5}}</span></li></ol></div></nav>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1"
+        },
+        {
+          "id": "f2",
+          "label": "Link text",
+          "type": "text",
+          "value": "Home",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/restorative-dentistry/",
+          "group": "2"
+        },
+        {
+          "id": "f4",
+          "label": "Link text",
+          "type": "text",
+          "value": "Restorative Dentistry",
+          "group": "2"
+        },
+        {
+          "id": "f5",
+          "label": "List item",
+          "type": "text",
+          "value": "White Tooth Fillings"
+        }
+      ]
+    },
+    {
+      "key": "s2",
+      "kind": "header",
+      "before": "\n",
+      "label": "Page header: White Tooth Fillings in Fortitude Valley",
+      "pinned": true,
+      "template": "<section class=\"page-hero\"><div class=\"container page-hero-grid\"><div class=\"hero-up\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h1>{{f2}}</h1><p class=\"lede\">{{f3}}</p><p class=\"lede\">{{f4}}</p><div class=\"btn-group\"><a class=\"btn btn-dark\" href=\"{{site:booking}}\" target=\"_blank\" rel=\"noopener\" data-track=\"book\">{{f5}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a><a class=\"btn btn-white btn-plain\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{f6}}</a></div></div><div class=\"page-hero-img hero-up d2\"><img src=\"{{f7}}\" alt=\"{{f8}}\" width=\"900\" height=\"675\"></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Restorative Dentistry"
+        },
+        {
+          "id": "f2",
+          "label": "Main heading",
+          "type": "text",
+          "value": "White Tooth Fillings in Fortitude Valley"
+        },
+        {
+          "id": "f3",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "Tooth decay, small chips and worn areas can weaken teeth and cause sensitivity or discomfort. White fillings, also known as tooth-coloured or composite fillings, repair these areas using a material that is matched to the natural shade of your teeth."
+        },
+        {
+          "id": "f4",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "At Precision Dental, we aim to detect decay early, when a small, conservative filling is often all that is needed."
+        },
+        {
+          "id": "f5",
+          "label": "Button text",
+          "type": "text",
+          "value": "Book Online"
+        },
+        {
+          "id": "f6",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        },
+        {
+          "id": "f7",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/restorative.webp"
+        },
+        {
+          "id": "f8",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Dentist explaining treatment options at Precision Dental"
+        }
+      ]
+    },
+    {
+      "key": "s3",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "What Are White Fillings?",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<p>{{f3}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "What Are White Fillings?"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "White fillings are made from composite resin, a tooth-coloured material that is bonded directly to the tooth. The material is applied in layers, shaped to restore the natural contours of your tooth and hardened with a special curing light."
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Because composite bonds to the tooth surface, it can often be placed with less removal of healthy tooth structure than some traditional filling materials. It can also be used to replace old amalgam fillings when they are worn, cracked or decayed."
+        }
+      ]
+    },
+    {
+      "key": "s4",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Are White Fillings Right for You?",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<ul class=\"check-list\"><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f3}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f4}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f5}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f6}}</span></li></ul>\n<p>{{f7}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Are White Fillings Right for You?"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "A white filling may be recommended if you have:"
+        },
+        {
+          "id": "f3",
+          "label": "List item",
+          "type": "text",
+          "value": "A cavity caused by tooth decay"
+        },
+        {
+          "id": "f4",
+          "label": "List item",
+          "type": "text",
+          "value": "A small chip or fracture"
+        },
+        {
+          "id": "f5",
+          "label": "List item",
+          "type": "text",
+          "value": "Worn areas near the gum line"
+        },
+        {
+          "id": "f6",
+          "label": "List item",
+          "type": "text",
+          "value": "A worn, leaking or broken older filling"
+        },
+        {
+          "id": "f7",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Composite fillings are well suited to small and medium-sized restorations. If a large part of the tooth is missing or weakened, a crown, inlay or onlay may offer more protection, and options such as CEREC same-day crowns may be discussed."
+        }
+      ]
+    },
+    {
+      "key": "s5",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "What Happens at Your Appointment",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><h2>{{f1}}</h2><div class=\"steps\"><div class=\"step reveal\"><span class=\"n\"></span><div><h3>{{f2}}</h3><p>{{f3}}</p></div></div><div class=\"step reveal\"><span class=\"n\"></span><div><h3>{{f4}}</h3><p>{{f5}}</p></div></div><div class=\"step reveal\"><span class=\"n\"></span><div><h3>{{f6}}</h3><p>{{f7}}</p></div></div></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "What Happens at Your Appointment"
+        },
+        {
+          "id": "f2",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Diagnosis",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Decay is often found during a routine check-up and clean. We use digital X-rays and DiagnoCam, which uses light to help identify decay between teeth and beneath fillings without radiation. We show you what we find and explain your options.",
+          "group": "1"
+        },
+        {
+          "id": "f4",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Preparing the Tooth",
+          "group": "2"
+        },
+        {
+          "id": "f5",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Local anaesthetic is used to keep you comfortable. Decay and any old filling material are carefully removed, and the tooth is cleaned and prepared for bonding.",
+          "group": "2"
+        },
+        {
+          "id": "f6",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Placing the Filling",
+          "group": "3"
+        },
+        {
+          "id": "f7",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Composite resin is applied in thin layers, each set with a curing light. The filling is then shaped, your bite is checked, and the surface is polished to a smooth finish.",
+          "group": "3"
+        }
+      ]
+    },
+    {
+      "key": "s6",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Aftercare and Ongoing Care",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Aftercare and Ongoing Care"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Wait until the numbness has worn off before eating to avoid biting your cheek or tongue. Some sensitivity to hot and cold is normal for a short time. Brush twice daily with fluoride toothpaste, clean between your teeth, limit sugary foods and drinks, and attend regular check-ups. If your bite feels high or you notice persistent sensitivity, please contact us."
+        }
+      ]
+    },
+    {
+      "key": "s7",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Why Choose Precision Dental for White Fillings",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Why Choose Precision Dental for White Fillings"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We place great importance on early detection and conservative care. With digital X-rays, DiagnoCam and an intra-oral camera, we can identify concerns early and show you exactly what we are seeing, so you understand why treatment is recommended."
+        }
+      ]
+    },
+    {
+      "key": "s8",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Fees, Health Funds and Payment Options",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Fees, Health Funds and Payment Options"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "The cost of your treatment depends on your individual needs. After your examination, we talk you through your options and the expected fees before any treatment begins. We accept most major health funds, process claims on the spot through HICAPS and are a preferred provider for {{site:preferredFunds}}. Interest-free payment plans are available through DentiCare for eligible patients, subject to terms and conditions. You can learn more on our Prices and Payment Options page."
+        }
+      ]
+    },
+    {
+      "key": "s13",
+      "kind": "content",
+      "before": "\n",
+      "label": "Before and after gallery (shows only once a case is ready under Before & After)",
+      "pinned": false,
+      "generated": "beforeAfter",
+      "ref": "before-after",
+      "template": "<section class=\"ba-section\" id=\"before-after\"><div class=\"container reveal\"><details class=\"ba-gallery\"><summary><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><span class=\"ba-sum\"><b>{{f2}}</b><span class=\"ba-count\">{{gen:beforeAfterCount}}</span></span><span class=\"ba-chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></summary><div class=\"ba-body\"><p class=\"ba-intro\">{{f3}}</p><div class=\"ba-grid\">{{gen:beforeAfter}}</div><p class=\"ba-disclaimer\">{{f4}}</p></div></details></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Before &amp; After"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "White Tooth Fillings before and after photos"
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "These photographs show patients treated at Precision Dental, shared with their written consent. The photos have not been edited. Every patient&#x27;s situation is different, and a consultation is needed to know whether a treatment is suitable for you."
+        },
+        {
+          "id": "f4",
+          "label": "Risk statement (always shown with the photos)",
+          "type": "text",
+          "value": "Any invasive procedure carries risks. Results vary between individuals. Seek a second opinion from an appropriately qualified health practitioner before proceeding."
+        }
+      ]
+    },
+    {
+      "key": "s9",
+      "kind": "faq",
+      "before": "\n",
+      "label": "Questions and answers",
+      "pinned": false,
+      "template": "<section class=\"body-section section-alt\" id=\"faq\"><div class=\"container\"><div class=\"section-head center\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h2>{{f2}}</h2></div><div class=\"faq-list\"><div class=\"faq-item open\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"true\" aria-controls=\"faq1\"><span class=\"num\">1</span><span class=\"q\">{{f3}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq1\"><div><p>{{f4}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq2\"><span class=\"num\">2</span><span class=\"q\">{{f5}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq2\"><div><p>{{f6}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq3\"><span class=\"num\">3</span><span class=\"q\">{{f7}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq3\"><div><p>{{f8}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq4\"><span class=\"num\">4</span><span class=\"q\">{{f9}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq4\"><div><p>{{f10}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq5\"><span class=\"num\">5</span><span class=\"q\">{{f11}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq5\"><div><p>{{f12}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq6\"><span class=\"num\">6</span><span class=\"q\">{{f13}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq6\"><div><p>{{f14}}</p></div></div></div></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "FAQ"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "Frequently Asked Questions"
+        },
+        {
+          "id": "f3",
+          "label": "Question",
+          "type": "text",
+          "value": "How long do white fillings last?",
+          "group": "1"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "The lifespan of a filling depends on its size, location, your bite, grinding habits and oral hygiene. Regular check-ups help us monitor your fillings over time.",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Question",
+          "type": "text",
+          "value": "Does getting a filling hurt?",
+          "group": "2"
+        },
+        {
+          "id": "f6",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Local anaesthetic is used so you are comfortable during treatment. You may feel some sensitivity afterwards, which usually settles within a few days.",
+          "group": "2"
+        },
+        {
+          "id": "f7",
+          "label": "Question",
+          "type": "text",
+          "value": "Should I replace my old silver fillings?",
+          "group": "3"
+        },
+        {
+          "id": "f8",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Amalgam fillings that are intact and not causing problems do not always need replacing. We recommend replacement when a filling is worn, cracked, leaking or has decay around it.",
+          "group": "3"
+        },
+        {
+          "id": "f9",
+          "label": "Question",
+          "type": "text",
+          "value": "Can I eat straight after a white filling?",
+          "group": "4"
+        },
+        {
+          "id": "f10",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Composite fillings are set with a curing light, so they are hard before you leave. We recommend waiting until the anaesthetic wears off before eating.",
+          "group": "4"
+        },
+        {
+          "id": "f11",
+          "label": "Question",
+          "type": "text",
+          "value": "Will my filling match my teeth?",
+          "group": "5"
+        },
+        {
+          "id": "f12",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We select a composite shade that blends with your surrounding teeth. Fillings will not change colour with whitening, so it is best to whiten beforehand if you plan to.",
+          "group": "5"
+        },
+        {
+          "id": "f13",
+          "label": "Question",
+          "type": "text",
+          "value": "What happens if I leave a cavity untreated?",
+          "group": "6"
+        },
+        {
+          "id": "f14",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Decay can progress deeper into the tooth, which may lead to a toothache, infection or the need for more involved treatment such as root canal therapy or a crown.",
+          "group": "6"
+        }
+      ]
+    },
+    {
+      "key": "s10",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "You may also be looking for",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><div class=\"section-head\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h2>{{f2}}</h2></div><div class=\"related-grid\"><a class=\"related-card\" href=\"{{f3}}\"><span class=\"mi-img\"><img src=\"/assets/img/menu/cerec.webp\" alt=\"\" loading=\"lazy\" width=\"120\" height=\"120\"></span><span><strong>{{f4}}</strong><small>{{f5}}</small></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></a><a class=\"related-card\" href=\"{{f6}}\"><span class=\"mi-img\"><img src=\"/assets/img/menu/crown.webp\" alt=\"\" loading=\"lazy\" width=\"120\" height=\"120\"></span><span><strong>{{f7}}</strong><small>{{f8}}</small></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></a><a class=\"related-card\" href=\"{{f9}}\"><span class=\"mi-img\"><img src=\"/assets/img/menu/implant.webp\" alt=\"\" loading=\"lazy\" width=\"120\" height=\"120\"></span><span><strong>{{f10}}</strong><small>{{f11}}</small></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></a></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Related Services"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "You may also be looking for"
+        },
+        {
+          "id": "f3",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/cerec/"
+        },
+        {
+          "id": "f4",
+          "label": "Bold text",
+          "type": "text",
+          "value": "CEREC Same-Day Crowns",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Small print",
+          "type": "text",
+          "value": "Restorative Dentistry",
+          "group": "1"
+        },
+        {
+          "id": "f6",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-crowns-and-bridges/"
+        },
+        {
+          "id": "f7",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Dental Crowns and Bridges",
+          "group": "2"
+        },
+        {
+          "id": "f8",
+          "label": "Small print",
+          "type": "text",
+          "value": "Restorative Dentistry",
+          "group": "2"
+        },
+        {
+          "id": "f9",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-implants/"
+        },
+        {
+          "id": "f10",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Dental Implants",
+          "group": "3"
+        },
+        {
+          "id": "f11",
+          "label": "Small print",
+          "type": "text",
+          "value": "Restorative Dentistry",
+          "group": "3"
+        }
+      ]
+    },
+    {
+      "key": "s11",
+      "kind": "cta",
+      "before": "\n",
+      "shared": "cta",
+      "label": "Book Your Visit band"
+    },
+    {
+      "key": "s12",
+      "kind": "disclaimer",
+      "before": "\n",
+      "label": "Disclaimer",
+      "pinned": false,
+      "template": "<section class=\"disclaimer-section\"><div class=\"container\"><p class=\"disclaimer\">{{f1}}</p></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Disclaimer wording",
+          "type": "text",
+          "value": "The information on this page is general in nature and is not a substitute for personalised advice from a registered dental practitioner. Individual needs, experiences and results vary."
+        }
+      ]
+    }
+  ]
+}

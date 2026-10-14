@@ -1,0 +1,543 @@
+{
+  "key": "service/lost-dental-crown-or-inlay-onlay",
+  "file": "service/lost-dental-crown-or-inlay-onlay.html",
+  "url": "/service/lost-dental-crown-or-inlay-onlay/",
+  "label": "Lost Crown, Inlay or Onlay Care in Fortitude Valley",
+  "group": "Treatments and services",
+  "seo": {
+    "title": "Lost Crown or Onlay Brisbane | Precision Dental",
+    "description": "Lost a crown, inlay or onlay? Precision Dental in Fortitude Valley offers urgent care to re-cement or replace restorations, including CEREC in one visit.",
+    "ogImage": "",
+    "canonical": "",
+    "noindex": false
+  },
+  "lastmod": "2026-10-02",
+  "layout": {
+    "head": "std",
+    "pre": "std",
+    "post": "std",
+    "schema": "gen"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "breadcrumbs",
+      "before": "",
+      "label": "Breadcrumb trail",
+      "pinned": true,
+      "template": "<nav class=\"breadcrumbs\" aria-label=\"Breadcrumb\"><div class=\"container\"><ol><li><a href=\"{{f1}}\">{{f2}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><a href=\"{{f3}}\">{{f4}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><span aria-current=\"page\">{{f5}}</span></li></ol></div></nav>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1"
+        },
+        {
+          "id": "f2",
+          "label": "Link text",
+          "type": "text",
+          "value": "Home",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-emergency/",
+          "group": "2"
+        },
+        {
+          "id": "f4",
+          "label": "Link text",
+          "type": "text",
+          "value": "Emergency Dentistry",
+          "group": "2"
+        },
+        {
+          "id": "f5",
+          "label": "List item",
+          "type": "text",
+          "value": "Lost Crown, Inlay or Onlay"
+        }
+      ]
+    },
+    {
+      "key": "s2",
+      "kind": "header",
+      "before": "\n",
+      "label": "Page header: Lost Crown, Inlay or Onlay Care in Fortitude Valley",
+      "pinned": true,
+      "template": "<section class=\"page-hero\"><div class=\"container page-hero-grid\"><div class=\"hero-up\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h1>{{f2}}</h1><p class=\"lede\">{{f3}}</p><div class=\"btn-group\"><a class=\"btn btn-dark\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{f4}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a><a class=\"btn btn-white btn-plain\" href=\"{{site:booking}}\" target=\"_blank\" rel=\"noopener\" data-track=\"book\">{{f5}}</a></div></div><div class=\"page-hero-img hero-up d2\"><img src=\"{{f6}}\" alt=\"{{f7}}\" width=\"900\" height=\"675\"></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Emergency Dentistry"
+        },
+        {
+          "id": "f2",
+          "label": "Main heading",
+          "type": "text",
+          "value": "Lost Crown, Inlay or Onlay Care in Fortitude Valley"
+        },
+        {
+          "id": "f3",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "When a crown, inlay or onlay comes loose, the tooth underneath can feel sensitive, sharp or unfamiliar. While it is not always painful, a missing restoration leaves the tooth vulnerable to damage and decay. At Precision Dental, we can assess the tooth promptly and discuss whether your restoration can be re-cemented or needs replacing."
+        },
+        {
+          "id": "f4",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        },
+        {
+          "id": "f5",
+          "label": "Button text",
+          "type": "text",
+          "value": "Book Online"
+        },
+        {
+          "id": "f6",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/why-choose.webp"
+        },
+        {
+          "id": "f7",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "The Precision Dental team caring for a patient"
+        }
+      ]
+    },
+    {
+      "key": "s3",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "What Are Crowns, Inlays and Onlays?",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<p>{{f3}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "What Are Crowns, Inlays and Onlays?"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "A crown is a cap that covers the entire visible part of a tooth. An inlay fits within the grooves of a back tooth&#x27;s chewing surface, while an onlay extends to cover one or more of the tooth&#x27;s cusps. All three are custom-made restorations bonded or cemented to the tooth."
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Restorations can come loose for several reasons, including decay developing beneath them, wear of the cement over time, biting on hard or sticky foods, grinding, or a fracture of the underlying tooth."
+        }
+      ]
+    },
+    {
+      "key": "s4",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "When to Seek Care",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><div class=\"callout urgent reveal\"><span class=\"cw\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z\"/></svg>{{f1}}</span><h2>{{f2}}</h2><p>{{f3}}</p>\n<ul class=\"check-list\"><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f4}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f5}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f6}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f7}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f8}}</span></li></ul></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Text",
+          "type": "text",
+          "value": "Important"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "When to Seek Care"
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Please call us as soon as you can if your restoration has come out. Book promptly if:"
+        },
+        {
+          "id": "f4",
+          "label": "List item",
+          "type": "text",
+          "value": "The tooth is sensitive to hot, cold or air"
+        },
+        {
+          "id": "f5",
+          "label": "List item",
+          "type": "text",
+          "value": "You have pain or discomfort"
+        },
+        {
+          "id": "f6",
+          "label": "List item",
+          "type": "text",
+          "value": "The tooth feels sharp or has broken"
+        },
+        {
+          "id": "f7",
+          "label": "List item",
+          "type": "text",
+          "value": "You swallowed or lost the restoration"
+        },
+        {
+          "id": "f8",
+          "label": "List item",
+          "type": "text",
+          "value": "The tooth has had root canal therapy, as it may be more fragile"
+        }
+      ]
+    },
+    {
+      "key": "s5",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "What to Do Before Your Appointment",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><div class=\"callout firstaid reveal\"><h2>{{f1}}</h2><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "What to Do Before Your Appointment"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Keep the restoration safe in a small container and bring it with you. Gently clean the tooth by brushing, and avoid chewing on that side. A small amount of dental wax or temporary dental cement from a pharmacy can protect a sensitive tooth for a short time, but do not use household glue. Avoid sticky, hard or very hot or cold foods."
+        }
+      ]
+    },
+    {
+      "key": "s6",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "What Happens at Your Appointment",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "What Happens at Your Appointment"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We examine the tooth and your restoration and take digital X-rays to check for decay or fractures beneath it. If the tooth and restoration are both in good condition, we clean them and re-cement the restoration in place. If there is decay, damage, or the restoration no longer fits well, a replacement may be needed. With our CEREC system, many new crowns, inlays and onlays can be designed, milled and fitted during one visit. If the tooth is severely damaged, we explain other options, such as root canal therapy or replacement of the tooth."
+        }
+      ]
+    },
+    {
+      "key": "s7",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Aftercare and Ongoing Care",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Aftercare and Ongoing Care"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Avoid chewing on the tooth until any anaesthetic has worn off, and avoid sticky or very hard foods for the first 24 hours. Brush and clean between your teeth carefully around the restoration each day. If you grind your teeth, a night splint may help protect your restorations. Regular check-ups help us monitor restoration edges for early signs of decay or wear."
+        }
+      ]
+    },
+    {
+      "key": "s8",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Why Choose Precision Dental for a Lost Restoration",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Why Choose Precision Dental for a Lost Restoration"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Our in-house CEREC technology means many replacement restorations can be completed in a single visit, without a temporary. We assess the tooth carefully so the restoration is placed on a healthy foundation."
+        }
+      ]
+    },
+    {
+      "key": "s9",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Fees, Health Funds and Payment Options",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Fees, Health Funds and Payment Options"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "The cost of your treatment depends on your individual needs. After your examination, we talk you through your options and the expected fees before any treatment begins. We accept most major health funds, process claims on the spot through HICAPS and are a preferred provider for {{site:preferredFunds}}. Interest-free payment plans are available through DentiCare for eligible patients, subject to terms and conditions. You can learn more on our Prices and Payment Options page."
+        }
+      ]
+    },
+    {
+      "key": "s10",
+      "kind": "faq",
+      "before": "\n",
+      "label": "Questions and answers",
+      "pinned": false,
+      "template": "<section class=\"body-section section-alt\" id=\"faq\"><div class=\"container\"><div class=\"section-head center\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h2>{{f2}}</h2></div><div class=\"faq-list\"><div class=\"faq-item open\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"true\" aria-controls=\"faq1\"><span class=\"num\">1</span><span class=\"q\">{{f3}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq1\"><div><p>{{f4}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq2\"><span class=\"num\">2</span><span class=\"q\">{{f5}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq2\"><div><p>{{f6}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq3\"><span class=\"num\">3</span><span class=\"q\">{{f7}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq3\"><div><p>{{f8}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq4\"><span class=\"num\">4</span><span class=\"q\">{{f9}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq4\"><div><p>{{f10}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq5\"><span class=\"num\">5</span><span class=\"q\">{{f11}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq5\"><div><p>{{f12}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq6\"><span class=\"num\">6</span><span class=\"q\">{{f13}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq6\"><div><p>{{f14}}</p></div></div></div></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "FAQ"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "Frequently Asked Questions"
+        },
+        {
+          "id": "f3",
+          "label": "Question",
+          "type": "text",
+          "value": "Can my old crown be put back on?",
+          "group": "1"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Often, yes, if the crown and the tooth underneath are in good condition. We will check both before re-cementing it.",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Question",
+          "type": "text",
+          "value": "What if I swallowed my crown?",
+          "group": "2"
+        },
+        {
+          "id": "f6",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Swallowed restorations usually pass without harm. If you have difficulty breathing or coughing, seek medical care immediately. We can make a replacement.",
+          "group": "2"
+        },
+        {
+          "id": "f7",
+          "label": "Question",
+          "type": "text",
+          "value": "Can I glue my crown back on myself?",
+          "group": "3"
+        },
+        {
+          "id": "f8",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Please do not use household glue, as it can damage the tooth and make proper repair difficult. A temporary pharmacy cement may be used briefly.",
+          "group": "3"
+        },
+        {
+          "id": "f9",
+          "label": "Question",
+          "type": "text",
+          "value": "Why did my crown fall out?",
+          "group": "4"
+        },
+        {
+          "id": "f10",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Common causes include decay beneath the crown, worn cement, biting on sticky foods and grinding.",
+          "group": "4"
+        },
+        {
+          "id": "f11",
+          "label": "Question",
+          "type": "text",
+          "value": "Is a lost crown an emergency?",
+          "group": "5"
+        },
+        {
+          "id": "f12",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "It is not always urgent, but the tooth is vulnerable without it. It is best to be seen within a day or two, or sooner if you have pain.",
+          "group": "5"
+        },
+        {
+          "id": "f13",
+          "label": "Question",
+          "type": "text",
+          "value": "Can a lost onlay be replaced on the same day?",
+          "group": "6"
+        },
+        {
+          "id": "f14",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "In many cases, yes. Our CEREC system allows many onlays to be made and fitted in a single appointment.",
+          "group": "6"
+        }
+      ]
+    },
+    {
+      "key": "s11",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "You may also be looking for",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><div class=\"section-head\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h2>{{f2}}</h2></div><div class=\"related-grid\"><a class=\"related-card\" href=\"{{f3}}\"><span class=\"mi-img\"><img src=\"/assets/img/menu/broken.webp\" alt=\"\" loading=\"lazy\" width=\"120\" height=\"120\"></span><span><strong>{{f4}}</strong><small>{{f5}}</small></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></a><a class=\"related-card\" href=\"{{f6}}\"><span class=\"mi-img\"><img src=\"/assets/img/menu/kidemerg.webp\" alt=\"\" loading=\"lazy\" width=\"120\" height=\"120\"></span><span><strong>{{f7}}</strong><small>{{f8}}</small></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></a><a class=\"related-card\" href=\"{{f9}}\"><span class=\"mi-img\"><img src=\"/assets/img/menu/abscess.webp\" alt=\"\" loading=\"lazy\" width=\"120\" height=\"120\"></span><span><strong>{{f10}}</strong><small>{{f11}}</small></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></a></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Related Services"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "You may also be looking for"
+        },
+        {
+          "id": "f3",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/broken-tooth/"
+        },
+        {
+          "id": "f4",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Broken Tooth",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Small print",
+          "type": "text",
+          "value": "Emergency Dentistry",
+          "group": "1"
+        },
+        {
+          "id": "f6",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/childrens-dental-emergencies-fortitude-valley/"
+        },
+        {
+          "id": "f7",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Children&#x27;s Dental Emergencies",
+          "group": "2"
+        },
+        {
+          "id": "f8",
+          "label": "Small print",
+          "type": "text",
+          "value": "Emergency Dentistry",
+          "group": "2"
+        },
+        {
+          "id": "f9",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-abscess/"
+        },
+        {
+          "id": "f10",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Dental Abscess",
+          "group": "3"
+        },
+        {
+          "id": "f11",
+          "label": "Small print",
+          "type": "text",
+          "value": "Emergency Dentistry",
+          "group": "3"
+        }
+      ]
+    },
+    {
+      "key": "s12",
+      "kind": "cta",
+      "before": "\n",
+      "shared": "cta",
+      "label": "Book Your Visit band"
+    },
+    {
+      "key": "s13",
+      "kind": "disclaimer",
+      "before": "\n",
+      "label": "Disclaimer",
+      "pinned": false,
+      "template": "<section class=\"disclaimer-section\"><div class=\"container\"><p class=\"disclaimer\">{{f1}}</p></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Disclaimer wording",
+          "type": "text",
+          "value": "The information on this page is general in nature and is not a substitute for personalised advice from a registered dental practitioner. Individual needs, experiences and results vary."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,597 @@
+{
+  "key": "service/composite-resin-veneers",
+  "file": "service/composite-resin-veneers.html",
+  "url": "/service/composite-resin-veneers/",
+  "label": "Composite Resin Veneers in Fortitude Valley",
+  "group": "Treatments and services",
+  "seo": {
+    "title": "Composite Veneers Fortitude Valley | Precision Dental",
+    "description": "Composite resin veneers in Fortitude Valley. A conservative option to reshape chipped, worn or uneven teeth, often in a single visit.",
+    "ogImage": "",
+    "canonical": "",
+    "noindex": false
+  },
+  "lastmod": "2026-10-02",
+  "layout": {
+    "head": "std",
+    "pre": "std",
+    "post": "std",
+    "schema": "gen"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "breadcrumbs",
+      "before": "",
+      "label": "Breadcrumb trail",
+      "pinned": true,
+      "template": "<nav class=\"breadcrumbs\" aria-label=\"Breadcrumb\"><div class=\"container\"><ol><li><a href=\"{{f1}}\">{{f2}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><a href=\"{{f3}}\">{{f4}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><span aria-current=\"page\">{{f5}}</span></li></ol></div></nav>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1"
+        },
+        {
+          "id": "f2",
+          "label": "Link text",
+          "type": "text",
+          "value": "Home",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/cosmetic-dentistry/",
+          "group": "2"
+        },
+        {
+          "id": "f4",
+          "label": "Link text",
+          "type": "text",
+          "value": "Cosmetic Dentistry",
+          "group": "2"
+        },
+        {
+          "id": "f5",
+          "label": "List item",
+          "type": "text",
+          "value": "Composite Resin Veneers"
+        }
+      ]
+    },
+    {
+      "key": "s2",
+      "kind": "header",
+      "before": "\n",
+      "label": "Page header: Composite Resin Veneers in Fortitude Valley",
+      "pinned": true,
+      "template": "<section class=\"page-hero\"><div class=\"container page-hero-grid\"><div class=\"hero-up\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h1>{{f2}}</h1><p class=\"lede\">{{f3}}</p><p class=\"lede\">{{f4}}</p><div class=\"btn-group\"><a class=\"btn btn-dark\" href=\"{{site:booking}}\" target=\"_blank\" rel=\"noopener\" data-track=\"book\">{{f5}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a><a class=\"btn btn-white btn-plain\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{f6}}</a></div></div><div class=\"page-hero-img hero-up d2\"><img src=\"{{f7}}\" alt=\"{{f8}}\" width=\"900\" height=\"675\"></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Cosmetic Dentistry"
+        },
+        {
+          "id": "f2",
+          "label": "Main heading",
+          "type": "text",
+          "value": "Composite Resin Veneers in Fortitude Valley"
+        },
+        {
+          "id": "f3",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "Composite resin veneers offer a conservative way to improve the shape, colour and proportions of your teeth. Because they are built up and sculpted directly onto your teeth, treatment is often completed in a single appointment, and in many cases little or no enamel needs to be removed."
+        },
+        {
+          "id": "f4",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "At Precision Dental, we take the time to understand what you would like to change and whether composite veneers suit your teeth, bite and lifestyle."
+        },
+        {
+          "id": "f5",
+          "label": "Button text",
+          "type": "text",
+          "value": "Book Online"
+        },
+        {
+          "id": "f6",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        },
+        {
+          "id": "f7",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/cosmetic.webp"
+        },
+        {
+          "id": "f8",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Matching a tooth shade at Precision Dental"
+        }
+      ]
+    },
+    {
+      "key": "s3",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "What Are Composite Resin Veneers?",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<p>{{f3}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "What Are Composite Resin Veneers?"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Composite resin is a tooth-coloured material that is also used for white fillings. When used as a veneer, it is applied in layers to the front of the tooth, shaped by hand and polished to a smooth finish. Shades can be blended to suit your surrounding teeth."
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Compared with porcelain veneers, composite veneers usually involve less tooth preparation, are completed more quickly and can be repaired more easily if they chip. However, composite is more prone to staining and wear over time, so it typically needs more maintenance, polishing and eventual replacement."
+        }
+      ]
+    },
+    {
+      "key": "s4",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Are Composite Resin Veneers Right for You?",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<ul class=\"check-list\"><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f3}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f4}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f5}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f6}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f7}}</span></li></ul>\n<p>{{f8}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Are Composite Resin Veneers Right for You?"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Composite veneers may be considered if you have:"
+        },
+        {
+          "id": "f3",
+          "label": "List item",
+          "type": "text",
+          "value": "Small chips or worn edges on your front teeth"
+        },
+        {
+          "id": "f4",
+          "label": "List item",
+          "type": "text",
+          "value": "Minor gaps between teeth"
+        },
+        {
+          "id": "f5",
+          "label": "List item",
+          "type": "text",
+          "value": "Teeth that are slightly uneven in shape or length"
+        },
+        {
+          "id": "f6",
+          "label": "List item",
+          "type": "text",
+          "value": "Localised discolouration that does not respond to whitening"
+        },
+        {
+          "id": "f7",
+          "label": "List item",
+          "type": "text",
+          "value": "A preference for a conservative, reversible or budget-conscious option"
+        },
+        {
+          "id": "f8",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Composite veneers work best when your teeth and gums are healthy. If you grind your teeth, bite your nails or have significant crowding, we will discuss whether another approach may be more suitable. If you are also considering teeth whitening, we recommend whitening first, as composite does not change colour with whitening treatment."
+        }
+      ]
+    },
+    {
+      "key": "s5",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "What Happens at Your Appointment",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><h2>{{f1}}</h2><div class=\"steps\"><div class=\"step reveal\"><span class=\"n\"></span><div><h3>{{f2}}</h3><p>{{f3}}</p></div></div><div class=\"step reveal\"><span class=\"n\"></span><div><h3>{{f4}}</h3><p>{{f5}}</p></div></div><div class=\"step reveal\"><span class=\"n\"></span><div><h3>{{f6}}</h3><p>{{f7}}</p></div></div></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "What Happens at Your Appointment"
+        },
+        {
+          "id": "f2",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Consultation",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We begin with an examination of your teeth, gums and bite, along with photographs and digital X-rays where needed. We talk about your goals, explain the benefits and limitations of composite veneers and provide a clear quote.",
+          "group": "1"
+        },
+        {
+          "id": "f4",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Treatment",
+          "group": "2"
+        },
+        {
+          "id": "f5",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "On the day of treatment, the tooth surface is cleaned and lightly prepared. Where needed, local anaesthetic is used to keep you comfortable, although many patients do not require it. The composite resin is applied in thin layers, each one shaped and set with a curing light. Once the shape is complete, the veneers are refined and polished.",
+          "group": "2"
+        },
+        {
+          "id": "f6",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Review",
+          "group": "3"
+        },
+        {
+          "id": "f7",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Before you leave, we check your bite and the appearance of your veneers with you. A short review appointment may be recommended to make any fine adjustments.",
+          "group": "3"
+        }
+      ]
+    },
+    {
+      "key": "s6",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Aftercare and Ongoing Care",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Aftercare and Ongoing Care"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Brush twice daily with a soft toothbrush and non-abrasive toothpaste, and clean between your teeth each day. Limit highly staining foods and drinks, such as coffee, tea and red wine, and rinse with water afterwards. Avoid biting hard objects, and consider a custom mouthguard for contact sport. Regular check-ups and cleans allow us to polish and maintain your veneers."
+        }
+      ]
+    },
+    {
+      "key": "s7",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Why Choose Precision Dental for Composite Veneers",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Why Choose Precision Dental for Composite Veneers"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Composite veneers rely on careful hands and an eye for detail. Dr Billy Choi takes a thoughtful approach to shade selection and shaping, and he will always discuss alternatives, including whitening and porcelain veneers, so you can choose the option that suits you."
+        }
+      ]
+    },
+    {
+      "key": "s8",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Fees, Health Funds and Payment Options",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Fees, Health Funds and Payment Options"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "The cost of your treatment depends on your individual needs. After your examination, we talk you through your options and the expected fees before any treatment begins. We accept most major health funds, process claims on the spot through HICAPS and are a preferred provider for {{site:preferredFunds}}. Interest-free payment plans are available through DentiCare for eligible patients, subject to terms and conditions. You can learn more on our Prices and Payment Options page."
+        }
+      ]
+    },
+    {
+      "key": "s13",
+      "kind": "content",
+      "before": "\n",
+      "label": "Before and after gallery (shows only once a case is ready under Before & After)",
+      "pinned": false,
+      "generated": "beforeAfter",
+      "ref": "before-after",
+      "template": "<section class=\"ba-section\" id=\"before-after\"><div class=\"container reveal\"><details class=\"ba-gallery\"><summary><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><span class=\"ba-sum\"><b>{{f2}}</b><span class=\"ba-count\">{{gen:beforeAfterCount}}</span></span><span class=\"ba-chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></summary><div class=\"ba-body\"><p class=\"ba-intro\">{{f3}}</p><div class=\"ba-grid\">{{gen:beforeAfter}}</div><p class=\"ba-disclaimer\">{{f4}}</p></div></details></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Before &amp; After"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "Composite Resin Veneers before and after photos"
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "These photographs show patients treated at Precision Dental, shared with their written consent. The photos have not been edited. Every patient&#x27;s situation is different, and a consultation is needed to know whether a treatment is suitable for you."
+        },
+        {
+          "id": "f4",
+          "label": "Risk statement (always shown with the photos)",
+          "type": "text",
+          "value": "Any invasive procedure carries risks. Results vary between individuals. Seek a second opinion from an appropriately qualified health practitioner before proceeding."
+        }
+      ]
+    },
+    {
+      "key": "s9",
+      "kind": "faq",
+      "before": "\n",
+      "label": "Questions and answers",
+      "pinned": false,
+      "template": "<section class=\"body-section section-alt\" id=\"faq\"><div class=\"container\"><div class=\"section-head center\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h2>{{f2}}</h2></div><div class=\"faq-list\"><div class=\"faq-item open\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"true\" aria-controls=\"faq1\"><span class=\"num\">1</span><span class=\"q\">{{f3}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq1\"><div><p>{{f4}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq2\"><span class=\"num\">2</span><span class=\"q\">{{f5}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq2\"><div><p>{{f6}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq3\"><span class=\"num\">3</span><span class=\"q\">{{f7}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq3\"><div><p>{{f8}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq4\"><span class=\"num\">4</span><span class=\"q\">{{f9}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq4\"><div><p>{{f10}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq5\"><span class=\"num\">5</span><span class=\"q\">{{f11}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq5\"><div><p>{{f12}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq6\"><span class=\"num\">6</span><span class=\"q\">{{f13}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq6\"><div><p>{{f14}}</p></div></div></div></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "FAQ"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "Frequently Asked Questions"
+        },
+        {
+          "id": "f3",
+          "label": "Question",
+          "type": "text",
+          "value": "How long do composite veneers last?",
+          "group": "1"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Composite veneers can last several years with good care, although their lifespan varies. They may need polishing, repair or replacement over time due to staining or wear.",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Question",
+          "type": "text",
+          "value": "Do composite veneers damage my teeth?",
+          "group": "2"
+        },
+        {
+          "id": "f6",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Composite veneers usually require minimal preparation of the natural tooth. In some cases, a small amount of enamel is shaped to improve the result, and we will explain this before treatment.",
+          "group": "2"
+        },
+        {
+          "id": "f7",
+          "label": "Question",
+          "type": "text",
+          "value": "Can composite veneers be repaired?",
+          "group": "3"
+        },
+        {
+          "id": "f8",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Yes. If a composite veneer chips, it can often be repaired directly in the chair without replacing the whole veneer.",
+          "group": "3"
+        },
+        {
+          "id": "f9",
+          "label": "Question",
+          "type": "text",
+          "value": "Will composite veneers stain?",
+          "group": "4"
+        },
+        {
+          "id": "f10",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Composite resin is more prone to staining than porcelain. Regular professional polishing and limiting staining foods and drinks can help maintain their appearance.",
+          "group": "4"
+        },
+        {
+          "id": "f11",
+          "label": "Question",
+          "type": "text",
+          "value": "How many appointments will I need?",
+          "group": "5"
+        },
+        {
+          "id": "f12",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Most patients need a consultation followed by one treatment appointment. A short review may be suggested afterwards.",
+          "group": "5"
+        },
+        {
+          "id": "f13",
+          "label": "Question",
+          "type": "text",
+          "value": "Are composite veneers covered by health funds?",
+          "group": "6"
+        },
+        {
+          "id": "f14",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Some extras policies provide rebates for cosmetic or restorative items. We can provide item numbers so you can check with your fund, and claims are processed on the spot through HICAPS.",
+          "group": "6"
+        }
+      ]
+    },
+    {
+      "key": "s10",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "You may also be looking for",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><div class=\"section-head\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h2>{{f2}}</h2></div><div class=\"related-grid\"><a class=\"related-card\" href=\"{{f3}}\"><span class=\"mi-img\"><img src=\"/assets/img/menu/aligner.webp\" alt=\"\" loading=\"lazy\" width=\"120\" height=\"120\"></span><span><strong>{{f4}}</strong><small>{{f5}}</small></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></a><a class=\"related-card\" href=\"{{f6}}\"><span class=\"mi-img\"><img src=\"/assets/img/menu/veneer.webp\" alt=\"\" loading=\"lazy\" width=\"120\" height=\"120\"></span><span><strong>{{f7}}</strong><small>{{f8}}</small></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></a><a class=\"related-card\" href=\"{{f9}}\"><span class=\"mi-img\"><img src=\"/assets/img/menu/whitening.webp\" alt=\"\" loading=\"lazy\" width=\"120\" height=\"120\"></span><span><strong>{{f10}}</strong><small>{{f11}}</small></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></a></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Related Services"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "You may also be looking for"
+        },
+        {
+          "id": "f3",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/invisalign/"
+        },
+        {
+          "id": "f4",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Invisalign®",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Small print",
+          "type": "text",
+          "value": "Cosmetic Dentistry",
+          "group": "1"
+        },
+        {
+          "id": "f6",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/porcelain-veneers/"
+        },
+        {
+          "id": "f7",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Porcelain Veneers",
+          "group": "2"
+        },
+        {
+          "id": "f8",
+          "label": "Small print",
+          "type": "text",
+          "value": "Cosmetic Dentistry",
+          "group": "2"
+        },
+        {
+          "id": "f9",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/teeth-whitening/"
+        },
+        {
+          "id": "f10",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Teeth Whitening",
+          "group": "3"
+        },
+        {
+          "id": "f11",
+          "label": "Small print",
+          "type": "text",
+          "value": "Cosmetic Dentistry",
+          "group": "3"
+        }
+      ]
+    },
+    {
+      "key": "s11",
+      "kind": "cta",
+      "before": "\n",
+      "shared": "cta",
+      "label": "Book Your Visit band"
+    },
+    {
+      "key": "s12",
+      "kind": "disclaimer",
+      "before": "\n",
+      "label": "Disclaimer",
+      "pinned": false,
+      "template": "<section class=\"disclaimer-section\"><div class=\"container\"><p class=\"disclaimer\">{{f1}}</p></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Disclaimer wording",
+          "type": "text",
+          "value": "The information on this page is general in nature and is not a substitute for personalised advice from a registered dental practitioner. Individual needs, experiences and results vary."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,478 @@
+{
+  "key": "dentist-new-farm",
+  "file": "dentist-new-farm.html",
+  "url": "/dentist-new-farm/",
+  "label": "Dentist for New Farm",
+  "group": "Suburb pages",
+  "seo": {
+    "title": "Dentist New Farm | Precision Dental Fortitude Valley",
+    "description": "Family dentist near New Farm. Gentle children's dentistry, check-ups and cosmetic care at Precision Dental in Fortitude Valley. Free on-site parking.",
+    "ogImage": "",
+    "canonical": "",
+    "noindex": false
+  },
+  "lastmod": "2026-10-02",
+  "layout": {
+    "head": "std",
+    "pre": "std",
+    "post": "std",
+    "schema": "gen"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "breadcrumbs",
+      "before": "",
+      "label": "Breadcrumb trail",
+      "pinned": true,
+      "template": "<nav class=\"breadcrumbs\" aria-label=\"Breadcrumb\"><div class=\"container\"><ol><li><a href=\"{{f1}}\">{{f2}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><span aria-current=\"page\">{{f3}}</span></li></ol></div></nav>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1"
+        },
+        {
+          "id": "f2",
+          "label": "Link text",
+          "type": "text",
+          "value": "Home",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "List item",
+          "type": "text",
+          "value": "Dentist for New Farm"
+        }
+      ]
+    },
+    {
+      "key": "s2",
+      "kind": "header",
+      "before": "\n",
+      "label": "Page header: Dentist for New Farm",
+      "pinned": true,
+      "template": "<section class=\"page-hero\"><div class=\"container hero-up\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h1>{{f2}}</h1><p class=\"sub\">{{f3}}</p><p class=\"lede\">{{f4}}</p><div class=\"btn-group\"><a class=\"btn btn-dark\" href=\"{{site:booking}}\" target=\"_blank\" rel=\"noopener\" data-track=\"book\">{{f5}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a><a class=\"btn btn-white btn-plain\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{f6}}</a></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Local Dentist"
+        },
+        {
+          "id": "f2",
+          "label": "Main heading",
+          "type": "text",
+          "value": "Dentist for New Farm"
+        },
+        {
+          "id": "f3",
+          "label": "Line under the heading",
+          "type": "text",
+          "value": "A Family Dental Practice Just Up the Road"
+        },
+        {
+          "id": "f4",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "Families from New Farm have a short trip to Precision Dental in Fortitude Valley. We look after every generation, from toddlers meeting the dentist for the first time to grandparents keeping their natural teeth healthy for longer."
+        },
+        {
+          "id": "f5",
+          "label": "Button text",
+          "type": "text",
+          "value": "Book Online"
+        },
+        {
+          "id": "f6",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        }
+      ]
+    },
+    {
+      "key": "s3",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "About Precision Dental",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<p>{{f3}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "About Precision Dental"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "New Farm has a strong neighbourhood feel, with young families, long-time locals and plenty of people who enjoy an active, outdoor lifestyle. We want visiting the dentist to feel just as relaxed. Our team takes time to get to know each patient and explains care in a warm, unhurried way."
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Children are encouraged to explore the chair before we begin, and parents are always welcome to stay close by. For grown-ups who find appointments stressful, we move at a comfortable pace and check in often. Find out more About Precision Dental and the values that shape our care."
+        }
+      ]
+    },
+    {
+      "key": "s4",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Our Dental Services",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><h2>{{f1}}</h2><div class=\"svc-cards\"><a class=\"svc-card reveal\" href=\"{{f2}}\"><h3>{{f3}}</h3><p>{{f4}}</p><span class=\"explore\">{{f5}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f6}}\"><h3>{{f7}}</h3><p>{{f8}}</p><span class=\"explore\">{{f9}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f10}}\"><h3>{{f11}}</h3><p>{{f12}}</p><span class=\"explore\">{{f13}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f14}}\"><h3>{{f15}}</h3><p>{{f16}}</p><span class=\"explore\">{{f17}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Our Dental Services"
+        },
+        {
+          "id": "f2",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/childrens-dentistry/"
+        },
+        {
+          "id": "f3",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Children&#x27;s Dentistry",
+          "group": "1"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Early, positive visits help children grow up comfortable with dental care. Our children&#x27;s dentistry appointments include gentle check-ups, fluoride treatments, fissure sealants and simple brushing tips for home.",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Children&#x27;s Dentistry",
+          "group": "1"
+        },
+        {
+          "id": "f6",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/general-treatments/"
+        },
+        {
+          "id": "f7",
+          "label": "Subheading",
+          "type": "text",
+          "value": "General Dentistry",
+          "group": "2"
+        },
+        {
+          "id": "f8",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "For parents and older family members, our General Dentistry services cover regular cleans, gum care, fillings, root canal therapy and extractions, all under one roof.",
+          "group": "2"
+        },
+        {
+          "id": "f9",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore General Dentistry",
+          "group": "2"
+        },
+        {
+          "id": "f10",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/cosmetic-dentistry/"
+        },
+        {
+          "id": "f11",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Cosmetic Dentistry",
+          "group": "3"
+        },
+        {
+          "id": "f12",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Teenagers and adults considering straighter teeth can explore Invisalign clear aligners, while whitening and veneers are also available through our Cosmetic Dentistry services, following a full assessment.",
+          "group": "3"
+        },
+        {
+          "id": "f13",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Cosmetic Dentistry",
+          "group": "3"
+        },
+        {
+          "id": "f14",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-emergency/"
+        },
+        {
+          "id": "f15",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Emergency Dentistry",
+          "group": "4"
+        },
+        {
+          "id": "f16",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Playground falls and sporting knocks happen. Our Emergency Dentistry team sees children and adults for urgent problems and will do our best to fit you in on the day.",
+          "group": "4"
+        },
+        {
+          "id": "f17",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Emergency Dentistry",
+          "group": "4"
+        }
+      ]
+    },
+    {
+      "key": "s5",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Why New Farm Patients Choose Precision Dental",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><h3>{{f2}}</h3>\n<p>{{f3}}</p>\n<h3>{{f4}}</h3>\n<p>{{f5}}</p>\n<h3>{{f6}}</h3>\n<p>{{f7}}</p>\n<h3>{{f8}}</h3>\n<p>{{f9}}</p>\n<h3>{{f10}}</h3>\n<p>{{f11}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Why New Farm Patients Choose Precision Dental"
+        },
+        {
+          "id": "f2",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Honesty"
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We give parents clear, balanced information and explain what each option involves, including when it is reasonable to watch and wait."
+        },
+        {
+          "id": "f4",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Comfort"
+        },
+        {
+          "id": "f5",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Calm voices, ceiling-mounted screens and a patient approach help younger visitors settle, while happy gas can support older children and adults who feel anxious."
+        },
+        {
+          "id": "f6",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Quality"
+        },
+        {
+          "id": "f7",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Our oral health therapist and Dr Billy Choi work together on preventive care, so small concerns can be picked up early."
+        },
+        {
+          "id": "f8",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Convenience"
+        },
+        {
+          "id": "f9",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Booking family members in on the same day may be possible, and free parking removes one more thing to organise."
+        },
+        {
+          "id": "f10",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Safety"
+        },
+        {
+          "id": "f11",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Instruments are sterilised and treatment areas cleaned thoroughly between every patient."
+        }
+      ]
+    },
+    {
+      "key": "s6",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Special Offers and Patient Benefits",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Special Offers and Patient Benefits"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We welcome families eligible for the Child Dental Benefits Schedule, and our team can help confirm your child&#x27;s eligibility. Preferred provider arrangements with {{site:preferredFunds}}, together with on-the-spot HICAPS claiming, help keep family visits simple."
+        }
+      ]
+    },
+    {
+      "key": "s7",
+      "kind": "faq",
+      "before": "\n",
+      "label": "Questions and answers",
+      "pinned": false,
+      "template": "<section class=\"body-section section-alt\" id=\"faq\"><div class=\"container\"><div class=\"section-head center\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h2>{{f2}}</h2></div><div class=\"faq-list\"><div class=\"faq-item open\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"true\" aria-controls=\"faq1\"><span class=\"num\">1</span><span class=\"q\">{{f3}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq1\"><div><p>{{f4}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq2\"><span class=\"num\">2</span><span class=\"q\">{{f5}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq2\"><div><p>{{f6}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq3\"><span class=\"num\">3</span><span class=\"q\">{{f7}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq3\"><div><p>{{f8}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq4\"><span class=\"num\">4</span><span class=\"q\">{{f9}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq4\"><div><p>{{f10}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq5\"><span class=\"num\">5</span><span class=\"q\">{{f11}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq5\"><div><p>{{f12}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq6\"><span class=\"num\">6</span><span class=\"q\">{{f13}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq6\"><div><p>{{f14}}</p></div></div></div></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "FAQ"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "Frequently Asked Questions"
+        },
+        {
+          "id": "f3",
+          "label": "Question",
+          "type": "text",
+          "value": "At what age should my child first visit the dentist?",
+          "group": "1"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We suggest a first visit around their first birthday or when the first teeth appear, whichever comes first.",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Question",
+          "type": "text",
+          "value": "Can I book my children&#x27;s appointments together?",
+          "group": "2"
+        },
+        {
+          "id": "f6",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Where availability allows, we are happy to schedule siblings back to back. Let our team know when you call.",
+          "group": "2"
+        },
+        {
+          "id": "f7",
+          "label": "Question",
+          "type": "text",
+          "value": "Can I stay with my child during their appointment?",
+          "group": "3"
+        },
+        {
+          "id": "f8",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Yes. Parents and carers are welcome to stay with their child for the whole visit.",
+          "group": "3"
+        },
+        {
+          "id": "f9",
+          "label": "Question",
+          "type": "text",
+          "value": "Is Invisalign suitable for teenagers?",
+          "group": "4"
+        },
+        {
+          "id": "f10",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Many teenagers are suitable for clear aligners. We assess suitability at a consultation and explain the commitment involved.",
+          "group": "4"
+        },
+        {
+          "id": "f11",
+          "label": "Question",
+          "type": "text",
+          "value": "My child chipped a tooth at the park. What should I do?",
+          "group": "5"
+        },
+        {
+          "id": "f12",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Keep any broken pieces in milk, rinse your child&#x27;s mouth gently with water and call us as soon as possible.",
+          "group": "5"
+        },
+        {
+          "id": "f13",
+          "label": "Question",
+          "type": "text",
+          "value": "Is parking available for families?",
+          "group": "6"
+        },
+        {
+          "id": "f14",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Yes. Free on-site parking is available for patients during their appointment.",
+          "group": "6"
+        }
+      ]
+    },
+    {
+      "key": "s8",
+      "kind": "cta",
+      "before": "\n",
+      "shared": "cta",
+      "label": "Book Your Visit band"
+    },
+    {
+      "key": "s9",
+      "kind": "contact",
+      "before": "\n",
+      "shared": "contact",
+      "label": "Enquiry form and map"
+    }
+  ]
+}

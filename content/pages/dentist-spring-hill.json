@@ -1,0 +1,478 @@
+{
+  "key": "dentist-spring-hill",
+  "file": "dentist-spring-hill.html",
+  "url": "/dentist-spring-hill/",
+  "label": "Dentist for Spring Hill",
+  "group": "Suburb pages",
+  "seo": {
+    "title": "Dentist Spring Hill | Precision Dental Fortitude Valley",
+    "description": "Dentist near Spring Hill. Emergency appointments, lost fillings, check-ups and whitening at Precision Dental in Fortitude Valley. Late Tuesday hours.",
+    "ogImage": "",
+    "canonical": "",
+    "noindex": false
+  },
+  "lastmod": "2026-10-02",
+  "layout": {
+    "head": "std",
+    "pre": "std",
+    "post": "std",
+    "schema": "gen"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "breadcrumbs",
+      "before": "",
+      "label": "Breadcrumb trail",
+      "pinned": true,
+      "template": "<nav class=\"breadcrumbs\" aria-label=\"Breadcrumb\"><div class=\"container\"><ol><li><a href=\"{{f1}}\">{{f2}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><span aria-current=\"page\">{{f3}}</span></li></ol></div></nav>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1"
+        },
+        {
+          "id": "f2",
+          "label": "Link text",
+          "type": "text",
+          "value": "Home",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "List item",
+          "type": "text",
+          "value": "Dentist for Spring Hill"
+        }
+      ]
+    },
+    {
+      "key": "s2",
+      "kind": "header",
+      "before": "\n",
+      "label": "Page header: Dentist for Spring Hill",
+      "pinned": true,
+      "template": "<section class=\"page-hero\"><div class=\"container hero-up\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h1>{{f2}}</h1><p class=\"sub\">{{f3}}</p><p class=\"lede\">{{f4}}</p><div class=\"btn-group\"><a class=\"btn btn-dark\" href=\"{{site:booking}}\" target=\"_blank\" rel=\"noopener\" data-track=\"book\">{{f5}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a><a class=\"btn btn-white btn-plain\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{f6}}</a></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Local Dentist"
+        },
+        {
+          "id": "f2",
+          "label": "Main heading",
+          "type": "text",
+          "value": "Dentist for Spring Hill"
+        },
+        {
+          "id": "f3",
+          "label": "Line under the heading",
+          "type": "text",
+          "value": "Reliable Dental Care Close to the CBD"
+        },
+        {
+          "id": "f4",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "Living or working in Spring Hill puts you close to Precision Dental in Fortitude Valley. When a tooth needs attention or your next check-up is overdue, our team makes it straightforward to get in, get sorted and get back to your day."
+        },
+        {
+          "id": "f5",
+          "label": "Button text",
+          "type": "text",
+          "value": "Book Online"
+        },
+        {
+          "id": "f6",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        }
+      ]
+    },
+    {
+      "key": "s3",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "About Precision Dental",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<p>{{f3}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "About Precision Dental"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Spring Hill sits between the city and the Valley, and its mix of residents, office workers and students keeps life moving. We have built our practice around dependable, well-organised care: appointments we aim to keep on time, clear quotes and a team you can call when something goes wrong."
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Our patient coordinator helps with bookings, fund questions and reminders, so the practical side of dental care is taken off your plate. Read more About Precision Dental and our approach."
+        }
+      ]
+    },
+    {
+      "key": "s4",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Our Dental Services",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><h2>{{f1}}</h2><div class=\"svc-cards\"><a class=\"svc-card reveal\" href=\"{{f2}}\"><h3>{{f3}}</h3><p>{{f4}}</p><span class=\"explore\">{{f5}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f6}}\"><h3>{{f7}}</h3><p>{{f8}}</p><span class=\"explore\">{{f9}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f10}}\"><h3>{{f11}}</h3><p>{{f12}}</p><span class=\"explore\">{{f13}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f14}}\"><h3>{{f15}}</h3><p>{{f16}}</p><span class=\"explore\">{{f17}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Our Dental Services"
+        },
+        {
+          "id": "f2",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-emergency/"
+        },
+        {
+          "id": "f3",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Emergency Dentistry",
+          "group": "1"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "A lost filling, a sudden toothache or a chipped front tooth can be unsettling. Our Emergency Dentistry team sets aside appointments each day for problems like these and will do our best to see you the same day.",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Emergency Dentistry",
+          "group": "1"
+        },
+        {
+          "id": "f6",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/general-treatments/"
+        },
+        {
+          "id": "f7",
+          "label": "Subheading",
+          "type": "text",
+          "value": "General Dentistry",
+          "group": "2"
+        },
+        {
+          "id": "f8",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Keeping on top of routine care means fewer surprises. Our General Dentistry services include check-ups, cleans, fillings, gum care and assessment of wisdom teeth using a digital OPG.",
+          "group": "2"
+        },
+        {
+          "id": "f9",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore General Dentistry",
+          "group": "2"
+        },
+        {
+          "id": "f10",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/cosmetic-dentistry/"
+        },
+        {
+          "id": "f11",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Cosmetic Dentistry",
+          "group": "3"
+        },
+        {
+          "id": "f12",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "For a brighter smile, professional whitening is often a good first step. Veneers and clear aligners are also available through our Cosmetic Dentistry services.",
+          "group": "3"
+        },
+        {
+          "id": "f13",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Cosmetic Dentistry",
+          "group": "3"
+        },
+        {
+          "id": "f14",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/restorative-dentistry/"
+        },
+        {
+          "id": "f15",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Restorative Dentistry",
+          "group": "4"
+        },
+        {
+          "id": "f16",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Damaged teeth can often be repaired with tooth-coloured fillings or ceramic crowns, many of which we can make in a single visit.",
+          "group": "4"
+        },
+        {
+          "id": "f17",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Restorative Dentistry",
+          "group": "4"
+        }
+      ]
+    },
+    {
+      "key": "s5",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Why Spring Hill Patients Choose Precision Dental",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><h3>{{f2}}</h3>\n<p>{{f3}}</p>\n<h3>{{f4}}</h3>\n<p>{{f5}}</p>\n<h3>{{f6}}</h3>\n<p>{{f7}}</p>\n<h3>{{f8}}</h3>\n<p>{{f9}}</p>\n<h3>{{f10}}</h3>\n<p>{{f11}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Why Spring Hill Patients Choose Precision Dental"
+        },
+        {
+          "id": "f2",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Honesty"
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "You will know the expected cost of your care before we begin, and our team is happy to answer questions about your health fund."
+        },
+        {
+          "id": "f4",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Comfort"
+        },
+        {
+          "id": "f5",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We use local anaesthetic carefully, work gently and check in regularly, so urgent treatment feels as manageable as possible."
+        },
+        {
+          "id": "f6",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Quality"
+        },
+        {
+          "id": "f7",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Digital X-rays and DiagnoCam imaging help us pinpoint the cause of pain or sensitivity accurately."
+        },
+        {
+          "id": "f8",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Convenience"
+        },
+        {
+          "id": "f9",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Tuesday appointments run until 7pm, making it possible to visit after a full day in the city."
+        },
+        {
+          "id": "f10",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Safety"
+        },
+        {
+          "id": "f11",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Every treatment room is decontaminated between patients, and reusable instruments are sterilised in an autoclave."
+        }
+      ]
+    },
+    {
+      "key": "s6",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Special Offers and Patient Benefits",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Special Offers and Patient Benefits"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Health fund claims are processed at the front desk through HICAPS, and {{site:preferredFunds}} members benefit from our preferred provider arrangements. Explore our Prices and Payment Options for payment methods and plans."
+        }
+      ]
+    },
+    {
+      "key": "s7",
+      "kind": "faq",
+      "before": "\n",
+      "label": "Questions and answers",
+      "pinned": false,
+      "template": "<section class=\"body-section section-alt\" id=\"faq\"><div class=\"container\"><div class=\"section-head center\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h2>{{f2}}</h2></div><div class=\"faq-list\"><div class=\"faq-item open\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"true\" aria-controls=\"faq1\"><span class=\"num\">1</span><span class=\"q\">{{f3}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq1\"><div><p>{{f4}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq2\"><span class=\"num\">2</span><span class=\"q\">{{f5}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq2\"><div><p>{{f6}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq3\"><span class=\"num\">3</span><span class=\"q\">{{f7}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq3\"><div><p>{{f8}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq4\"><span class=\"num\">4</span><span class=\"q\">{{f9}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq4\"><div><p>{{f10}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq5\"><span class=\"num\">5</span><span class=\"q\">{{f11}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq5\"><div><p>{{f12}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq6\"><span class=\"num\">6</span><span class=\"q\">{{f13}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq6\"><div><p>{{f14}}</p></div></div></div></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "FAQ"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "Frequently Asked Questions"
+        },
+        {
+          "id": "f3",
+          "label": "Question",
+          "type": "text",
+          "value": "My filling fell out. How soon should I be seen?",
+          "group": "1"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Ideally within a day or two, or sooner if you have pain. Keep the area clean and avoid chewing on that side until your appointment.",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Question",
+          "type": "text",
+          "value": "What should I do about a toothache before my visit?",
+          "group": "2"
+        },
+        {
+          "id": "f6",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Rinse with warm water, floss gently around the tooth and take over-the-counter pain relief as directed if suitable. Call us for an appointment.",
+          "group": "2"
+        },
+        {
+          "id": "f7",
+          "label": "Question",
+          "type": "text",
+          "value": "Do I need my wisdom teeth out?",
+          "group": "3"
+        },
+        {
+          "id": "f8",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Not always. We assess their position with a digital OPG and advise whether monitoring or removal is more appropriate.",
+          "group": "3"
+        },
+        {
+          "id": "f9",
+          "label": "Question",
+          "type": "text",
+          "value": "Can I visit after work?",
+          "group": "4"
+        },
+        {
+          "id": "f10",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Yes. We are open until 7pm on Tuesdays, and our team can help find other suitable times.",
+          "group": "4"
+        },
+        {
+          "id": "f11",
+          "label": "Question",
+          "type": "text",
+          "value": "How much does an emergency visit cost?",
+          "group": "5"
+        },
+        {
+          "id": "f12",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "It depends on the examination, any imaging and the treatment required. We explain expected fees before we start.",
+          "group": "5"
+        },
+        {
+          "id": "f13",
+          "label": "Question",
+          "type": "text",
+          "value": "Can I claim my check-up on the spot?",
+          "group": "6"
+        },
+        {
+          "id": "f14",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Yes. We process most health fund claims at the time of your visit using HICAPS.",
+          "group": "6"
+        }
+      ]
+    },
+    {
+      "key": "s8",
+      "kind": "cta",
+      "before": "\n",
+      "shared": "cta",
+      "label": "Book Your Visit band"
+    },
+    {
+      "key": "s9",
+      "kind": "contact",
+      "before": "\n",
+      "shared": "contact",
+      "label": "Enquiry form and map"
+    }
+  ]
+}

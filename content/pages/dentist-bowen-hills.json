@@ -1,0 +1,478 @@
+{
+  "key": "dentist-bowen-hills",
+  "file": "dentist-bowen-hills.html",
+  "url": "/dentist-bowen-hills/",
+  "label": "Dentist for Bowen Hills",
+  "group": "Suburb pages",
+  "seo": {
+    "title": "Dentist Bowen Hills | Precision Dental Fortitude Valley",
+    "description": "Dentist near Bowen Hills. Precision Dental in Fortitude Valley offers check-ups, same-day CEREC crowns, emergency care and free on-site parking.",
+    "ogImage": "",
+    "canonical": "",
+    "noindex": false
+  },
+  "lastmod": "2026-10-09",
+  "layout": {
+    "head": "std",
+    "pre": "std",
+    "post": "std",
+    "schema": "gen"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "breadcrumbs",
+      "before": "",
+      "label": "Breadcrumb trail",
+      "pinned": true,
+      "template": "<nav class=\"breadcrumbs\" aria-label=\"Breadcrumb\"><div class=\"container\"><ol><li><a href=\"{{f1}}\">{{f2}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><span aria-current=\"page\">{{f3}}</span></li></ol></div></nav>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1"
+        },
+        {
+          "id": "f2",
+          "label": "Link text",
+          "type": "text",
+          "value": "Home",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "List item",
+          "type": "text",
+          "value": "Dentist for Bowen Hills"
+        }
+      ]
+    },
+    {
+      "key": "s2",
+      "kind": "header",
+      "before": "\n",
+      "label": "Page header: Dentist for Bowen Hills",
+      "pinned": true,
+      "template": "<section class=\"page-hero\"><div class=\"container hero-up\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h1>{{f2}}</h1><p class=\"sub\">{{f3}}</p><p class=\"lede\">{{f4}}</p><div class=\"btn-group\"><a class=\"btn btn-dark\" href=\"{{site:booking}}\" target=\"_blank\" rel=\"noopener\" data-track=\"book\">{{f5}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a><a class=\"btn btn-white btn-plain\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{f6}}</a></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Local Dentist"
+        },
+        {
+          "id": "f2",
+          "label": "Main heading",
+          "type": "text",
+          "value": "Dentist for Bowen Hills"
+        },
+        {
+          "id": "f3",
+          "label": "Line under the heading",
+          "type": "text",
+          "value": "Dental Care Next Door, Without the Parking Hassle"
+        },
+        {
+          "id": "f4",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "Bowen Hills sits right beside Fortitude Valley, which puts Precision Dental only a few streets from home or work for many locals. Our practice at HQ South Tower on Wickham Street offers general, cosmetic, restorative and emergency care, with free on-site parking for patients while they are with us."
+        },
+        {
+          "id": "f5",
+          "label": "Button text",
+          "type": "text",
+          "value": "Book Online"
+        },
+        {
+          "id": "f6",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        }
+      ]
+    },
+    {
+      "key": "s3",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "About Precision Dental",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<p>{{f3}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "About Precision Dental"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Bowen Hills blends office towers, apartment living and the busy Brisbane Showgrounds precinct, and our patients here tend to want care that is efficient without feeling rushed. We aim to keep appointments running to time, explain every finding in clear terms and make it simple to book a visit around your working week."
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Once you are settled in the chair, a ceiling-mounted screen and noise-cancelling headphones help the time pass comfortably. Our intra-oral camera lets you see your teeth on screen as we examine them, so you always understand what we are recommending and why. Learn more About Precision Dental and the principles that guide our team."
+        }
+      ]
+    },
+    {
+      "key": "s4",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Our Dental Services",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><h2>{{f1}}</h2><div class=\"svc-cards\"><a class=\"svc-card reveal\" href=\"{{f2}}\"><h3>{{f3}}</h3><p>{{f4}}</p><span class=\"explore\">{{f5}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f6}}\"><h3>{{f7}}</h3><p>{{f8}}</p><span class=\"explore\">{{f9}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f10}}\"><h3>{{f11}}</h3><p>{{f12}}</p><span class=\"explore\">{{f13}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f14}}\"><h3>{{f15}}</h3><p>{{f16}}</p><span class=\"explore\">{{f17}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Our Dental Services"
+        },
+        {
+          "id": "f2",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/general-treatments/"
+        },
+        {
+          "id": "f3",
+          "label": "Subheading",
+          "type": "text",
+          "value": "General Dentistry",
+          "group": "1"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "A thorough check-up and clean is the easiest way to stay ahead of decay and gum problems. For Bowen Hills patients, our General Dentistry services also include gum treatment, root canal therapy, extractions and custom night splints for people who clench under the pressure of a demanding job.",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore General Dentistry",
+          "group": "1"
+        },
+        {
+          "id": "f6",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/restorative-dentistry/"
+        },
+        {
+          "id": "f7",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Restorative Dentistry",
+          "group": "2"
+        },
+        {
+          "id": "f8",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "If a cracked tooth or old filling has been bothering you, our CEREC same-day crowns can often be designed, milled and fitted in one appointment, meaning fewer trips back and no temporary crown. We also provide fillings, bridges, implants and dentures.",
+          "group": "2"
+        },
+        {
+          "id": "f9",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Restorative Dentistry",
+          "group": "2"
+        },
+        {
+          "id": "f10",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-emergency/"
+        },
+        {
+          "id": "f11",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Emergency Dentistry",
+          "group": "3"
+        },
+        {
+          "id": "f12",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "A broken tooth or sudden toothache can derail a workday. Our Emergency Dentistry team holds time aside for urgent visits, and being so close to Bowen Hills means you can reach us quickly when it matters.",
+          "group": "3"
+        },
+        {
+          "id": "f13",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Emergency Dentistry",
+          "group": "3"
+        },
+        {
+          "id": "f14",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/cosmetic-dentistry/"
+        },
+        {
+          "id": "f15",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Cosmetic Dentistry",
+          "group": "4"
+        },
+        {
+          "id": "f16",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "From professional whitening to veneers and Invisalign clear aligners, our Cosmetic Dentistry options always start with an honest assessment of what suits your teeth and goals.",
+          "group": "4"
+        },
+        {
+          "id": "f17",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Cosmetic Dentistry",
+          "group": "4"
+        }
+      ]
+    },
+    {
+      "key": "s5",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Why Bowen Hills Patients Choose Precision Dental",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><h3>{{f2}}</h3>\n<p>{{f3}}</p>\n<h3>{{f4}}</h3>\n<p>{{f5}}</p>\n<h3>{{f6}}</h3>\n<p>{{f7}}</p>\n<h3>{{f8}}</h3>\n<p>{{f9}}</p>\n<h3>{{f10}}</h3>\n<p>{{f11}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Why Bowen Hills Patients Choose Precision Dental"
+        },
+        {
+          "id": "f2",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Honesty"
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "You will receive a written treatment plan and quote after your examination, and we never pressure anyone to go ahead. If monitoring a concern is a reasonable option, we will tell you."
+        },
+        {
+          "id": "f4",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Comfort"
+        },
+        {
+          "id": "f5",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "If you feel uneasy about dental visits, let us know. We can slow things down, pause whenever you need and offer happy gas to help you relax."
+        },
+        {
+          "id": "f6",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Quality"
+        },
+        {
+          "id": "f7",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Dr Billy Choi has practised dentistry in Brisbane for more than two decades and continues to attend postgraduate courses to keep his skills current."
+        },
+        {
+          "id": "f8",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Convenience"
+        },
+        {
+          "id": "f9",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Free parking on site, appointments from 8am on Fridays and until 7pm on Tuesdays, and on-the-spot HICAPS claims all help keep your visit short and simple."
+        },
+        {
+          "id": "f10",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Safety"
+        },
+        {
+          "id": "f11",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We are an accredited practice, assessed against the National Safety and Quality Health Service Standards."
+        }
+      ]
+    },
+    {
+      "key": "s6",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Special Offers and Patient Benefits",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Special Offers and Patient Benefits"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Precision Dental is a preferred provider for {{site:preferredFunds}}, and we accept most other major funds. Eligible patients can also spread treatment costs through DentiCare with no interest, subject to eligibility, terms and conditions. A deposit and a small set-up fee apply. See our Prices and Payment Options for full details."
+        }
+      ]
+    },
+    {
+      "key": "s7",
+      "kind": "faq",
+      "before": "\n",
+      "label": "Questions and answers",
+      "pinned": false,
+      "template": "<section class=\"body-section section-alt\" id=\"faq\"><div class=\"container\"><div class=\"section-head center\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h2>{{f2}}</h2></div><div class=\"faq-list\"><div class=\"faq-item open\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"true\" aria-controls=\"faq1\"><span class=\"num\">1</span><span class=\"q\">{{f3}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq1\"><div><p>{{f4}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq2\"><span class=\"num\">2</span><span class=\"q\">{{f5}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq2\"><div><p>{{f6}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq3\"><span class=\"num\">3</span><span class=\"q\">{{f7}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq3\"><div><p>{{f8}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq4\"><span class=\"num\">4</span><span class=\"q\">{{f9}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq4\"><div><p>{{f10}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq5\"><span class=\"num\">5</span><span class=\"q\">{{f11}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq5\"><div><p>{{f12}}</p></div></div></div><div class=\"faq-item\"><h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"faq6\"><span class=\"num\">6</span><span class=\"q\">{{f13}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3><div class=\"faq-a\" id=\"faq6\"><div><p>{{f14}}</p></div></div></div></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "FAQ"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "Frequently Asked Questions"
+        },
+        {
+          "id": "f3",
+          "label": "Question",
+          "type": "text",
+          "value": "How close is Precision Dental to Bowen Hills?",
+          "group": "1"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Bowen Hills borders Fortitude Valley, and our practice is at {{site:addressStreet}}. For many residents and workers, it is a short trip.",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Question",
+          "type": "text",
+          "value": "Can I park at the practice?",
+          "group": "2"
+        },
+        {
+          "id": "f6",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Yes. Patients can use free on-site parking at HQ South Tower for the length of their appointment.",
+          "group": "2"
+        },
+        {
+          "id": "f7",
+          "label": "Question",
+          "type": "text",
+          "value": "How long does a same-day crown appointment take?",
+          "group": "3"
+        },
+        {
+          "id": "f8",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "A CEREC crown visit usually takes a few hours, covering preparation, design, milling and fitting. We will give you an estimate when booking.",
+          "group": "3"
+        },
+        {
+          "id": "f9",
+          "label": "Question",
+          "type": "text",
+          "value": "I clench my teeth when I am stressed. What can you do?",
+          "group": "4"
+        },
+        {
+          "id": "f10",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We can check for signs of wear or cracks and, if appropriate, make a custom night splint from a digital scan of your teeth to help protect them.",
+          "group": "4"
+        },
+        {
+          "id": "f11",
+          "label": "Question",
+          "type": "text",
+          "value": "Can I book a check-up during my lunch break?",
+          "group": "5"
+        },
+        {
+          "id": "f12",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Many check-ups take between 30 and 60 minutes, depending on your needs. Call our team, and we will help find a time that fits your day.",
+          "group": "5"
+        },
+        {
+          "id": "f13",
+          "label": "Question",
+          "type": "text",
+          "value": "What happens if I need an urgent appointment?",
+          "group": "6"
+        },
+        {
+          "id": "f14",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Call us as early as possible. We set aside time for urgent care and will do our best to see you that day.",
+          "group": "6"
+        }
+      ]
+    },
+    {
+      "key": "s8",
+      "kind": "cta",
+      "before": "\n",
+      "shared": "cta",
+      "label": "Book Your Visit band"
+    },
+    {
+      "key": "s9",
+      "kind": "contact",
+      "before": "\n",
+      "shared": "contact",
+      "label": "Enquiry form and map"
+    }
+  ]
+}

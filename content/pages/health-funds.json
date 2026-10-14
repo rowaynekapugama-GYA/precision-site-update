@@ -1,0 +1,399 @@
+{
+  "key": "health-funds",
+  "file": "health-funds.html",
+  "url": "/health-funds/",
+  "label": "Health Funds and Government Schemes",
+  "group": "Main pages",
+  "seo": {
+    "title": "CDBS & DVA Dentist Fortitude Valley | Precision Dental",
+    "description": "Precision Dental in Fortitude Valley is a preferred provider for {{site:preferredFunds}}, and welcomes eligible CDBS families and DVA card holders.",
+    "ogImage": "",
+    "canonical": "",
+    "noindex": false
+  },
+  "lastmod": "2026-10-14",
+  "layout": {
+    "head": "std",
+    "pre": "std",
+    "post": "std",
+    "schema": "gen"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "breadcrumbs",
+      "before": "",
+      "label": "Breadcrumb trail",
+      "pinned": true,
+      "template": "<nav class=\"breadcrumbs\" aria-label=\"Breadcrumb\"><div class=\"container\"><ol><li><a href=\"{{f1}}\">{{f2}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><span aria-current=\"page\">{{f3}}</span></li></ol></div></nav>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1"
+        },
+        {
+          "id": "f2",
+          "label": "Link text",
+          "type": "text",
+          "value": "Home",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "List item",
+          "type": "text",
+          "value": "Health Funds and Government Schemes"
+        }
+      ]
+    },
+    {
+      "key": "s2",
+      "kind": "header",
+      "before": "\n",
+      "label": "Page header: Health Funds and Government Schemes",
+      "pinned": true,
+      "template": "<section class=\"page-hero\"><div class=\"container page-hero-grid\"><div class=\"hero-up\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h1>{{f2}}</h1><p class=\"sub\">{{f3}}</p><p class=\"lede\">{{f4}}</p><div class=\"btn-group\"><a class=\"btn btn-dark\" href=\"{{site:booking}}\" target=\"_blank\" rel=\"noopener\" data-track=\"book\">{{f5}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a><a class=\"btn btn-white btn-plain\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{f6}}</a></div></div><div class=\"page-hero-img hero-up d2\"><img src=\"{{f7}}\" alt=\"{{f8}}\" width=\"900\" height=\"675\"></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Patients"
+        },
+        {
+          "id": "f2",
+          "label": "Main heading",
+          "type": "text",
+          "value": "Health Funds and Government Schemes"
+        },
+        {
+          "id": "f3",
+          "label": "Line under the heading",
+          "type": "text",
+          "value": "Help With the Cost of Your Dental Care"
+        },
+        {
+          "id": "f4",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "Private health insurance, the Child Dental Benefits Schedule and the Department of Veterans&#x27; Affairs can each help with the cost of dental care. Here is how they work at Precision Dental. If you are not sure what applies to you, our team is happy to check."
+        },
+        {
+          "id": "f5",
+          "label": "Button text",
+          "type": "text",
+          "value": "Book Online"
+        },
+        {
+          "id": "f6",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        },
+        {
+          "id": "f7",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/front-desk.webp"
+        },
+        {
+          "id": "f8",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "The front desk at Precision Dental in Fortitude Valley"
+        }
+      ]
+    },
+    {
+      "key": "s3",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Private Health Funds",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\" id=\"private-health-funds\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<p>{{f3}}</p>{{site:hicapsLine}}</div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Private Health Funds"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Precision Dental is a preferred provider for {{site:preferredFunds}}. Members of these funds may receive higher rebates on eligible treatments, depending on their level of cover."
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Patients with other private health funds are welcome too, and can still claim according to their level of cover. If you would like help understanding your policy before treatment, please ask us."
+        }
+      ]
+    },
+    {
+      "key": "s4",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Child Dental Benefits Schedule (CDBS)",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\" id=\"cdbs\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<h3>{{f3}}</h3>\n<p>{{f4}}</p>\n<ul class=\"check-list\"><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f5}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f6}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f7}}</span></li></ul>\n<h3>{{f8}}</h3>\n<p>{{f9}}</p>\n<ul class=\"check-list\"><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f10}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f11}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f12}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f13}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f14}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f15}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f16}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f17}}</span></li></ul>\n<h3>{{f18}}</h3>\n<ul><li>{{f19}}</li><li>{{f20}}</li><li>{{f21}}</li></ul>\n<h3>{{f22}}</h3>\n<p>{{f23}}</p>{{site:cdbsBulkBillLine}}\n<p class=\"scheme-note\">{{f24}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Child Dental Benefits Schedule (CDBS)"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "The Child Dental Benefits Schedule is an Australian Government program that helps eligible families with the cost of basic dental care for their children."
+        },
+        {
+          "id": "f3",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Who is eligible"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "A child can use the CDBS if they are:"
+        },
+        {
+          "id": "f5",
+          "label": "List item",
+          "type": "text",
+          "value": "Aged 0 to 17 for at least one day of the calendar year"
+        },
+        {
+          "id": "f6",
+          "label": "List item",
+          "type": "text",
+          "value": "Eligible for Medicare"
+        },
+        {
+          "id": "f7",
+          "label": "List item",
+          "type": "text",
+          "value": "Receiving an eligible Australian Government payment, or with a parent or guardian who receives Family Tax Benefit Part A or another eligible payment"
+        },
+        {
+          "id": "f8",
+          "label": "Subheading",
+          "type": "text",
+          "value": "What the benefit covers"
+        },
+        {
+          "id": "f9",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Eligible children can receive up to $1,158 in benefits over two consecutive calendar years, for children whose two-year period starts in 2026. The cap is indexed each year, and eligibility is set by Services Australia. The CDBS covers basic dental services, including:"
+        },
+        {
+          "id": "f10",
+          "label": "List item",
+          "type": "text",
+          "value": "Check-ups"
+        },
+        {
+          "id": "f11",
+          "label": "List item",
+          "type": "text",
+          "value": "X-rays"
+        },
+        {
+          "id": "f12",
+          "label": "List item",
+          "type": "text",
+          "value": "Cleans"
+        },
+        {
+          "id": "f13",
+          "label": "List item",
+          "type": "text",
+          "value": "Fissure sealants"
+        },
+        {
+          "id": "f14",
+          "label": "List item",
+          "type": "text",
+          "value": "Fillings"
+        },
+        {
+          "id": "f15",
+          "label": "List item",
+          "type": "text",
+          "value": "Root canals"
+        },
+        {
+          "id": "f16",
+          "label": "List item",
+          "type": "text",
+          "value": "Extractions"
+        },
+        {
+          "id": "f17",
+          "label": "List item",
+          "type": "text",
+          "value": "Partial dentures"
+        },
+        {
+          "id": "f18",
+          "label": "Subheading",
+          "type": "text",
+          "value": "What it does not cover"
+        },
+        {
+          "id": "f19",
+          "label": "List item",
+          "type": "text",
+          "value": "Orthodontics, such as braces"
+        },
+        {
+          "id": "f20",
+          "label": "List item",
+          "type": "text",
+          "value": "Cosmetic dentistry"
+        },
+        {
+          "id": "f21",
+          "label": "List item",
+          "type": "text",
+          "value": "Dental treatment in hospital"
+        },
+        {
+          "id": "f22",
+          "label": "Subheading",
+          "type": "text",
+          "value": "How to access it"
+        },
+        {
+          "id": "f23",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "You can check your child&#x27;s eligibility through your Medicare online account in myGov, or with Services Australia. Please bring your child&#x27;s Medicare card to the appointment, and our team will confirm their eligibility and remaining balance before treatment begins."
+        },
+        {
+          "id": "f24",
+          "label": "Note",
+          "type": "text",
+          "value": "Benefit amounts and eligibility are set by the Australian Government and may change. Please contact us or Services Australia to confirm your child&#x27;s eligibility."
+        }
+      ]
+    },
+    {
+      "key": "s5",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Department of Veterans' Affairs (DVA)",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\" id=\"dva\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<h3>{{f3}}</h3>\n<p>{{f4}}</p>\n<h3>{{f5}}</h3>\n<p>{{f6}}</p>\n<h3>{{f7}}</h3>\n<p>{{f8}}</p>{{site:dvaBillingLine}}</div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Department of Veterans&#x27; Affairs (DVA)"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Precision Dental sees eligible Department of Veterans&#x27; Affairs patients."
+        },
+        {
+          "id": "f3",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Gold Card"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Gold Card holders are eligible for clinically necessary dental care under the DVA fee schedule. Some treatments may need prior approval from DVA."
+        },
+        {
+          "id": "f5",
+          "label": "Subheading",
+          "type": "text",
+          "value": "White Card"
+        },
+        {
+          "id": "f6",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "White Card holders are eligible for dental treatment for accepted service-related conditions."
+        },
+        {
+          "id": "f7",
+          "label": "Subheading",
+          "type": "text",
+          "value": "At your appointment"
+        },
+        {
+          "id": "f8",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Please bring your DVA card to every appointment. If you have any questions about what your card covers, contact our team before your visit."
+        }
+      ]
+    },
+    {
+      "key": "s6",
+      "kind": "content",
+      "before": "\n",
+      "label": "Not sure if you are eligible?",
+      "pinned": false,
+      "template": "<section class=\"scheme-cta\"><div class=\"container\"><div class=\"scheme-cta-card reveal\"><div><h2>{{f1}}</h2><p>{{f2}}</p></div><div class=\"btn-group\"><a class=\"btn btn-dark\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{f3}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a><a class=\"btn btn-white btn-plain\" href=\"{{site:booking}}\" target=\"_blank\" rel=\"noopener\" data-track=\"book\">{{f4}}</a></div></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Not sure if you&#x27;re eligible?"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Call us on {{site:phone}} and our team will check for you."
+        },
+        {
+          "id": "f3",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        },
+        {
+          "id": "f4",
+          "label": "Button text",
+          "type": "text",
+          "value": "Book Online"
+        }
+      ]
+    },
+    {
+      "key": "s7",
+      "kind": "cta",
+      "before": "\n",
+      "shared": "cta",
+      "label": "Book Your Visit band"
+    }
+  ]
+}

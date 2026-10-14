@@ -1,0 +1,107 @@
+{
+  "key": "disclaimer",
+  "file": "disclaimer.html",
+  "url": "/disclaimer/",
+  "label": "Disclaimer",
+  "group": "Legal and practice information",
+  "seo": {
+    "title": "Disclaimer | Precision Dental Fortitude Valley",
+    "description": "Terms on which the information published on the Precision Dental website is provided.",
+    "ogImage": "",
+    "canonical": "",
+    "noindex": false
+  },
+  "lastmod": "2026-10-02",
+  "layout": {
+    "head": "std",
+    "pre": "std",
+    "post": "std",
+    "schema": "gen"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "breadcrumbs",
+      "before": "",
+      "label": "Breadcrumb trail",
+      "pinned": true,
+      "template": "<nav class=\"breadcrumbs\" aria-label=\"Breadcrumb\"><div class=\"container\"><ol><li><a href=\"{{f1}}\">{{f2}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><span aria-current=\"page\">{{f3}}</span></li></ol></div></nav>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1"
+        },
+        {
+          "id": "f2",
+          "label": "Link text",
+          "type": "text",
+          "value": "Home",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "List item",
+          "type": "text",
+          "value": "Disclaimer"
+        }
+      ]
+    },
+    {
+      "key": "s2",
+      "kind": "header",
+      "before": "",
+      "label": "Page header: Disclaimer",
+      "pinned": true,
+      "template": "<section class=\"page-hero\"><div class=\"container hero-up\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h1>{{f2}}</h1></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Legal"
+        },
+        {
+          "id": "f2",
+          "label": "Main heading",
+          "type": "text",
+          "value": "Disclaimer"
+        }
+      ]
+    },
+    {
+      "key": "s3",
+      "kind": "content",
+      "before": "",
+      "altAuto": true,
+      "alt": false,
+      "label": "Section 3",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><div class=\"placeholder-note\">{{f1}}</div><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Text",
+          "type": "rich",
+          "value": "<strong>For GYA, this page is a placeholder.</strong> This page needs the practice’s own website disclaimer. The general information disclaimer that appears at the foot of each treatment page is already in place and is separate from this."
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "rich",
+          "value": "The content for this page is being finalised. For anything urgent, please call us on <a href=\"tel:{{site:phoneTel}}\">{{site:phone}}</a>."
+        }
+      ]
+    },
+    {
+      "key": "s4",
+      "kind": "cta",
+      "before": "",
+      "shared": "cta",
+      "label": "Book Your Visit band"
+    }
+  ]
+}

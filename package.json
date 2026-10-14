@@ -1,0 +1,59 @@
+{
+  "name": "precision-dental-site",
+  "version": "3.1.0",
+  "description": "Precision Dental website (static) with the GYA client dashboard at /admin.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "build": "node scripts/build.mjs",
+    "build:next": "cross-env NODE_OPTIONS=--no-deprecation next build",
+    "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
+    "render": "tsx scripts/render-site.ts",
+    "pull": "tsx scripts/pull-content.ts",
+    "seed": "tsx scripts/seed.ts",
+    "seed:admin": "tsx scripts/seed-admin.ts",
+    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "migrate": "cross-env NODE_OPTIONS=--no-deprecation payload migrate",
+    "migrate:create": "cross-env NODE_OPTIONS=--no-deprecation payload migrate:create",
+    "typecheck": "tsc --noEmit",
+    "qa:parity": "tsx scripts/qa/parity.ts",
+    "qa:banned": "node scripts/qa/banned.mjs",
+    "qa:secrets": "node scripts/qa/secrets.mjs"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "6.3.1",
+    "@dnd-kit/sortable": "10.0.0",
+    "@dnd-kit/utilities": "3.2.2",
+    "@payloadcms/db-postgres": "3.90.2",
+    "@payloadcms/next": "3.90.2",
+    "@payloadcms/storage-vercel-blob": "3.90.2",
+    "@payloadcms/ui": "3.90.2",
+    "@tiptap/core": "2.27.3",
+    "@tiptap/extension-image": "2.27.3",
+    "@tiptap/extension-link": "2.27.3",
+    "@tiptap/extension-placeholder": "2.27.3",
+    "@tiptap/pm": "2.27.3",
+    "@tiptap/react": "2.27.3",
+    "@tiptap/starter-kit": "2.27.3",
+    "cross-env": "^7.0.3",
+    "graphql": "^16.8.1",
+    "next": "15.4.11",
+    "payload": "3.90.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "sanitize-html": "2.14.0",
+    "sharp": "0.34.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.0",
+    "@types/sanitize-html": "2.13.0",
+    "tsx": "^4.19.2",
+    "typescript": "5.7.3"
+  }
+}

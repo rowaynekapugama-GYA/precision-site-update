@@ -1,0 +1,912 @@
+{
+  "key": "sitemap",
+  "file": "sitemap.html",
+  "url": "/sitemap/",
+  "label": "Sitemap",
+  "group": "Legal and practice information",
+  "seo": {
+    "title": "Sitemap | Precision Dental Fortitude Valley",
+    "description": "Every page on the Precision Dental website, Fortitude Valley Brisbane.",
+    "ogImage": "",
+    "canonical": "",
+    "noindex": false
+  },
+  "lastmod": "2026-10-14",
+  "layout": {
+    "head": "std",
+    "pre": "std",
+    "post": "std",
+    "schema": "gen"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "breadcrumbs",
+      "before": "",
+      "label": "Breadcrumb trail",
+      "pinned": true,
+      "template": "<nav class=\"breadcrumbs\" aria-label=\"Breadcrumb\"><div class=\"container\"><ol><li><a href=\"{{f1}}\">{{f2}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><span aria-current=\"page\">{{f3}}</span></li></ol></div></nav>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1"
+        },
+        {
+          "id": "f2",
+          "label": "Link text",
+          "type": "text",
+          "value": "Home",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "List item",
+          "type": "text",
+          "value": "Sitemap"
+        }
+      ]
+    },
+    {
+      "key": "s2",
+      "kind": "header",
+      "before": "",
+      "label": "Page header: Sitemap",
+      "pinned": true,
+      "template": "<section class=\"page-hero\"><div class=\"container hero-up\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h1>{{f2}}</h1><p class=\"lede\">{{f3}}</p></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Sitemap"
+        },
+        {
+          "id": "f2",
+          "label": "Main heading",
+          "type": "text",
+          "value": "Sitemap"
+        },
+        {
+          "id": "f3",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "Every page on the Precision Dental website."
+        }
+      ]
+    },
+    {
+      "key": "s3",
+      "kind": "content",
+      "before": "",
+      "altAuto": true,
+      "alt": false,
+      "generated": "sitemapArticles",
+      "label": "Practice",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><div class=\"sitemap-cols\"><div><h3>{{f1}}</h3><ul><li><a href=\"{{f2}}\">{{f3}}</a></li><li><a href=\"{{f4}}\">{{f5}}</a></li><li><a href=\"{{f6}}\">{{f7}}</a></li><li><a href=\"{{f8}}\">{{f9}}</a></li><li><a href=\"{{f10}}\">{{f11}}</a></li><li><a href=\"{{f12}}\">{{f13}}</a></li><li><a href=\"{{f14}}\">{{f15}}</a></li><li><a href=\"{{f16}}\">{{f17}}</a></li><li><a href=\"{{f18}}\">{{f19}}</a></li><li><a href=\"{{f20}}\">{{f21}}</a></li><li><a href=\"{{f22}}\">{{f23}}</a></li><li><a href=\"{{f114}}\">{{f115}}</a></li><li><a href=\"{{f116}}\">{{f117}}</a></li><li><a href=\"{{f24}}\">{{f25}}</a></li></ul></div><div><h3>{{f26}}</h3><ul><li><a href=\"{{f27}}\">{{f28}}</a></li><li><a href=\"{{f29}}\">{{f30}}</a></li><li><a href=\"{{f31}}\">{{f32}}</a></li><li><a href=\"{{f33}}\">{{f34}}</a></li><li><a href=\"{{f35}}\">{{f36}}</a></li><li><a href=\"{{f37}}\">{{f38}}</a></li><li><a href=\"{{f39}}\">{{f40}}</a></li><li><a href=\"{{f41}}\">{{f42}}</a></li><li><a href=\"{{f43}}\">{{f44}}</a></li><li><a href=\"{{f45}}\">{{f46}}</a></li><li><a href=\"{{f47}}\">{{f48}}</a></li><li><a href=\"{{f49}}\">{{f50}}</a></li><li><a href=\"{{f51}}\">{{f52}}</a></li><li><a href=\"{{f53}}\">{{f54}}</a></li><li><a href=\"{{f55}}\">{{f56}}</a></li><li><a href=\"{{f57}}\">{{f58}}</a></li><li><a href=\"{{f59}}\">{{f60}}</a></li><li><a href=\"{{f61}}\">{{f62}}</a></li><li><a href=\"{{f63}}\">{{f64}}</a></li><li><a href=\"{{f65}}\">{{f66}}</a></li><li><a href=\"{{f67}}\">{{f68}}</a></li><li><a href=\"{{f69}}\">{{f70}}</a></li><li><a href=\"{{f71}}\">{{f72}}</a></li><li><a href=\"{{f73}}\">{{f74}}</a></li><li><a href=\"{{f75}}\">{{f76}}</a></li><li><a href=\"{{f77}}\">{{f78}}</a></li><li><a href=\"{{f79}}\">{{f80}}</a></li><li><a href=\"{{f81}}\">{{f82}}</a></li><li><a href=\"{{f83}}\">{{f84}}</a></li><li><a href=\"{{f85}}\">{{f86}}</a></li><li><a href=\"{{f87}}\">{{f88}}</a></li><li><a href=\"{{f89}}\">{{f90}}</a></li></ul></div><div><h3>{{f91}}</h3><ul><li><a href=\"{{f92}}\">{{f93}}</a></li><li><a href=\"{{f94}}\">{{f95}}</a></li><li><a href=\"{{f96}}\">{{f97}}</a></li><li><a href=\"{{f98}}\">{{f99}}</a></li><li><a href=\"{{f100}}\">{{f101}}</a></li><li><a href=\"{{f102}}\">{{f103}}</a></li><li><a href=\"{{f104}}\">{{f105}}</a></li></ul></div>{{f106}}<div><h3>{{f107}}</h3><ul><li><a href=\"{{f108}}\">{{f109}}</a></li><li><a href=\"{{f110}}\">{{f111}}</a></li><li><a href=\"{{f112}}\">{{f113}}</a></li></ul></div></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Practice"
+        },
+        {
+          "id": "f2",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1.1"
+        },
+        {
+          "id": "f3",
+          "label": "Link text",
+          "type": "text",
+          "value": "Home",
+          "group": "1.1"
+        },
+        {
+          "id": "f4",
+          "label": "Link address",
+          "type": "link",
+          "value": "/about-us/",
+          "group": "1.2"
+        },
+        {
+          "id": "f5",
+          "label": "Link text",
+          "type": "text",
+          "value": "About Us",
+          "group": "1.2"
+        },
+        {
+          "id": "f6",
+          "label": "Link address",
+          "type": "link",
+          "value": "/accreditation/",
+          "group": "1.3"
+        },
+        {
+          "id": "f7",
+          "label": "Link text",
+          "type": "text",
+          "value": "Accreditation",
+          "group": "1.3"
+        },
+        {
+          "id": "f8",
+          "label": "Link address",
+          "type": "link",
+          "value": "/blog/",
+          "group": "1.4"
+        },
+        {
+          "id": "f9",
+          "label": "Link text",
+          "type": "text",
+          "value": "Dental Articles and Videos",
+          "group": "1.4"
+        },
+        {
+          "id": "f10",
+          "label": "Link address",
+          "type": "link",
+          "value": "/contact/",
+          "group": "1.5"
+        },
+        {
+          "id": "f11",
+          "label": "Link text",
+          "type": "text",
+          "value": "Contact Precision Dental",
+          "group": "1.5"
+        },
+        {
+          "id": "f12",
+          "label": "Link address",
+          "type": "link",
+          "value": "/dental-technology/",
+          "group": "1.6"
+        },
+        {
+          "id": "f13",
+          "label": "Link text",
+          "type": "text",
+          "value": "Dental Technology at Precision Dental",
+          "group": "1.6"
+        },
+        {
+          "id": "f14",
+          "label": "Link address",
+          "type": "link",
+          "value": "/exceptional-infection-control/",
+          "group": "1.7"
+        },
+        {
+          "id": "f15",
+          "label": "Link text",
+          "type": "text",
+          "value": "Infection Prevention and Control",
+          "group": "1.7"
+        },
+        {
+          "id": "f16",
+          "label": "Link address",
+          "type": "link",
+          "value": "/invisalign-smileview-fortitude-valley/",
+          "group": "1.8"
+        },
+        {
+          "id": "f17",
+          "label": "Link text",
+          "type": "text",
+          "value": "Invisalign SmileView™",
+          "group": "1.8"
+        },
+        {
+          "id": "f18",
+          "label": "Link address",
+          "type": "link",
+          "value": "/our-team/",
+          "group": "1.9"
+        },
+        {
+          "id": "f19",
+          "label": "Link text",
+          "type": "text",
+          "value": "Meet the Team",
+          "group": "1.9"
+        },
+        {
+          "id": "f20",
+          "label": "Link address",
+          "type": "link",
+          "value": "/our-team/dentist-fortitude-valley-dr-billy-choi/",
+          "group": "1.10"
+        },
+        {
+          "id": "f21",
+          "label": "Link text",
+          "type": "text",
+          "value": "Dr Billy Choi",
+          "group": "1.10"
+        },
+        {
+          "id": "f22",
+          "label": "Link address",
+          "type": "link",
+          "value": "/price-list/",
+          "group": "1.11"
+        },
+        {
+          "id": "f23",
+          "label": "Link text",
+          "type": "text",
+          "value": "Prices and Payment Options",
+          "group": "1.11"
+        },
+        {
+          "id": "f24",
+          "label": "Link address",
+          "type": "link",
+          "value": "/smile-gallery/",
+          "group": "1.12"
+        },
+        {
+          "id": "f25",
+          "label": "Link text",
+          "type": "text",
+          "value": "Smile Gallery",
+          "group": "1.12"
+        },
+        {
+          "id": "f26",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Services"
+        },
+        {
+          "id": "f27",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/anxious-patients/",
+          "group": "2.1"
+        },
+        {
+          "id": "f28",
+          "label": "Link text",
+          "type": "text",
+          "value": "Anxious Patients",
+          "group": "2.1"
+        },
+        {
+          "id": "f29",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/broken-tooth/",
+          "group": "2.2"
+        },
+        {
+          "id": "f30",
+          "label": "Link text",
+          "type": "text",
+          "value": "Broken Tooth",
+          "group": "2.2"
+        },
+        {
+          "id": "f31",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/cerec/",
+          "group": "2.3"
+        },
+        {
+          "id": "f32",
+          "label": "Link text",
+          "type": "text",
+          "value": "CEREC Same-Day Crowns",
+          "group": "2.3"
+        },
+        {
+          "id": "f33",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/childrens-dental-emergencies-fortitude-valley/",
+          "group": "2.4"
+        },
+        {
+          "id": "f34",
+          "label": "Link text",
+          "type": "text",
+          "value": "Children&#x27;s Dental Emergencies",
+          "group": "2.4"
+        },
+        {
+          "id": "f35",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/childrens-dentistry/",
+          "group": "2.5"
+        },
+        {
+          "id": "f36",
+          "label": "Link text",
+          "type": "text",
+          "value": "Children&#x27;s Dentistry",
+          "group": "2.5"
+        },
+        {
+          "id": "f37",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/composite-resin-veneers/",
+          "group": "2.6"
+        },
+        {
+          "id": "f38",
+          "label": "Link text",
+          "type": "text",
+          "value": "Composite Resin Veneers",
+          "group": "2.6"
+        },
+        {
+          "id": "f39",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/cosmetic-dentistry/",
+          "group": "2.7"
+        },
+        {
+          "id": "f40",
+          "label": "Link text",
+          "type": "text",
+          "value": "Cosmetic Dentistry in Fortitude Valley",
+          "group": "2.7"
+        },
+        {
+          "id": "f41",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-abscess/",
+          "group": "2.8"
+        },
+        {
+          "id": "f42",
+          "label": "Link text",
+          "type": "text",
+          "value": "Dental Abscess",
+          "group": "2.8"
+        },
+        {
+          "id": "f43",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-check-up-and-clean/",
+          "group": "2.9"
+        },
+        {
+          "id": "f44",
+          "label": "Link text",
+          "type": "text",
+          "value": "Dental Check-Up and Clean",
+          "group": "2.9"
+        },
+        {
+          "id": "f45",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-crowns-and-bridges/",
+          "group": "2.10"
+        },
+        {
+          "id": "f46",
+          "label": "Link text",
+          "type": "text",
+          "value": "Dental Crowns and Bridges",
+          "group": "2.10"
+        },
+        {
+          "id": "f47",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-emergency/",
+          "group": "2.11"
+        },
+        {
+          "id": "f48",
+          "label": "Link text",
+          "type": "text",
+          "value": "Emergency Dentist in Fortitude Valley",
+          "group": "2.11"
+        },
+        {
+          "id": "f49",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-implants/",
+          "group": "2.12"
+        },
+        {
+          "id": "f50",
+          "label": "Link text",
+          "type": "text",
+          "value": "Dental Implants",
+          "group": "2.12"
+        },
+        {
+          "id": "f51",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dentures/",
+          "group": "2.13"
+        },
+        {
+          "id": "f52",
+          "label": "Link text",
+          "type": "text",
+          "value": "Dentures",
+          "group": "2.13"
+        },
+        {
+          "id": "f53",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/general-treatments/",
+          "group": "2.14"
+        },
+        {
+          "id": "f54",
+          "label": "Link text",
+          "type": "text",
+          "value": "General Dentistry in Fortitude Valley",
+          "group": "2.14"
+        },
+        {
+          "id": "f55",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/grinding-and-clenching/",
+          "group": "2.15"
+        },
+        {
+          "id": "f56",
+          "label": "Link text",
+          "type": "text",
+          "value": "Grinding and Clenching",
+          "group": "2.15"
+        },
+        {
+          "id": "f57",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/gum-and-periodontal-treatment/",
+          "group": "2.16"
+        },
+        {
+          "id": "f58",
+          "label": "Link text",
+          "type": "text",
+          "value": "Gum and Periodontal Treatment",
+          "group": "2.16"
+        },
+        {
+          "id": "f59",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/invisalign/",
+          "group": "2.17"
+        },
+        {
+          "id": "f60",
+          "label": "Link text",
+          "type": "text",
+          "value": "Invisalign®",
+          "group": "2.17"
+        },
+        {
+          "id": "f61",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/knocked-out-tooth/",
+          "group": "2.18"
+        },
+        {
+          "id": "f62",
+          "label": "Link text",
+          "type": "text",
+          "value": "Knocked-Out Tooth",
+          "group": "2.18"
+        },
+        {
+          "id": "f63",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/lost-dental-crown-or-inlay-onlay/",
+          "group": "2.19"
+        },
+        {
+          "id": "f64",
+          "label": "Link text",
+          "type": "text",
+          "value": "Lost Crown, Inlay or Onlay",
+          "group": "2.19"
+        },
+        {
+          "id": "f65",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/lost-tooth-fillings/",
+          "group": "2.20"
+        },
+        {
+          "id": "f66",
+          "label": "Link text",
+          "type": "text",
+          "value": "Lost Filling",
+          "group": "2.20"
+        },
+        {
+          "id": "f67",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/mouthguards-fortitude-valley/",
+          "group": "2.21"
+        },
+        {
+          "id": "f68",
+          "label": "Link text",
+          "type": "text",
+          "value": "Mouthguards",
+          "group": "2.21"
+        },
+        {
+          "id": "f69",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/porcelain-veneers/",
+          "group": "2.22"
+        },
+        {
+          "id": "f70",
+          "label": "Link text",
+          "type": "text",
+          "value": "Porcelain Veneers",
+          "group": "2.22"
+        },
+        {
+          "id": "f71",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/preventive-care-for-adults/",
+          "group": "2.23"
+        },
+        {
+          "id": "f72",
+          "label": "Link text",
+          "type": "text",
+          "value": "Preventive Care for Adults",
+          "group": "2.23"
+        },
+        {
+          "id": "f73",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/preventive-care-for-young-adults/",
+          "group": "2.24"
+        },
+        {
+          "id": "f74",
+          "label": "Link text",
+          "type": "text",
+          "value": "Preventive Care for Young Adults",
+          "group": "2.24"
+        },
+        {
+          "id": "f75",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/restorative-dentistry/",
+          "group": "2.25"
+        },
+        {
+          "id": "f76",
+          "label": "Link text",
+          "type": "text",
+          "value": "Restorative Dentistry in Fortitude Valley",
+          "group": "2.25"
+        },
+        {
+          "id": "f77",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/root-canal-therapy/",
+          "group": "2.26"
+        },
+        {
+          "id": "f78",
+          "label": "Link text",
+          "type": "text",
+          "value": "Root Canal Therapy",
+          "group": "2.26"
+        },
+        {
+          "id": "f79",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/soft-tissue-injuries-in-the-mouth/",
+          "group": "2.27"
+        },
+        {
+          "id": "f80",
+          "label": "Link text",
+          "type": "text",
+          "value": "Soft Tissue Injuries",
+          "group": "2.27"
+        },
+        {
+          "id": "f81",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/teeth-whitening/",
+          "group": "2.28"
+        },
+        {
+          "id": "f82",
+          "label": "Link text",
+          "type": "text",
+          "value": "Teeth Whitening",
+          "group": "2.28"
+        },
+        {
+          "id": "f83",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/tooth-extraction/",
+          "group": "2.29"
+        },
+        {
+          "id": "f84",
+          "label": "Link text",
+          "type": "text",
+          "value": "Tooth Extraction",
+          "group": "2.29"
+        },
+        {
+          "id": "f85",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/toothache-or-dental-pain/",
+          "group": "2.30"
+        },
+        {
+          "id": "f86",
+          "label": "Link text",
+          "type": "text",
+          "value": "Toothache or Dental Pain",
+          "group": "2.30"
+        },
+        {
+          "id": "f87",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/white-tooth-filling-restorations/",
+          "group": "2.31"
+        },
+        {
+          "id": "f88",
+          "label": "Link text",
+          "type": "text",
+          "value": "White Tooth Fillings",
+          "group": "2.31"
+        },
+        {
+          "id": "f89",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/wisdom-teeth-solution/",
+          "group": "2.32"
+        },
+        {
+          "id": "f90",
+          "label": "Link text",
+          "type": "text",
+          "value": "Wisdom Teeth",
+          "group": "2.32"
+        },
+        {
+          "id": "f91",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Areas We Serve"
+        },
+        {
+          "id": "f92",
+          "label": "Link address",
+          "type": "link",
+          "value": "/dentist-bowen-hills/",
+          "group": "3.1"
+        },
+        {
+          "id": "f93",
+          "label": "Link text",
+          "type": "text",
+          "value": "Dentist for Bowen Hills",
+          "group": "3.1"
+        },
+        {
+          "id": "f94",
+          "label": "Link address",
+          "type": "link",
+          "value": "/dentist-hamilton/",
+          "group": "3.2"
+        },
+        {
+          "id": "f95",
+          "label": "Link text",
+          "type": "text",
+          "value": "Dentist for Hamilton",
+          "group": "3.2"
+        },
+        {
+          "id": "f96",
+          "label": "Link address",
+          "type": "link",
+          "value": "/dentist-herston/",
+          "group": "3.3"
+        },
+        {
+          "id": "f97",
+          "label": "Link text",
+          "type": "text",
+          "value": "Dentist for Herston",
+          "group": "3.3"
+        },
+        {
+          "id": "f98",
+          "label": "Link address",
+          "type": "link",
+          "value": "/dentist-new-farm/",
+          "group": "3.4"
+        },
+        {
+          "id": "f99",
+          "label": "Link text",
+          "type": "text",
+          "value": "Dentist for New Farm",
+          "group": "3.4"
+        },
+        {
+          "id": "f100",
+          "label": "Link address",
+          "type": "link",
+          "value": "/dentist-newstead/",
+          "group": "3.5"
+        },
+        {
+          "id": "f101",
+          "label": "Link text",
+          "type": "text",
+          "value": "Dentist for Newstead",
+          "group": "3.5"
+        },
+        {
+          "id": "f102",
+          "label": "Link address",
+          "type": "link",
+          "value": "/dentist-spring-hill/",
+          "group": "3.6"
+        },
+        {
+          "id": "f103",
+          "label": "Link text",
+          "type": "text",
+          "value": "Dentist for Spring Hill",
+          "group": "3.6"
+        },
+        {
+          "id": "f104",
+          "label": "Link address",
+          "type": "link",
+          "value": "/dentist-teneriffe/",
+          "group": "3.7"
+        },
+        {
+          "id": "f105",
+          "label": "Link text",
+          "type": "text",
+          "value": "Dentist for Teneriffe",
+          "group": "3.7"
+        },
+        {
+          "id": "f106",
+          "label": "Text",
+          "type": "text",
+          "value": "{{gen:sitemapArticles}}"
+        },
+        {
+          "id": "f107",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Legal"
+        },
+        {
+          "id": "f108",
+          "label": "Link address",
+          "type": "link",
+          "value": "/disclaimer/",
+          "group": "4.1"
+        },
+        {
+          "id": "f109",
+          "label": "Link text",
+          "type": "text",
+          "value": "Disclaimer",
+          "group": "4.1"
+        },
+        {
+          "id": "f110",
+          "label": "Link address",
+          "type": "link",
+          "value": "/privacy-policy/",
+          "group": "4.2"
+        },
+        {
+          "id": "f111",
+          "label": "Link text",
+          "type": "text",
+          "value": "Privacy Policy",
+          "group": "4.2"
+        },
+        {
+          "id": "f112",
+          "label": "Link address",
+          "type": "link",
+          "value": "/treatment-risks/",
+          "group": "4.3"
+        },
+        {
+          "id": "f113",
+          "label": "Link text",
+          "type": "text",
+          "value": "Treatment Risks",
+          "group": "4.3"
+        },
+        {
+          "id": "f114",
+          "label": "Link address",
+          "type": "link",
+          "value": "/new-patients/"
+        },
+        {
+          "id": "f115",
+          "label": "Link text",
+          "type": "text",
+          "value": "New Patients"
+        },
+        {
+          "id": "f116",
+          "label": "Link address",
+          "type": "link",
+          "value": "/health-funds/"
+        },
+        {
+          "id": "f117",
+          "label": "Link text",
+          "type": "text",
+          "value": "Health Funds and Government Schemes"
+        }
+      ]
+    },
+    {
+      "key": "s4",
+      "kind": "cta",
+      "before": "",
+      "shared": "cta",
+      "label": "Book Your Visit band"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "key": "cta",
+  "label": "Book Your Visit band",
+  "template": "<section class=\"cta\" id=\"book\">\n  <div class=\"container cta-grid\">\n    <div class=\"reveal-left\">\n      <span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span>\n      <h2>{{f2}}</h2>\n      <p>{{f3}}</p>\n      <div class=\"btn-group\">\n        <a class=\"btn btn-dark\" href=\"{{site:booking}}\" target=\"_blank\" rel=\"noopener\" data-track=\"book\">{{f4}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a>\n        <a class=\"btn btn-white btn-plain\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{f5}}</a>\n      </div>\n    </div>\n    <div class=\"cta-side reveal-right\">\n      <div class=\"stat\"><b><a href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{site:phone}}</a></b><span>{{site:hoursSummary}}</span></div>\n      <div class=\"stat\"><b>{{site:streetShort}}</b><span>{{site:addressShort}}</span></div>\n    </div>\n  </div>\n</section>",
+  "fields": [
+    {
+      "id": "f1",
+      "label": "Small label",
+      "type": "text",
+      "value": "Book Online"
+    },
+    {
+      "id": "f2",
+      "label": "Heading",
+      "type": "text",
+      "value": "Book Your Visit at Precision Dental"
+    },
+    {
+      "id": "f3",
+      "label": "Paragraph",
+      "type": "text",
+      "value": "Whether you are due for a routine visit or ready to talk through a treatment you have been considering, our Fortitude Valley team would be glad to welcome you. Call us on {{site:phone}} or book online, and we will find a time that suits you."
+    },
+    {
+      "id": "f4",
+      "label": "Button text",
+      "type": "text",
+      "value": "Book Online"
+    },
+    {
+      "id": "f5",
+      "label": "Button text",
+      "type": "text",
+      "value": "Call {{site:phone}}"
+    }
+  ]
+}

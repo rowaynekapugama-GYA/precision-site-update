@@ -1,5 +1,50 @@
 # Changelog
 
+## 2026-10-14 - v3.1.0: new patient offer, price list, Health Funds page, registration, before and after
+
+From Dr Choi's revision notes of 14 October 2026.
+
+- **$229 new patient offer.** A strip directly under the homepage hero, the main call to action on a new **New Patients** page (`/new-patients/`), and a small pop-up (after 20 seconds, or when a computer visitor heads for the address bar; once per visit; closes with X or Esc; never covers the menu or the Call and Book bar). Each shows the price, the five inclusions (comprehensive examination, 2 intraoral X-rays, intraoral photos, scale and polish, fluoride treatment), Book Now and Call buttons, and "New patients only. Terms and conditions apply." linked to a new terms page (`/new-patient-offer-terms/`, not indexed) that holds a placeholder until the practice confirms the terms. No urgency wording; the dashboard refuses it. Price, inclusions, dates and terms are edited once in Site Settings.
+- **Download Our Price List form** on the homepage, the New Patients page and Prices and Payment Options (where the page already promised a form), plus a footer button. First name, last name, email, mobile and a consent box. Each request goes to SmileOx tagged "Price List Download" with its lead source, UTM tags and ad click IDs (by email to the SmileOx intake address, and to a SmileOx webhook when one is set), to reception and GYA, and to the dashboard's Enquiries list. An on-page thank-you replaces the form, and the GA4 `generate_lead`, Google Ads conversion, Meta `Lead` and dataLayer `price_list_download` events fire. SmileOx's automation emails the PDF; the website can send it instead (Site Settings).
+- **Health Funds and Government Schemes page** (`/health-funds/`): private health funds, the Child Dental Benefits Schedule (eligibility, the $1,158 cap for two-year periods starting in 2026, what is and is not covered, how to access it, the government disclaimer) and DVA Gold and White Cards, with the "Not sure if you're eligible?" call line. SEO title "CDBS & DVA Dentist Fortitude Valley | Precision Dental". Linked from the Patients menu (desktop and phone), the footer, the HTML sitemap, the homepage CDBS and health fund cards, and the CDBS and DVA sections of Prices and Payment Options. HICAPS, CDBS bulk billing and DVA direct billing lines are built but stay off until the practice confirms them (switches in Site Settings).
+- **AHPRA registration.** "Dr Billy Choi, General Dentist, AHPRA Registration: DEN0000958417" in the footer of every page, on his profile (replacing "to be confirmed") and on his Meet the Team card. Registration type and number are new Team fields, so other practitioners are added the same way.
+- **Google reviews badge** under the homepage hero buttons (stars, rating, "500+ Google Reviews", linked to the Google Business Profile, no review text). Built and **switched off** until the practice signs it off and confirms the rating.
+- **Before and after galleries** on 11 treatment pages (cosmetic, veneers, composite veneers, whitening, Invisalign, implants, crowns and bridges, CEREC, dentures, white fillings, restorative), collapsed by default with the AHPRA risk statement. They stay completely out of the pages until a case is added in the new **Before & After** dashboard screen with consent documented, unedited photos and consistent lighting all ticked. No placeholders or stock photos.
+- **Dashboard:** new Before & After screen; Site Settings panels for the offer, the reviews badge, the price list (PDF upload, who sends it, consent and thank-you wording) and the health fund lines; Google Ads ID and conversion label (GYA only); registration fields on Team; price list requests in Enquiries with their lead source, and in the CSV.
+- **Fix:** photos uploaded in the dashboard can now be seen by visitors. Before, the Media Library was readable only when signed in, so an uploaded photo showed to staff but not to the public.
+- **Content updates for sites already in the dashboard.** A new build step applies this release's page changes to the database once (`scripts/content-updates.ts`), so a site imported from v3.0.0 gets the new pages and sections without a re-import, and later dashboard edits are never undone. The enquiry form also copies the SmileOx intake address when `SMILEOX_INTAKE_EMAIL` is set.
+- Treatment page wording is unchanged and stays pending Dr Choi's review. Every other page is unchanged apart from the menu and footer additions above.
+
+## 2026-10-09 - v3.0.0: the client dashboard at /admin
+
+- **New: a dashboard at `/admin`** where the practice signs in to edit the website themselves, laid out like WordPress: Dashboard, Pages, Blog Posts, Media Library, Team, Enquiries, SEO, Site Settings, plus Redirects and Users for GYA. Payload's own admin stays at `/cms` for GYA only.
+- **Every page is editable** as a list of named sections (headings, paragraphs, buttons, links and photos), with drag-to-reorder, hide and show, a Preview link and an SEO tab with character counters and a Google-style preview.
+- **Blog posts** can be written, published, unpublished and deleted, with headings, lists, links, quotes, inline photos, the Book Online and Call buttons, categories, an FAQ, the risk statement and per-post SEO. A published post goes on Dental Articles, the sitemap, the HTML sitemap and gets BlogPosting schema.
+- **Site Settings in one place:** phone, email, address, opening hours, booking link, preferred health funds, parking, socials, logo, colours, SEO defaults, feature switches, and GTM, GA4 and Meta Pixel IDs (GYA only). Each change updates every page and the Dentist schema.
+- **Enquiries** from the website form are saved in the dashboard as well as emailed, with a follow-up tick and a CSV download. The SMTP2GO relay, its recipients and its replies to visitors are unchanged.
+- **Publish website** rebuilds the site from what is saved. The public site stays fully static and never reads the database; if the database is unavailable the build uses the JSON in the repo.
+- First administrator `rowayne@gyaclients.com` is created from environment variables and must choose a new password at first sign in. Nobody can register.
+- **No visible change to the website.** All 125 pages, `sitemap.xml` and `robots.txt` are byte for byte the 9 October release (verified file by file, and in Chromium at 1280 and 390).
+- The old `api/enquiry.js` serverless function moved to `src/app/api/enquiry/route.ts` with the same behaviour. Deploys now go through `scripts/push-to-github.sh` (stage on `cms`, then promote). See `README-CMS.md`.
+
+## 2026-10-09 - Booking change reverted: Book Online goes straight to the booking system again
+
+- **Reverted the "Online booking moves to the Contact page" release below.** Every Book Online button (header, mobile menu, sticky mobile bar, Book Your Visit band, page heroes, homepage hero and article CTAs) links directly to the Henry Schein One booking page again and opens it in a new tab, as it did in the earlier 9 October release.
+- The Book Online section at the top of the Contact page is removed. The Contact page is back to the earlier 9 October layout, with the virtual tour after Getting Here and Parking.
+- Dr Billy Choi's 9 October changes (laser membership, DentiCare, SuperCare, virtual tour) are kept.
+- Every page, the stylesheet, the script and `sitemap.xml` are byte for byte the same as the earlier 9 October release. Only this changelog differs.
+
+## 2026-10-09 - Online booking moves to the Contact page
+
+- **New Book Online section at the top of the Contact page** (`id="book-online"`), straight after the page header: "Book Your Appointment Online", "Choose a time that suits you. New and existing patients welcome.", and a Book Online button that opens the booking system in a new tab.
+- **The booking system is linked, not embedded.** Henry Schein One's help centre says its online booking cannot be hosted in an iframe on a practice website (in force since 14 March 2022) and should be opened from a link in a new tab. The embedded version is built and tested behind one switch, `BOOKING_EMBED` in `build.py`, if that ever changes.
+- **Every Book Online button on the site now goes to `/contact/#book-online`**: 615 links across all 124 pages (header, mobile menu, sticky mobile bar, the Book Your Visit band, page heroes, article CTAs). They open in the same tab and carry `data-cta="book-online"`. The button in the Contact section that actually opens the booking system carries `data-cta="book-online-start"`, so the two are never counted as one.
+- The booking system's address now appears in one place on the site, the Contact page section.
+- Tapping a link to the page you are already on from the mobile menu now closes the menu first.
+- The rest of the Contact page, including the virtual tour, the enquiry form and the map, is unchanged. No Call button or tap-to-call link changed.
+
+Verified: 615 of 615 Book Online links land on the booking section from desktop and mobile, with the heading clear of the fixed header; 69 of 69 articles pass; no console errors, failed requests or horizontal scrolling at 390, 768 or 1440 across all 124 pages.
+
 ## 2026-10-09 - Dr Billy Choi's feedback, and a virtual tour on the Contact page
 
 - **Laser Dentistry membership removed.** Dr Choi is no longer a member of The Australian Association of Laser Dentistry. Removed from his credentials panel and from the Professional Memberships list on his page, which now lists the Australian Dental Association and the Australian Society of Implant Dentistry. It appeared nowhere else on the site, including structured data and meta descriptions.
@@ -363,7 +408,7 @@ the same design system, so the menu no longer points at pages that do not exist.
 - Every page: one H1, a title, a meta description, a canonical, Australian spelling, no em dashes.
 - **Schema**: Dentist on all 55 indexable pages, BreadcrumbList on all 54 inner pages,
   FAQPage on the 37 pages with an FAQ. All parse. **No rating or review markup anywhere.**
-- **AHPRA scan**: no superlative or expert claims, no guarantees, no pain-free claims, no
+- **AHPRA scan**: no superlative or expert claims, no guarantees, no pain-free claims, no <!-- qa:allow: describes the AHPRA check -->
   testimonials, star ratings or review counts, no urgency wording.
 - Risk statement present on exactly the 10 pages the instructions name. Disclaimer on all
   32 service pages.

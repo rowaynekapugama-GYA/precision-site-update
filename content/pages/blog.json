@@ -1,0 +1,98 @@
+{
+  "key": "blog",
+  "file": "blog.html",
+  "url": "/blog/",
+  "label": "Dental articles from Precision Dental",
+  "group": "Main pages",
+  "seo": {
+    "title": "Dental Articles | Precision Dental Fortitude Valley",
+    "description": "Dental articles from Precision Dental in Fortitude Valley, covering treatments, prevention and looking after your teeth at home.",
+    "ogImage": "",
+    "canonical": "",
+    "noindex": false
+  },
+  "lastmod": "2026-10-02",
+  "layout": {
+    "head": "std",
+    "pre": "std",
+    "post": "std",
+    "schema": "gen"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "breadcrumbs",
+      "before": "",
+      "label": "Breadcrumb trail",
+      "pinned": true,
+      "template": "<nav class=\"breadcrumbs\" aria-label=\"Breadcrumb\"><div class=\"container\"><ol><li><a href=\"{{f1}}\">{{f2}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><span aria-current=\"page\">{{f3}}</span></li></ol></div></nav>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1"
+        },
+        {
+          "id": "f2",
+          "label": "Link text",
+          "type": "text",
+          "value": "Home",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "List item",
+          "type": "text",
+          "value": "Dental Articles"
+        }
+      ]
+    },
+    {
+      "key": "s2",
+      "kind": "header",
+      "before": "\n",
+      "label": "Page header: Dental articles from Precision Dental",
+      "pinned": true,
+      "template": "<section class=\"page-hero\">\n<div class=\"container\">\n<span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z\"/></svg>{{f1}}</span>\n<h1>{{f2}}</h1>\n<p class=\"lede\">{{f3}}</p>\n</div>\n</section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Dental Articles"
+        },
+        {
+          "id": "f2",
+          "label": "Main heading",
+          "type": "text",
+          "value": "Dental articles from Precision Dental"
+        },
+        {
+          "id": "f3",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "Practical information on treatments, prevention and looking after\nyour teeth at home, written by our Fortitude Valley practice."
+        }
+      ]
+    },
+    {
+      "key": "s3",
+      "kind": "articleIndex",
+      "before": "\n",
+      "label": "Article list (fills in automatically from Blog Posts)",
+      "generated": "articleIndex",
+      "template": "{{gen:articleIndex}}",
+      "fields": []
+    },
+    {
+      "key": "s4",
+      "kind": "cta",
+      "before": "\n",
+      "shared": "cta",
+      "label": "Book Your Visit band"
+    }
+  ]
+}

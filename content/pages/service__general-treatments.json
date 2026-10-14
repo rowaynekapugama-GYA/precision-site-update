@@ -1,0 +1,540 @@
+{
+  "key": "service/general-treatments",
+  "file": "service/general-treatments.html",
+  "url": "/service/general-treatments/",
+  "label": "General Dentistry in Fortitude Valley",
+  "group": "Treatments and services",
+  "seo": {
+    "title": "General Dentistry Fortitude Valley | Precision Dental",
+    "description": "General dentistry in Fortitude Valley for the whole family, from check-ups and cleans to root canal therapy and gum care. Book online.",
+    "ogImage": "",
+    "canonical": "",
+    "noindex": false
+  },
+  "lastmod": "2026-10-02",
+  "layout": {
+    "head": "std",
+    "pre": "std",
+    "post": "std",
+    "schema": "gen"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "breadcrumbs",
+      "before": "",
+      "label": "Breadcrumb trail",
+      "pinned": true,
+      "template": "<nav class=\"breadcrumbs\" aria-label=\"Breadcrumb\"><div class=\"container\"><ol><li><a href=\"{{f1}}\">{{f2}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><span aria-current=\"page\">{{f3}}</span></li></ol></div></nav>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1"
+        },
+        {
+          "id": "f2",
+          "label": "Link text",
+          "type": "text",
+          "value": "Home",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "List item",
+          "type": "text",
+          "value": "General Dentistry"
+        }
+      ]
+    },
+    {
+      "key": "s2",
+      "kind": "header",
+      "before": "\n",
+      "label": "Page header: General Dentistry in Fortitude Valley",
+      "pinned": true,
+      "template": "<section class=\"page-hero\"><div class=\"container page-hero-grid\"><div class=\"hero-up\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h1>{{f2}}</h1><p class=\"sub\">{{f3}}</p><p class=\"lede\">{{f4}}</p><p class=\"lede\">{{f5}}</p><div class=\"btn-group\"><a class=\"btn btn-dark\" href=\"{{site:booking}}\" target=\"_blank\" rel=\"noopener\" data-track=\"book\">{{f6}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a><a class=\"btn btn-white btn-plain\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{f7}}</a></div></div><div class=\"page-hero-img hero-up d2\"><img src=\"{{f8}}\" alt=\"{{f9}}\" width=\"900\" height=\"675\"></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Our Services"
+        },
+        {
+          "id": "f2",
+          "label": "Main heading",
+          "type": "text",
+          "value": "General Dentistry in Fortitude Valley"
+        },
+        {
+          "id": "f3",
+          "label": "Line under the heading",
+          "type": "text",
+          "value": "Everyday Care for Healthy Teeth and Gums"
+        },
+        {
+          "id": "f4",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "General dentistry is the foundation of lifelong oral health. It focuses on preventing problems before they begin, finding concerns early while they are simpler to manage, and treating everyday dental issues with care. At Precision Dental, we look after patients of all ages, and we take the time to explain your oral health in clear, practical terms."
+        },
+        {
+          "id": "f5",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "Regular visits allow us to monitor changes over time, clean away the build-up that brushing cannot reach and give you personalised advice for caring for your teeth at home."
+        },
+        {
+          "id": "f6",
+          "label": "Button text",
+          "type": "text",
+          "value": "Book Online"
+        },
+        {
+          "id": "f7",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        },
+        {
+          "id": "f8",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/intraoral-camera.webp"
+        },
+        {
+          "id": "f9",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Examining a patient with an intra-oral camera at Precision Dental"
+        }
+      ]
+    },
+    {
+      "key": "s3",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Our General Dentistry Services",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><h2>{{f1}}</h2><div class=\"svc-cards\"><a class=\"svc-card reveal\" href=\"{{f2}}\"><h3>{{f3}}</h3><p>{{f4}}</p><span class=\"explore\">{{f5}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f6}}\"><h3>{{f7}}</h3><p>{{f8}}</p><span class=\"explore\">{{f9}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f10}}\"><h3>{{f11}}</h3><p>{{f12}}</p><span class=\"explore\">{{f13}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f14}}\"><h3>{{f15}}</h3><p>{{f16}}</p><span class=\"explore\">{{f17}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f18}}\"><h3>{{f19}}</h3><p>{{f20}}</p><span class=\"explore\">{{f21}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f22}}\"><h3>{{f23}}</h3><p>{{f24}}</p><span class=\"explore\">{{f25}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f26}}\"><h3>{{f27}}</h3><p>{{f28}}</p><span class=\"explore\">{{f29}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f30}}\"><h3>{{f31}}</h3><p>{{f32}}</p><span class=\"explore\">{{f33}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f34}}\"><h3>{{f35}}</h3><p>{{f36}}</p><span class=\"explore\">{{f37}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f38}}\"><h3>{{f39}}</h3><p>{{f40}}</p><span class=\"explore\">{{f41}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a><a class=\"svc-card reveal\" href=\"{{f42}}\"><h3>{{f43}}</h3><p>{{f44}}</p><span class=\"explore\">{{f45}} <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></span></a></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Our General Dentistry Services"
+        },
+        {
+          "id": "f2",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-check-up-and-clean/"
+        },
+        {
+          "id": "f3",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Dental Check-Up and Clean",
+          "group": "1"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "A thorough check-up and clean, supported by digital imaging where needed, helps keep your teeth and gums healthy between visits.",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Dental Check-Up and Clean",
+          "group": "1"
+        },
+        {
+          "id": "f6",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/preventive-care-for-adults/"
+        },
+        {
+          "id": "f7",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Preventive Care for Adults",
+          "group": "2"
+        },
+        {
+          "id": "f8",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Our preventive care for adults focuses on protecting your natural teeth through every stage of adult life.",
+          "group": "2"
+        },
+        {
+          "id": "f9",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Preventive Care for Adults",
+          "group": "2"
+        },
+        {
+          "id": "f10",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/preventive-care-for-young-adults/"
+        },
+        {
+          "id": "f11",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Preventive Care for Young Adults",
+          "group": "3"
+        },
+        {
+          "id": "f12",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Teenagers and young adults face unique challenges. Our preventive care for young adults supports healthy habits during these important years.",
+          "group": "3"
+        },
+        {
+          "id": "f13",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Preventive Care for Young Adults",
+          "group": "3"
+        },
+        {
+          "id": "f14",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/childrens-dentistry/"
+        },
+        {
+          "id": "f15",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Children&#x27;s Dentistry",
+          "group": "4"
+        },
+        {
+          "id": "f16",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Our children&#x27;s dentistry appointments are relaxed, friendly and designed to build positive associations with dental visits.",
+          "group": "4"
+        },
+        {
+          "id": "f17",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Children&#x27;s Dentistry",
+          "group": "4"
+        },
+        {
+          "id": "f18",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/anxious-patients/"
+        },
+        {
+          "id": "f19",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Anxious Patients",
+          "group": "5"
+        },
+        {
+          "id": "f20",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "If dental visits make you uneasy, our care for anxious patients includes a gentle pace, clear communication and the option of happy gas.",
+          "group": "5"
+        },
+        {
+          "id": "f21",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Anxious Patients",
+          "group": "5"
+        },
+        {
+          "id": "f22",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/grinding-and-clenching/"
+        },
+        {
+          "id": "f23",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Grinding and Clenching",
+          "group": "6"
+        },
+        {
+          "id": "f24",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We assess the signs of grinding and clenching and can provide custom splints to help protect your teeth.",
+          "group": "6"
+        },
+        {
+          "id": "f25",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Grinding and Clenching",
+          "group": "6"
+        },
+        {
+          "id": "f26",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/gum-and-periodontal-treatment/"
+        },
+        {
+          "id": "f27",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Gum and Periodontal Treatment",
+          "group": "7"
+        },
+        {
+          "id": "f28",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Our gum and periodontal treatment helps manage gum inflammation and periodontal disease to protect the structures that support your teeth.",
+          "group": "7"
+        },
+        {
+          "id": "f29",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Gum and Periodontal Treatment",
+          "group": "7"
+        },
+        {
+          "id": "f30",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/mouthguards-fortitude-valley/"
+        },
+        {
+          "id": "f31",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Mouthguards",
+          "group": "8"
+        },
+        {
+          "id": "f32",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Custom mouthguards are made from impressions or scans of your teeth for a secure, comfortable fit during sport.",
+          "group": "8"
+        },
+        {
+          "id": "f33",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Mouthguards",
+          "group": "8"
+        },
+        {
+          "id": "f34",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/root-canal-therapy/"
+        },
+        {
+          "id": "f35",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Root Canal Therapy",
+          "group": "9"
+        },
+        {
+          "id": "f36",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Root canal therapy treats infection or inflammation inside a tooth, with the aim of keeping your natural tooth.",
+          "group": "9"
+        },
+        {
+          "id": "f37",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Root Canal Therapy",
+          "group": "9"
+        },
+        {
+          "id": "f38",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/tooth-extraction/"
+        },
+        {
+          "id": "f39",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Tooth Extraction",
+          "group": "10"
+        },
+        {
+          "id": "f40",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "When a tooth cannot be saved, a careful tooth extraction is performed with your comfort in mind.",
+          "group": "10"
+        },
+        {
+          "id": "f41",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Tooth Extraction",
+          "group": "10"
+        },
+        {
+          "id": "f42",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/wisdom-teeth-solution/"
+        },
+        {
+          "id": "f43",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Wisdom Teeth",
+          "group": "11"
+        },
+        {
+          "id": "f44",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We assess your wisdom teeth using a digital OPG and discuss whether monitoring or removal is the right approach.",
+          "group": "11"
+        },
+        {
+          "id": "f45",
+          "label": "Text",
+          "type": "text",
+          "value": "Explore Wisdom Teeth",
+          "group": "11"
+        }
+      ]
+    },
+    {
+      "key": "s4",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "You may also be looking for",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><div class=\"section-head\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h2>{{f2}}</h2></div><div class=\"related-grid\"><a class=\"related-card\" href=\"{{f3}}\"><span class=\"mi-img\"><img src=\"/assets/img/menu/anxious.webp\" alt=\"\" loading=\"lazy\" width=\"120\" height=\"120\"></span><span><strong>{{f4}}</strong><small>{{f5}}</small></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></a><a class=\"related-card\" href=\"{{f6}}\"><span class=\"mi-img\"><img src=\"/assets/img/menu/child.webp\" alt=\"\" loading=\"lazy\" width=\"120\" height=\"120\"></span><span><strong>{{f7}}</strong><small>{{f8}}</small></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></a><a class=\"related-card\" href=\"{{f9}}\"><span class=\"mi-img\"><img src=\"/assets/img/menu/checkup.webp\" alt=\"\" loading=\"lazy\" width=\"120\" height=\"120\"></span><span><strong>{{f10}}</strong><small>{{f11}}</small></span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></a></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Related Services"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "You may also be looking for"
+        },
+        {
+          "id": "f3",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/anxious-patients/"
+        },
+        {
+          "id": "f4",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Anxious Patients",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Small print",
+          "type": "text",
+          "value": "General Dentistry",
+          "group": "1"
+        },
+        {
+          "id": "f6",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/childrens-dentistry/"
+        },
+        {
+          "id": "f7",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Children&#x27;s Dentistry",
+          "group": "2"
+        },
+        {
+          "id": "f8",
+          "label": "Small print",
+          "type": "text",
+          "value": "General Dentistry",
+          "group": "2"
+        },
+        {
+          "id": "f9",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-check-up-and-clean/"
+        },
+        {
+          "id": "f10",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Dental Check-Up and Clean",
+          "group": "3"
+        },
+        {
+          "id": "f11",
+          "label": "Small print",
+          "type": "text",
+          "value": "General Dentistry",
+          "group": "3"
+        }
+      ]
+    },
+    {
+      "key": "s5",
+      "kind": "cta",
+      "before": "\n",
+      "shared": "cta",
+      "label": "Book Your Visit band"
+    },
+    {
+      "key": "s6",
+      "kind": "disclaimer",
+      "before": "\n",
+      "label": "Disclaimer",
+      "pinned": false,
+      "template": "<section class=\"disclaimer-section\"><div class=\"container\"><p class=\"disclaimer\">{{f1}}</p></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Disclaimer wording",
+          "type": "text",
+          "value": "The information on this page is general in nature and is not a substitute for personalised advice from a registered dental practitioner. Individual needs, experiences and results vary."
+        }
+      ]
+    }
+  ]
+}

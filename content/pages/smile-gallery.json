@@ -1,0 +1,3741 @@
+{
+  "key": "smile-gallery",
+  "file": "smile-gallery.html",
+  "url": "/smile-gallery/",
+  "label": "Smile Gallery",
+  "group": "Main pages",
+  "seo": {
+    "title": "Smile Gallery | Precision Dental Fortitude Valley",
+    "description": "View examples of cosmetic and restorative dental treatment provided at Precision Dental in Fortitude Valley. Individual results vary.",
+    "ogImage": "",
+    "canonical": "",
+    "noindex": false
+  },
+  "lastmod": "2026-10-02",
+  "layout": {
+    "head": "std",
+    "pre": "std",
+    "post": "std",
+    "schema": "gen"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "breadcrumbs",
+      "before": "",
+      "label": "Breadcrumb trail",
+      "pinned": true,
+      "template": "<nav class=\"breadcrumbs\" aria-label=\"Breadcrumb\"><div class=\"container\"><ol><li><a href=\"{{f1}}\">{{f2}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><span aria-current=\"page\">{{f3}}</span></li></ol></div></nav>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1"
+        },
+        {
+          "id": "f2",
+          "label": "Link text",
+          "type": "text",
+          "value": "Home",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "List item",
+          "type": "text",
+          "value": "Smile Gallery"
+        }
+      ]
+    },
+    {
+      "key": "s2",
+      "kind": "header",
+      "before": "\n",
+      "label": "Page header: Smile Gallery",
+      "pinned": true,
+      "template": "<section class=\"page-hero\"><div class=\"container page-hero-grid\"><div class=\"hero-up\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h1>{{f2}}</h1><p class=\"sub\">{{f3}}</p><p class=\"lede\">{{f4}}</p><p class=\"lede\">{{f5}}</p><div class=\"btn-group\"><a class=\"btn btn-dark\" href=\"{{site:booking}}\" target=\"_blank\" rel=\"noopener\" data-track=\"book\">{{f6}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a><a class=\"btn btn-white btn-plain\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{f7}}</a></div></div><div class=\"page-hero-img hero-up d2\"><img src=\"{{f8}}\" alt=\"{{f9}}\" width=\"900\" height=\"675\"></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Our Work"
+        },
+        {
+          "id": "f2",
+          "label": "Main heading",
+          "type": "text",
+          "value": "Smile Gallery"
+        },
+        {
+          "id": "f3",
+          "label": "Line under the heading",
+          "type": "text",
+          "value": "Examples of Treatment at Precision Dental"
+        },
+        {
+          "id": "f4",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "The images in our gallery show examples of treatment provided to patients at Precision Dental. They are intended to help you understand the types of cosmetic dentistry and restorative dentistry treatments available."
+        },
+        {
+          "id": "f5",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "Every patient&#x27;s situation is different. The results shown relate to the individual patients pictured, and your results may differ. Each case required a clinical examination, diagnosis and a treatment plan developed for that person."
+        },
+        {
+          "id": "f6",
+          "label": "Button text",
+          "type": "text",
+          "value": "Book Online"
+        },
+        {
+          "id": "f7",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        },
+        {
+          "id": "f8",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/benefits.webp"
+        },
+        {
+          "id": "f9",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "A patient in the treatment room at Precision Dental"
+        }
+      ]
+    },
+    {
+      "key": "s3",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Examples of Treatment at Precision Dental",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<p>{{f3}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Examples of Treatment at Precision Dental"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "To learn whether a treatment may be suitable for you, including its benefits, risks and alternatives, please book a consultation."
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Explore our Cosmetic Dentistry and Restorative Dentistry services to learn more."
+        }
+      ]
+    },
+    {
+      "key": "s4",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Section 4",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><div class=\"gallery-note\"><p>{{f1}}</p><p>{{f2}}</p></div><div class=\"gallery-filters\" role=\"group\" aria-label=\"Filter by treatment\"><button type=\"button\" class=\"filter-chip is-on\" data-filter=\"All\" aria-pressed=\"true\">{{f3}}</button><button type=\"button\" class=\"filter-chip\" data-filter=\"Implant\" aria-pressed=\"false\">{{f4}}</button><button type=\"button\" class=\"filter-chip\" data-filter=\"Invisalign\" aria-pressed=\"false\">{{f5}}</button><button type=\"button\" class=\"filter-chip\" data-filter=\"Composite Veneers\" aria-pressed=\"false\">{{f6}}</button><button type=\"button\" class=\"filter-chip\" data-filter=\"Porcelain Veneers\" aria-pressed=\"false\">{{f7}}</button><button type=\"button\" class=\"filter-chip\" data-filter=\"Whitening\" aria-pressed=\"false\">{{f8}}</button><button type=\"button\" class=\"filter-chip\" data-filter=\"Bonding\" aria-pressed=\"false\">{{f9}}</button><button type=\"button\" class=\"filter-chip\" data-filter=\"Crowns and Bridges\" aria-pressed=\"false\">{{f10}}</button><button type=\"button\" class=\"filter-chip\" data-filter=\"Full Mouth Rehabilitation\" aria-pressed=\"false\">{{f11}}</button></div><p class=\"gallery-count\" aria-live=\"polite\">{{f12}}</p><div class=\"gallery-grid\"><figure class=\"gallery-card\" data-cat=\"Invisalign\"><button type=\"button\" class=\"ph\" data-case=\"1\" aria-label=\"View a larger version of Before and after Invisalign, crowns and bridges. Mia of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f13}}\" alt=\"{{f14}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f15}}</strong><span class=\"tt\">{{f16}}</span><span class=\"tf\">{{f17}}</span><span class=\"rv\">{{f18}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Crowns and Bridges\"><button type=\"button\" class=\"ph\" data-case=\"2\" aria-label=\"View a larger version of Before and after Dental crown. Emma of Teneriffe, treated at Precision Dental.\"><img src=\"{{f19}}\" alt=\"{{f20}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f21}}</strong><span class=\"tt\">{{f22}}</span><span class=\"tf\">{{f23}}</span><span class=\"rv\">{{f24}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Crowns and Bridges\"><button type=\"button\" class=\"ph\" data-case=\"3\" aria-label=\"View a larger version of Before and after Dental crown. Emma of Teneriffe, treated at Precision Dental.\"><img src=\"{{f25}}\" alt=\"{{f26}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f27}}</strong><span class=\"tt\">{{f28}}</span><span class=\"tf\">{{f29}}</span><span class=\"rv\">{{f30}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Invisalign\"><button type=\"button\" class=\"ph\" data-case=\"4\" aria-label=\"View a larger version of Before and after Invisalign. Mark of Newstead, treated at Precision Dental.\"><img src=\"{{f31}}\" alt=\"{{f32}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f33}}</strong><span class=\"tt\">{{f34}}</span><span class=\"tf\">{{f35}}</span><span class=\"rv\">{{f36}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Crowns and Bridges\"><button type=\"button\" class=\"ph\" data-case=\"5\" aria-label=\"View a larger version of Before and after Dental crowns and bridges. Brandon of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f37}}\" alt=\"{{f38}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f39}}</strong><span class=\"tt\">{{f40}}</span><span class=\"tf\">{{f41}}</span><span class=\"rv\">{{f42}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Crowns and Bridges\"><button type=\"button\" class=\"ph\" data-case=\"6\" aria-label=\"View a larger version of Before and after Dental crowns and bridges. Brandon of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f43}}\" alt=\"{{f44}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f45}}</strong><span class=\"tt\">{{f46}}</span><span class=\"tf\">{{f47}}</span><span class=\"rv\">{{f48}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Crowns and Bridges\"><button type=\"button\" class=\"ph\" data-case=\"7\" aria-label=\"View a larger version of Before and after Dental crowns and bridges. Brandon of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f49}}\" alt=\"{{f50}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f51}}</strong><span class=\"tt\">{{f52}}</span><span class=\"tf\">{{f53}}</span><span class=\"rv\">{{f54}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Crowns and Bridges\"><button type=\"button\" class=\"ph\" data-case=\"8\" aria-label=\"View a larger version of Before and after Dental crowns and bridges. Brandon of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f55}}\" alt=\"{{f56}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f57}}</strong><span class=\"tt\">{{f58}}</span><span class=\"tf\">{{f59}}</span><span class=\"rv\">{{f60}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Porcelain Veneers\"><button type=\"button\" class=\"ph\" data-case=\"9\" aria-label=\"View a larger version of Before and after Porcelain veneers. Ana of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f61}}\" alt=\"{{f62}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f63}}</strong><span class=\"tt\">{{f64}}</span><span class=\"tf\">{{f65}}</span><span class=\"rv\">{{f66}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Invisalign\"><button type=\"button\" class=\"ph\" data-case=\"10\" aria-label=\"View a larger version of Before and after Invisalign. Jessa of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f67}}\" alt=\"{{f68}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f69}}</strong><span class=\"tt\">{{f70}}</span><span class=\"tf\">{{f71}}</span><span class=\"rv\">{{f72}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Crowns and Bridges\"><button type=\"button\" class=\"ph\" data-case=\"11\" aria-label=\"View a larger version of Before and after Dental crowns. Peter of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f73}}\" alt=\"{{f74}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f75}}</strong><span class=\"tt\">{{f76}}</span><span class=\"tf\">{{f77}}</span><span class=\"rv\">{{f78}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Full Mouth Rehabilitation\"><button type=\"button\" class=\"ph\" data-case=\"12\" aria-label=\"View a larger version of Before and after Full mouth rehabilitation. George of Slacks Creek, treated at Precision Dental.\"><img src=\"{{f79}}\" alt=\"{{f80}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f81}}</strong><span class=\"tt\">{{f82}}</span><span class=\"rv\">{{f83}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"13\" aria-label=\"View a larger version of Before and after Teeth whitening. Samantha of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f84}}\" alt=\"{{f85}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f86}}</strong><span class=\"tt\">{{f87}}</span><span class=\"rv\">{{f88}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"14\" aria-label=\"View a larger version of Before and after Teeth whitening. Sally of Brisbane, treated at Precision Dental.\"><img src=\"{{f89}}\" alt=\"{{f90}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f91}}</strong><span class=\"tt\">{{f92}}</span><span class=\"rv\">{{f93}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"15\" aria-label=\"View a larger version of Before and after Teeth whitening. Peter of Brisbane, treated at Precision Dental.\"><img src=\"{{f94}}\" alt=\"{{f95}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f96}}</strong><span class=\"tt\">{{f97}}</span><span class=\"rv\">{{f98}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"16\" aria-label=\"View a larger version of Before and after Teeth whitening. Mathew of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f99}}\" alt=\"{{f100}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f101}}</strong><span class=\"tt\">{{f102}}</span><span class=\"rv\">{{f103}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"17\" aria-label=\"View a larger version of Before and after Teeth whitening. Mark of Brisbane, treated at Precision Dental.\"><img src=\"{{f104}}\" alt=\"{{f105}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f106}}</strong><span class=\"tt\">{{f107}}</span><span class=\"rv\">{{f108}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"18\" aria-label=\"View a larger version of Before and after Teeth whitening. Luke of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f109}}\" alt=\"{{f110}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f111}}</strong><span class=\"tt\">{{f112}}</span><span class=\"rv\">{{f113}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"19\" aria-label=\"View a larger version of Before and after Teeth whitening. Kevin of Brisbane, treated at Precision Dental.\"><img src=\"{{f114}}\" alt=\"{{f115}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f116}}</strong><span class=\"tt\">{{f117}}</span><span class=\"rv\">{{f118}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"20\" aria-label=\"View a larger version of Before and after Teeth whitening. Kay of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f119}}\" alt=\"{{f120}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f121}}</strong><span class=\"tt\">{{f122}}</span><span class=\"rv\">{{f123}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"21\" aria-label=\"View a larger version of Before and after Teeth whitening. Kaitlyn of Brisbane, treated at Precision Dental.\"><img src=\"{{f124}}\" alt=\"{{f125}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f126}}</strong><span class=\"tt\">{{f127}}</span><span class=\"rv\">{{f128}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"22\" aria-label=\"View a larger version of Before and after Teeth whitening. Jordan of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f129}}\" alt=\"{{f130}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f131}}</strong><span class=\"tt\">{{f132}}</span><span class=\"rv\">{{f133}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"23\" aria-label=\"View a larger version of Before and after Teeth whitening. Jacob of Brisbane, treated at Precision Dental.\"><img src=\"{{f134}}\" alt=\"{{f135}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f136}}</strong><span class=\"tt\">{{f137}}</span><span class=\"rv\">{{f138}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"24\" aria-label=\"View a larger version of Before and after Teeth whitening. Gabriel of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f139}}\" alt=\"{{f140}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f141}}</strong><span class=\"tt\">{{f142}}</span><span class=\"rv\">{{f143}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"25\" aria-label=\"View a larger version of Before and after Teeth whitening. Donovan of Brisbane, treated at Precision Dental.\"><img src=\"{{f144}}\" alt=\"{{f145}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f146}}</strong><span class=\"tt\">{{f147}}</span><span class=\"rv\">{{f148}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"26\" aria-label=\"View a larger version of Before and after Teeth whitening. Danica of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f149}}\" alt=\"{{f150}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f151}}</strong><span class=\"tt\">{{f152}}</span><span class=\"rv\">{{f153}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"27\" aria-label=\"View a larger version of Before and after Teeth whitening. Cameron of Brisbane, treated at Precision Dental.\"><img src=\"{{f154}}\" alt=\"{{f155}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f156}}</strong><span class=\"tt\">{{f157}}</span><span class=\"rv\">{{f158}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"28\" aria-label=\"View a larger version of Before and after Teeth whitening. Bridget of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f159}}\" alt=\"{{f160}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f161}}</strong><span class=\"tt\">{{f162}}</span><span class=\"rv\">{{f163}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"29\" aria-label=\"View a larger version of Before and after Teeth whitening. Sophie of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f164}}\" alt=\"{{f165}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f166}}</strong><span class=\"tt\">{{f167}}</span><span class=\"rv\">{{f168}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"30\" aria-label=\"View a larger version of Before and after Teeth whitening. Shane of Brisbane, treated at Precision Dental.\"><img src=\"{{f169}}\" alt=\"{{f170}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f171}}</strong><span class=\"tt\">{{f172}}</span><span class=\"rv\">{{f173}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"31\" aria-label=\"View a larger version of Before and after Teeth whitening. Ryan of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f174}}\" alt=\"{{f175}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f176}}</strong><span class=\"tt\">{{f177}}</span><span class=\"rv\">{{f178}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Whitening\"><button type=\"button\" class=\"ph\" data-case=\"32\" aria-label=\"View a larger version of Before and after Teeth whitening. Brendan of Brisbane, treated at Precision Dental.\"><img src=\"{{f179}}\" alt=\"{{f180}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f181}}</strong><span class=\"tt\">{{f182}}</span><span class=\"rv\">{{f183}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Crowns and Bridges\"><button type=\"button\" class=\"ph\" data-case=\"33\" aria-label=\"View a larger version of Before and after Dental crowns and bridges. Tom of Brisbane, treated at Precision Dental.\"><img src=\"{{f184}}\" alt=\"{{f185}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f186}}</strong><span class=\"tt\">{{f187}}</span><span class=\"tf\">{{f188}}</span><span class=\"rv\">{{f189}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Composite Veneers\"><button type=\"button\" class=\"ph\" data-case=\"34\" aria-label=\"View a larger version of Before and after Composite resin veneers. Tahlia of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f190}}\" alt=\"{{f191}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f192}}</strong><span class=\"tt\">{{f193}}</span><span class=\"tf\">{{f194}}</span><span class=\"rv\">{{f195}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Composite Veneers\"><button type=\"button\" class=\"ph\" data-case=\"35\" aria-label=\"View a larger version of Before and after Composite resin veneers. Yvonne of Brisbane, treated at Precision Dental.\"><img src=\"{{f196}}\" alt=\"{{f197}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f198}}</strong><span class=\"tt\">{{f199}}</span><span class=\"tf\">{{f200}}</span><span class=\"rv\">{{f201}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Composite Veneers\"><button type=\"button\" class=\"ph\" data-case=\"36\" aria-label=\"View a larger version of Before and after Composite resin veneers. Stacey of Brisbane, treated at Precision Dental.\"><img src=\"{{f202}}\" alt=\"{{f203}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f204}}</strong><span class=\"tt\">{{f205}}</span><span class=\"tf\">{{f206}}</span><span class=\"rv\">{{f207}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Composite Veneers\"><button type=\"button\" class=\"ph\" data-case=\"37\" aria-label=\"View a larger version of Before and after Composite resin veneers. Pam of Brisbane, treated at Precision Dental.\"><img src=\"{{f208}}\" alt=\"{{f209}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f210}}</strong><span class=\"tt\">{{f211}}</span><span class=\"tf\">{{f212}}</span><span class=\"rv\">{{f213}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Composite Veneers\"><button type=\"button\" class=\"ph\" data-case=\"38\" aria-label=\"View a larger version of Before and after Composite resin veneers. Robert of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f214}}\" alt=\"{{f215}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f216}}</strong><span class=\"tt\">{{f217}}</span><span class=\"tf\">{{f218}}</span><span class=\"rv\">{{f219}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Composite Veneers\"><button type=\"button\" class=\"ph\" data-case=\"39\" aria-label=\"View a larger version of Before and after Composite veneers. Josephine of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f220}}\" alt=\"{{f221}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f222}}</strong><span class=\"tt\">{{f223}}</span><span class=\"tf\">{{f224}}</span><span class=\"rv\">{{f225}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Composite Veneers\"><button type=\"button\" class=\"ph\" data-case=\"40\" aria-label=\"View a larger version of Before and after Composite resin veneers. Geraldine of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f226}}\" alt=\"{{f227}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f228}}</strong><span class=\"tt\">{{f229}}</span><span class=\"tf\">{{f230}}</span><span class=\"rv\">{{f231}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Composite Veneers\"><button type=\"button\" class=\"ph\" data-case=\"41\" aria-label=\"View a larger version of Before and after Composite resin veneers. Hannah of Brisbane, treated at Precision Dental.\"><img src=\"{{f232}}\" alt=\"{{f233}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f234}}</strong><span class=\"tt\">{{f235}}</span><span class=\"tf\">{{f236}}</span><span class=\"rv\">{{f237}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Composite Veneers\"><button type=\"button\" class=\"ph\" data-case=\"42\" aria-label=\"View a larger version of Before and after Composite resin veneers. David of Brisbane, treated at Precision Dental.\"><img src=\"{{f238}}\" alt=\"{{f239}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f240}}</strong><span class=\"tt\">{{f241}}</span><span class=\"tf\">{{f242}}</span><span class=\"rv\">{{f243}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Composite Veneers\"><button type=\"button\" class=\"ph\" data-case=\"43\" aria-label=\"View a larger version of Before and after Composite resin veneers. A patient of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f244}}\" alt=\"{{f245}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f246}}</strong><span class=\"tt\">{{f247}}</span><span class=\"tf\">{{f248}}</span><span class=\"rv\">{{f249}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Composite Veneers\"><button type=\"button\" class=\"ph\" data-case=\"44\" aria-label=\"View a larger version of Before and after Composite resin veneers. Daniel of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f250}}\" alt=\"{{f251}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f252}}</strong><span class=\"tt\">{{f253}}</span><span class=\"tf\">{{f254}}</span><span class=\"rv\">{{f255}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Composite Veneers\"><button type=\"button\" class=\"ph\" data-case=\"45\" aria-label=\"View a larger version of Before and after Composite resin veneers. Chelsea of Brisbane, treated at Precision Dental.\"><img src=\"{{f256}}\" alt=\"{{f257}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f258}}</strong><span class=\"tt\">{{f259}}</span><span class=\"tf\">{{f260}}</span><span class=\"rv\">{{f261}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Composite Veneers\"><button type=\"button\" class=\"ph\" data-case=\"46\" aria-label=\"View a larger version of Before and after Composite resin veneers. Casey of Melbourne, treated at Precision Dental.\"><img src=\"{{f262}}\" alt=\"{{f263}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f264}}</strong><span class=\"tt\">{{f265}}</span><span class=\"tf\">{{f266}}</span><span class=\"rv\">{{f267}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Bonding\"><button type=\"button\" class=\"ph\" data-case=\"47\" aria-label=\"View a larger version of Before and after Composite resin bonding. Angus of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f268}}\" alt=\"{{f269}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f270}}</strong><span class=\"tt\">{{f271}}</span><span class=\"rv\">{{f272}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Bonding\"><button type=\"button\" class=\"ph\" data-case=\"48\" aria-label=\"View a larger version of Before and after Composite resin bonding. Naomi of Brisbane, treated at Precision Dental.\"><img src=\"{{f273}}\" alt=\"{{f274}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f275}}</strong><span class=\"tt\">{{f276}}</span><span class=\"rv\">{{f277}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Bonding\"><button type=\"button\" class=\"ph\" data-case=\"49\" aria-label=\"View a larger version of Before and after Composite resin bonding. CR of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f278}}\" alt=\"{{f279}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f280}}</strong><span class=\"tt\">{{f281}}</span><span class=\"rv\">{{f282}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Bonding\"><button type=\"button\" class=\"ph\" data-case=\"50\" aria-label=\"View a larger version of Before and after Composite resin bonding. Debbie of Brisbane, treated at Precision Dental.\"><img src=\"{{f283}}\" alt=\"{{f284}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f285}}</strong><span class=\"tt\">{{f286}}</span><span class=\"rv\">{{f287}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Porcelain Veneers\"><button type=\"button\" class=\"ph\" data-case=\"51\" aria-label=\"View a larger version of Before and after Porcelain veneers. Alana of Brisbane, treated at Precision Dental.\"><img src=\"{{f288}}\" alt=\"{{f289}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f290}}</strong><span class=\"tt\">{{f291}}</span><span class=\"tf\">{{f292}}</span><span class=\"rv\">{{f293}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Porcelain Veneers\"><button type=\"button\" class=\"ph\" data-case=\"52\" aria-label=\"View a larger version of Before and after Porcelain veneers. Dina of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f294}}\" alt=\"{{f295}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f296}}</strong><span class=\"tt\">{{f297}}</span><span class=\"tf\">{{f298}}</span><span class=\"rv\">{{f299}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Porcelain Veneers\"><button type=\"button\" class=\"ph\" data-case=\"53\" aria-label=\"View a larger version of Before and after Porcelain veneers. Andre of Brisbane, treated at Precision Dental.\"><img src=\"{{f300}}\" alt=\"{{f301}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f302}}</strong><span class=\"tt\">{{f303}}</span><span class=\"tf\">{{f304}}</span><span class=\"rv\">{{f305}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Porcelain Veneers\"><button type=\"button\" class=\"ph\" data-case=\"54\" aria-label=\"View a larger version of Before and after Porcelain veneers. Jenny of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f306}}\" alt=\"{{f307}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f308}}</strong><span class=\"tt\">{{f309}}</span><span class=\"tf\">{{f310}}</span><span class=\"rv\">{{f311}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Porcelain Veneers\"><button type=\"button\" class=\"ph\" data-case=\"55\" aria-label=\"View a larger version of Before and after Porcelain veneers. Nina of Brisbane, treated at Precision Dental.\"><img src=\"{{f312}}\" alt=\"{{f313}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f314}}</strong><span class=\"tt\">{{f315}}</span><span class=\"tf\">{{f316}}</span><span class=\"rv\">{{f317}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Porcelain Veneers\"><button type=\"button\" class=\"ph\" data-case=\"56\" aria-label=\"View a larger version of Before and after Porcelain veneers. Natalie of Brisbane, treated at Precision Dental.\"><img src=\"{{f318}}\" alt=\"{{f319}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f320}}</strong><span class=\"tt\">{{f321}}</span><span class=\"tf\">{{f322}}</span><span class=\"rv\">{{f323}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Porcelain Veneers\"><button type=\"button\" class=\"ph\" data-case=\"57\" aria-label=\"View a larger version of Before and after Porcelain veneers. Reubin of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f324}}\" alt=\"{{f325}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f326}}</strong><span class=\"tt\">{{f327}}</span><span class=\"tf\">{{f328}}</span><span class=\"rv\">{{f329}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Porcelain Veneers\"><button type=\"button\" class=\"ph\" data-case=\"58\" aria-label=\"View a larger version of Before and after Porcelain veneers. Diana of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f330}}\" alt=\"{{f331}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f332}}</strong><span class=\"tt\">{{f333}}</span><span class=\"tf\">{{f334}}</span><span class=\"rv\">{{f335}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Invisalign\"><button type=\"button\" class=\"ph\" data-case=\"59\" aria-label=\"View a larger version of Before and after Invisalign. Catherine of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f336}}\" alt=\"{{f337}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f338}}</strong><span class=\"tt\">{{f339}}</span><span class=\"tf\">{{f340}}</span><span class=\"rv\">{{f341}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Invisalign\"><button type=\"button\" class=\"ph\" data-case=\"60\" aria-label=\"View a larger version of Before and after Invisalign. Carmi of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f342}}\" alt=\"{{f343}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f344}}</strong><span class=\"tt\">{{f345}}</span><span class=\"tf\">{{f346}}</span><span class=\"rv\">{{f347}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Invisalign\"><button type=\"button\" class=\"ph\" data-case=\"61\" aria-label=\"View a larger version of Before and after Invisalign. Bridget of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f348}}\" alt=\"{{f349}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f350}}</strong><span class=\"tt\">{{f351}}</span><span class=\"tf\">{{f352}}</span><span class=\"rv\">{{f353}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Crowns and Bridges\"><button type=\"button\" class=\"ph\" data-case=\"62\" aria-label=\"View a larger version of Before and after Dental crowns and bridges. Kihana of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f354}}\" alt=\"{{f355}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f356}}</strong><span class=\"tt\">{{f357}}</span><span class=\"tf\">{{f358}}</span><span class=\"rv\">{{f359}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Crowns and Bridges\"><button type=\"button\" class=\"ph\" data-case=\"63\" aria-label=\"View a larger version of Before and after Dental crowns and bridges. A patient of Brisbane, treated at Precision Dental.\"><img src=\"{{f360}}\" alt=\"{{f361}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f362}}</strong><span class=\"tt\">{{f363}}</span><span class=\"tf\">{{f364}}</span><span class=\"rv\">{{f365}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Crowns and Bridges\"><button type=\"button\" class=\"ph\" data-case=\"64\" aria-label=\"View a larger version of Before and after Dental crowns and bridges. Jae of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f366}}\" alt=\"{{f367}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f368}}</strong><span class=\"tt\">{{f369}}</span><span class=\"tf\">{{f370}}</span><span class=\"rv\">{{f371}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Crowns and Bridges\"><button type=\"button\" class=\"ph\" data-case=\"65\" aria-label=\"View a larger version of Before and after Dental crowns and bridges. Noel of Brisbane, treated at Precision Dental.\"><img src=\"{{f372}}\" alt=\"{{f373}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f374}}</strong><span class=\"tt\">{{f375}}</span><span class=\"tf\">{{f376}}</span><span class=\"rv\">{{f377}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Crowns and Bridges\"><button type=\"button\" class=\"ph\" data-case=\"66\" aria-label=\"View a larger version of Before and after Dental crowns and bridges. Kanae of Brisbane, treated at Precision Dental.\"><img src=\"{{f378}}\" alt=\"{{f379}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f380}}</strong><span class=\"tt\">{{f381}}</span><span class=\"tf\">{{f382}}</span><span class=\"rv\">{{f383}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Crowns and Bridges\"><button type=\"button\" class=\"ph\" data-case=\"67\" aria-label=\"View a larger version of Before and after Dental crowns and bridges. Mark of Brisbane, treated at Precision Dental.\"><img src=\"{{f384}}\" alt=\"{{f385}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f386}}</strong><span class=\"tt\">{{f387}}</span><span class=\"tf\">{{f388}}</span><span class=\"rv\">{{f389}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Implant\"><button type=\"button\" class=\"ph\" data-case=\"68\" aria-label=\"View a larger version of Before and after Dental implant. Chris of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f390}}\" alt=\"{{f391}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f392}}</strong><span class=\"tt\">{{f393}}</span><span class=\"tf\">{{f394}}</span><span class=\"rv\">{{f395}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Implant\"><button type=\"button\" class=\"ph\" data-case=\"69\" aria-label=\"View a larger version of Before and after Dental implant. William of Redland Bay, treated at Precision Dental.\"><img src=\"{{f396}}\" alt=\"{{f397}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f398}}</strong><span class=\"tt\">{{f399}}</span><span class=\"tf\">{{f400}}</span><span class=\"rv\">{{f401}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Implant\"><button type=\"button\" class=\"ph\" data-case=\"70\" aria-label=\"View a larger version of Before and after Dental implant. Peter of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f402}}\" alt=\"{{f403}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f404}}</strong><span class=\"tt\">{{f405}}</span><span class=\"tf\">{{f406}}</span><span class=\"rv\">{{f407}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Implant\"><button type=\"button\" class=\"ph\" data-case=\"71\" aria-label=\"View a larger version of Before and after Dental implant. Ken of Brisbane, treated at Precision Dental.\"><img src=\"{{f408}}\" alt=\"{{f409}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f410}}</strong><span class=\"tt\">{{f411}}</span><span class=\"tf\">{{f412}}</span><span class=\"rv\">{{f413}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Implant\"><button type=\"button\" class=\"ph\" data-case=\"72\" aria-label=\"View a larger version of Before and after Dental implant. Isaac of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f414}}\" alt=\"{{f415}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f416}}</strong><span class=\"tt\">{{f417}}</span><span class=\"tf\">{{f418}}</span><span class=\"rv\">{{f419}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Implant\"><button type=\"button\" class=\"ph\" data-case=\"73\" aria-label=\"View a larger version of Before and after Dental implant. Chris of Brisbane, treated at Precision Dental.\"><img src=\"{{f420}}\" alt=\"{{f421}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f422}}</strong><span class=\"tt\">{{f423}}</span><span class=\"tf\">{{f424}}</span><span class=\"rv\">{{f425}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Implant\"><button type=\"button\" class=\"ph\" data-case=\"74\" aria-label=\"View a larger version of Before and after Dental implant. Rachel of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f426}}\" alt=\"{{f427}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f428}}</strong><span class=\"tt\">{{f429}}</span><span class=\"tf\">{{f430}}</span><span class=\"rv\">{{f431}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Invisalign\"><button type=\"button\" class=\"ph\" data-case=\"75\" aria-label=\"View a larger version of Before and after Invisalign, crowns and bridges. Luke of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f432}}\" alt=\"{{f433}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f434}}</strong><span class=\"tt\">{{f435}}</span><span class=\"tf\">{{f436}}</span><span class=\"rv\">{{f437}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Invisalign\"><button type=\"button\" class=\"ph\" data-case=\"76\" aria-label=\"View a larger version of Before and after Invisalign, crowns and bridges. Luke of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f438}}\" alt=\"{{f439}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f440}}</strong><span class=\"tt\">{{f441}}</span><span class=\"tf\">{{f442}}</span><span class=\"rv\">{{f443}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Invisalign\"><button type=\"button\" class=\"ph\" data-case=\"77\" aria-label=\"View a larger version of Before and after Invisalign, crowns and bridges. Luke of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f444}}\" alt=\"{{f445}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f446}}</strong><span class=\"tt\">{{f447}}</span><span class=\"tf\">{{f448}}</span><span class=\"rv\">{{f449}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Full Mouth Rehabilitation\"><button type=\"button\" class=\"ph\" data-case=\"78\" aria-label=\"View a larger version of Before and after Full mouth rehabilitation. Kane of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f450}}\" alt=\"{{f451}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f452}}</strong><span class=\"tt\">{{f453}}</span><span class=\"rv\">{{f454}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Full Mouth Rehabilitation\"><button type=\"button\" class=\"ph\" data-case=\"79\" aria-label=\"View a larger version of Before and after Full mouth rehabilitation. Kane of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f455}}\" alt=\"{{f456}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f457}}</strong><span class=\"tt\">{{f458}}</span><span class=\"rv\">{{f459}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Full Mouth Rehabilitation\"><button type=\"button\" class=\"ph\" data-case=\"80\" aria-label=\"View a larger version of Before and after Full mouth rehabilitation. Kane of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f460}}\" alt=\"{{f461}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f462}}</strong><span class=\"tt\">{{f463}}</span><span class=\"rv\">{{f464}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Crowns and Bridges\"><button type=\"button\" class=\"ph\" data-case=\"81\" aria-label=\"View a larger version of Before and after Dental crowns and bridges. Josh of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f465}}\" alt=\"{{f466}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f467}}</strong><span class=\"tt\">{{f468}}</span><span class=\"tf\">{{f469}}</span><span class=\"rv\">{{f470}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Crowns and Bridges\"><button type=\"button\" class=\"ph\" data-case=\"82\" aria-label=\"View a larger version of Before and after Dental crowns and bridges. Josh of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f471}}\" alt=\"{{f472}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f473}}</strong><span class=\"tt\">{{f474}}</span><span class=\"tf\">{{f475}}</span><span class=\"rv\">{{f476}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Crowns and Bridges\"><button type=\"button\" class=\"ph\" data-case=\"83\" aria-label=\"View a larger version of Before and after Dental crowns and bridges. Josh of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f477}}\" alt=\"{{f478}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f479}}</strong><span class=\"tt\">{{f480}}</span><span class=\"tf\">{{f481}}</span><span class=\"rv\">{{f482}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Invisalign\"><button type=\"button\" class=\"ph\" data-case=\"84\" aria-label=\"View a larger version of Before and after Invisalign. Catherine of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f483}}\" alt=\"{{f484}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f485}}</strong><span class=\"tt\">{{f486}}</span><span class=\"tf\">{{f487}}</span><span class=\"rv\">{{f488}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Invisalign\"><button type=\"button\" class=\"ph\" data-case=\"85\" aria-label=\"View a larger version of Before and after Invisalign. Catherine of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f489}}\" alt=\"{{f490}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f491}}</strong><span class=\"tt\">{{f492}}</span><span class=\"tf\">{{f493}}</span><span class=\"rv\">{{f494}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Invisalign\"><button type=\"button\" class=\"ph\" data-case=\"86\" aria-label=\"View a larger version of Before and after Invisalign. Carmi of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f495}}\" alt=\"{{f496}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f497}}</strong><span class=\"tt\">{{f498}}</span><span class=\"tf\">{{f499}}</span><span class=\"rv\">{{f500}}</span></figcaption></figure><figure class=\"gallery-card\" data-cat=\"Invisalign\"><button type=\"button\" class=\"ph\" data-case=\"87\" aria-label=\"View a larger version of Before and after Invisalign. Bridget of Fortitude Valley, treated at Precision Dental.\"><img src=\"{{f501}}\" alt=\"{{f502}}\" loading=\"lazy\" decoding=\"async\"></button><figcaption><strong>{{f503}}</strong><span class=\"tt\">{{f504}}</span><span class=\"tf\">{{f505}}</span><span class=\"rv\">{{f506}}</span></figcaption></figure></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Every photograph below is of a patient treated at Precision Dental, published with their permission. They are shown as taken, and the treatment and the time between the two photographs are stated on each one."
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "These are individual cases. A dental examination and diagnosis is needed before anyone can say what is suitable or likely for you, and results vary between individuals. Any dental procedure carries risks and benefits."
+        },
+        {
+          "id": "f3",
+          "label": "Button text",
+          "type": "rich",
+          "value": "All<span class=\"c\">87</span>"
+        },
+        {
+          "id": "f4",
+          "label": "Button text",
+          "type": "rich",
+          "value": "Implant<span class=\"c\">7</span>"
+        },
+        {
+          "id": "f5",
+          "label": "Button text",
+          "type": "rich",
+          "value": "Invisalign<span class=\"c\">13</span>"
+        },
+        {
+          "id": "f6",
+          "label": "Button text",
+          "type": "rich",
+          "value": "Composite Veneers<span class=\"c\">13</span>"
+        },
+        {
+          "id": "f7",
+          "label": "Button text",
+          "type": "rich",
+          "value": "Porcelain Veneers<span class=\"c\">9</span>"
+        },
+        {
+          "id": "f8",
+          "label": "Button text",
+          "type": "rich",
+          "value": "Whitening<span class=\"c\">20</span>"
+        },
+        {
+          "id": "f9",
+          "label": "Button text",
+          "type": "rich",
+          "value": "Bonding<span class=\"c\">4</span>"
+        },
+        {
+          "id": "f10",
+          "label": "Button text",
+          "type": "rich",
+          "value": "Crowns and Bridges<span class=\"c\">17</span>"
+        },
+        {
+          "id": "f11",
+          "label": "Button text",
+          "type": "rich",
+          "value": "Full Mouth Rehabilitation<span class=\"c\">4</span>"
+        },
+        {
+          "id": "f12",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Showing all 87 cases"
+        },
+        {
+          "id": "f13",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/01-mia-invisalign-th.webp",
+          "group": "1"
+        },
+        {
+          "id": "f14",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Invisalign, crowns and bridges. Mia of Fortitude Valley, treated at Precision Dental.",
+          "group": "1"
+        },
+        {
+          "id": "f15",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Mia of Fortitude Valley",
+          "group": "1"
+        },
+        {
+          "id": "f16",
+          "label": "Text",
+          "type": "text",
+          "value": "Invisalign, crowns and bridges",
+          "group": "1"
+        },
+        {
+          "id": "f17",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 to 8 months",
+          "group": "1"
+        },
+        {
+          "id": "f18",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "1"
+        },
+        {
+          "id": "f19",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/02-emma-crowns-bridges-th.webp",
+          "group": "2"
+        },
+        {
+          "id": "f20",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental crown. Emma of Teneriffe, treated at Precision Dental.",
+          "group": "2"
+        },
+        {
+          "id": "f21",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Emma of Teneriffe",
+          "group": "2"
+        },
+        {
+          "id": "f22",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental crown",
+          "group": "2"
+        },
+        {
+          "id": "f23",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 1 day to 2 weeks",
+          "group": "2"
+        },
+        {
+          "id": "f24",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "2"
+        },
+        {
+          "id": "f25",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/03-emma-crowns-bridges-th.webp",
+          "group": "3"
+        },
+        {
+          "id": "f26",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental crown. Emma of Teneriffe, treated at Precision Dental.",
+          "group": "3"
+        },
+        {
+          "id": "f27",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Emma of Teneriffe",
+          "group": "3"
+        },
+        {
+          "id": "f28",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental crown",
+          "group": "3"
+        },
+        {
+          "id": "f29",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 1 day to 2 weeks",
+          "group": "3"
+        },
+        {
+          "id": "f30",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "3"
+        },
+        {
+          "id": "f31",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/04-mark-invisalign-th.webp",
+          "group": "4"
+        },
+        {
+          "id": "f32",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Invisalign. Mark of Newstead, treated at Precision Dental.",
+          "group": "4"
+        },
+        {
+          "id": "f33",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Mark of Newstead",
+          "group": "4"
+        },
+        {
+          "id": "f34",
+          "label": "Text",
+          "type": "text",
+          "value": "Invisalign",
+          "group": "4"
+        },
+        {
+          "id": "f35",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 to 8 months",
+          "group": "4"
+        },
+        {
+          "id": "f36",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "4"
+        },
+        {
+          "id": "f37",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/05-brandon-crowns-bridges-th.webp",
+          "group": "5"
+        },
+        {
+          "id": "f38",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental crowns and bridges. Brandon of Fortitude Valley, treated at Precision Dental.",
+          "group": "5"
+        },
+        {
+          "id": "f39",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Brandon of Fortitude Valley",
+          "group": "5"
+        },
+        {
+          "id": "f40",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental crowns and bridges",
+          "group": "5"
+        },
+        {
+          "id": "f41",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 1 day to 2 weeks",
+          "group": "5"
+        },
+        {
+          "id": "f42",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "5"
+        },
+        {
+          "id": "f43",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/06-brandon-crowns-bridges-th.webp",
+          "group": "6"
+        },
+        {
+          "id": "f44",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental crowns and bridges. Brandon of Fortitude Valley, treated at Precision Dental.",
+          "group": "6"
+        },
+        {
+          "id": "f45",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Brandon of Fortitude Valley",
+          "group": "6"
+        },
+        {
+          "id": "f46",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental crowns and bridges",
+          "group": "6"
+        },
+        {
+          "id": "f47",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 1 day to 2 weeks",
+          "group": "6"
+        },
+        {
+          "id": "f48",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "6"
+        },
+        {
+          "id": "f49",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/07-brandon-crowns-bridges-th.webp",
+          "group": "7"
+        },
+        {
+          "id": "f50",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental crowns and bridges. Brandon of Fortitude Valley, treated at Precision Dental.",
+          "group": "7"
+        },
+        {
+          "id": "f51",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Brandon of Fortitude Valley",
+          "group": "7"
+        },
+        {
+          "id": "f52",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental crowns and bridges",
+          "group": "7"
+        },
+        {
+          "id": "f53",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 1 day to 2 weeks",
+          "group": "7"
+        },
+        {
+          "id": "f54",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "7"
+        },
+        {
+          "id": "f55",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/08-brandon-crowns-bridges-th.webp",
+          "group": "8"
+        },
+        {
+          "id": "f56",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental crowns and bridges. Brandon of Fortitude Valley, treated at Precision Dental.",
+          "group": "8"
+        },
+        {
+          "id": "f57",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Brandon of Fortitude Valley",
+          "group": "8"
+        },
+        {
+          "id": "f58",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental crowns and bridges",
+          "group": "8"
+        },
+        {
+          "id": "f59",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 1 day to 2 weeks",
+          "group": "8"
+        },
+        {
+          "id": "f60",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "8"
+        },
+        {
+          "id": "f61",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/09-ana-porcelain-veneers-th.webp",
+          "group": "9"
+        },
+        {
+          "id": "f62",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Porcelain veneers. Ana of Fortitude Valley, treated at Precision Dental.",
+          "group": "9"
+        },
+        {
+          "id": "f63",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Ana of Fortitude Valley",
+          "group": "9"
+        },
+        {
+          "id": "f64",
+          "label": "Text",
+          "type": "text",
+          "value": "Porcelain veneers",
+          "group": "9"
+        },
+        {
+          "id": "f65",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "9"
+        },
+        {
+          "id": "f66",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "9"
+        },
+        {
+          "id": "f67",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/10-jessa-invisalign-th.webp",
+          "group": "10"
+        },
+        {
+          "id": "f68",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Invisalign. Jessa of Fortitude Valley, treated at Precision Dental.",
+          "group": "10"
+        },
+        {
+          "id": "f69",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Jessa of Fortitude Valley",
+          "group": "10"
+        },
+        {
+          "id": "f70",
+          "label": "Text",
+          "type": "text",
+          "value": "Invisalign",
+          "group": "10"
+        },
+        {
+          "id": "f71",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 to 8 months",
+          "group": "10"
+        },
+        {
+          "id": "f72",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "10"
+        },
+        {
+          "id": "f73",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/11-peter-crowns-bridges-th.webp",
+          "group": "11"
+        },
+        {
+          "id": "f74",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental crowns. Peter of Fortitude Valley, treated at Precision Dental.",
+          "group": "11"
+        },
+        {
+          "id": "f75",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Peter of Fortitude Valley",
+          "group": "11"
+        },
+        {
+          "id": "f76",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental crowns",
+          "group": "11"
+        },
+        {
+          "id": "f77",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 1 day to 2 weeks",
+          "group": "11"
+        },
+        {
+          "id": "f78",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "11"
+        },
+        {
+          "id": "f79",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/12-george-full-mouth-th.webp",
+          "group": "12"
+        },
+        {
+          "id": "f80",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Full mouth rehabilitation. George of Slacks Creek, treated at Precision Dental.",
+          "group": "12"
+        },
+        {
+          "id": "f81",
+          "label": "Bold text",
+          "type": "text",
+          "value": "George of Slacks Creek",
+          "group": "12"
+        },
+        {
+          "id": "f82",
+          "label": "Text",
+          "type": "text",
+          "value": "Full mouth rehabilitation",
+          "group": "12"
+        },
+        {
+          "id": "f83",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "12"
+        },
+        {
+          "id": "f84",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/13-samantha-whitening-th.webp",
+          "group": "13"
+        },
+        {
+          "id": "f85",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Samantha of Fortitude Valley, treated at Precision Dental.",
+          "group": "13"
+        },
+        {
+          "id": "f86",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Samantha of Fortitude Valley",
+          "group": "13"
+        },
+        {
+          "id": "f87",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "13"
+        },
+        {
+          "id": "f88",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "13"
+        },
+        {
+          "id": "f89",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/14-sally-whitening-th.webp",
+          "group": "14"
+        },
+        {
+          "id": "f90",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Sally of Brisbane, treated at Precision Dental.",
+          "group": "14"
+        },
+        {
+          "id": "f91",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Sally of Brisbane",
+          "group": "14"
+        },
+        {
+          "id": "f92",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "14"
+        },
+        {
+          "id": "f93",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "14"
+        },
+        {
+          "id": "f94",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/15-peter-whitening-th.webp",
+          "group": "15"
+        },
+        {
+          "id": "f95",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Peter of Brisbane, treated at Precision Dental.",
+          "group": "15"
+        },
+        {
+          "id": "f96",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Peter of Brisbane",
+          "group": "15"
+        },
+        {
+          "id": "f97",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "15"
+        },
+        {
+          "id": "f98",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "15"
+        },
+        {
+          "id": "f99",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/16-mathew-whitening-th.webp",
+          "group": "16"
+        },
+        {
+          "id": "f100",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Mathew of Fortitude Valley, treated at Precision Dental.",
+          "group": "16"
+        },
+        {
+          "id": "f101",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Mathew of Fortitude Valley",
+          "group": "16"
+        },
+        {
+          "id": "f102",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "16"
+        },
+        {
+          "id": "f103",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "16"
+        },
+        {
+          "id": "f104",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/17-mark-whitening-th.webp",
+          "group": "17"
+        },
+        {
+          "id": "f105",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Mark of Brisbane, treated at Precision Dental.",
+          "group": "17"
+        },
+        {
+          "id": "f106",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Mark of Brisbane",
+          "group": "17"
+        },
+        {
+          "id": "f107",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "17"
+        },
+        {
+          "id": "f108",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "17"
+        },
+        {
+          "id": "f109",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/18-luke-whitening-th.webp",
+          "group": "18"
+        },
+        {
+          "id": "f110",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Luke of Fortitude Valley, treated at Precision Dental.",
+          "group": "18"
+        },
+        {
+          "id": "f111",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Luke of Fortitude Valley",
+          "group": "18"
+        },
+        {
+          "id": "f112",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "18"
+        },
+        {
+          "id": "f113",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "18"
+        },
+        {
+          "id": "f114",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/19-kevin-whitening-th.webp",
+          "group": "19"
+        },
+        {
+          "id": "f115",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Kevin of Brisbane, treated at Precision Dental.",
+          "group": "19"
+        },
+        {
+          "id": "f116",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Kevin of Brisbane",
+          "group": "19"
+        },
+        {
+          "id": "f117",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "19"
+        },
+        {
+          "id": "f118",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "19"
+        },
+        {
+          "id": "f119",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/20-kay-whitening-th.webp",
+          "group": "20"
+        },
+        {
+          "id": "f120",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Kay of Fortitude Valley, treated at Precision Dental.",
+          "group": "20"
+        },
+        {
+          "id": "f121",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Kay of Fortitude Valley",
+          "group": "20"
+        },
+        {
+          "id": "f122",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "20"
+        },
+        {
+          "id": "f123",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "20"
+        },
+        {
+          "id": "f124",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/21-kaitlyn-whitening-th.webp",
+          "group": "21"
+        },
+        {
+          "id": "f125",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Kaitlyn of Brisbane, treated at Precision Dental.",
+          "group": "21"
+        },
+        {
+          "id": "f126",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Kaitlyn of Brisbane",
+          "group": "21"
+        },
+        {
+          "id": "f127",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "21"
+        },
+        {
+          "id": "f128",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "21"
+        },
+        {
+          "id": "f129",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/22-jordan-whitening-th.webp",
+          "group": "22"
+        },
+        {
+          "id": "f130",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Jordan of Fortitude Valley, treated at Precision Dental.",
+          "group": "22"
+        },
+        {
+          "id": "f131",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Jordan of Fortitude Valley",
+          "group": "22"
+        },
+        {
+          "id": "f132",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "22"
+        },
+        {
+          "id": "f133",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "22"
+        },
+        {
+          "id": "f134",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/23-jacob-whitening-th.webp",
+          "group": "23"
+        },
+        {
+          "id": "f135",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Jacob of Brisbane, treated at Precision Dental.",
+          "group": "23"
+        },
+        {
+          "id": "f136",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Jacob of Brisbane",
+          "group": "23"
+        },
+        {
+          "id": "f137",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "23"
+        },
+        {
+          "id": "f138",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "23"
+        },
+        {
+          "id": "f139",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/24-gabriel-whitening-th.webp",
+          "group": "24"
+        },
+        {
+          "id": "f140",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Gabriel of Fortitude Valley, treated at Precision Dental.",
+          "group": "24"
+        },
+        {
+          "id": "f141",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Gabriel of Fortitude Valley",
+          "group": "24"
+        },
+        {
+          "id": "f142",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "24"
+        },
+        {
+          "id": "f143",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "24"
+        },
+        {
+          "id": "f144",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/25-donovan-whitening-th.webp",
+          "group": "25"
+        },
+        {
+          "id": "f145",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Donovan of Brisbane, treated at Precision Dental.",
+          "group": "25"
+        },
+        {
+          "id": "f146",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Donovan of Brisbane",
+          "group": "25"
+        },
+        {
+          "id": "f147",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "25"
+        },
+        {
+          "id": "f148",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "25"
+        },
+        {
+          "id": "f149",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/26-danica-whitening-th.webp",
+          "group": "26"
+        },
+        {
+          "id": "f150",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Danica of Fortitude Valley, treated at Precision Dental.",
+          "group": "26"
+        },
+        {
+          "id": "f151",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Danica of Fortitude Valley",
+          "group": "26"
+        },
+        {
+          "id": "f152",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "26"
+        },
+        {
+          "id": "f153",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "26"
+        },
+        {
+          "id": "f154",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/27-cameron-whitening-th.webp",
+          "group": "27"
+        },
+        {
+          "id": "f155",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Cameron of Brisbane, treated at Precision Dental.",
+          "group": "27"
+        },
+        {
+          "id": "f156",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Cameron of Brisbane",
+          "group": "27"
+        },
+        {
+          "id": "f157",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "27"
+        },
+        {
+          "id": "f158",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "27"
+        },
+        {
+          "id": "f159",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/28-bridget-whitening-th.webp",
+          "group": "28"
+        },
+        {
+          "id": "f160",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Bridget of Fortitude Valley, treated at Precision Dental.",
+          "group": "28"
+        },
+        {
+          "id": "f161",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Bridget of Fortitude Valley",
+          "group": "28"
+        },
+        {
+          "id": "f162",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "28"
+        },
+        {
+          "id": "f163",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "28"
+        },
+        {
+          "id": "f164",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/29-sophie-whitening-th.webp",
+          "group": "29"
+        },
+        {
+          "id": "f165",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Sophie of Fortitude Valley, treated at Precision Dental.",
+          "group": "29"
+        },
+        {
+          "id": "f166",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Sophie of Fortitude Valley",
+          "group": "29"
+        },
+        {
+          "id": "f167",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "29"
+        },
+        {
+          "id": "f168",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "29"
+        },
+        {
+          "id": "f169",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/30-shane-whitening-th.webp",
+          "group": "30"
+        },
+        {
+          "id": "f170",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Shane of Brisbane, treated at Precision Dental.",
+          "group": "30"
+        },
+        {
+          "id": "f171",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Shane of Brisbane",
+          "group": "30"
+        },
+        {
+          "id": "f172",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "30"
+        },
+        {
+          "id": "f173",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "30"
+        },
+        {
+          "id": "f174",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/31-ryan-whitening-th.webp",
+          "group": "31"
+        },
+        {
+          "id": "f175",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Ryan of Fortitude Valley, treated at Precision Dental.",
+          "group": "31"
+        },
+        {
+          "id": "f176",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Ryan of Fortitude Valley",
+          "group": "31"
+        },
+        {
+          "id": "f177",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "31"
+        },
+        {
+          "id": "f178",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "31"
+        },
+        {
+          "id": "f179",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/32-brendan-whitening-th.webp",
+          "group": "32"
+        },
+        {
+          "id": "f180",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Teeth whitening. Brendan of Brisbane, treated at Precision Dental.",
+          "group": "32"
+        },
+        {
+          "id": "f181",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Brendan of Brisbane",
+          "group": "32"
+        },
+        {
+          "id": "f182",
+          "label": "Text",
+          "type": "text",
+          "value": "Teeth whitening",
+          "group": "32"
+        },
+        {
+          "id": "f183",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "32"
+        },
+        {
+          "id": "f184",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/33-tom-crowns-bridges-th.webp",
+          "group": "33"
+        },
+        {
+          "id": "f185",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental crowns and bridges. Tom of Brisbane, treated at Precision Dental.",
+          "group": "33"
+        },
+        {
+          "id": "f186",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Tom of Brisbane",
+          "group": "33"
+        },
+        {
+          "id": "f187",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental crowns and bridges",
+          "group": "33"
+        },
+        {
+          "id": "f188",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 1 day to 2 weeks",
+          "group": "33"
+        },
+        {
+          "id": "f189",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "33"
+        },
+        {
+          "id": "f190",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/34-tahlia-composite-veneers-th.webp",
+          "group": "34"
+        },
+        {
+          "id": "f191",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Composite resin veneers. Tahlia of Fortitude Valley, treated at Precision Dental.",
+          "group": "34"
+        },
+        {
+          "id": "f192",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Tahlia of Fortitude Valley",
+          "group": "34"
+        },
+        {
+          "id": "f193",
+          "label": "Text",
+          "type": "text",
+          "value": "Composite resin veneers",
+          "group": "34"
+        },
+        {
+          "id": "f194",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "34"
+        },
+        {
+          "id": "f195",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "34"
+        },
+        {
+          "id": "f196",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/35-yvonne-composite-veneers-th.webp",
+          "group": "35"
+        },
+        {
+          "id": "f197",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Composite resin veneers. Yvonne of Brisbane, treated at Precision Dental.",
+          "group": "35"
+        },
+        {
+          "id": "f198",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Yvonne of Brisbane",
+          "group": "35"
+        },
+        {
+          "id": "f199",
+          "label": "Text",
+          "type": "text",
+          "value": "Composite resin veneers",
+          "group": "35"
+        },
+        {
+          "id": "f200",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "35"
+        },
+        {
+          "id": "f201",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "35"
+        },
+        {
+          "id": "f202",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/36-stacey-composite-veneers-th.webp",
+          "group": "36"
+        },
+        {
+          "id": "f203",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Composite resin veneers. Stacey of Brisbane, treated at Precision Dental.",
+          "group": "36"
+        },
+        {
+          "id": "f204",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Stacey of Brisbane",
+          "group": "36"
+        },
+        {
+          "id": "f205",
+          "label": "Text",
+          "type": "text",
+          "value": "Composite resin veneers",
+          "group": "36"
+        },
+        {
+          "id": "f206",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "36"
+        },
+        {
+          "id": "f207",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "36"
+        },
+        {
+          "id": "f208",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/37-pam-composite-veneers-th.webp",
+          "group": "37"
+        },
+        {
+          "id": "f209",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Composite resin veneers. Pam of Brisbane, treated at Precision Dental.",
+          "group": "37"
+        },
+        {
+          "id": "f210",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Pam of Brisbane",
+          "group": "37"
+        },
+        {
+          "id": "f211",
+          "label": "Text",
+          "type": "text",
+          "value": "Composite resin veneers",
+          "group": "37"
+        },
+        {
+          "id": "f212",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "37"
+        },
+        {
+          "id": "f213",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "37"
+        },
+        {
+          "id": "f214",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/38-robert-composite-veneers-th.webp",
+          "group": "38"
+        },
+        {
+          "id": "f215",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Composite resin veneers. Robert of Fortitude Valley, treated at Precision Dental.",
+          "group": "38"
+        },
+        {
+          "id": "f216",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Robert of Fortitude Valley",
+          "group": "38"
+        },
+        {
+          "id": "f217",
+          "label": "Text",
+          "type": "text",
+          "value": "Composite resin veneers",
+          "group": "38"
+        },
+        {
+          "id": "f218",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "38"
+        },
+        {
+          "id": "f219",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "38"
+        },
+        {
+          "id": "f220",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/39-josephine-composite-veneers-th.webp",
+          "group": "39"
+        },
+        {
+          "id": "f221",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Composite veneers. Josephine of Fortitude Valley, treated at Precision Dental.",
+          "group": "39"
+        },
+        {
+          "id": "f222",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Josephine of Fortitude Valley",
+          "group": "39"
+        },
+        {
+          "id": "f223",
+          "label": "Text",
+          "type": "text",
+          "value": "Composite veneers",
+          "group": "39"
+        },
+        {
+          "id": "f224",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "39"
+        },
+        {
+          "id": "f225",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "39"
+        },
+        {
+          "id": "f226",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/40-geraldine-composite-veneers-th.webp",
+          "group": "40"
+        },
+        {
+          "id": "f227",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Composite resin veneers. Geraldine of Fortitude Valley, treated at Precision Dental.",
+          "group": "40"
+        },
+        {
+          "id": "f228",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Geraldine of Fortitude Valley",
+          "group": "40"
+        },
+        {
+          "id": "f229",
+          "label": "Text",
+          "type": "text",
+          "value": "Composite resin veneers",
+          "group": "40"
+        },
+        {
+          "id": "f230",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "40"
+        },
+        {
+          "id": "f231",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "40"
+        },
+        {
+          "id": "f232",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/41-hannah-composite-veneers-th.webp",
+          "group": "41"
+        },
+        {
+          "id": "f233",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Composite resin veneers. Hannah of Brisbane, treated at Precision Dental.",
+          "group": "41"
+        },
+        {
+          "id": "f234",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Hannah of Brisbane",
+          "group": "41"
+        },
+        {
+          "id": "f235",
+          "label": "Text",
+          "type": "text",
+          "value": "Composite resin veneers",
+          "group": "41"
+        },
+        {
+          "id": "f236",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "41"
+        },
+        {
+          "id": "f237",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "41"
+        },
+        {
+          "id": "f238",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/42-david-composite-veneers-th.webp",
+          "group": "42"
+        },
+        {
+          "id": "f239",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Composite resin veneers. David of Brisbane, treated at Precision Dental.",
+          "group": "42"
+        },
+        {
+          "id": "f240",
+          "label": "Bold text",
+          "type": "text",
+          "value": "David of Brisbane",
+          "group": "42"
+        },
+        {
+          "id": "f241",
+          "label": "Text",
+          "type": "text",
+          "value": "Composite resin veneers",
+          "group": "42"
+        },
+        {
+          "id": "f242",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "42"
+        },
+        {
+          "id": "f243",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "42"
+        },
+        {
+          "id": "f244",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/43-a-patient-composite-veneers-th.webp",
+          "group": "43"
+        },
+        {
+          "id": "f245",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Composite resin veneers. A patient of Fortitude Valley, treated at Precision Dental.",
+          "group": "43"
+        },
+        {
+          "id": "f246",
+          "label": "Bold text",
+          "type": "text",
+          "value": "A patient of Fortitude Valley",
+          "group": "43"
+        },
+        {
+          "id": "f247",
+          "label": "Text",
+          "type": "text",
+          "value": "Composite resin veneers",
+          "group": "43"
+        },
+        {
+          "id": "f248",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "43"
+        },
+        {
+          "id": "f249",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "43"
+        },
+        {
+          "id": "f250",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/44-daniel-composite-veneers-th.webp",
+          "group": "44"
+        },
+        {
+          "id": "f251",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Composite resin veneers. Daniel of Fortitude Valley, treated at Precision Dental.",
+          "group": "44"
+        },
+        {
+          "id": "f252",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Daniel of Fortitude Valley",
+          "group": "44"
+        },
+        {
+          "id": "f253",
+          "label": "Text",
+          "type": "text",
+          "value": "Composite resin veneers",
+          "group": "44"
+        },
+        {
+          "id": "f254",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "44"
+        },
+        {
+          "id": "f255",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "44"
+        },
+        {
+          "id": "f256",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/45-chelsea-composite-veneers-th.webp",
+          "group": "45"
+        },
+        {
+          "id": "f257",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Composite resin veneers. Chelsea of Brisbane, treated at Precision Dental.",
+          "group": "45"
+        },
+        {
+          "id": "f258",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Chelsea of Brisbane",
+          "group": "45"
+        },
+        {
+          "id": "f259",
+          "label": "Text",
+          "type": "text",
+          "value": "Composite resin veneers",
+          "group": "45"
+        },
+        {
+          "id": "f260",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "45"
+        },
+        {
+          "id": "f261",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "45"
+        },
+        {
+          "id": "f262",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/46-casey-composite-veneers-th.webp",
+          "group": "46"
+        },
+        {
+          "id": "f263",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Composite resin veneers. Casey of Melbourne, treated at Precision Dental.",
+          "group": "46"
+        },
+        {
+          "id": "f264",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Casey of Melbourne",
+          "group": "46"
+        },
+        {
+          "id": "f265",
+          "label": "Text",
+          "type": "text",
+          "value": "Composite resin veneers",
+          "group": "46"
+        },
+        {
+          "id": "f266",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "46"
+        },
+        {
+          "id": "f267",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "46"
+        },
+        {
+          "id": "f268",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/47-angus-bonding-th.webp",
+          "group": "47"
+        },
+        {
+          "id": "f269",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Composite resin bonding. Angus of Fortitude Valley, treated at Precision Dental.",
+          "group": "47"
+        },
+        {
+          "id": "f270",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Angus of Fortitude Valley",
+          "group": "47"
+        },
+        {
+          "id": "f271",
+          "label": "Text",
+          "type": "text",
+          "value": "Composite resin bonding",
+          "group": "47"
+        },
+        {
+          "id": "f272",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "47"
+        },
+        {
+          "id": "f273",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/48-naomi-bonding-th.webp",
+          "group": "48"
+        },
+        {
+          "id": "f274",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Composite resin bonding. Naomi of Brisbane, treated at Precision Dental.",
+          "group": "48"
+        },
+        {
+          "id": "f275",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Naomi of Brisbane",
+          "group": "48"
+        },
+        {
+          "id": "f276",
+          "label": "Text",
+          "type": "text",
+          "value": "Composite resin bonding",
+          "group": "48"
+        },
+        {
+          "id": "f277",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "48"
+        },
+        {
+          "id": "f278",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/49-cr-bonding-th.webp",
+          "group": "49"
+        },
+        {
+          "id": "f279",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Composite resin bonding. CR of Fortitude Valley, treated at Precision Dental.",
+          "group": "49"
+        },
+        {
+          "id": "f280",
+          "label": "Bold text",
+          "type": "text",
+          "value": "CR of Fortitude Valley",
+          "group": "49"
+        },
+        {
+          "id": "f281",
+          "label": "Text",
+          "type": "text",
+          "value": "Composite resin bonding",
+          "group": "49"
+        },
+        {
+          "id": "f282",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "49"
+        },
+        {
+          "id": "f283",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/50-debbie-bonding-th.webp",
+          "group": "50"
+        },
+        {
+          "id": "f284",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Composite resin bonding. Debbie of Brisbane, treated at Precision Dental.",
+          "group": "50"
+        },
+        {
+          "id": "f285",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Debbie of Brisbane",
+          "group": "50"
+        },
+        {
+          "id": "f286",
+          "label": "Text",
+          "type": "text",
+          "value": "Composite resin bonding",
+          "group": "50"
+        },
+        {
+          "id": "f287",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "50"
+        },
+        {
+          "id": "f288",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/51-alana-porcelain-veneers-th.webp",
+          "group": "51"
+        },
+        {
+          "id": "f289",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Porcelain veneers. Alana of Brisbane, treated at Precision Dental.",
+          "group": "51"
+        },
+        {
+          "id": "f290",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Alana of Brisbane",
+          "group": "51"
+        },
+        {
+          "id": "f291",
+          "label": "Text",
+          "type": "text",
+          "value": "Porcelain veneers",
+          "group": "51"
+        },
+        {
+          "id": "f292",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "51"
+        },
+        {
+          "id": "f293",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "51"
+        },
+        {
+          "id": "f294",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/52-dina-porcelain-veneers-th.webp",
+          "group": "52"
+        },
+        {
+          "id": "f295",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Porcelain veneers. Dina of Fortitude Valley, treated at Precision Dental.",
+          "group": "52"
+        },
+        {
+          "id": "f296",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Dina of Fortitude Valley",
+          "group": "52"
+        },
+        {
+          "id": "f297",
+          "label": "Text",
+          "type": "text",
+          "value": "Porcelain veneers",
+          "group": "52"
+        },
+        {
+          "id": "f298",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "52"
+        },
+        {
+          "id": "f299",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "52"
+        },
+        {
+          "id": "f300",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/53-andre-porcelain-veneers-th.webp",
+          "group": "53"
+        },
+        {
+          "id": "f301",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Porcelain veneers. Andre of Brisbane, treated at Precision Dental.",
+          "group": "53"
+        },
+        {
+          "id": "f302",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Andre of Brisbane",
+          "group": "53"
+        },
+        {
+          "id": "f303",
+          "label": "Text",
+          "type": "text",
+          "value": "Porcelain veneers",
+          "group": "53"
+        },
+        {
+          "id": "f304",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "53"
+        },
+        {
+          "id": "f305",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "53"
+        },
+        {
+          "id": "f306",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/54-jenny-porcelain-veneers-th.webp",
+          "group": "54"
+        },
+        {
+          "id": "f307",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Porcelain veneers. Jenny of Fortitude Valley, treated at Precision Dental.",
+          "group": "54"
+        },
+        {
+          "id": "f308",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Jenny of Fortitude Valley",
+          "group": "54"
+        },
+        {
+          "id": "f309",
+          "label": "Text",
+          "type": "text",
+          "value": "Porcelain veneers",
+          "group": "54"
+        },
+        {
+          "id": "f310",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "54"
+        },
+        {
+          "id": "f311",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "54"
+        },
+        {
+          "id": "f312",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/55-nina-porcelain-veneers-th.webp",
+          "group": "55"
+        },
+        {
+          "id": "f313",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Porcelain veneers. Nina of Brisbane, treated at Precision Dental.",
+          "group": "55"
+        },
+        {
+          "id": "f314",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Nina of Brisbane",
+          "group": "55"
+        },
+        {
+          "id": "f315",
+          "label": "Text",
+          "type": "text",
+          "value": "Porcelain veneers",
+          "group": "55"
+        },
+        {
+          "id": "f316",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "55"
+        },
+        {
+          "id": "f317",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "55"
+        },
+        {
+          "id": "f318",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/56-natalie-porcelain-veneers-th.webp",
+          "group": "56"
+        },
+        {
+          "id": "f319",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Porcelain veneers. Natalie of Brisbane, treated at Precision Dental.",
+          "group": "56"
+        },
+        {
+          "id": "f320",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Natalie of Brisbane",
+          "group": "56"
+        },
+        {
+          "id": "f321",
+          "label": "Text",
+          "type": "text",
+          "value": "Porcelain veneers",
+          "group": "56"
+        },
+        {
+          "id": "f322",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "56"
+        },
+        {
+          "id": "f323",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "56"
+        },
+        {
+          "id": "f324",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/57-reubin-porcelain-veneers-th.webp",
+          "group": "57"
+        },
+        {
+          "id": "f325",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Porcelain veneers. Reubin of Fortitude Valley, treated at Precision Dental.",
+          "group": "57"
+        },
+        {
+          "id": "f326",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Reubin of Fortitude Valley",
+          "group": "57"
+        },
+        {
+          "id": "f327",
+          "label": "Text",
+          "type": "text",
+          "value": "Porcelain veneers",
+          "group": "57"
+        },
+        {
+          "id": "f328",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "57"
+        },
+        {
+          "id": "f329",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "57"
+        },
+        {
+          "id": "f330",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/58-diana-porcelain-veneers-th.webp",
+          "group": "58"
+        },
+        {
+          "id": "f331",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Porcelain veneers. Diana of Fortitude Valley, treated at Precision Dental.",
+          "group": "58"
+        },
+        {
+          "id": "f332",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Diana of Fortitude Valley",
+          "group": "58"
+        },
+        {
+          "id": "f333",
+          "label": "Text",
+          "type": "text",
+          "value": "Porcelain veneers",
+          "group": "58"
+        },
+        {
+          "id": "f334",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 weeks",
+          "group": "58"
+        },
+        {
+          "id": "f335",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "58"
+        },
+        {
+          "id": "f336",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/59-catherine-invisalign-th.webp",
+          "group": "59"
+        },
+        {
+          "id": "f337",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Invisalign. Catherine of Fortitude Valley, treated at Precision Dental.",
+          "group": "59"
+        },
+        {
+          "id": "f338",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Catherine of Fortitude Valley",
+          "group": "59"
+        },
+        {
+          "id": "f339",
+          "label": "Text",
+          "type": "text",
+          "value": "Invisalign",
+          "group": "59"
+        },
+        {
+          "id": "f340",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 to 8 months",
+          "group": "59"
+        },
+        {
+          "id": "f341",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "59"
+        },
+        {
+          "id": "f342",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/60-carmi-invisalign-th.webp",
+          "group": "60"
+        },
+        {
+          "id": "f343",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Invisalign. Carmi of Fortitude Valley, treated at Precision Dental.",
+          "group": "60"
+        },
+        {
+          "id": "f344",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Carmi of Fortitude Valley",
+          "group": "60"
+        },
+        {
+          "id": "f345",
+          "label": "Text",
+          "type": "text",
+          "value": "Invisalign",
+          "group": "60"
+        },
+        {
+          "id": "f346",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 to 8 months",
+          "group": "60"
+        },
+        {
+          "id": "f347",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "60"
+        },
+        {
+          "id": "f348",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/61-bridget-invisalign-th.webp",
+          "group": "61"
+        },
+        {
+          "id": "f349",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Invisalign. Bridget of Fortitude Valley, treated at Precision Dental.",
+          "group": "61"
+        },
+        {
+          "id": "f350",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Bridget of Fortitude Valley",
+          "group": "61"
+        },
+        {
+          "id": "f351",
+          "label": "Text",
+          "type": "text",
+          "value": "Invisalign",
+          "group": "61"
+        },
+        {
+          "id": "f352",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 to 8 months",
+          "group": "61"
+        },
+        {
+          "id": "f353",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "61"
+        },
+        {
+          "id": "f354",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/62-kihana-crowns-bridges-th.webp",
+          "group": "62"
+        },
+        {
+          "id": "f355",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental crowns and bridges. Kihana of Fortitude Valley, treated at Precision Dental.",
+          "group": "62"
+        },
+        {
+          "id": "f356",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Kihana of Fortitude Valley",
+          "group": "62"
+        },
+        {
+          "id": "f357",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental crowns and bridges",
+          "group": "62"
+        },
+        {
+          "id": "f358",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 1 day to 2 weeks",
+          "group": "62"
+        },
+        {
+          "id": "f359",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "62"
+        },
+        {
+          "id": "f360",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/63-a-patient-crowns-bridges-th.webp",
+          "group": "63"
+        },
+        {
+          "id": "f361",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental crowns and bridges. A patient of Brisbane, treated at Precision Dental.",
+          "group": "63"
+        },
+        {
+          "id": "f362",
+          "label": "Bold text",
+          "type": "text",
+          "value": "A patient of Brisbane",
+          "group": "63"
+        },
+        {
+          "id": "f363",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental crowns and bridges",
+          "group": "63"
+        },
+        {
+          "id": "f364",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 1 day to 2 weeks",
+          "group": "63"
+        },
+        {
+          "id": "f365",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "63"
+        },
+        {
+          "id": "f366",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/64-jae-crowns-bridges-th.webp",
+          "group": "64"
+        },
+        {
+          "id": "f367",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental crowns and bridges. Jae of Fortitude Valley, treated at Precision Dental.",
+          "group": "64"
+        },
+        {
+          "id": "f368",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Jae of Fortitude Valley",
+          "group": "64"
+        },
+        {
+          "id": "f369",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental crowns and bridges",
+          "group": "64"
+        },
+        {
+          "id": "f370",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 1 day to 2 weeks",
+          "group": "64"
+        },
+        {
+          "id": "f371",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "64"
+        },
+        {
+          "id": "f372",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/65-noel-crowns-bridges-th.webp",
+          "group": "65"
+        },
+        {
+          "id": "f373",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental crowns and bridges. Noel of Brisbane, treated at Precision Dental.",
+          "group": "65"
+        },
+        {
+          "id": "f374",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Noel of Brisbane",
+          "group": "65"
+        },
+        {
+          "id": "f375",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental crowns and bridges",
+          "group": "65"
+        },
+        {
+          "id": "f376",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 1 day to 2 weeks",
+          "group": "65"
+        },
+        {
+          "id": "f377",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "65"
+        },
+        {
+          "id": "f378",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/66-kanae-crowns-bridges-th.webp",
+          "group": "66"
+        },
+        {
+          "id": "f379",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental crowns and bridges. Kanae of Brisbane, treated at Precision Dental.",
+          "group": "66"
+        },
+        {
+          "id": "f380",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Kanae of Brisbane",
+          "group": "66"
+        },
+        {
+          "id": "f381",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental crowns and bridges",
+          "group": "66"
+        },
+        {
+          "id": "f382",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 1 day to 2 weeks",
+          "group": "66"
+        },
+        {
+          "id": "f383",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "66"
+        },
+        {
+          "id": "f384",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/67-mark-crowns-bridges-th.webp",
+          "group": "67"
+        },
+        {
+          "id": "f385",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental crowns and bridges. Mark of Brisbane, treated at Precision Dental.",
+          "group": "67"
+        },
+        {
+          "id": "f386",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Mark of Brisbane",
+          "group": "67"
+        },
+        {
+          "id": "f387",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental crowns and bridges",
+          "group": "67"
+        },
+        {
+          "id": "f388",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 1 day to 2 weeks",
+          "group": "67"
+        },
+        {
+          "id": "f389",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "67"
+        },
+        {
+          "id": "f390",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/68-chris-implant-th.webp",
+          "group": "68"
+        },
+        {
+          "id": "f391",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental implant. Chris of Fortitude Valley, treated at Precision Dental.",
+          "group": "68"
+        },
+        {
+          "id": "f392",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Chris of Fortitude Valley",
+          "group": "68"
+        },
+        {
+          "id": "f393",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental implant",
+          "group": "68"
+        },
+        {
+          "id": "f394",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 4 months",
+          "group": "68"
+        },
+        {
+          "id": "f395",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "68"
+        },
+        {
+          "id": "f396",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/69-william-implant-th.webp",
+          "group": "69"
+        },
+        {
+          "id": "f397",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental implant. William of Redland Bay, treated at Precision Dental.",
+          "group": "69"
+        },
+        {
+          "id": "f398",
+          "label": "Bold text",
+          "type": "text",
+          "value": "William of Redland Bay",
+          "group": "69"
+        },
+        {
+          "id": "f399",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental implant",
+          "group": "69"
+        },
+        {
+          "id": "f400",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 4 months",
+          "group": "69"
+        },
+        {
+          "id": "f401",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "69"
+        },
+        {
+          "id": "f402",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/70-peter-implant-th.webp",
+          "group": "70"
+        },
+        {
+          "id": "f403",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental implant. Peter of Fortitude Valley, treated at Precision Dental.",
+          "group": "70"
+        },
+        {
+          "id": "f404",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Peter of Fortitude Valley",
+          "group": "70"
+        },
+        {
+          "id": "f405",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental implant",
+          "group": "70"
+        },
+        {
+          "id": "f406",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 4 months",
+          "group": "70"
+        },
+        {
+          "id": "f407",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "70"
+        },
+        {
+          "id": "f408",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/71-ken-implant-th.webp",
+          "group": "71"
+        },
+        {
+          "id": "f409",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental implant. Ken of Brisbane, treated at Precision Dental.",
+          "group": "71"
+        },
+        {
+          "id": "f410",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Ken of Brisbane",
+          "group": "71"
+        },
+        {
+          "id": "f411",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental implant",
+          "group": "71"
+        },
+        {
+          "id": "f412",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 4 months",
+          "group": "71"
+        },
+        {
+          "id": "f413",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "71"
+        },
+        {
+          "id": "f414",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/72-isaac-implant-th.webp",
+          "group": "72"
+        },
+        {
+          "id": "f415",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental implant. Isaac of Fortitude Valley, treated at Precision Dental.",
+          "group": "72"
+        },
+        {
+          "id": "f416",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Isaac of Fortitude Valley",
+          "group": "72"
+        },
+        {
+          "id": "f417",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental implant",
+          "group": "72"
+        },
+        {
+          "id": "f418",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 4 months",
+          "group": "72"
+        },
+        {
+          "id": "f419",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "72"
+        },
+        {
+          "id": "f420",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/73-chris-implant-th.webp",
+          "group": "73"
+        },
+        {
+          "id": "f421",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental implant. Chris of Brisbane, treated at Precision Dental.",
+          "group": "73"
+        },
+        {
+          "id": "f422",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Chris of Brisbane",
+          "group": "73"
+        },
+        {
+          "id": "f423",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental implant",
+          "group": "73"
+        },
+        {
+          "id": "f424",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 4 months",
+          "group": "73"
+        },
+        {
+          "id": "f425",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "73"
+        },
+        {
+          "id": "f426",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/74-rachel-implant-th.webp",
+          "group": "74"
+        },
+        {
+          "id": "f427",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental implant. Rachel of Fortitude Valley, treated at Precision Dental.",
+          "group": "74"
+        },
+        {
+          "id": "f428",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Rachel of Fortitude Valley",
+          "group": "74"
+        },
+        {
+          "id": "f429",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental implant",
+          "group": "74"
+        },
+        {
+          "id": "f430",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 4 months",
+          "group": "74"
+        },
+        {
+          "id": "f431",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "74"
+        },
+        {
+          "id": "f432",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/75-luke-invisalign-th.webp",
+          "group": "75"
+        },
+        {
+          "id": "f433",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Invisalign, crowns and bridges. Luke of Fortitude Valley, treated at Precision Dental.",
+          "group": "75"
+        },
+        {
+          "id": "f434",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Luke of Fortitude Valley",
+          "group": "75"
+        },
+        {
+          "id": "f435",
+          "label": "Text",
+          "type": "text",
+          "value": "Invisalign, crowns and bridges",
+          "group": "75"
+        },
+        {
+          "id": "f436",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 to 8 months",
+          "group": "75"
+        },
+        {
+          "id": "f437",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "75"
+        },
+        {
+          "id": "f438",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/76-luke-invisalign-th.webp",
+          "group": "76"
+        },
+        {
+          "id": "f439",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Invisalign, crowns and bridges. Luke of Fortitude Valley, treated at Precision Dental.",
+          "group": "76"
+        },
+        {
+          "id": "f440",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Luke of Fortitude Valley",
+          "group": "76"
+        },
+        {
+          "id": "f441",
+          "label": "Text",
+          "type": "text",
+          "value": "Invisalign, crowns and bridges",
+          "group": "76"
+        },
+        {
+          "id": "f442",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 to 8 months",
+          "group": "76"
+        },
+        {
+          "id": "f443",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "76"
+        },
+        {
+          "id": "f444",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/77-luke-invisalign-th.webp",
+          "group": "77"
+        },
+        {
+          "id": "f445",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Invisalign, crowns and bridges. Luke of Fortitude Valley, treated at Precision Dental.",
+          "group": "77"
+        },
+        {
+          "id": "f446",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Luke of Fortitude Valley",
+          "group": "77"
+        },
+        {
+          "id": "f447",
+          "label": "Text",
+          "type": "text",
+          "value": "Invisalign, crowns and bridges",
+          "group": "77"
+        },
+        {
+          "id": "f448",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 to 8 months",
+          "group": "77"
+        },
+        {
+          "id": "f449",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "77"
+        },
+        {
+          "id": "f450",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/78-kane-full-mouth-th.webp",
+          "group": "78"
+        },
+        {
+          "id": "f451",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Full mouth rehabilitation. Kane of Fortitude Valley, treated at Precision Dental.",
+          "group": "78"
+        },
+        {
+          "id": "f452",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Kane of Fortitude Valley",
+          "group": "78"
+        },
+        {
+          "id": "f453",
+          "label": "Text",
+          "type": "text",
+          "value": "Full mouth rehabilitation",
+          "group": "78"
+        },
+        {
+          "id": "f454",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "78"
+        },
+        {
+          "id": "f455",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/79-kane-full-mouth-th.webp",
+          "group": "79"
+        },
+        {
+          "id": "f456",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Full mouth rehabilitation. Kane of Fortitude Valley, treated at Precision Dental.",
+          "group": "79"
+        },
+        {
+          "id": "f457",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Kane of Fortitude Valley",
+          "group": "79"
+        },
+        {
+          "id": "f458",
+          "label": "Text",
+          "type": "text",
+          "value": "Full mouth rehabilitation",
+          "group": "79"
+        },
+        {
+          "id": "f459",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "79"
+        },
+        {
+          "id": "f460",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/80-kane-full-mouth-th.webp",
+          "group": "80"
+        },
+        {
+          "id": "f461",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Full mouth rehabilitation. Kane of Fortitude Valley, treated at Precision Dental.",
+          "group": "80"
+        },
+        {
+          "id": "f462",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Kane of Fortitude Valley",
+          "group": "80"
+        },
+        {
+          "id": "f463",
+          "label": "Text",
+          "type": "text",
+          "value": "Full mouth rehabilitation",
+          "group": "80"
+        },
+        {
+          "id": "f464",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "80"
+        },
+        {
+          "id": "f465",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/81-josh-crowns-bridges-th.webp",
+          "group": "81"
+        },
+        {
+          "id": "f466",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental crowns and bridges. Josh of Fortitude Valley, treated at Precision Dental.",
+          "group": "81"
+        },
+        {
+          "id": "f467",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Josh of Fortitude Valley",
+          "group": "81"
+        },
+        {
+          "id": "f468",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental crowns and bridges",
+          "group": "81"
+        },
+        {
+          "id": "f469",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 1 day to 2 weeks",
+          "group": "81"
+        },
+        {
+          "id": "f470",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "81"
+        },
+        {
+          "id": "f471",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/82-josh-crowns-bridges-th.webp",
+          "group": "82"
+        },
+        {
+          "id": "f472",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental crowns and bridges. Josh of Fortitude Valley, treated at Precision Dental.",
+          "group": "82"
+        },
+        {
+          "id": "f473",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Josh of Fortitude Valley",
+          "group": "82"
+        },
+        {
+          "id": "f474",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental crowns and bridges",
+          "group": "82"
+        },
+        {
+          "id": "f475",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 1 day to 2 weeks",
+          "group": "82"
+        },
+        {
+          "id": "f476",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "82"
+        },
+        {
+          "id": "f477",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/83-josh-crowns-bridges-th.webp",
+          "group": "83"
+        },
+        {
+          "id": "f478",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Dental crowns and bridges. Josh of Fortitude Valley, treated at Precision Dental.",
+          "group": "83"
+        },
+        {
+          "id": "f479",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Josh of Fortitude Valley",
+          "group": "83"
+        },
+        {
+          "id": "f480",
+          "label": "Text",
+          "type": "text",
+          "value": "Dental crowns and bridges",
+          "group": "83"
+        },
+        {
+          "id": "f481",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 1 day to 2 weeks",
+          "group": "83"
+        },
+        {
+          "id": "f482",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "83"
+        },
+        {
+          "id": "f483",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/84-catherine-invisalign-th.webp",
+          "group": "84"
+        },
+        {
+          "id": "f484",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Invisalign. Catherine of Fortitude Valley, treated at Precision Dental.",
+          "group": "84"
+        },
+        {
+          "id": "f485",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Catherine of Fortitude Valley",
+          "group": "84"
+        },
+        {
+          "id": "f486",
+          "label": "Text",
+          "type": "text",
+          "value": "Invisalign",
+          "group": "84"
+        },
+        {
+          "id": "f487",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 to 8 months",
+          "group": "84"
+        },
+        {
+          "id": "f488",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "84"
+        },
+        {
+          "id": "f489",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/85-catherine-invisalign-th.webp",
+          "group": "85"
+        },
+        {
+          "id": "f490",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Invisalign. Catherine of Fortitude Valley, treated at Precision Dental.",
+          "group": "85"
+        },
+        {
+          "id": "f491",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Catherine of Fortitude Valley",
+          "group": "85"
+        },
+        {
+          "id": "f492",
+          "label": "Text",
+          "type": "text",
+          "value": "Invisalign",
+          "group": "85"
+        },
+        {
+          "id": "f493",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 to 8 months",
+          "group": "85"
+        },
+        {
+          "id": "f494",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "85"
+        },
+        {
+          "id": "f495",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/86-carmi-invisalign-th.webp",
+          "group": "86"
+        },
+        {
+          "id": "f496",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Invisalign. Carmi of Fortitude Valley, treated at Precision Dental.",
+          "group": "86"
+        },
+        {
+          "id": "f497",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Carmi of Fortitude Valley",
+          "group": "86"
+        },
+        {
+          "id": "f498",
+          "label": "Text",
+          "type": "text",
+          "value": "Invisalign",
+          "group": "86"
+        },
+        {
+          "id": "f499",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 to 8 months",
+          "group": "86"
+        },
+        {
+          "id": "f500",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "86"
+        },
+        {
+          "id": "f501",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/gallery/87-bridget-invisalign-th.webp",
+          "group": "87"
+        },
+        {
+          "id": "f502",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Before and after Invisalign. Bridget of Fortitude Valley, treated at Precision Dental.",
+          "group": "87"
+        },
+        {
+          "id": "f503",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Bridget of Fortitude Valley",
+          "group": "87"
+        },
+        {
+          "id": "f504",
+          "label": "Text",
+          "type": "text",
+          "value": "Invisalign",
+          "group": "87"
+        },
+        {
+          "id": "f505",
+          "label": "Text",
+          "type": "text",
+          "value": "Between photos: 3 to 8 months",
+          "group": "87"
+        },
+        {
+          "id": "f506",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals.",
+          "group": "87"
+        }
+      ]
+    },
+    {
+      "key": "s5",
+      "kind": "content",
+      "before": "",
+      "label": "Section 5",
+      "pinned": false,
+      "template": "<div class=\"lightbox\" id=\"lightbox\" hidden><div class=\"lb-backdrop\" data-close></div><div class=\"lb-panel\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Before and after photograph\"><button type=\"button\" class=\"lb-x\" data-close aria-label=\"Close\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\"><path d=\"M18 6 6 18M6 6l12 12\"/></svg></button><figure><div class=\"lb-stage\"><img id=\"lbImg\" alt=\"{{f1}}\"><button type=\"button\" class=\"lb-nav lb-prev\" data-step=\"-1\" aria-label=\"Previous case\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m15 6-6 6 6 6\"/></svg></button><button type=\"button\" class=\"lb-nav lb-next\" data-step=\"1\" aria-label=\"Next case\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></button></div><figcaption><strong id=\"lbWho\"></strong><span id=\"lbMeta\"></span><span class=\"rv\">{{f2}}</span></figcaption></figure></div></div>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": ""
+        },
+        {
+          "id": "f2",
+          "label": "Text",
+          "type": "text",
+          "value": "Results vary between individuals. Any dental procedure carries risks and benefits."
+        }
+      ]
+    },
+    {
+      "key": "s6",
+      "kind": "cta",
+      "before": "\n",
+      "shared": "cta",
+      "label": "Book Your Visit band"
+    },
+    {
+      "key": "s7",
+      "kind": "disclaimer",
+      "before": "\n",
+      "label": "Disclaimer",
+      "pinned": false,
+      "template": "<section class=\"disclaimer-section\"><div class=\"container\"><p class=\"disclaimer\">{{f1}}</p><p class=\"disclaimer\">{{f2}}</p></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Disclaimer wording",
+          "type": "text",
+          "value": "Disclaimer: the material posted is for informational purposes only and is not intended to substitute for professional medical advice, diagnosis or treatment. Results vary with each patient. Any dental procedure carries risks and benefits. If you have any specific questions about any dental or medical matter, you should consult your dentist, physician or other professional healthcare provider."
+        },
+        {
+          "id": "f2",
+          "label": "Disclaimer wording",
+          "type": "text",
+          "value": "Any surgical or invasive procedure carries risks. Before proceeding, you should seek a second opinion from an appropriately qualified health practitioner."
+        }
+      ]
+    }
+  ]
+}

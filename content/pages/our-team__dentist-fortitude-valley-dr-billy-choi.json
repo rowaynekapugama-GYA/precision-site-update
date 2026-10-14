@@ -1,0 +1,369 @@
+{
+  "key": "our-team/dentist-fortitude-valley-dr-billy-choi",
+  "file": "our-team/dentist-fortitude-valley-dr-billy-choi.html",
+  "url": "/our-team/dentist-fortitude-valley-dr-billy-choi/",
+  "label": "Dr Billy Choi",
+  "group": "Main pages",
+  "seo": {
+    "title": "Dr Billy Choi | Dentist Fortitude Valley | Precision Dental",
+    "description": "Meet Dr Billy Choi, principal dentist at Precision Dental in Fortitude Valley, a UQ graduate with more than two decades of experience in dentistry.",
+    "ogImage": "",
+    "canonical": "",
+    "noindex": false
+  },
+  "lastmod": "2026-10-14",
+  "layout": {
+    "head": "std",
+    "pre": "std",
+    "post": "std",
+    "schema": "gen"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "breadcrumbs",
+      "before": "",
+      "label": "Breadcrumb trail",
+      "pinned": true,
+      "template": "<nav class=\"breadcrumbs\" aria-label=\"Breadcrumb\"><div class=\"container\"><ol><li><a href=\"{{f1}}\">{{f2}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><a href=\"{{f3}}\">{{f4}}</a><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m9 6 6 6-6 6\"/></svg></li><li><span aria-current=\"page\">{{f5}}</span></li></ol></div></nav>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1"
+        },
+        {
+          "id": "f2",
+          "label": "Link text",
+          "type": "text",
+          "value": "Home",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "Link address",
+          "type": "link",
+          "value": "/our-team/",
+          "group": "2"
+        },
+        {
+          "id": "f4",
+          "label": "Link text",
+          "type": "text",
+          "value": "Our Team",
+          "group": "2"
+        },
+        {
+          "id": "f5",
+          "label": "List item",
+          "type": "text",
+          "value": "Dr Billy Choi"
+        }
+      ]
+    },
+    {
+      "key": "s2",
+      "kind": "header",
+      "before": "\n",
+      "label": "Page header: Dr Billy Choi",
+      "pinned": true,
+      "template": "<section class=\"page-hero\"><div class=\"container page-hero-grid\"><div class=\"hero-up\"><span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span><h1>{{f2}}</h1><p class=\"sub\">{{f3}}</p><p class=\"lede\">{{f4}}</p><div class=\"btn-group\"><a class=\"btn btn-dark\" href=\"{{site:booking}}\" target=\"_blank\" rel=\"noopener\" data-track=\"book\">{{f5}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a><a class=\"btn btn-white btn-plain\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{f6}}</a></div></div><div class=\"page-hero-img hero-up d2\"><img src=\"{{f7}}\" alt=\"{{f8}}\" width=\"900\" height=\"675\"></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Our Team"
+        },
+        {
+          "id": "f2",
+          "label": "Main heading",
+          "type": "text",
+          "value": "Dr Billy Choi"
+        },
+        {
+          "id": "f3",
+          "label": "Line under the heading",
+          "type": "text",
+          "value": "Principal Dentist"
+        },
+        {
+          "id": "f4",
+          "label": "Intro paragraph",
+          "type": "text",
+          "value": "Dr Billy Choi is the principal dentist at Precision Dental and the person behind the practice&#x27;s commitment to honest, comfortable and considered care."
+        },
+        {
+          "id": "f5",
+          "label": "Button text",
+          "type": "text",
+          "value": "Book Online"
+        },
+        {
+          "id": "f6",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        },
+        {
+          "id": "f7",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/choi-patient.webp"
+        },
+        {
+          "id": "f8",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Dr Billy Choi with a patient and a dental assistant at Precision Dental"
+        }
+      ]
+    },
+    {
+      "key": "s3",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Principal Dentist",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container media-split reveal\"><div><h2>{{f1}}</h2><div class=\"cred\"><div><strong>{{f2}}</strong><span>{{f3}}</span></div><div><strong>{{f4}}</strong><span>{{f5}}</span></div><div><strong>{{f6}}</strong><span>{{f7}}</span></div><div><strong>{{f8}}</strong><span>{{f9}}</span></div></div></div><div class=\"media-img portrait\"><img class=\"face-top\" src=\"{{f10}}\" alt=\"{{f11}}\" loading=\"lazy\" width=\"880\" height=\"1100\"></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Principal Dentist"
+        },
+        {
+          "id": "f2",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Role",
+          "group": "1"
+        },
+        {
+          "id": "f3",
+          "label": "Text",
+          "type": "text",
+          "value": "Principal Dentist",
+          "group": "1"
+        },
+        {
+          "id": "f4",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Qualification",
+          "group": "2"
+        },
+        {
+          "id": "f5",
+          "label": "Text",
+          "type": "text",
+          "value": "Bachelor of Dental Science (University of Queensland)",
+          "group": "2"
+        },
+        {
+          "id": "f6",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Registration",
+          "group": "3"
+        },
+        {
+          "id": "f7",
+          "label": "Text",
+          "type": "text",
+          "value": "General Dentist, AHPRA Registration: DEN0000958417",
+          "group": "3"
+        },
+        {
+          "id": "f8",
+          "label": "Bold text",
+          "type": "text",
+          "value": "Memberships",
+          "group": "4"
+        },
+        {
+          "id": "f9",
+          "label": "Text",
+          "type": "text",
+          "value": "The Australian Dental Association; The Australian Society of Implant Dentistry",
+          "group": "4"
+        },
+        {
+          "id": "f10",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/drchoi-portrait.webp"
+        },
+        {
+          "id": "f11",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Dr Billy Choi, Principal Dentist at Precision Dental"
+        }
+      ]
+    },
+    {
+      "key": "s4",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Brisbane Roots",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<p>{{f3}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Brisbane Roots"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Billy was born in Seoul, and his family made Brisbane home in 1991. He attended Brisbane Boys&#x27; College before studying dentistry at the University of Queensland, graduating with a Bachelor of Dental Science in 2003. Billy speaks both English and Korean, and many Korean-speaking patients appreciate being able to discuss their care in their first language."
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "After graduating, Billy provided dental care in practices throughout the Brisbane area. Over time, he wanted to create a practice of his own, one where patients could expect the same unhurried, transparent approach at every visit. That vision became Precision Dental."
+        }
+      ]
+    },
+    {
+      "key": "s5",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "His Approach to Dentistry",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<p>{{f3}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "His Approach to Dentistry"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "With more than two decades in practice, Billy provides a broad range of general and cosmetic dentistry. Billy places great importance on explaining what is happening and why. He prefers to show rather than tell, using intra-oral photographs and digital imaging to help you see what he sees, then walking you through each option, including its benefits, limitations and costs, so you can make an informed choice."
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Billy also has a strong interest in treating patients who feel anxious about dental visits. He believes that a calm environment, gentle technique and a willingness to pause whenever you need make a meaningful difference."
+        }
+      ]
+    },
+    {
+      "key": "s6",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Continuing Education",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Continuing Education"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Dentistry continues to evolve, and Billy is committed to evolving with it. He regularly attends national and international postgraduate lectures and seminars to refine his clinical skills and stay informed about new techniques and technology, including digital dentistry, CEREC restorations and dental implants."
+        }
+      ]
+    },
+    {
+      "key": "s7",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": true,
+      "label": "Professional Memberships",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<ul class=\"check-list\"><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f3}}</span></li><li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg><span>{{f4}}</span></li></ul></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Professional Memberships"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Billy is registered with the Dental Board of Australia and is a member of:"
+        },
+        {
+          "id": "f3",
+          "label": "List item",
+          "type": "text",
+          "value": "The Australian Dental Association"
+        },
+        {
+          "id": "f4",
+          "label": "List item",
+          "type": "text",
+          "value": "The Australian Society of Implant Dentistry"
+        }
+      ]
+    },
+    {
+      "key": "s8",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "label": "Outside the Practice",
+      "pinned": false,
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<p>{{f3}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Outside the Practice"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "When he is away from the dental chair, Billy enjoys cycling and spending time with his family and friends."
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "To meet the rest of the people who will look after you, visit our team page."
+        }
+      ]
+    },
+    {
+      "key": "s9",
+      "kind": "cta",
+      "before": "\n",
+      "shared": "cta",
+      "label": "Book Your Visit band"
+    }
+  ]
+}

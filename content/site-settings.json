@@ -1,0 +1,132 @@
+{
+  "practiceName": "Precision Dental",
+  "logo": "/assets/img/logo.png",
+  "phone": "(07) 3852 1160",
+  "email": "admin@precisiondentistry.com.au",
+  "address": {
+    "unit": "S13, HQ South Tower",
+    "street": "520 Wickham Street",
+    "streetShort": "520 Wickham St",
+    "suburb": "Fortitude Valley",
+    "state": "QLD",
+    "postcode": "4006",
+    "latitude": -27.453,
+    "longitude": 153.0377,
+    "mapEmbed": "https://www.google.com/maps?q=HQ%20South%20Tower%2C%20520%20Wickham%20Street%2C%20Fortitude%20Valley%20QLD%204006&output=embed"
+  },
+  "parking": "Free on-site parking for patients.",
+  "abn": "45 166 034 199",
+  "hours": [
+    {
+      "day": "Monday",
+      "open": true,
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "day": "Tuesday",
+      "open": true,
+      "opens": "10:00",
+      "closes": "19:00"
+    },
+    {
+      "day": "Wednesday",
+      "open": true,
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "day": "Thursday",
+      "open": true,
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "day": "Friday",
+      "open": true,
+      "opens": "08:00",
+      "closes": "17:00"
+    },
+    {
+      "day": "Saturday",
+      "open": false,
+      "opens": "",
+      "closes": ""
+    },
+    {
+      "day": "Sunday",
+      "open": false,
+      "opens": "",
+      "closes": ""
+    }
+  ],
+  "bookingUrl": "https://booking.au.hsone.app/soe/new/Precision%20Dental?pid=AUSHC01",
+  "preferredFunds": "Bupa, HCF and CBHS",
+  "paymentAccepted": "Cash, EFTPOS, Visa, Mastercard, American Express",
+  "socials": {
+    "facebook": "",
+    "instagram": "",
+    "youtube": "",
+    "linkedin": "",
+    "googleBusiness": ""
+  },
+  "colours": {
+    "navy": "",
+    "blue": "",
+    "blueDark": ""
+  },
+  "tracking": {
+    "ga4Id": "",
+    "gtmId": "",
+    "metaPixelId": "",
+    "googleAdsId": "",
+    "adsPriceListLabel": ""
+  },
+  "features": {
+    "mode": "open",
+    "emergencyDentistry": true,
+    "cdbs": false,
+    "zipAfterpay": false,
+    "countdown": false,
+    "countdownDate": ""
+  },
+  "offer": {
+    "enabled": true,
+    "showBanner": true,
+    "showPopup": true,
+    "popupDelay": 20,
+    "title": "New Patient Offer",
+    "price": "229",
+    "inclusions": "Comprehensive examination\n2 intraoral X-rays\nIntraoral photos\nScale and polish\nFluoride treatment",
+    "period": "",
+    "termsLine": "New patients only. Terms and conditions apply.",
+    "termsUrl": "/new-patient-offer-terms/",
+    "terms": "",
+    "bookLabel": "Book Now"
+  },
+  "reviews": {
+    "enabled": false,
+    "rating": "",
+    "count": "500+",
+    "url": "",
+    "logo": ""
+  },
+  "priceList": {
+    "file": "",
+    "delivery": "smileox",
+    "buttonLabel": "Email Me the Price List",
+    "consentText": "I agree to Precision Dental emailing me the price list and contacting me about my enquiry. I can opt out at any time.",
+    "thankYou": "Thank you. Our price list is on its way to your inbox. If it has not arrived within a few minutes, please check your junk folder or give us a call."
+  },
+  "schemes": {
+    "hicaps": false,
+    "cdbsBulkBill": false,
+    "dvaDirectBill": false
+  },
+  "seoDefaults": {
+    "titleSuffix": " | Precision Dental",
+    "description": "",
+    "ogImage": "/assets/img/og-image.jpg"
+  },
+  "imageReplacements": []
+}

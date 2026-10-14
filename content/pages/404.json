@@ -1,0 +1,136 @@
+{
+  "key": "404",
+  "file": "404.html",
+  "url": null,
+  "label": "Page not found (404)",
+  "group": "Other",
+  "seo": {
+    "title": "Page Not Found | Precision Dental",
+    "description": "",
+    "ogImage": "",
+    "canonical": "",
+    "noindex": true
+  },
+  "lastmod": null,
+  "layout": {
+    "head": "<!DOCTYPE html>\n<html lang=\"en-AU\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>{{seo:title}}</title>\n<meta name=\"robots\" content=\"noindex\">\n<link rel=\"icon\" href=\"/assets/img/favicon.png\" sizes=\"32x32\">\n<meta name=\"theme-color\" content=\"#012A41\">\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap\" rel=\"stylesheet\">\n<link rel=\"stylesheet\" href=\"/assets/css/styles.css\">\n<style>\n.nf{min-height:100svh;display:grid;place-items:center;text-align:center;padding:40px 0;\n  background:radial-gradient(70% 60% at 50% 0%,rgba(10,132,184,.25),rgba(10,132,184,0) 60%),linear-gradient(180deg,var(--navy-900),var(--navy))}\n.nf .container{max-width:640px}\n.nf img{height:52px;margin:0 auto 34px}\n.nf h1{color:#fff;font-size:clamp(2.6rem,7vw,4.4rem);margin-bottom:16px}\n.nf p{color:rgba(255,255,255,.82);font-size:1.05rem;margin-bottom:30px}\n.nf .btn-group{justify-content:center}\n.nf .links{margin-top:34px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:center;font-size:.92rem}\n.nf .links a{color:var(--sky-300)}\n.nf .links a:hover{color:#fff}\n</style>\n</head>\n<body>\n",
+    "pre": "<main class=\"nf\">\n",
+    "post": "\n</main>\n</body>\n</html>\n",
+    "schema": "none"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "content",
+      "before": "  ",
+      "label": "Page not found",
+      "pinned": false,
+      "template": "<div class=\"container\">\n    <img src=\"{{f1}}\" alt=\"{{f2}}\">\n    <h1>{{f3}}</h1>\n    <p>{{f4}}</p>\n    <div class=\"btn-group\">\n      <a class=\"btn btn-white\" href=\"{{f5}}\">{{f6}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a>\n      <a class=\"btn btn-outline btn-plain\" href=\"tel:{{site:phoneTel}}\">{{f7}}</a>\n    </div>\n    <div class=\"links\">\n      <a href=\"{{f8}}\">{{f9}}</a>\n      <a href=\"{{f10}}\">{{f11}}</a>\n      <a href=\"{{f12}}\">{{f13}}</a>\n      <a href=\"{{f14}}\">{{f15}}</a>\n      <a href=\"{{f16}}\">{{f17}}</a>\n    </div>\n  </div>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/logo-white.png"
+        },
+        {
+          "id": "f2",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Precision Dental"
+        },
+        {
+          "id": "f3",
+          "label": "Main heading",
+          "type": "text",
+          "value": "Page not found"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "That page is not here. It may have moved, or the address may have a typo. Our team is happy to help on {{site:phone}}."
+        },
+        {
+          "id": "f5",
+          "label": "Button link",
+          "type": "link",
+          "value": "/"
+        },
+        {
+          "id": "f6",
+          "label": "Button text",
+          "type": "text",
+          "value": "Back to home"
+        },
+        {
+          "id": "f7",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        },
+        {
+          "id": "f8",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/general-treatments/"
+        },
+        {
+          "id": "f9",
+          "label": "Link text",
+          "type": "text",
+          "value": "General Dentistry"
+        },
+        {
+          "id": "f10",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/cosmetic-dentistry/"
+        },
+        {
+          "id": "f11",
+          "label": "Link text",
+          "type": "text",
+          "value": "Cosmetic Dentistry"
+        },
+        {
+          "id": "f12",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/restorative-dentistry/"
+        },
+        {
+          "id": "f13",
+          "label": "Link text",
+          "type": "text",
+          "value": "Restorative Dentistry"
+        },
+        {
+          "id": "f14",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-emergency/"
+        },
+        {
+          "id": "f15",
+          "label": "Link text",
+          "type": "text",
+          "value": "Emergency Dentistry"
+        },
+        {
+          "id": "f16",
+          "label": "Link address",
+          "type": "link",
+          "value": "/contact/"
+        },
+        {
+          "id": "f17",
+          "label": "Link text",
+          "type": "text",
+          "value": "Contact"
+        }
+      ]
+    }
+  ]
+}
