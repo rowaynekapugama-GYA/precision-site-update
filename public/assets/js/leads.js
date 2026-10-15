@@ -34,27 +34,38 @@
     }
   });
 
-  /* ---------- 2. offer pop-up ---------- */
+  /* ---------- 2. offer pop-up: centred, once per visit, easy to close ---------- */
   (function(){
     var pop=document.getElementById('offerPop'); if(!pop)return;
+    var dialog=pop.querySelector('.om-dialog');
     var skip=(pop.getAttribute('data-skip')||'').split(/\s+/).filter(Boolean);
     if(skip.indexOf(location.pathname)>-1) return;
     if(read('pd_offer_seen')) return;
-    var delay=parseInt(pop.getAttribute('data-delay'),10); if(isNaN(delay))delay=20;
-    var shown=false, timer=null;
+    var delay=parseInt(pop.getAttribute('data-delay'),10); if(isNaN(delay))delay=2;
+    var shown=false, open=false, timer=null, last=null;
+    /* fetch the photo while we wait, so it is there when the pop-up opens */
+    var photo=pop.querySelector('.om-ring img'); if(photo){photo.loading='eager';}
+    function focusables(){
+      return [].slice.call(dialog.querySelectorAll('a[href],button,[tabindex]:not([tabindex="-1"])')).filter(function(el){return el.offsetParent!==null;});
+    }
     function show(how){
       if(shown)return; shown=true; if(timer)clearTimeout(timer);
       document.removeEventListener('mouseout',exit);
-      /* not while the phone menu is open */
-      var mm=document.getElementById('mobileMenu'); if(mm&&mm.classList.contains('open')){shown=false;timer=setTimeout(function(){show(how)},5000);return;}
+      /* not over the phone menu */
+      var mm=document.getElementById('mobileMenu'); if(mm&&mm.classList.contains('open')){shown=false;timer=setTimeout(function(){show(how)},4000);return;}
       store('pd_offer_seen','1');
-      pop.hidden=false;
-      requestAnimationFrame(function(){requestAnimationFrame(function(){pop.classList.add('is-in');});});
+      last=document.activeElement;
+      pop.hidden=false; open=true;
+      document.body.classList.add('om-open');
+      requestAnimationFrame(function(){requestAnimationFrame(function(){pop.classList.add('is-in');dialog.focus();});});
       window.dataLayer.push({event:'offer_popup_shown',offer:'new_patient',trigger:how});
     }
     function hide(){
+      if(!open)return; open=false;
       pop.classList.remove('is-in');
+      document.body.classList.remove('om-open');
       setTimeout(function(){pop.hidden=true;},350);
+      if(last&&last.focus){try{last.focus({preventScroll:true});}catch(e){last.focus();}}
       window.dataLayer.push({event:'offer_popup_closed',offer:'new_patient'});
     }
     function exit(e){ if(!e.relatedTarget && e.clientY<=0) show('exit'); }
@@ -62,9 +73,20 @@
       if(e.target.closest('[data-pop-close]')) hide();
       else if(e.target.closest('a')) setTimeout(hide,150);
     });
-    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!pop.hidden) hide(); });
+    document.addEventListener('keydown',function(e){
+      if(!open)return;
+      if(e.key==='Escape'){hide();return;}
+      if(e.key==='Tab'){
+        /* keep the keyboard inside the pop-up while it is open */
+        var f=focusables(); if(!f.length)return;
+        var first=f[0], lastEl=f[f.length-1];
+        if(e.shiftKey&&(document.activeElement===first||document.activeElement===dialog)){e.preventDefault();lastEl.focus();}
+        else if(!e.shiftKey&&document.activeElement===lastEl){e.preventDefault();first.focus();}
+      }
+    });
     if(delay>0) timer=setTimeout(function(){show('timer');},delay*1000);
-    if(window.matchMedia && window.matchMedia('(pointer:fine)').matches) document.addEventListener('mouseout',exit);
+    else if(window.matchMedia && window.matchMedia('(pointer:fine)').matches) document.addEventListener('mouseout',exit);
+    else timer=setTimeout(function(){show('timer');},1500);
   })();
 
   /* ---------- 3. price list form ---------- */

@@ -27,7 +27,7 @@ export const DEFAULTS = {
     enabled: false,
     showBanner: true,
     showPopup: true,
-    popupDelay: 20,
+    popupDelay: 2,
     title: 'New Patient Offer',
     price: '',
     inclusions: '',
@@ -122,19 +122,50 @@ export function offerSection(s: Settings): string {
     `</div></div></section>`
 }
 
-/** The small, dismissible pop-up. Hidden until leads.js shows it (once per visit). */
+export const OFFER_PHOTO = '/assets/img/offer-team.webp'
+const ICON_PHONE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>'
+const WAVE = '<svg class="om-wave" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">' +
+  '<path d="M0 70 C 260 10, 470 120, 760 64 S 1080 20, 1200 46 V120 H0 Z" fill="#DCEFFA"/>' +
+  '<path d="M0 96 C 300 50, 520 128, 820 86 S 1100 62, 1200 78 V120 H0 Z" fill="#1A9AD4"/>' +
+  '<path d="M0 112 C 320 84, 560 132, 860 104 S 1110 94, 1200 102 V120 H0 Z" fill="#012A41"/></svg>'
+
+/** "New Patient Offer" -> New Patient / <em>Offer</em>, the last word in the serif accent the site uses. */
+function splitTitle(title: string): string {
+  const words = String(title || '').trim().split(/\s+/)
+  if (words.length < 2) return esc(title)
+  const last = words.pop() as string
+  return `${esc(words.join(' '))} <span>${esc(last)}</span>`
+}
+
+/**
+ * The centred pop-up: shown once per visit, a moment after the first page opens.
+ * Closes with the X, the Esc key or a click outside it, and gives focus back to the
+ * page. Hidden in the HTML (and never shown without JavaScript) until leads.js opens it.
+ */
 export function offerPopup(s: Settings): string {
   if (!offerLive(s) || !s.offer.showPopup) return ''
   const delay = Math.max(0, Math.round(Number(s.offer.popupDelay) || 0))
   const skip = ['/new-patients/', s.offer.termsUrl || OFFER_TERMS_URL].join(' ')
-  return `\n<aside class="offer-pop" id="offerPop" hidden role="dialog" aria-modal="false" aria-labelledby="offerPopTitle" data-delay="${delay}" data-skip="${attr(skip)}">` +
-    `<button class="offer-pop-x" type="button" aria-label="Close this offer" data-pop-close>${ICON_X}</button>` +
-    `<span class="offer-pop-tag">${esc(s.offer.title)}</span>` +
-    `<p class="offer-pop-price" id="offerPopTitle"><b>${esc(offerPrice(s))}</b> <span>${esc(s.offer.title)}</span></p>` +
-    `<p class="offer-pop-inc">${inclusionList(s).map(esc).join(' <span aria-hidden="true">&middot;</span> ')}</p>` +
-    offerButtons(s, 'popup') +
-    termsLink(s, 'offer-pop-terms') +
-    `</aside>`
+  const book = s.offer.bookLabel || DEFAULTS.offer.bookLabel
+  return `\n<div class="offer-modal" id="offerPop" hidden data-delay="${delay}" data-skip="${attr(skip)}">` +
+    `<div class="om-backdrop" data-pop-close></div>` +
+    `<div class="om-dialog" role="dialog" aria-modal="true" aria-labelledby="offerPopTitle" aria-describedby="offerPopInc" tabindex="-1">` +
+    `<button class="om-x" type="button" aria-label="Close this offer" data-pop-close>${ICON_X}</button>` +
+    `<div class="om-main">` +
+    `<img class="om-logo" src="${attr(s.logo)}" alt="${esc(s.practiceName)}" width="200" height="52">` +
+    `<h2 class="om-title" id="offerPopTitle">${splitTitle(s.offer.title)}</h2>` +
+    `<p class="om-inc-label">Includes</p>` +
+    `<ul class="om-list" id="offerPopInc">${inclusionList(s).map((i) => `<li>${ICON_CHECK}<span>${esc(i)}</span></li>`).join('')}</ul>` +
+    `<div class="om-cta">` +
+    `<a class="btn btn-blue" href="${attr(s.bookingUrl)}" target="_blank" rel="noopener" data-track="book" data-offer-cta="popup">${esc(book)} ${ICON_ARR}</a>` +
+    `<a class="btn btn-white btn-plain" href="tel:${esc(phoneDigits(s.phone))}" data-track="call" data-offer-cta="popup">${ICON_PHONE}${esc(s.phone)}</a>` +
+    `</div>` +
+    termsLink(s, 'om-terms') +
+    `</div>` +
+    `<div class="om-visual" aria-hidden="true"><div class="om-ring"><img src="${OFFER_PHOTO}" alt="" width="720" height="720" loading="lazy"></div>` +
+    `<div class="om-price"><b>${esc(offerPrice(s))}</b><span>New patients</span></div></div>` +
+    WAVE +
+    `</div></div>`
 }
 
 /** The facts of the offer on the terms page, then the full terms (or a clear placeholder). */
@@ -155,19 +186,49 @@ export function offerTerms(s: Settings): string {
 }
 
 // ---------------------------------------------------------- reviews badge
-export function reviewsBadge(s: Settings): string {
+/** The hero badge was replaced by the reviews band (15 October); the slot in the hero stays empty. */
+export function reviewsBadge(_s: Settings): string {
+  return ''
+}
+
+/** Where the band links: the profile link in Site Settings, else the footer icon's, else a Maps search for the practice. */
+export function reviewsUrl(s: Settings): string {
+  const own = String(s.reviews.url || '').trim() || String(s.socials.googleBusiness || '').trim()
+  if (/^https?:\/\//i.test(own)) return own
+  const a = s.address
+  const q = `${s.practiceName}, ${a.street}, ${a.suburb} ${a.state} ${a.postcode}`
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`
+}
+
+export const REVIEWS_BG = '/assets/img/reception-desk.webp'
+
+/**
+ * "Over 500 Google Reviews" band under the homepage offer strip, linked to the Google
+ * Business Profile. The number of reviews only, and the star rating when it has been
+ * entered: never any review wording (AHPRA treats patient reviews as testimonials).
+ */
+export function reviewsBand(s: Settings): string {
   const r = s.reviews
+  const raw = String(r.count || '').trim()
+  if (!r.enabled || !raw) return ''
+  const num = /^\d[\d,]*\+?$/.test(raw) ? raw.replace(/\+$/, '') : ''
   const rating = Number(String(r.rating || '').replace(',', '.'))
-  if (!r.enabled || !r.url || !(rating > 0 && rating <= 5)) return ''
-  const shown = rating.toFixed(1)
-  const count = String(r.count || '').trim()
-  const label = `Rated ${shown} out of 5${count ? ` from ${count} Google reviews` : ' on Google'}. Opens our Google Business Profile.`
-  const logo = r.logo ? `<img class="rb-logo" src="${attr(r.logo)}" alt="" width="22" height="22">` : ''
-  // a rating badge only, never review text, and off until the practice signs it off
-  return `<a class="reviews-badge" href="${attr(r.url)}" target="_blank" rel="noopener" aria-label="${esc(label)}">` + // qa:allow
-    logo +
-    `<span class="rb-stars" style="--rating:${shown}" aria-hidden="true"></span>` +
-    `<span class="rb-txt"><b>${shown}</b> ${esc(count ? `${count} Google Reviews` : 'Google Reviews')}</span></a>`
+  const hasRating = rating > 0 && rating <= 5
+  const shown = hasRating ? rating.toFixed(1) : ''
+  const label = `${num ? `Over ${num}` : raw} Google reviews${hasRating ? `, rated ${shown} out of 5` : ''}. Opens Google in a new tab.`
+  const brand = r.logo
+    ? `<img class="gr-logo" src="${attr(r.logo)}" alt="Google" width="240" height="80">`
+    : `<span class="gr-word">Google</span>`
+  const stars = hasRating
+    ? `<span class="gr-stars" style="--rating:${shown}" aria-hidden="true"></span><span class="gr-rating">${shown}</span>`
+    : ''
+  return `<section class="gr-band" id="google-reviews" aria-label="Google reviews">` +
+    `<div class="gr-bg" aria-hidden="true"><img src="${REVIEWS_BG}" alt="" width="1400" height="933" loading="lazy"></div>` +
+    `<div class="container"><a class="gr-link reveal" href="${attr(reviewsUrl(s))}" target="_blank" rel="noopener" aria-label="${esc(label)}">` +
+    `<span class="gr-count">${num ? `<small>Over</small><b>${esc(num)}</b>` : `<b class="gr-count-text">${esc(raw)}</b>`}</span>` +
+    `<span class="gr-brand">${brand}<span class="gr-sub">Reviews ${stars}</span></span>` +
+    `<span class="gr-cta">See our reviews on Google <span class="arr" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>` +
+    `</a></div></section>`
 }
 
 // ------------------------------------------------------------ price list

@@ -102,6 +102,16 @@
       "fields": []
     },
     {
+      "key": "s11",
+      "kind": "content",
+      "before": "\n\n<!-- ================= GOOGLE REVIEWS ================= -->\n",
+      "label": "Google reviews band (number of reviews, rating and link are in Site Settings)",
+      "pinned": false,
+      "ref": "reviews-band",
+      "template": "{{site:reviewsBand}}",
+      "fields": []
+    },
+    {
       "key": "s2",
       "kind": "content",
       "before": "\n\n<!-- ================= ABOUT ================= -->\n",

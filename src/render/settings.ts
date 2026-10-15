@@ -8,7 +8,7 @@
  */
 import type { HoursDay, Settings } from './types'
 import { attr, esc, ORIGIN } from './util'
-import { offerBanner, offerPopup, offerSection, offerTerms, priceListForm, reviewsBadge, schemeLines, withLeadDefaults } from './leads'
+import { offerBanner, offerPopup, offerSection, offerTerms, priceListForm, reviewsBadge, reviewsBand, schemeLines, withLeadDefaults } from './leads'
 
 const SHORT: Record<string, string> = {
   Monday: 'Mon', Tuesday: 'Tue', Wednesday: 'Wed', Thursday: 'Thu', Friday: 'Fri',
@@ -130,6 +130,7 @@ export function siteTokens(settings: Settings): Record<string, string> {
     offerPopup: offerPopup(s),
     offerTerms: offerTerms(s),
     reviewsBadge: reviewsBadge(s),
+    reviewsBand: reviewsBand(s),
     priceListForm: priceListForm(s),
     ...schemeLines(s),
   }

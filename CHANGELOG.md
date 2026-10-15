@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-10-15 - v3.1.2: "Over 500 Google Reviews" on the homepage
+
+- **Google reviews band on the homepage**, under the offer strip, as on the old website and at the practice's request: "Over 500" with Google and Reviews, linking to the practice's Google listing. The star rating shows next to Reviews once it is entered in Site Settings, and Google's own logo once it is uploaded there (until then the word Google in the site's font). Only the number and the rating, never review wording. It replaces the small badge under the hero buttons from v3.1.0, which was never switched on.
+- Sites already in the dashboard get the band (and the setting switched on with 500 reviews) on the next build: content update `2026-10-15-reviews-band`.
+
+## 2026-10-15 - v3.1.1: the new patient offer pop-up opens in the middle of the screen
+
+- **The $229 pop-up is now a centred window** that opens two seconds after the first page of a visit loads, in the site's own styling: the Precision Dental logo, "New Patient *Offer*" in the site's heading and serif accent, the five inclusions with tick icons, Book Now and Call (07) 3852 1160, the terms line, the team photo already used on About Us in a blue ring, a "$229 New patients" badge, and a navy and blue wave along the bottom.
+- Still once per visit, and never on the New Patients or terms pages. Closes with the X, the Esc key or a click outside it; the keyboard stays inside it while it is open and focus returns to the page afterwards. On phones it stacks into one column with the buttons in reach.
+- Sites already on v3.1.0 move from the 20 second delay to 2 seconds on the next build (content update `2026-10-15-centred-popup`), unless the delay was changed in the dashboard.
+
 ## 2026-10-14 - v3.1.0: new patient offer, price list, Health Funds page, registration, before and after
 
 From Dr Choi's revision notes of 14 October 2026.

@@ -284,7 +284,7 @@ export function settingsFromDoc(d: Doc, media: MediaMap, docs?: MediaMap): Setti
     },
     offer: {
       enabled: !!o.enabled, showBanner: o.showBanner !== false, showPopup: o.showPopup !== false,
-      popupDelay: typeof o.popupDelay === 'number' ? o.popupDelay : Number(o.popupDelay ?? 20),
+      popupDelay: typeof o.popupDelay === 'number' ? o.popupDelay : Number(o.popupDelay ?? 2),
       title: str(o.title) || 'New Patient Offer', price: str(o.price), inclusions: str(o.inclusions), period: str(o.period),
       termsLine: str(o.termsLine) || 'New patients only. Terms and conditions apply.',
       termsUrl: str(o.termsUrl) || '/new-patient-offer-terms/', terms: str(o.terms), bookLabel: str(o.bookLabel) || 'Book Now',

@@ -191,7 +191,7 @@ Publish the website after any change.
 ## The new patient offer
 
 The $229 offer appears in three places: the strip under the homepage hero, the New Patients page and
-a small pop-up. All three, and the terms page, come from one place.
+a pop-up in the middle of the screen, shown once per visit a couple of seconds after the first page opens. All three, and the terms page, come from one place.
 
 1. Click **Site Settings**, then **New patient offer**.
 2. Change the price (numbers only), what is included (one item per line), the **Offer period** (the
@@ -258,12 +258,17 @@ each January and update it on the page.
 
 ---
 
-## Google reviews badge
+## Google reviews band
 
-A small badge showing the Google star rating and the number of reviews can appear under the homepage
-buttons. It is switched off. GYA switches it on once the practice has signed it off, and the rating must
-be kept the same as Google shows it. Review wording is never put on the website: under AHPRA's rules,
-patient reviews used in advertising are testimonials.
+The homepage shows "Over 500 Google Reviews" under the offer, linking to the practice's Google listing.
+To update it, click **Site Settings**, then **Google reviews band**:
+
+- **Number of reviews:** round down to what Google shows (for example 500 shows as "Over 500").
+- **Star rating:** as Google shows it, for example 4.9. Leave it blank to show the number only.
+- **Google Business Profile link** and **Google logo**: GYA usually sets these once.
+
+**Save settings**, then **Publish website**. Review wording is never put on the website: under AHPRA's
+rules, patient reviews used in advertising are testimonials. Only the number and the rating are shown.
 
 ---
 

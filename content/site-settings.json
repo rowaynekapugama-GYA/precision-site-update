@@ -94,7 +94,7 @@
     "enabled": true,
     "showBanner": true,
     "showPopup": true,
-    "popupDelay": 20,
+    "popupDelay": 2,
     "title": "New Patient Offer",
     "price": "229",
     "inclusions": "Comprehensive examination\n2 intraoral X-rays\nIntraoral photos\nScale and polish\nFluoride treatment",
@@ -105,9 +105,9 @@
     "bookLabel": "Book Now"
   },
   "reviews": {
-    "enabled": false,
+    "enabled": true,
     "rating": "",
-    "count": "500+",
+    "count": "500",
     "url": "",
     "logo": ""
   },

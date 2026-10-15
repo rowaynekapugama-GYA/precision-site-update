@@ -1,4 +1,4 @@
-# Precision Dental: the client dashboard (v3.1.0)
+# Precision Dental: the client dashboard (v3.1.2)
 
 The Precision Dental website (precisiondentistry.com.au) now has a dashboard at **/admin**.
 The practice can sign in, change wording and photos, reorder sections, write blog posts, update
@@ -234,11 +234,11 @@ npm run render && npm run dev # http://localhost:3000 and http://localhost:3000/
 
 | Revision | On the website | Edited in |
 |---|---|---|
-| $229 new patient offer | Strip under the homepage hero; main panel on `/new-patients/`; pop-up on every other page (once per visit, after 20 s or exit intent, never over the menu or the Call and Book bar); terms page `/new-patient-offer-terms/` (noindex) | Site Settings > New patient offer (price, inclusions, period, terms line, full terms, button wording, which placements show, pop-up delay) |
+| $229 new patient offer | Strip under the homepage hero; main panel on `/new-patients/`; centred pop-up on every other page (v3.1.1: opens 2 s after the first page of a visit, once per visit; closes with X, Esc or a click outside; keyboard kept inside while open); terms page `/new-patient-offer-terms/` (noindex) | Site Settings > New patient offer (price, inclusions, period, terms line, full terms, button wording, which placements show, pop-up delay) |
 | Price list form | Homepage section, `/new-patients/`, and inside "Download Our Price List" on `/price-list/` (`#price-list`); footer button on every page links there | Site Settings > Price list (PDF, who emails it, button, consent, thank-you) |
 | Health Funds and Government Schemes | `/health-funds/`, Patients menu, footer, HTML sitemap, homepage CDBS and health fund cards, CDBS and DVA sections of `/price-list/` | Pages > Health Funds and Government Schemes; the three "only if confirmed" lines in Site Settings > Health funds and government schemes |
 | AHPRA registration | Footer of every page, Dr Choi's profile ("Registration" row), his Meet the Team card | Team (registration type and number); his profile's row in Pages |
-| Google reviews badge | Under the homepage hero buttons when switched on | Site Settings > Google reviews badge (**off**) |
+| Google reviews band (v3.1.2) | "Over 500 Google Reviews" band under the homepage offer strip, linked to Google; stars when a rating is entered | Site Settings > Google reviews band (on, 500 reviews, no rating yet) |
 | Before and after | A collapsed gallery on 11 treatment pages, absent until a case is ready | Before & After (new screen) |
 
 ### The price list and SmileOx
@@ -279,6 +279,24 @@ Verified: a database seeded from v3.0.0 and built with v3.1.0 pulls back exactly
 For GYA when writing the next release: add an update to `UPDATES` with a new id, run
 `npx tsx scripts/content-updates.ts --files` to apply it to `content/`, and commit both.
 
+### Verification run for v3.1.2 (15 October 2026)
+
+- From the unzipped v3.1.2 release (`npm ci`): a database seeded from v3.0.0 and built with v3.1.2 pulls
+  back exactly `content/`, with the reviews band switched on.
+- Chromium: 71 checks for the 14 and 15 October features (63 before publishing, 8 after), including the
+  band under the offer strip, its Google link in a new tab, no stars without a rating, stars and 4.9 once
+  a rating is entered, and the dashboard refusing a rating outside 1 to 5. The v3.0.0 dashboard drive:
+  46 of 46.
+
+### Verification run for v3.1.1 (15 October 2026)
+
+- From the unzipped v3.1.1 release (`npm ci`): a database seeded from v3.0.0 and built with v3.1.1 pulls
+  back exactly `content/`; a v3.1.0 database gets the 2 second pop-up delay from the new content update.
+- Chromium, 69 checks for the 14 October features, including the centred pop-up: opens on the first page,
+  centred, modal with focus inside, page behind locked, keyboard kept inside, closes with Esc, a click
+  outside and the X, once per visit, fits a 390 px phone with both buttons in view. The v3.0.0 drive of
+  every dashboard function still passes 46 of 46.
+
 ### Verification run for v3.1.0 (14 October 2026)
 
 - `tsc --noEmit` clean; `qa:banned` and `qa:secrets` (including the seed password) clean.
@@ -309,7 +327,7 @@ For GYA when writing the next release: add an update to `UPDATES` with a new id,
 | **v3.1.0: price list PDF** | SmileOx emails the PDF | No PDF yet. Requests are captured, emailed to SmileOx, reception and GYA and listed in Enquiries | Get the PDF from the practice; set up the SmileOx automation on the "Price List Download" tag (or upload it in Site Settings and choose "The website"). |
 | **v3.1.0: SmileOx intake address** | All new forms feed SmileOx with source tracking | Built for `SMILEOX_INTAKE_EMAIL` (and an optional webhook) | Set `SMILEOX_INTAKE_EMAIL` in Vercel before go-live, and `SMILEOX_WEBHOOK_URL` if SmileOx gives one. Confirm SmileOx maps the `Label: value` lines (Tag, Lead source, utm_*). |
 | **v3.1.0: price list copy** | "SmileOx emails the price list" | The approved Prices page says "we will send it to your mobile and email" | Confirm whether SmileOx also sends it by SMS; if not, change "your mobile and email" to "your email" in Pages > Prices and Payment Options. |
-| **v3.1.0: Google rating** | Confirm the rating from the Google Business Profile; client sign-off before publishing | Badge built, switched off, rating empty | Practice signs off, GYA enters the rating and the profile link, switches it on. Only Google's official logo file, uploaded in the same panel. |
+| **v3.1.2: Google reviews** | Confirm the rating from the Google Business Profile; client sign-off | The practice asked for the 500 reviews to be highlighted (15 Oct), so the band is on with "Over 500". No star rating or Google logo yet, and the link opens a Google Maps search for the practice | Enter the star rating as Google shows it, the Google Business Profile link, and upload Google's official logo file (Site Settings > Google reviews band). |
 | **v3.1.0: HICAPS** | Mention on-the-spot claiming only if the practice confirms it | The new page's HICAPS line is off. **The approved pages already say HICAPS**: the homepage hero chip "HICAPS on the spot", the homepage health fund card, the "Health Fund Claims with HICAPS" section and SEO description of Prices and Payment Options | Ask the practice. If HICAPS is not available, remove those mentions (Pages > Home, Prices and Payment Options). If it is, switch the line on. |
 | **v3.1.0: CDBS bulk billing, DVA billing** | Add only if confirmed | Both lines built and off | Switch on in Site Settings once the practice confirms. |
 | **v3.1.0: Dr Choi's registration** | "Dr Billy Choi – General Dentist – AHPRA Registration: DEN0000958417"; confirm the number | Shown as "Dr Billy Choi, General Dentist, AHPRA Registration: DEN0000958417" (commas in place of the dashes, house style). Not found in a web search, so not independently checked | Check DEN0000958417 on the AHPRA public register before go-live. |

@@ -75,7 +75,9 @@ export function SettingsForm({ initial, isAdmin }: { initial: S; isAdmin: boolea
     if ([s.offer.title, s.offer.inclusions, s.offer.period, s.offer.termsLine, s.offer.bookLabel].some((t) => URGENT.test(t || ''))) {
       toast('Please take out wording that pushes people to book quickly. AHPRA does not allow it in health advertising.', 'bad'); return
     }
-    if (s.reviews.enabled && (!(rating > 0 && rating <= 5) || !/^https?:\/\//.test(s.reviews.url))) { toast('The reviews badge needs the rating (for example 4.9) and the Google Business Profile link.', 'bad'); return }
+    if (s.reviews.enabled && !String(s.reviews.count).trim()) { toast('The reviews band needs the number of reviews, for example 500.', 'bad'); return }
+    if (String(s.reviews.rating).trim() && !(rating > 0 && rating <= 5)) { toast('The star rating must be a number from 1 to 5, for example 4.9, as Google shows it.', 'bad'); return }
+    if (s.reviews.url.trim() && !/^https?:\/\//.test(s.reviews.url.trim())) { toast('The Google Business Profile link must start with https://', 'bad'); return }
     setBusy(true)
     try {
       const body: Record<string, unknown> = {
@@ -202,22 +204,23 @@ export function SettingsForm({ initial, isAdmin }: { initial: S; isAdmin: boolea
             help="Shown on the terms page (/new-patient-offer-terms/). Leave an empty line between paragraphs. While empty, the page shows a placeholder note." />
           <div className="row">
             <Toggle label="Strip under the homepage hero" checked={s.offer.showBanner} onChange={(v) => setO({ showBanner: v })} />
-            <Toggle label="Pop-up (once per visit)" checked={s.offer.showPopup} onChange={(v) => setO({ showPopup: v })} />
+            <Toggle label="Pop-up in the middle of the screen (once per visit)" checked={s.offer.showPopup} onChange={(v) => setO({ showPopup: v })} />
           </div>
           <TextInput label="Pop-up appears after (seconds)" type="number" value={String(s.offer.popupDelay)} onChange={(v) => setO({ popupDelay: Number(v) || 0 })}
-            help="On a computer it also appears when the visitor moves to leave the page. 0 means only then. It never covers the menu or the Book and Call buttons, and closes with the X or the Esc key." />
+            help="How long after the first page opens. 0 means only when a computer visitor moves to leave the page. It shows once per visit and closes with the X, the Esc key or a click outside it. It is not shown on the New Patients and terms pages." />
         </Panel>
 
-        <Panel id="reviews" title="Google reviews badge" intro="A small badge under the homepage hero buttons showing the Google star rating and number of reviews, linking to the Google Business Profile. Review wording is never shown.">
-          <Notice tone="warn" icon={Icon.info()}><p>Switch this on only once the practice has signed off. AHPRA treats patient reviews about clinical care as testimonials, so GYA has left this off until the practice confirms it is comfortable showing the rating. Use the rating exactly as Google shows it and keep it up to date.</p></Notice>
-          <Toggle label="Show the reviews badge" checked={s.reviews.enabled} onChange={(v) => setR({ enabled: v })} />
+        <Panel id="reviews" title="Google reviews band" intro="The &ldquo;Over 500 Google Reviews&rdquo; band on the homepage, under the offer strip. It links to the practice's Google listing. Review wording is never shown.">
+          <Notice tone="info" icon={Icon.info()}><p>AHPRA treats patient reviews about clinical care as testimonials, so the website shows only the number of reviews and the star rating, never what reviewers wrote. Keep both the same as Google shows them, and update the number every so often.</p></Notice>
+          <Toggle label="Show the Google reviews band" checked={s.reviews.enabled} onChange={(v) => setR({ enabled: v })} />
           <div className="row">
-            <TextInput label="Star rating" value={s.reviews.rating} onChange={(v) => setR({ rating: v })} placeholder="4.9" help="As shown on the Google Business Profile." />
-            <TextInput label="Number of reviews" value={s.reviews.count} onChange={(v) => setR({ count: v })} placeholder="500+" />
+            <TextInput label="Number of reviews" value={s.reviews.count} onChange={(v) => setR({ count: v })} placeholder="500" help="Shown as Over 500. Round down to what Google shows." />
+            <TextInput label="Star rating (optional)" value={s.reviews.rating} onChange={(v) => setR({ rating: v })} placeholder="4.9" help="As shown on Google. When filled in, the stars and the rating appear next to Reviews." />
           </div>
-          <TextInput label="Google Business Profile link" value={s.reviews.url} onChange={(v) => setR({ url: v.trim() })} placeholder="https://g.page/..." help={s.socials.googleBusiness && !s.reviews.url ? <>Use the same link as the footer icon? <button type="button" className="btn small ghost" onClick={() => setR({ url: s.socials.googleBusiness })}>Use it</button></> : 'Opens in a new tab.'} />
+          <TextInput label="Google Business Profile link (optional)" value={s.reviews.url} onChange={(v) => setR({ url: v.trim() })} placeholder="https://g.page/..."
+            help={s.socials.googleBusiness && !s.reviews.url ? <>Blank uses the footer&apos;s Google link. <button type="button" className="btn small ghost" onClick={() => setR({ url: s.socials.googleBusiness })}>Use it here</button></> : 'Blank opens Google Maps searching for the practice. Opens in a new tab.'} />
           <ImageSlot label="Google logo (optional)" value={s.reviews.logo} onChange={(v) => setR({ logo: v.value, logoMedia: v.media })} />
-          <p className="help" style={{ marginTop: -6 }}>Only Google&apos;s official logo file from Google&apos;s brand resources. Without it the badge shows the stars and the words.</p>
+          <p className="help" style={{ marginTop: -6 }}>Upload Google&apos;s own logo file (from Google&apos;s brand resources, or the same file the old website used). Without it the band shows the word Google in the website&apos;s font.</p>
         </Panel>
 
         <Panel id="pricelist" title="Price list" intro="The Download Our Price List form on the homepage, the New Patients page and Prices and Payment Options (the footer button links to it).">
@@ -281,7 +284,7 @@ export function SettingsForm({ initial, isAdmin }: { initial: S; isAdmin: boolea
         <div className="panel">
           <h3 style={{ marginBottom: 6 }}>On this screen</h3>
           <ul className="list-plain">
-            {[['practice', 'Practice details'], ['hours', 'Opening hours'], ['booking', 'Booking and payments'], ['social', 'Social media'], ['brand', 'Logo and colours'], ['seo', 'SEO defaults'], ['offer', 'New patient offer'], ['reviews', 'Google reviews badge'], ['pricelist', 'Price list'], ['schemes', 'Health funds and schemes'], ['features', 'Site features'], ...(isAdmin ? [['tracking', 'Tracking']] : [])].map(([id, l]) => (
+            {[['practice', 'Practice details'], ['hours', 'Opening hours'], ['booking', 'Booking and payments'], ['social', 'Social media'], ['brand', 'Logo and colours'], ['seo', 'SEO defaults'], ['offer', 'New patient offer'], ['reviews', 'Google reviews band'], ['pricelist', 'Price list'], ['schemes', 'Health funds and schemes'], ['features', 'Site features'], ...(isAdmin ? [['tracking', 'Tracking']] : [])].map(([id, l]) => (
               <li key={id}><a href={`#${id}`}>{l}</a></li>
             ))}
           </ul>

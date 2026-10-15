@@ -293,8 +293,50 @@ export const UPDATES: ContentUpdate[] = [
       // settings: the offer, badge, price list and scheme switches, when not set yet
       const s = c.settings, rs = repo.settings
       if (!String(s.offer?.price || '').trim() && rs.offer?.price) { s.offer = { ...rs.offer }; done.push('settings: new patient offer') }
-      if (!s.reviews?.count && rs.reviews) { s.reviews = { ...rs.reviews, enabled: false }; done.push('settings: reviews badge (off)') }
+      if (!s.reviews?.count && rs.reviews) { s.reviews = { ...rs.reviews }; done.push(`settings: Google reviews (${rs.reviews.enabled ? 'on' : 'off'})`) }
       if (!s.priceList?.consentText && rs.priceList) { s.priceList = { ...rs.priceList }; done.push('settings: price list') }
+      return done
+    },
+  },
+  {
+    id: '2026-10-15-centred-popup',
+    description: 'The new patient offer pop-up opens in the middle of the screen two seconds after the first page loads',
+    apply(c) {
+      const done: string[] = []
+      // only if it still has the 14 October default (20 seconds); a delay the practice chose is kept
+      if (c.settings.offer && Number(c.settings.offer.popupDelay) === 20) {
+        c.settings.offer.popupDelay = 2
+        done.push('settings: pop-up after 2 seconds')
+      }
+      return done
+    },
+  },
+  {
+    id: '2026-10-15-reviews-band',
+    description: '"Over 500 Google Reviews" band on the homepage, under the offer strip (replaces the hero badge)',
+    apply(c) {
+      const done: string[] = []
+      const home = page(c, 'index')
+      if (home) {
+        const after = home.sections.findIndex((s) => s.ref === 'offer-banner')
+        const at = after >= 0 ? after + 1 : home.sections.findIndex((s) => s.kind === 'header') + 1
+        const target = home.sections[at]
+        const added = insertSection(home, {
+          kind: 'content',
+          before: '\n\n<!-- ================= GOOGLE REVIEWS ================= -->\n',
+          label: 'Google reviews band (number of reviews, rating and link are in Site Settings)',
+          pinned: false,
+          ref: 'reviews-band',
+          template: '{{site:reviewsBand}}',
+          fields: [],
+        }, (s) => s === target)
+        if (added) { done.push('index: Google reviews band'); touch(home) }
+      }
+      // the practice asked for it (15 October): switch it on with their count, unless already set up
+      if (c.settings.reviews && String(c.settings.reviews.count).trim() === '500+' && !c.settings.reviews.enabled) {
+        c.settings.reviews = { ...c.settings.reviews, enabled: true, count: '500' }
+        done.push('settings: reviews band on, 500 reviews')
+      }
       return done
     },
   },
