@@ -306,8 +306,13 @@ export function teamGrid(team: TeamMember[]): string {
       ? `<a class="explore" href="${esc(m.profileUrl)}">${esc(m.profileLinkText || `Read ${m.name}’s profile`)}` +
         `<span class="ic">${ICON_CHEV_RIGHT}</span></a>`
       : ''
-    return '<article class="team-card reveal"><div class="ph">' +
-      `<img src="${esc(m.photo)}" alt="${esc(m.photoAlt)}" loading="lazy" width="900" height="900"></div>` +
+    // until a photo is added, a tidy initials tile rather than a broken image
+    const initials = String(m.name || '').replace(/^Dr\.?\s+/i, '').split(/\s+/).filter(Boolean)
+      .slice(0, 2).map((w) => w[0].toUpperCase()).join('')
+    const ph = m.photo
+      ? `<div class="ph"><img src="${esc(m.photo)}" alt="${esc(m.photoAlt)}" loading="lazy" width="900" height="900"></div>`
+      : `<div class="ph ph-initials" aria-hidden="true"><span>${esc(initials)}</span></div>`
+    return '<article class="team-card reveal">' + ph +
       `<div class="tx"><h3>${esc(m.name)}</h3><span class="role">${esc(m.role)}</span>${quals}${reg}${bio}${link}</div></article>`
   }).join('')
 }

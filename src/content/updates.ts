@@ -340,4 +340,42 @@ export const UPDATES: ContentUpdate[] = [
       return done
     },
   },
+  {
+    id: '2026-10-16-hygienist-registrations',
+    description: 'Dental hygienists Ivan Yang and Mobina Rezayee, with their AHPRA registration numbers (from the practice, 16 October)',
+    apply(c) {
+      const done: string[] = []
+      const people = [
+        { name: 'Ivan Yang', registrationNumber: 'DEN0004030046' },
+        { name: 'Mobina Rezayee', registrationNumber: 'DEN0004029897' },
+      ]
+      // clinicians first: straight after the dentist and the oral health therapist
+      const clinical = c.team.filter((m) => /dentist|therapist|hygienist/i.test(m.role) && !people.some((p) => p.name.toLowerCase() === m.name.toLowerCase()))
+      let order = clinical.length ? Math.max(...clinical.map((m) => m.order)) : 0
+      for (const p of people) {
+        const existing = c.team.find((m) => m.name.trim().toLowerCase() === p.name.toLowerCase())
+        if (existing) {
+          if (!existing.registrationNumber) {
+            existing.registrationNumber = p.registrationNumber
+            existing.registrationType = existing.registrationType || 'Dental Hygienist'
+            done.push(`team: ${p.name} registration`)
+          }
+          continue
+        }
+        order += 1
+        for (const m of c.team) if (m.order >= order) m.order += 1
+        c.team.push({
+          name: p.name, role: 'Dental Hygienist', qualifications: '', photo: '', photoAlt: '', bio: '',
+          profileUrl: '', profileLinkText: '', hidden: false, order,
+          registrationType: 'Dental Hygienist', registrationNumber: p.registrationNumber,
+        })
+        done.push(`team: added ${p.name}, Dental Hygienist`)
+      }
+      if (done.length) {
+        const team = c.pages.find((pg) => pg.key === 'our-team')
+        if (team) touch(team)
+      }
+      return done
+    },
+  },
 ]

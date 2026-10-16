@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-16 - v3.1.3: dental hygienists and their AHPRA registration
+
+- **Ivan Yang and Mobina Rezayee, Dental Hygienists**, added to Meet the Team (after Lizzy) with their AHPRA registration numbers from the practice: DEN0004030046 and DEN0004029897. Both numbers now also appear in the footer on every page, under Dr Choi's.
+- Until their photos and short bios are added (Team screen in the dashboard), their cards show their initials in the site's blue rather than a photo, and no bio.
+- Sites already in the dashboard get both people on the next build (content update `2026-10-16-hygienist-registrations`); if either has already been added in the dashboard, only a missing registration number is filled in.
+
 ## 2026-10-15 - v3.1.2: "Over 500 Google Reviews" on the homepage
 
 - **Google reviews band on the homepage**, under the offer strip, as on the old website and at the practice's request: "Over 500" with Google and Reviews, linking to the practice's Google listing. The star rating shows next to Reviews once it is entered in Site Settings, and Google's own logo once it is uploaded there (until then the word Google in the site's font). Only the number and the rating, never review wording. It replaces the small badge under the hero buttons from v3.1.0, which was never switched on.

@@ -28,6 +28,34 @@
     "registrationNumber": ""
   },
   {
+    "name": "Ivan Yang",
+    "role": "Dental Hygienist",
+    "qualifications": "",
+    "photo": "",
+    "photoAlt": "",
+    "bio": "",
+    "profileUrl": "",
+    "profileLinkText": "",
+    "hidden": false,
+    "order": 3,
+    "registrationType": "Dental Hygienist",
+    "registrationNumber": "DEN0004030046"
+  },
+  {
+    "name": "Mobina Rezayee",
+    "role": "Dental Hygienist",
+    "qualifications": "",
+    "photo": "",
+    "photoAlt": "",
+    "bio": "",
+    "profileUrl": "",
+    "profileLinkText": "",
+    "hidden": false,
+    "order": 4,
+    "registrationType": "Dental Hygienist",
+    "registrationNumber": "DEN0004029897"
+  },
+  {
     "name": "Lidia",
     "role": "Patient Coordinator",
     "qualifications": "",
@@ -37,7 +65,7 @@
     "profileUrl": "",
     "profileLinkText": "",
     "hidden": false,
-    "order": 3,
+    "order": 5,
     "registrationType": "",
     "registrationNumber": ""
   },
@@ -51,7 +79,7 @@
     "profileUrl": "",
     "profileLinkText": "",
     "hidden": false,
-    "order": 4,
+    "order": 6,
     "registrationType": "",
     "registrationNumber": ""
   },
@@ -65,7 +93,7 @@
     "profileUrl": "",
     "profileLinkText": "",
     "hidden": false,
-    "order": 5,
+    "order": 7,
     "registrationType": "",
     "registrationNumber": ""
   },
@@ -79,7 +107,7 @@
     "profileUrl": "",
     "profileLinkText": "",
     "hidden": false,
-    "order": 6,
+    "order": 8,
     "registrationType": "",
     "registrationNumber": ""
   }
