@@ -31,7 +31,8 @@ if (process.argv.includes('--files')) {
     if (before.get(p.key) !== JSON.stringify(p)) writeJson(path.join(CONTENT_DIR, 'pages', pageFileName(p.key)), p)
   }
   writeJson(path.join(CONTENT_DIR, 'chrome.json'), c.chrome)
-  writeJson(path.join(CONTENT_DIR, 'team.json'), c.team)
+  // new team members are appended by updates; the file is kept in the order the dashboard shows
+  writeJson(path.join(CONTENT_DIR, 'team.json'), [...c.team].sort((a, b) => a.order - b.order))
   writeJson(path.join(CONTENT_DIR, 'site-settings.json'), c.settings)
   process.exit(0)
 }
@@ -91,7 +92,8 @@ try {
   }
   for (let i = 0; i < c.team.length; i++) {
     const doc = sync.teamToDoc(c.team[i])
-    if (JSON.stringify(doc) !== teamBefore[i]) await payload.update({ collection: 'team', id: teamDocs[i].id, data: doc as any, ...ctx })
+    if (i >= teamBefore.length) await payload.create({ collection: 'team', data: doc as any, ...ctx })
+    else if (JSON.stringify(doc) !== teamBefore[i]) await payload.update({ collection: 'team', id: teamDocs[i].id, data: doc as any, ...ctx })
   }
   const sDoc = sync.settingsToDoc(c.settings)
   if (JSON.stringify(sDoc) !== settingsBefore) await payload.updateGlobal({ slug: 'site-settings', data: sDoc as any, context: sync.CTX, overrideAccess: true })

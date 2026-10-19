@@ -1062,7 +1062,10 @@ body.om-open{overflow:hidden}
 .foot-reg{margin-top:16px;font-size:.8rem;line-height:1.55;color:var(--ink-3)}
 .footer .foot-cta{margin-top:18px;font-size:.88rem;padding:6px 6px 6px 18px}
 
-/* ---------- team card registration ---------- */
+/* ---------- team card registration, and the initials tile used until a photo is added ---------- */
+.team-card .ph-initials{display:grid;place-items:center}
+.team-card .ph-initials span{font-family:var(--font-head);font-weight:700;font-size:clamp(3rem,6vw,4.4rem);letter-spacing:-.02em;
+  background:linear-gradient(135deg,var(--blue-500),var(--blue-700));-webkit-background-clip:text;background-clip:text;color:transparent}
 .team-card .reg{display:block;font-size:.78rem;color:var(--ink-3);margin:-6px 0 12px}
 
 /* ---------- Health Funds and Government Schemes ---------- */
