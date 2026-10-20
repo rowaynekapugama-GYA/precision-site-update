@@ -28,9 +28,12 @@ export const SiteSettings: GlobalConfig = {
         { name: 'latitude', type: 'number' },
         { name: 'longitude', type: 'number' },
         { name: 'mapEmbed', type: 'text' },
+        { name: 'crossStreet', type: 'text' },
       ],
     },
     { name: 'parking', type: 'text' },
+    { name: 'serviceAreaLine', type: 'text' },
+    { name: 'areaServed', type: 'text' },
     { name: 'abn', type: 'text' },
     {
       name: 'hours', type: 'array', maxRows: 7, fields: [

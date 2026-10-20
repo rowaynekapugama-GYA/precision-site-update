@@ -211,8 +211,11 @@ People ask for the price list through the form on the homepage, the New Patients
 Payment Options. Each request goes to SmileOx (tagged "Price List Download"), to reception, and to
 **Enquiries** (choose **Price list downloads** to see just these).
 
-- **To upload or replace the PDF:** Site Settings > **Price list** > **Upload the PDF**, then
-  **Save settings**. The PDF is never linked on the website itself.
+- **The PDF is built in.** The designed October 2026 price list is part of the website. To change a
+  fee, ask GYA: we update the Prices and Payment Options page and the PDF together. After someone fills in the form they can
+  open the PDF straight away, and SmileOx emails it as well.
+- **To send a different PDF instead:** Site Settings > **Price list** > **Upload a different PDF**,
+  then **Save settings**. "Use the built-in PDF again" switches back.
 - **Who emails it:** normally SmileOx. If SmileOx is not set up yet, choose "The website" and the
   website emails a link to the PDF straight away.
 - The consent wording and the thank-you message are in the same panel.
@@ -250,11 +253,15 @@ blank for non-clinical staff. **Save team**, then **Publish website**.
 
 ## Health funds and government schemes
 
-The **Health Funds and Government Schemes** page is edited like any other page (Pages). Three lines on
-it only appear once the practice confirms them, under Site Settings > **Health funds and government
-schemes**: on-the-spot claiming with HICAPS, bulk billing for the Child Dental Benefits Schedule, and
-billing DVA directly. The CDBS amount ($1,158) changes each year: check it with Services Australia
-each January and update it on the page.
+The **Health Funds and Government Schemes** page is edited like any other page (Pages): the preferred
+provider paragraph, the list of accepted funds, the CDBS section and the DVA line all live there. Three
+lines only appear once the practice confirms them, under Site Settings > **Health funds and government
+schemes**: on-the-spot claiming with HICAPS (on), bulk billing for the Child Dental Benefits Schedule
+and billing DVA directly (both off until confirmed). The CDBS amounts ($1,158 for periods starting in
+2026, $1,132 for 2025) change each January: check them with Services Australia and update the page.
+
+The address, the "(Corner of Brookes St)" note and the service area line under it are in Site Settings >
+**Practice details**, and change everywhere at once.
 
 ---
 

@@ -82,7 +82,8 @@ export function SettingsForm({ initial, isAdmin }: { initial: S; isAdmin: boolea
     try {
       const body: Record<string, unknown> = {
         practiceName: s.practiceName, logo: s.logo, logoMedia: s.logoMedia ?? null, phone: s.phone.trim(), email: s.email.trim(),
-        address: s.address, parking: s.parking, abn: s.abn, hours: s.hours.map((h) => ({ day: h.day, open: h.open, opens: h.open ? h.opens : '', closes: h.open ? h.closes : '' })),
+        address: { ...s.address, crossStreet: (s.address.crossStreet || '').trim() }, parking: s.parking,
+        serviceAreaLine: (s.serviceAreaLine || '').trim(), areaServed: (s.areaServed || '').trim(), abn: s.abn, hours: s.hours.map((h) => ({ day: h.day, open: h.open, opens: h.open ? h.opens : '', closes: h.open ? h.closes : '' })),
         bookingUrl: s.bookingUrl.trim(), preferredFunds: s.preferredFunds, paymentAccepted: s.paymentAccepted,
         socials: s.socials, colours: s.colours, features: s.features,
         offer: { ...s.offer, price: String(s.offer.price).trim().replace(/^\$/, ''), popupDelay: Math.max(0, Number(s.offer.popupDelay) || 0) },
@@ -133,7 +134,10 @@ export function SettingsForm({ initial, isAdmin }: { initial: S; isAdmin: boolea
             <TextInput label="State" value={s.address.state} onChange={(v) => setA({ state: v })} />
             <TextInput label="Postcode" value={s.address.postcode} onChange={(v) => setA({ postcode: v })} />
           </div>
+          <TextInput label="Cross street or landmark (optional)" value={s.address.crossStreet || ''} onChange={(v) => setA({ crossStreet: v })} help="Shown in brackets after the street, for example Corner of Brookes St. Google gets the address without it." />
           <TextInput label="Parking note" value={s.parking} onChange={(v) => set({ parking: v })} />
+          <TextInput label="Service area line" value={s.serviceAreaLine || ''} onChange={(v) => set({ serviceAreaLine: v })} help="One sentence, shown in the footer and on the contact section. Leave blank to hide it." />
+          <TextInput label="Areas served (for Google)" value={s.areaServed || ''} onChange={(v) => set({ areaServed: v })} help="Suburbs and areas separated by commas, for example Newstead, New Farm, Teneriffe. Not shown on the page." />
           <TextInput label="Google Maps embed link" value={s.address.mapEmbed} onChange={(v) => setA({ mapEmbed: v.trim() })} help="The address of the map shown on the contact page. Only change this if the practice moves." />
           <div className="row">
             <TextInput label="Map latitude" value={geo.lat} onChange={(v) => { setGeo({ ...geo, lat: v }); if (Number.isFinite(Number(v)) && v.trim() !== '' && v.trim() !== '-') setA({ latitude: Number(v) }) }} help="Used by Google Maps and search. Only change if the practice moves." />
@@ -226,11 +230,14 @@ export function SettingsForm({ initial, isAdmin }: { initial: S; isAdmin: boolea
         <Panel id="pricelist" title="Price list" intro="The Download Our Price List form on the homepage, the New Patients page and Prices and Payment Options (the footer button links to it).">
           <div className="field"><span className="lab">Price list PDF</span>
             <div className="actions">
-              {s.priceList.file ? <a className="btn small ghost" href={s.priceList.file} target="_blank" rel="noopener">{Icon.external()} Open the current PDF</a> : <span className="help">No PDF uploaded yet.</span>}
-              <label className="btn small">{Icon.upload()} {pdfBusy ? 'Uploading...' : s.priceList.file ? 'Replace the PDF' : 'Upload the PDF'}
+              <a className="btn small ghost" href={s.priceList.file || '/downloads/Precision-Dental-Price-List-October-2026.pdf'} target="_blank" rel="noopener">{Icon.external()} Open the current PDF</a>
+              <label className="btn small">{Icon.upload()} {pdfBusy ? 'Uploading...' : s.priceList.file ? 'Replace the PDF' : 'Upload a different PDF'}
                 <input type="file" accept="application/pdf" hidden onChange={(e) => { uploadPdf(e.target.files?.[0]); e.target.value = '' }} /></label>
+              {s.priceList.file ? <button type="button" className="btn small ghost" onClick={() => setP({ file: '', fileDoc: undefined })}>Use the built-in PDF again</button> : null}
             </div>
-            <div className="help">Never linked on the website itself, so people get it through the form.</div>
+            <div className="help">{s.priceList.file
+              ? 'An uploaded PDF is being sent out. Remove it to go back to the built-in one.'
+              : 'The designed October 2026 price list is built into the website. To change a fee, ask GYA, who update it together with the Prices page. Upload a PDF only if you need to send something different.'}</div>
           </div>
           <Select label="Who emails the price list" value={s.priceList.delivery} onChange={(v) => setP({ delivery: v === 'website' ? 'website' : 'smileox' })}
             options={[{ value: 'smileox', label: 'SmileOx automation (the contact is tagged Price List Download)' }, { value: 'website', label: 'The website, straight away (a link to the PDF above)' }]}

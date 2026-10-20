@@ -1113,3 +1113,51 @@ body.om-open{overflow:hidden}
 .ba-case figcaption strong{display:block;color:var(--navy);font-family:var(--font-head);font-weight:600}
 .ba-disclaimer{margin-top:24px;padding:14px 18px;border-left:3px solid var(--blue-500);background:var(--sky-50);border-radius:0 12px 12px 0;font-size:.9rem}
 @media(max-width:560px){.ba-grid{grid-template-columns:1fr}.ba-gallery summary{padding:20px}.ba-body{padding:0 20px 22px}}
+
+/* ---------- client update 19 Oct 2026: fee table (data/price-list.json), funds list, service area ---------- */
+.fee-intro{max-width:70ch;margin-bottom:22px}
+.fee-wrap{margin-top:8px}
+.fee-disclaimer{margin:0 0 22px;padding:16px 20px;border-left:3px solid var(--blue-500);background:var(--sky-50);border-radius:0 14px 14px 0;font-size:.95rem;max-width:none}
+.section-alt .fee-disclaimer{background:var(--white)}
+.fee-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;font-size:.97rem}
+.fee-table thead th{background:var(--navy);color:#fff;font-family:var(--font-head);font-weight:600;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:15px 20px}
+.fee-table thead th:last-child,.fee-table .fee-price{text-align:right}
+.fee-table td{padding:14px 20px;border-top:1px solid var(--line);vertical-align:top;color:var(--ink-2)}
+.fee-table .fee-cat th{background:var(--sky-50);color:var(--navy);font-family:var(--font-head);font-weight:600;font-size:1rem;text-align:left;padding:13px 20px;border-top:1px solid var(--line);box-shadow:inset 3px 0 0 var(--blue-500)}
+.fee-table tbody:first-of-type .fee-cat th{border-top:0}
+.fee-table .fee-service{color:var(--ink)}
+.fee-table .fee-service sup{color:var(--blue-600);font-weight:700;margin-left:2px}
+.fee-table .fee-items{width:22%;font-size:.88rem;color:var(--ink-3)}
+.fee-table .fee-price{width:22%;font-family:var(--font-head);font-weight:700;color:var(--navy);white-space:normal}
+.fee-table .fee-offer td{background:#EAF6FC}
+.fee-table .fee-offer .fee-service{font-weight:600}
+.fee-table .fee-offer .fee-price{color:var(--blue-600)}
+.fee-terms{display:block;margin-top:4px;font-family:var(--font-body);font-weight:600;font-size:.8rem;color:var(--blue-600);text-decoration:underline;text-underline-offset:2px}
+.fee-note,.fee-edition{margin:14px 0 0;font-size:.88rem;color:var(--ink-3)}
+.fee-edition{margin-top:4px}
+.fee-note a{color:var(--blue-600);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+@media(max-width:720px){
+  .fee-table,.fee-table tbody,.fee-table tr,.fee-table td,.fee-table th{display:block;width:100%}
+  .fee-table{border:0;background:none;border-radius:0;overflow:visible}
+  .fee-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .fee-table tbody{margin-bottom:18px}
+  .fee-table .fee-cat th{border:0;border-radius:12px;margin-bottom:10px;padding:12px 16px}
+  .fee-table tr:not(.fee-cat){background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:10px;display:grid;grid-template-columns:1fr;gap:6px}
+  .fee-table tr.fee-offer{background:#EAF6FC}
+  .fee-table td{border:0;padding:0;background:none !important;width:auto}
+  .fee-table .fee-service{grid-column:1/-1;font-size:.98rem}
+  .fee-table .fee-items{width:auto;font-size:.82rem}
+  .fee-table .fee-items::before{content:"ADA item no. ";font-weight:600;color:var(--ink-3)}
+  .fee-table .fee-price{width:auto;text-align:left;font-size:1.02rem;margin-top:2px}
+  .fee-terms{display:inline;margin:0 0 0 10px}
+  .fee-terms{font-size:.78rem}
+}
+.prose .fund-grid,.fund-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 18px;margin:6px 0 18px;padding:0}
+.prose .fund-grid li,.fund-grid li{list-style:none;margin:0;position:relative;padding:10px 14px 10px 32px;background:var(--white);border:1px solid var(--line);border-radius:12px;font-size:.93rem;color:var(--ink);line-height:1.35}
+.fund-grid li::before{content:"";position:absolute;left:14px;top:50%;width:7px;height:7px;margin-top:-3.5px;border-radius:50%;background:var(--blue-500)}
+@media(max-width:560px){.fund-grid{grid-template-columns:1fr}}
+.prose h3+.fund-grid{margin-top:12px}
+.foot-area{font-size:.86rem;color:var(--ink-2);line-height:1.55}
+.map-info .map-area{margin-top:8px;font-size:.84rem;color:var(--ink-3)}
+.pl-thanks p{margin:0 0 12px;color:inherit}
+.pl-thanks .pl-pdf{font-size:.9rem}

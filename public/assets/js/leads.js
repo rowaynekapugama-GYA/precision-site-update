@@ -2,7 +2,7 @@
    1. remembers where a visitor came from (UTM tags, ad click IDs, referrer)
    2. the new patient offer pop-up: once per browser session, never blocks the page
    3. the price list form: posts to /api/price-list, then fires the conversion events
-   4. click events for the offer and price list buttons */
+   4. click events for the offer and price list buttons, and opening the price list PDF */
 (function(){
   var KEY='pd_attr', DAY=864e5;
   window.dataLayer=window.dataLayer||[];
@@ -26,8 +26,11 @@
 
   /* ---------- 4. click events ---------- */
   document.addEventListener('click',function(e){
-    var a=e.target.closest&&e.target.closest('[data-offer-cta],[data-pl-cta]'); if(!a)return;
-    if(a.hasAttribute('data-offer-cta')){
+    var a=e.target.closest&&e.target.closest('[data-offer-cta],[data-pl-cta],[data-pl-pdf]'); if(!a)return;
+    if(a.hasAttribute('data-pl-pdf')){
+      var h=a.closest('[data-pl-location]');
+      window.dataLayer.push({event:'price_list_pdf_open',form_location:h?h.getAttribute('data-pl-location'):location.pathname});
+    }else if(a.hasAttribute('data-offer-cta')){
       window.dataLayer.push({event:'offer_cta_click',offer:'new_patient',placement:a.getAttribute('data-offer-cta'),cta:a.getAttribute('data-track')||''});
     }else{
       window.dataLayer.push({event:'price_list_cta_click',placement:a.getAttribute('data-pl-cta')});

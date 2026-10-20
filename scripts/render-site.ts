@@ -11,6 +11,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { loadContent } from '../src/content/load'
 import { renderSite, siteRoutes } from '../src/render/site'
+import { priceListFile } from '../src/render/priceList'
 
 const root = process.cwd()
 const pub = path.join(root, 'public')
@@ -43,13 +44,16 @@ fs.mkdirSync(path.join(root, 'src', 'generated'), { recursive: true })
 fs.writeFileSync(path.join(root, 'src', 'generated', 'site-routes.json'), JSON.stringify(routes, null, 1) + '\n')
 
 // what the price list route needs to know, so it never has to read the database
+// the PDF is the one uploaded in the dashboard, else the one the build writes from data/price-list.json;
+// emails need a full address, on whichever domain this deployment serves
 const leadSettings = content.settings
-const plFile = leadSettings.priceList?.file || ''
+const plFile = priceListFile(leadSettings)
+const siteOrigin = (process.env.SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? 'https://' + process.env.VERCEL_PROJECT_PRODUCTION_URL : '') || 'https://precisiondentistry.com.au').replace(/\/+$/, '')
 fs.writeFileSync(path.join(root, 'src', 'generated', 'lead-config.json'), JSON.stringify({
   phone: leadSettings.phone,
   priceList: {
     delivery: leadSettings.priceList?.delivery === 'website' ? 'website' : 'smileox',
-    file: plFile ? (/^https?:\/\//i.test(plFile) ? plFile : 'https://precisiondentistry.com.au' + (plFile.startsWith('/') ? plFile : '/' + plFile)) : '',
+    file: /^https?:\/\//i.test(plFile) ? plFile : siteOrigin + (plFile.startsWith('/') ? plFile : '/' + plFile),
   },
 }, null, 1) + '\n')
 

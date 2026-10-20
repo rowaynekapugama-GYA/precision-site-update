@@ -11,7 +11,7 @@
     "canonical": "",
     "noindex": false
   },
-  "lastmod": "2026-10-14",
+  "lastmod": "2026-10-19",
   "layout": {
     "head": "std",
     "pre": "std",
@@ -109,6 +109,31 @@
       ]
     },
     {
+      "key": "s13",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "pinned": false,
+      "ref": "fee-table",
+      "label": "Our Fees (the table comes from data/price-list.json)",
+      "template": "<section class=\"body-section{{alt}}\" id=\"fees\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose fee-intro\"><p>{{f2}}</p></div>{{site:priceTable}}</div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Our Fees"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Fees for our most common treatments, with their ADA item numbers. You can also download the price list as a PDF using the form below."
+        }
+      ]
+    },
+    {
       "key": "s3",
       "kind": "content",
       "before": "\n",
@@ -158,7 +183,7 @@
           "id": "f2",
           "label": "Paragraph",
           "type": "text",
-          "value": "We accept most major private health funds. Claims are processed electronically at the time of your appointment using HICAPS, so there is no need to lodge paperwork later. You simply pay any gap on the day."
+          "value": "We accept most private health insurance benefits using HICAPS, so you can claim on the spot and pay only the gap. No manual lodgement needed."
         }
       ]
     },
@@ -206,7 +231,7 @@
           "id": "f2",
           "label": "Paragraph",
           "type": "text",
-          "value": "We accept EFTPOS, Visa, Mastercard, American Express and cash."
+          "value": "We accept EFTPOS, Visa, Mastercard and cash."
         }
       ]
     },
@@ -218,7 +243,7 @@
       "alt": false,
       "label": "Interest-Free Payment Plans with DentiCare",
       "pinned": false,
-      "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "template": "<section class=\"body-section{{alt}}\" id=\"payment-plans\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
       "fields": [
         {
           "id": "f1",
@@ -230,7 +255,7 @@
           "id": "f2",
           "label": "Paragraph",
           "type": "text",
-          "value": "If you would prefer to spread the cost of treatment, DentiCare offers payment plans with no interest and no credit check, for amounts up to your approved DentiCare limit. A deposit and a small set-up fee apply. Eligibility criteria, terms and conditions apply. Our team can explain how the plan works and help you apply."
+          "value": "DentiCare offers interest-free payment plans for dental treatment between $3,000 and $12,000. A 20% deposit is paid before treatment starts, and the balance is spread over 12 to 18 months, with weekly, fortnightly or monthly payments. A small set-up fee applies. Eligibility criteria, terms and conditions apply. Our team can explain how the plan works and help you apply."
         }
       ]
     },
@@ -240,7 +265,7 @@
       "before": "\n",
       "altAuto": true,
       "alt": true,
-      "label": "Accessing Your Superannuation with SuperCare",
+      "label": "Accessing Your Superannuation with My SuperCare",
       "pinned": false,
       "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
       "fields": [
@@ -248,13 +273,38 @@
           "id": "f1",
           "label": "Heading",
           "type": "text",
-          "value": "Accessing Your Superannuation with SuperCare"
+          "value": "Accessing Your Superannuation with My SuperCare"
         },
         {
           "id": "f2",
           "label": "Paragraph",
           "type": "rich",
-          "value": "For some patients, early release of superannuation on compassionate grounds may be an option for treatment such as dental implants, root canal therapy, gum treatment, and restorative treatment for tooth decay, erosion and other damage using <a href=\"/service/white-tooth-filling-restorations/\">composite resin fillings</a> or <a href=\"/service/dental-crowns-and-bridges/\">crowns</a>. Treatment that helps restore everyday function, such as eating and speaking comfortably, may be considered. SuperCare is an independent service that guides eligible patients through the application process. Eligibility is determined under Australian Taxation Office criteria, and approval is not assured. We recommend seeking independent financial advice before accessing your super."
+          "value": "My SuperCare helps Australians access necessary dental treatment by easing the financial pressure of its cost. It works with the Australian Taxation Office under strict guidelines, and the application process is simple, so you can get the treatment you need sooner. For some patients, early release of superannuation on compassionate grounds may be an option for treatment such as dental implants, root canal therapy, gum treatment, and restorative treatment for tooth decay, erosion and other damage using <a href=\"/service/white-tooth-filling-restorations/\">composite resin fillings</a> or <a href=\"/service/dental-crowns-and-bridges/\">crowns</a>. Treatment that helps restore everyday function, such as eating and speaking comfortably, may be considered. My SuperCare is an independent service that guides eligible patients through the application process. Eligibility is determined under Australian Taxation Office criteria, and approval is not assured. We recommend seeking independent financial advice before accessing your super."
+        }
+      ]
+    },
+    {
+      "key": "s14",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "pinned": false,
+      "ref": "payment-plan-options",
+      "label": "Flexible Payment Plans",
+      "template": "<section class=\"body-section{{alt}}\" id=\"payment-plan-options\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Flexible Payment Plans"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Flexible payment plan options are available, including interest-free plans. Contact us to find the right option for you."
         }
       ]
     },
@@ -278,7 +328,7 @@
           "id": "f2",
           "label": "Paragraph",
           "type": "text",
-          "value": "The Medicare Child Dental Benefits Schedule provides benefits towards basic dental services, such as check-ups, X-rays, cleans and fillings, for eligible children and teenagers. Our team can help you confirm your child&#x27;s eligibility and remaining benefit before their appointment."
+          "value": "The Medicare Child Dental Benefits Schedule provides benefits towards basic dental services, such as check-ups, X-rays, cleans and fillings, for eligible children and teenagers. Our team can help you confirm your child&#x27;s eligibility and remaining benefit before their appointment. Ask our team how CDBS billing works at our practice."
         },
         {
           "id": "f3",
@@ -316,7 +366,7 @@
           "id": "f2",
           "label": "Paragraph",
           "type": "text",
-          "value": "We welcome Department of Veterans&#x27; Affairs card holders. Please contact our team before your appointment so we can confirm what your card covers."
+          "value": "We welcome eligible Department of Veterans&#x27; Affairs (DVA) patients. Please bring your Veteran Card to your appointment and our team will explain what&#x27;s covered."
         },
         {
           "id": "f3",

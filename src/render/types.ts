@@ -169,8 +169,14 @@ export interface Settings {
     latitude: number
     longitude: number
     mapEmbed: string
+    /** shown after the street in brackets, for example "Corner of Brookes St"; left out of the schema */
+    crossStreet?: string
   }
   parking: string
+  /** one sentence for the footer and the contact section, for example "Located in Fortitude Valley, serving patients from ..." */
+  serviceAreaLine?: string
+  /** suburbs and areas for the schema's areaServed, separated by commas */
+  areaServed?: string
   abn: string
   hours: HoursDay[]
   bookingUrl: string

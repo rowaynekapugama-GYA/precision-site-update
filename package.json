@@ -1,6 +1,6 @@
 {
   "name": "precision-dental-site",
-  "version": "3.1.3",
+  "version": "3.2.0",
   "description": "Precision Dental website (static) with the GYA client dashboard at /admin.",
   "private": true,
   "type": "module",
@@ -13,6 +13,7 @@
     "build:next": "cross-env NODE_OPTIONS=--no-deprecation next build",
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
     "render": "tsx scripts/render-site.ts",
+    "price-list:pdf": "tsx scripts/price-list-pdf.ts",
     "pull": "tsx scripts/pull-content.ts",
     "seed": "tsx scripts/seed.ts",
     "seed:admin": "tsx scripts/seed-admin.ts",
@@ -43,6 +44,7 @@
     "graphql": "^16.8.1",
     "next": "15.4.11",
     "payload": "3.90.2",
+    "pdfkit": "0.17.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "sanitize-html": "2.14.0",

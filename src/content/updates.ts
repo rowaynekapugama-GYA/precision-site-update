@@ -379,3 +379,214 @@ export const UPDATES: ContentUpdate[] = [
     },
   },
 ]
+
+// ------------------------------------------------------------- 19 Oct 2026
+// Client changes round 2 (email thread 14 to 17 October): October 2026 price list,
+// payment options, health funds, CDBS and DVA wording, service area, contact details.
+const ROUND2 = '2026-10-19'
+const touch2 = (p: Page | undefined) => { if (p && (!p.lastmod || p.lastmod < ROUND2)) p.lastmod = ROUND2 }
+const TICK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>'
+const OLD_PAYMENTS = /american express/i
+
+export const HICAPS_TEXT = 'We accept most private health insurance benefits using HICAPS, so you can claim on the spot and pay only the gap. No manual lodgement needed.'
+export const SERVICE_AREA = 'Located in Fortitude Valley, serving patients from Newstead, New Farm, Teneriffe, Bowen Hills and all Brisbane metro areas.'
+export const AREA_SERVED = 'Fortitude Valley, Newstead, New Farm, Teneriffe, Bowen Hills, Brisbane'
+
+function field(sec: Section | undefined, id: string): Field | undefined {
+  return sec?.fields?.find((f) => f.id === id)
+}
+
+/** Set a field's value; says whether it changed. */
+function setField(sec: Section | undefined, id: string, value: string, label?: string): boolean {
+  const f = field(sec, id)
+  if (!f || f.value === value) return false
+  f.value = value
+  if (label) f.label = label
+  return true
+}
+
+export function feeTableSection(): Omit<Section, 'key'> {
+  return {
+    kind: 'content', before: '\n', altAuto: true, alt: false, pinned: false, ref: 'fee-table',
+    label: 'Our Fees (the table comes from data/price-list.json)',
+    template: '<section class="body-section{{alt}}" id="fees"><div class="container reveal"><h2>{{f1}}</h2><div class="prose fee-intro"><p>{{f2}}</p></div>{{site:priceTable}}</div></section>',
+    fields: [
+      { id: 'f1', label: 'Heading', type: 'text', value: 'Our Fees' },
+      { id: 'f2', label: 'Paragraph', type: 'text', value: 'Fees for our most common treatments, with their ADA item numbers. You can also download the price list as a PDF using the form below.' },
+    ],
+  } as Omit<Section, 'key'>
+}
+
+export function planOptionsSection(): Omit<Section, 'key'> {
+  return {
+    kind: 'content', before: '\n', altAuto: true, alt: false, pinned: false, ref: 'payment-plan-options',
+    label: 'Flexible Payment Plans',
+    template: '<section class="body-section{{alt}}" id="payment-plan-options"><div class="container split reveal"><h2>{{f1}}</h2><div class="prose"><p>{{f2}}</p></div></div></section>',
+    fields: [
+      { id: 'f1', label: 'Heading', type: 'text', value: 'Flexible Payment Plans' },
+      { id: 'f2', label: 'Paragraph', type: 'text', value: 'Flexible payment plan options are available, including interest-free plans. Contact us to find the right option for you.' },
+    ],
+  } as Omit<Section, 'key'>
+}
+
+const ticks = (ids: string[]) => `<ul class="check-list">${ids.map((id) => `<li>${TICK}<span>{{${id}}}</span></li>`).join('')}</ul>`
+
+/** Health Funds: the expanded CDBS section (checked against the CDBS guide, Version 14, and Services Australia). */
+export function cdbsSection(): Pick<Section, 'template' | 'fields' | 'label'> {
+  const T = (id: string, label: string, value: string): Field => ({ id, label, type: 'text', value })
+  return {
+    label: 'Child Dental Benefits Schedule (CDBS)',
+    template: '<section class="body-section{{alt}}" id="cdbs"><div class="container reveal"><h2>{{f1}}</h2><div class="prose"><p>{{f2}}</p>\n' +
+      '<h3>{{f3}}</h3>\n<p>{{f4}}</p>\n' + ticks(['f5', 'f6', 'f7']) + '\n' +
+      '<h3>{{f8}}</h3>\n<p>{{f9}}</p>\n<p>{{f10}}</p>\n' + ticks(['f11', 'f12', 'f13', 'f14', 'f15', 'f16', 'f17', 'f18', 'f19']) + '\n' +
+      '<h3>{{f20}}</h3>\n<ul><li>{{f21}}</li><li>{{f22}}</li><li>{{f23}}</li></ul>\n' +
+      '<h3>{{f24}}</h3>\n<p>{{f25}}</p>\n<p>{{f26}}</p>\n<p>{{f27}}</p>{{site:cdbsBulkBillLine}}\n' +
+      '<p><a href="{{f28}}" target="_blank" rel="noopener">{{f29}}</a></p>\n' +
+      '<p class="scheme-note">{{f30}}</p></div></div></section>',
+    fields: [
+      T('f1', 'Heading', 'Child Dental Benefits Schedule (CDBS)'),
+      T('f2', 'Paragraph', 'The Child Dental Benefits Schedule is a government-funded Medicare program that helps cover the cost of basic dental services for eligible children aged 0 to 17.'),
+      T('f3', 'Subheading', 'Who is eligible'),
+      T('f4', 'Paragraph', 'Generally, a child is eligible if they are:'),
+      T('f5', 'List item', 'Aged 0 to 17 at any point in the calendar year'),
+      T('f6', 'List item', 'Eligible for Medicare'),
+      T('f7', 'List item', 'Receiving Family Tax Benefit Part A or another relevant Australian Government payment at some point in the year, or with a parent, carer or guardian who does'),
+      T('f8', 'Subheading', 'What the benefit covers'),
+      T('f9', 'Paragraph', 'Eligible children can receive up to $1,158 in benefits over two consecutive calendar years when their two-year period starts in 2026. For children whose period started in 2025, the cap is $1,132. The cap is indexed each year and depends on eligibility.'),
+      T('f10', 'Paragraph', 'The CDBS covers basic dental services, such as:'),
+      T('f11', 'List item', 'Examinations'),
+      T('f12', 'List item', 'X-rays'),
+      T('f13', 'List item', 'Cleaning'),
+      T('f14', 'List item', 'Fluoride treatment'),
+      T('f15', 'List item', 'Fissure sealants'),
+      T('f16', 'List item', 'Fillings'),
+      T('f17', 'List item', 'Root canals'),
+      T('f18', 'List item', 'Extractions'),
+      T('f19', 'List item', 'Partial dentures'),
+      T('f20', 'Subheading', 'What it does not cover'),
+      T('f21', 'List item', 'Orthodontic treatment, such as braces'),
+      T('f22', 'List item', 'Cosmetic treatment'),
+      T('f23', 'List item', 'Services provided in hospital'),
+      T('f24', 'Subheading', 'How to access it'),
+      T('f25', 'Paragraph', 'You can check your child&#x27;s eligibility and remaining balance through your Medicare online account in myGov (select History and statements, then Child Dental Benefits Schedule). You can also ask our team at the appointment, and we will check for you.'),
+      T('f26', 'Paragraph', 'Please bring your child&#x27;s Medicare card to the appointment.'),
+      T('f27', 'Paragraph', 'Ask our team how CDBS billing works at our practice.'),
+      { id: 'f28', label: 'Link address', type: 'link', value: 'https://www.servicesaustralia.gov.au/child-dental-benefits-schedule', group: 'more' },
+      { id: 'f29', label: 'Link text', type: 'text', value: 'Child Dental Benefits Schedule on the Services Australia website', group: 'more' },
+      T('f30', 'Small print', 'Benefit amounts and eligibility are set by the Australian Government and may change. Please contact us or Services Australia to confirm your child&#x27;s eligibility.'),
+    ],
+  }
+}
+
+export function dvaSection(): Pick<Section, 'template' | 'fields' | 'label'> {
+  return {
+    label: 'Department of Veterans\' Affairs (DVA)',
+    template: '<section class="body-section{{alt}}" id="dva"><div class="container split reveal"><h2>{{f1}}</h2><div class="prose"><p>{{f2}}</p>{{site:dvaBillingLine}}</div></div></section>',
+    fields: [
+      { id: 'f1', label: 'Heading', type: 'text', value: 'Department of Veterans&#x27; Affairs (DVA)' },
+      { id: 'f2', label: 'Paragraph', type: 'text', value: DVA_TEXT },
+    ],
+  }
+}
+
+export const DVA_TEXT = 'We welcome eligible Department of Veterans&#x27; Affairs (DVA) patients. Please bring your Veteran Card to your appointment and our team will explain what&#x27;s covered.'
+
+const SUPERCARE_INTRO = 'My SuperCare helps Australians access necessary dental treatment by easing the financial pressure of its cost. It works with the Australian Taxation Office under strict guidelines, and the application process is simple, so you can get the treatment you need sooner.'
+
+/** The service area line under the address in a footer. */
+export function patchFooterArea(post: string): string {
+  if (post.includes('{{site:footServiceArea}}')) return post
+  return post.replace('<p>{{site:address}}</p>', '<p>{{site:address}}</p>{{site:footServiceArea}}')
+}
+
+UPDATES.push({
+  id: '2026-10-19-client-round-2',
+  description: 'October 2026 price list (fee table and PDF), payment options, health funds, CDBS and DVA wording, service area and contact details',
+  apply(c) {
+    const done: string[] = []
+    const s = c.settings
+
+    // ---- Site Settings
+    if (s.phone !== '(07) 3852 1160') { s.phone = '(07) 3852 1160'; done.push('settings: phone') }
+    if (s.email !== 'admin@precisiondentistry.com.au') { s.email = 'admin@precisiondentistry.com.au'; done.push('settings: email') }
+    if (s.address?.street === '520 Wickham Street') { s.address.street = '520 Wickham St'; done.push('settings: street') }
+    if (s.address && !String(s.address.crossStreet || '').trim()) { s.address.crossStreet = 'Corner of Brookes St'; done.push('settings: cross street') }
+    if (!String(s.serviceAreaLine || '').trim()) { s.serviceAreaLine = SERVICE_AREA; done.push('settings: service area line') }
+    if (!String(s.areaServed || '').trim()) { s.areaServed = AREA_SERVED; done.push('settings: areas served') }
+    if (!s.paymentAccepted || OLD_PAYMENTS.test(s.paymentAccepted)) { s.paymentAccepted = 'EFTPOS, Visa, Mastercard, Cash'; done.push('settings: payment methods') }
+    if (s.offer && /^Scale and polish$/m.test(s.offer.inclusions || '')) {
+      s.offer.inclusions = s.offer.inclusions.replace(/^Scale and polish$/m, 'Scale and polish (professional clean)')
+      done.push('settings: offer inclusions')
+    }
+    if (s.schemes && !s.schemes.hicaps) { s.schemes.hicaps = true; done.push('settings: HICAPS confirmed') }
+    // every form now hands out the October 2026 PDF the build writes (an older upload is let go)
+    if (s.priceList && (s.priceList.file || s.priceList.fileDoc)) {
+      s.priceList.file = ''
+      delete s.priceList.fileDoc
+      done.push('settings: price list PDF is now the October 2026 edition')
+    }
+
+    // ---- Prices and Payment Options
+    const prices = page(c, 'price-list')
+    if (prices) {
+      const by = (label: string) => prices.sections.find((x) => (x.label || '').startsWith(label))
+      const dl = by('Download Our Price List')
+      if (insertSection(prices, feeTableSection(), (x) => x === dl)) done.push('price-list: fee table')
+      if (setField(by('Health Fund Claims with HICAPS'), 'f2', HICAPS_TEXT)) done.push('price-list: HICAPS')
+      if (setField(by('Payment Methods'), 'f2', 'We accept EFTPOS, Visa, Mastercard and cash.')) done.push('price-list: payment methods')
+      const dc = by('Interest-Free Payment Plans with DentiCare')
+      if (editTemplate(dc, '<section class="body-section{{alt}}">', '<section class="body-section{{alt}}" id="payment-plans">', 'id="payment-plans"')) done.push('price-list: payment plans anchor')
+      if (setField(dc, 'f2', 'DentiCare offers interest-free payment plans for dental treatment between $3,000 and $12,000. A 20% deposit is paid before treatment starts, and the balance is spread over 12 to 18 months, with weekly, fortnightly or monthly payments. A small set-up fee applies. Eligibility criteria, terms and conditions apply. Our team can explain how the plan works and help you apply.')) done.push('price-list: DentiCare')
+      const sc = by('Accessing Your Superannuation with')
+      if (sc) {
+        if (setField(sc, 'f1', 'Accessing Your Superannuation with My SuperCare')) { sc.label = 'Accessing Your Superannuation with My SuperCare'; done.push('price-list: My SuperCare heading') }
+        const f2 = field(sc, 'f2')
+        if (f2 && !f2.value.includes(SUPERCARE_INTRO)) {
+          f2.value = `${SUPERCARE_INTRO} ${f2.value.replace('SuperCare is an independent service', 'My SuperCare is an independent service')}`
+          done.push('price-list: My SuperCare')
+        }
+        const after = prices.sections[prices.sections.indexOf(sc) + 1]
+        if (insertSection(prices, planOptionsSection(), (x) => x === after)) done.push('price-list: flexible payment plans')
+      }
+      const cdbs = by('Child Dental Benefits Schedule')
+      const cf = field(cdbs, 'f2')
+      if (cf && !cf.value.includes('how CDBS billing works')) { cf.value += ' Ask our team how CDBS billing works at our practice.'; done.push('price-list: CDBS billing line') }
+      if (setField(by('Department of Veterans'), 'f2', DVA_TEXT)) done.push('price-list: DVA')
+      if (done.some((d) => d.startsWith('price-list'))) touch2(prices)
+    }
+
+    // ---- Health Funds and Government Schemes
+    const hf = page(c, 'health-funds')
+    if (hf) {
+      const n = done.length
+      const priv = hf.sections.find((x) => (x.template || '').includes('id="private-health-funds"'))
+      if (setField(priv, 'f2', 'We accept most health funds and are a preferred provider for {{site:preferredFunds}}. This means members of these funds receive maximum benefits, based on their level of cover, when they claim on the spot. Ask us about yours!')) done.push('health-funds: preferred providers')
+      if (editTemplate(priv, '<p>{{f2}}</p>\n<p>{{f3}}</p>{{site:hicapsLine}}', '<p>{{f2}}</p>{{site:hicapsLine}}\n<h3>{{f3}}</h3>\n{{site:fundsList}}', '{{site:fundsList}}')) {
+        setField(priv, 'f3', 'Funds and schemes we accept', 'Subheading')
+        done.push('health-funds: list of funds')
+      }
+      const cdbs = hf.sections.find((x) => (x.template || '').includes('id="cdbs"'))
+      if (cdbs && !(cdbs.template || '').includes('{{f30}}')) { Object.assign(cdbs, cdbsSection()); done.push('health-funds: CDBS') }
+      const dva = hf.sections.find((x) => (x.template || '').includes('id="dva"'))
+      if (dva && !(dva.fields || []).some((f) => f.value === DVA_TEXT)) { Object.assign(dva, dvaSection()); done.push('health-funds: DVA') }
+      if (done.length > n) touch2(hf)
+    }
+
+    // ---- service area line: footers (the homepage keeps its own) and the contact block
+    const home = page(c, 'index')
+    if (home && home.layout.post !== 'std') {
+      const v = patchFooterArea(home.layout.post)
+      if (v !== home.layout.post) { home.layout.post = v; touch2(home); done.push('index: footer service area') }
+    }
+    if (c.chrome) {
+      const v = patchFooterArea(c.chrome.post)
+      if (v !== c.chrome.post) { c.chrome.post = v; done.push('chrome: footer service area') }
+    }
+    const contact = c.blocks?.contact
+    if (contact && contact.template && !contact.template.includes('{{site:mapServiceArea}}') && contact.template.includes('<p>{{site:addressLines}}</p>')) {
+      contact.template = contact.template.replace('<p>{{site:addressLines}}</p>', '<p>{{site:addressLines}}</p>{{site:mapServiceArea}}')
+      done.push('contact block: service area')
+    }
+    return done
+  },
+})

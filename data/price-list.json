@@ -1,0 +1,150 @@
+{
+  "_howTo": "The one place to change prices. This file builds the fee table on /price-list/ and the downloadable PDF (public/downloads/<pdfFile>) on every deploy. Change a price, commit, and both update. For a new edition, change 'edition' and 'pdfFile' too. Rows with \"plan\": true get an asterisk and the payment plan note. The row with \"offer\": true shows the New Patient Offer from Site Settings (price and inclusions) while the offer is switched on, and is hidden when it is off. Keep medicine and whitening product brand names out (TGA advertising rules).",
+  "title": "Price List",
+  "edition": "October 2026",
+  "pdfFile": "Precision-Dental-Price-List-October-2026.pdf",
+  "pdfDesigned": true,
+  "_pdfDesigned": "true: public/downloads/<pdfFile> is the designed PDF exported from the Claude Design canvas (20 October 2026), and the build leaves it alone. After a fee change, update the canvas, export it again and replace that file, or set this to false to have the build write a plain PDF from this file instead.",
+  "disclaimer": "This price list is only a guide. The cost depends on your needs, your mouth, teeth, material required and time required for treatment. It also depends on which private health fund you have, as we are a preferred provider for some. For a final quotation, book an appointment with one of our gentle and compassionate dentists on {phone}.",
+  "planNote": "Interest-free payment plan available (see Payment Options).",
+  "categories": [
+    {
+      "name": "Comprehensive Examination or Consultation",
+      "rows": [
+        { "items": "011, 014, 012, 013", "service": "Understand your needs, fears and concerns; bite analysis; comprehensive treatment plan", "price": "$55 to $75" }
+      ]
+    },
+    {
+      "name": "Dental Digital X-Ray",
+      "rows": [
+        { "items": "022", "service": "Intraoral X-ray", "price": "From $44" },
+        { "items": "037", "service": "Digital full mouth X-ray (OPG)", "price": "From $125" }
+      ]
+    },
+    {
+      "name": "Dental Digital Photos",
+      "rows": [
+        { "items": "072, 073", "service": "Intraoral/extraoral photos", "price": "From $50" }
+      ]
+    },
+    {
+      "name": "Preventative Care",
+      "rows": [
+        { "items": "114, 121", "service": "Professional dental hygienist visit: Airflow experience, includes fluoride treatment (121)", "price": "From $170" },
+        { "items": "011, 114, 121, 022 x2", "offer": true, "service": "New Patient Offer", "price": "$229" },
+        { "items": "151", "service": "Sports mouthguard", "price": "From $250" },
+        { "items": "965", "service": "Night guard occlusal splint", "price": "From $620" }
+      ]
+    },
+    {
+      "name": "Teeth Whitening",
+      "rows": [
+        { "items": "073, 072, 118 x10", "service": "In-chair teeth whitening (1 hr 30 min procedure)", "price": "From $800" },
+        { "items": "071 x2, 073, 072, 119", "service": "Take-home teeth whitening kit: upper and lower reusable trays, 10 syringes of bleaching gel (dentist only)", "price": "From $350" }
+      ]
+    },
+    {
+      "name": "Restoration",
+      "rows": [
+        { "items": "521 to 535", "service": "Natural white fillings (depending on number of surfaces)", "price": "$190 to $480" },
+        { "items": "551 to 555", "service": "Ceramic 3D inlays/onlays, same day (depending on number of surfaces)", "price": "$750 to $1,600" },
+        { "items": "613", "service": "Ceramic crowns (same day)", "price": "From $1,685" }
+      ]
+    },
+    {
+      "name": "Teeth Removal (Extractions)",
+      "rows": [
+        { "items": "311, 314, 322, 324 (surgical)", "service": "Extraction of teeth (depending on difficulty)", "price": "$210 to $500" }
+      ]
+    },
+    {
+      "name": "Root Canal Therapy",
+      "rows": [
+        { "items": "022, 419, 572, 415, 416, 417, 418, 597", "service": "Root canal treatment plus restoration: front teeth (depends on number of canals)", "price": "Approx. from $1,100" },
+        { "items": "022, 419, 572, 415, 416, 417, 418, 597", "service": "Root canal treatment plus restoration: premolars", "price": "Approx. from $1,400" },
+        { "items": "022, 419, 572, 415, 416, 417, 418, 597", "service": "Root canal treatment plus restoration: back molars", "price": "Approx. $1,660 to $1,940" }
+      ]
+    },
+    {
+      "name": "Dental Implants",
+      "rows": [
+        { "items": "688, 661, 672", "service": "Single dental implant with ceramic crown", "price": "From $4,900", "plan": true },
+        { "items": "236, 243", "service": "Bone graft", "price": "$820 to $1,200" }
+      ]
+    },
+    {
+      "name": "Cosmetic Procedure",
+      "rows": [
+        { "items": "526", "service": "Composite resin veneers", "price": "From $500" },
+        { "items": "556", "service": "Porcelain veneers", "price": "From $1,500" }
+      ]
+    },
+    {
+      "name": "Digital Smile Design",
+      "rows": [
+        { "items": "072, 073, 075 x8", "service": "Digital Smile Design", "price": "From $350, reimbursed from final fees", "plan": true }
+      ]
+    },
+    {
+      "name": "Dentures (Partial)",
+      "rows": [
+        { "items": "721/722", "service": "Acrylic denture", "price": "$950 to $1,150 per arch" },
+        { "items": "727/728", "service": "Chrome-based dentures", "price": "$1,650 to $1,900 per arch" }
+      ]
+    },
+    {
+      "name": "Invisalign",
+      "rows": [
+        { "items": "825 x2", "service": "Invisalign®", "price": "From $5,800", "plan": true }
+      ]
+    }
+  ],
+  "payment": {
+    "hicaps": "We accept most private health insurance benefits using HICAPS, so you can claim on the spot and pay only the gap. No manual lodgement needed.",
+    "methods": "We welcome EFTPOS, Visa, Mastercard and cash.",
+    "plans": [
+      {
+        "name": "DentiCare",
+        "points": [
+          "Interest-free payment plan, with a 20% deposit paid before treatment starts",
+          "Spread over 12 to 18 months, with weekly, fortnightly or monthly payments",
+          "For dental treatment between $3,000 and $12,000"
+        ]
+      },
+      {
+        "name": "My SuperCare",
+        "points": [
+          "Helps Australians access necessary dental treatment by easing financial pressure",
+          "Works with the Australian Taxation Office under strict guidelines",
+          "A simple application process, so you can get your treatment sooner"
+        ]
+      }
+    ],
+    "plansNote": "Flexible payment plan options are available, including interest-free plans. Contact us to find the right option for you.",
+    "terms": "Eligibility criteria, terms and conditions apply."
+  },
+  "funds": {
+    "intro": "We accept most health funds and are a preferred provider for {preferredFunds}. This means members of these funds receive maximum benefits, based on their level of cover, when they claim on the spot. Ask us about yours!",
+    "heading": "Funds and schemes we accept",
+    "list": [
+      "Bupa Dental Care",
+      "HCF",
+      "GU Health",
+      "Medibank",
+      "Doctors' Health Fund (Avant Mutual)",
+      "CUA Health",
+      "HBF",
+      "TUH Health Fund",
+      "Defence Health",
+      "Police Health",
+      "nib",
+      "CBHS Health Fund",
+      "GMHBA Health Insurance",
+      "Australian Unity",
+      "HIF",
+      "Peoplecare",
+      "Australian Government Department of Veterans' Affairs",
+      "Medicare Child Dental Benefits Schedule"
+    ]
+  }
+}

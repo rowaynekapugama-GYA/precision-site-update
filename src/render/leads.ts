@@ -11,6 +11,7 @@
 import type { BeforeAfterCase, Settings, TeamMember } from './types'
 import { attr, esc } from './util'
 import { phoneDigits } from './settings'
+import { priceListFile } from './priceList'
 
 // ------------------------------------------------------------------ icons
 export const ICON_PILL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg>'
@@ -245,7 +246,9 @@ export function priceListForm(s: Settings): string {
     `<div class="pl-hp" aria-hidden="true"><label for="pl-company">Company</label><input id="pl-company" name="company" type="text" tabindex="-1" autocomplete="off"></div>` +
     `<label class="consent full"><input type="checkbox" name="consent" value="yes" required> <span>${esc(p.consentText || DEFAULTS.priceList.consentText)} Read our <a href="/privacy-policy/">Privacy Statement</a>.</span></label>` +
     `<p class="form-status" role="status" aria-live="polite" data-pl-status></p>` +
-    `<p class="pl-thanks" hidden data-pl-thanks>${esc(p.thankYou || DEFAULTS.priceList.thankYou)}</p>` +
+    // once the details are in, the visitor can open the PDF straight away as well
+    `<div class="pl-thanks" hidden data-pl-thanks><p>${esc(p.thankYou || DEFAULTS.priceList.thankYou)}</p>` +
+    `<a class="btn btn-blue pl-pdf" href="${attr(priceListFile(s))}" target="_blank" rel="noopener" data-pl-pdf>Open the price list (PDF) ${ICON_ARR}</a></div>` +
     `<div class="full"><button class="btn btn-dark" type="submit" data-pl-submit>${esc(p.buttonLabel || DEFAULTS.priceList.buttonLabel)} ${ICON_ARR}</button></div>` +
     `</form>`
 }
@@ -255,7 +258,7 @@ export function priceListForm(s: Settings): string {
 export function schemeLines(s: Settings): Record<string, string> {
   return {
     hicapsLine: s.schemes.hicaps
-      ? '<p>Claims can be processed on the spot with HICAPS, so you only pay any gap on the day.</p>' : '',
+      ? '<p>We accept most private health insurance benefits using HICAPS, so you can claim on the spot and pay only the gap. No manual lodgement needed.</p>' : '',
     cdbsBulkBillLine: s.schemes.cdbsBulkBill
       ? '<p>We bulk bill eligible CDBS services, so there is no out-of-pocket cost for treatment covered by the schedule, up to your child&#x27;s benefit cap.</p>' : '',
     dvaBillingLine: s.schemes.dvaDirectBill

@@ -8,6 +8,7 @@
  */
 import type { HoursDay, Settings } from './types'
 import { attr, esc, ORIGIN } from './util'
+import { fundsList, priceTable } from './priceList'
 import { offerBanner, offerPopup, offerSection, offerTerms, priceListForm, reviewsBadge, reviewsBand, schemeLines, withLeadDefaults } from './leads'
 
 const SHORT: Record<string, string> = {
@@ -98,14 +99,20 @@ export function siteTokens(settings: Settings): Record<string, string> {
   const s = withLeadDefaults(settings)
   const a = s.address
   const social = (u: string) => (u && u.trim() ? attr(u.trim()) : '#')
+  // the street as people read it: "520 Wickham St (Corner of Brookes St)"; the schema keeps the plain street
+  const streetFull = streetWithCross(s)
+  const area = String(s.serviceAreaLine || '').trim()
   return {
     phone: esc(s.phone),
     phoneTel: esc(phoneDigits(s.phone)),
     email: esc(s.email),
-    address: esc(`${a.unit}, ${a.street}, ${a.suburb} ${a.state} ${a.postcode}`),
-    addressLines: `${esc(a.unit)}<br>${esc(a.street)}<br>${esc(`${a.suburb} ${a.state} ${a.postcode}`)}`,
+    address: esc(`${a.unit}, ${streetFull}, ${a.suburb} ${a.state} ${a.postcode}`),
+    addressLines: `${esc(a.unit)}<br>${esc(streetFull)}<br>${esc(`${a.suburb} ${a.state} ${a.postcode}`)}`,
     addressShort: esc(`${a.unit}, ${a.suburb} ${a.state} ${a.postcode}`),
-    addressStreet: esc(`${a.unit}, ${a.street}`),
+    addressStreet: esc(`${a.unit}, ${streetFull}`),
+    serviceAreaLine: esc(area),
+    footServiceArea: area ? `<p class="foot-area">${esc(area)}</p>` : '',
+    mapServiceArea: area ? `<p class="map-area">${esc(area)}</p>` : '',
     streetShort: esc(a.streetShort),
     street: esc(a.street),
     suburb: esc(a.suburb),
@@ -132,8 +139,22 @@ export function siteTokens(settings: Settings): Record<string, string> {
     reviewsBadge: reviewsBadge(s),
     reviewsBand: reviewsBand(s),
     priceListForm: priceListForm(s),
+    priceTable: priceTable(s),
+    fundsList: fundsList(s),
     ...schemeLines(s),
   }
+}
+
+/** "520 Wickham St (Corner of Brookes St)", or just the street when there is no cross street. */
+export function streetWithCross(s: Settings): string {
+  const cross = String(s.address.crossStreet || '').trim()
+  return cross ? `${s.address.street} (${cross})` : s.address.street
+}
+
+/** The schema's areaServed, from the comma-separated list in Site Settings. */
+export function areaServed(s: Settings): Record<string, string>[] {
+  return String(s.areaServed || '').split(',').map((x) => x.trim()).filter(Boolean)
+    .map((name) => ({ '@type': 'Place', name }))
 }
 
 const ID_RE = /^[A-Za-z0-9-]+$/
@@ -192,6 +213,7 @@ export function practiceNode(s: Settings): Record<string, unknown> {
     },
     geo: { '@type': 'GeoCoordinates', latitude: a.latitude, longitude: a.longitude },
     paymentAccepted: s.paymentAccepted,
+    ...(areaServed(s).length ? { areaServed: areaServed(s) } : {}),
     openingHoursSpecification: hourGroups(s.hours).map((g) => ({
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: g.days.length === 1 ? g.days[0] : g.days,
