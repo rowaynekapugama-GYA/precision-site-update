@@ -1,4 +1,4 @@
-# Precision Dental: the client dashboard (v3.3.0)
+# Precision Dental: the client dashboard (v3.4.0)
 
 The Precision Dental website (precisiondentistry.com.au) now has a dashboard at **/admin**.
 The practice can sign in, change wording and photos, reorder sections, write blog posts, update
@@ -17,6 +17,8 @@ on a public page reads the database.
   site, PDF under a non-guessable name, noindex, not linked), Invisalign from $6,000, American
   Express, no Flexible Payment Plans section, the address exactly as on Google, and the $229 offer
   ongoing. See CHANGELOG.md.
+- v3.4.0 (21 October 2026): four everyday fees above the price list form ($229 offer, examination,
+  hygienist visit, take-home whitening), from `data/price-list.json` > `teaser`.
 
 ---
 
@@ -336,6 +338,7 @@ For GYA when writing the next release: add an update to `UPDATES` with a new id,
 |---|---|---|---|
 | **v3.3.0: address and Google Business Profile** | NAP identical everywhere | "S13, HQ South Tower, 520 Wickham St, Fortitude Valley QLD 4006" and (07) 3852 1160 on every page, in the schema and the PDF; the corner is only a directions note on Contact. Dr Choi's email signature writes "Fortitude Valley, QLD 4006" (comma before QLD) | **Check the live Google Business Profile character for character** (unit, "St" or "Street", commas). If it differs, change Site Settings > Practice details to match it, or change the profile, so the two are identical. |
 | **v3.3.0: SmileOx PDF link** | Price list only through the form | New secret PDF address; the old one returns 404 | Update the SmileOx "Price List Download" automation to the new address (above) before deploying, or new requests get a broken link. |
+| **v3.4.0: everyday fees on the Prices page** | Billy, 20 October: no prices on the site apart from the $229 offer and Invisalign; 21 October feedback: do not list all the prices, prompt the download | Four everyday fees above the form ($229 offer, examination $55 to $75, hygienist from $170, take-home whitening from $350); the rest only in the PDF | Confirm with Billy. To change which fees show, edit `teaser` in `data/price-list.json`; to show none, remove its rows. |
 | **v3.3.0: other "interest-free" mentions** | Billy: remove the Flexible Payment Plans section and other flexible plan mentions; DentiCare is the only plan | Section removed. 37 pages still say "interest-free", each naming DentiCare (the approved line on 29 treatment pages, the DentiCare section, the homepage card, About Us, New Patients, two Invisalign pages, two blog posts). The PDF fee pages keep "* Interest-free payment plan available (see Payment Options)", which points at the DentiCare page | Kept, because interest-free is DentiCare's own term. If Billy wants the word gone too, it is a copy change in those places and a canvas edit. |
 | **v3.1.0: $229 offer terms and period** | Offers must state price, inclusions and the period; terms from the practice | v3.3.0: ongoing, confirmed by the practice on 20 October. Terms line "Ongoing offer for new patients. Additional X-rays or treatment are charged separately if required."; the terms page says "Offer period: Ongoing" and lists the inclusions | No action. If the offer ever gets an end date, enter it under Offer period. |
 | **v3.2.0/v3.3.0: price list PDF** | SmileOx emails the PDF | The designed 2026 PDF (`/downloads/precision-dental-price-list-2026-118de1bb6ba774f7.pdf`, rendered from the Claude Design canvas and kept by the build because `pdfDesigned` is true in `data/price-list.json`), handed out after the form and in `lead-config` for the website-sends-it mode. No fee table on the site since v3.3.0 | To change a fee, edit the canvas and export it again over the same file (and the figure in `data/price-list.json`, which only feeds the fallback generator), then deploy. |

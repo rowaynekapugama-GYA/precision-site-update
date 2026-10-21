@@ -1,5 +1,43 @@
 # Changelog
 
+## 2026-10-21 - v3.4.0: a few everyday fees above the price list form
+
+From the practice's feedback: do not list every fee on Prices and Payment Options, prompt people to download the price list with their details instead.
+
+- **"A Few of Our Everyday Fees"** sits in the Download Our Price List section, just above the form. It shows:
+  - the $229 New Patient Offer, with its inclusions and the ongoing terms line linked to the terms page;
+  - comprehensive examination or consultation, $55 to $75;
+  - dental hygienist visit (Airflow clean, includes fluoride treatment), from $170;
+  - take-home teeth whitening kit, from $350.
+
+  A note under the fees says they are a guide only, lists what else the full price list covers (X-rays, fillings, crowns, root canal treatment, implants, veneers, dentures and Invisalign), and points to the form. Every other fee stays in the PDF, which is still only handed out after the form is sent.
+- **Prices come from `data/price-list.json`** (new `teaser` block). Each row looks up its fee in the categories, so a fee is changed in one place. The offer row uses Site Settings. The build stops with a clear error if a row no longer matches a fee. There are no prices in the schema or meta tags.
+- **The price list PDF** at the same private address is replaced with the export supplied on 21 October. Its fees and wording are identical to v3.3.0 (checked page by page).
+- **Note:** Billy's 20 October email asked for no prices on the site apart from the $229 offer and Invisalign. These everyday fees go further than that and were added at GYA's request after his feedback. Confirm with him.
+- Existing sites get the section on the next build through content update `2026-10-21-price-teaser`, which adds `{{site:priceTeaser}}` to the Download Our Price List section.
+
+| File | Change |
+|---|---|
+| `data/price-list.json` | `teaser`: heading, the four rows, note |
+| `src/render/priceList.ts` | `priceTeaser()` |
+| `src/render/settings.ts` | `{{site:priceTeaser}}` token |
+| `src/content/updates.ts` | content update `2026-10-21-price-teaser` |
+| `content/pages/price-list.json` | token added above the form |
+| `public/assets/css/styles.css` | `.price-teaser` styles (phone and desktop) |
+| `public/downloads/precision-dental-price-list-2026-118de1bb6ba774f7.pdf` | the supplied export |
+| `package.json`, `package-lock.json` | version 3.4.0 |
+| `CHANGELOG.md`, `README-CMS.md`, `docs/HOW-TO-UPDATE.md` | documentation |
+
+**QA:**
+- The build passes both with the database (v3.3.0 upgrade) and without it, and both produce identical public files.
+- `tsc`, `qa:banned` and `qa:secrets` are clean.
+- The browser run passed 51 of 51 checks:
+  - exactly the four fees, directly above the form, with the offer terms link;
+  - no other prices on the page;
+  - the form still hands out the PDF only after sending, and SmileOx still receives the lead;
+  - JSON-LD is valid and there are no console errors;
+  - no sideways scroll at 375 px or 1440 px.
+
 ## 2026-10-20 - v3.3.0: client revisions round 3 (Dr Billy Choi, email of 20 October)
 
 ### What changed

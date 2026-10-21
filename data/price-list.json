@@ -100,6 +100,17 @@
       ]
     }
   ],
+  "_teaser": "The few everyday fees shown on Prices and Payment Options, just above the price list form (21 October 2026). Each row takes its price from the categories above (the row whose service starts with \"find\"), so a fee is only ever changed in one place; the offer row takes its price and inclusions from Site Settings. Every other fee stays in the PDF, which people get through the form.",
+  "teaser": {
+    "heading": "A Few of Our Everyday Fees",
+    "rows": [
+      { "offer": true },
+      { "label": "Comprehensive examination or consultation", "find": "Understand your needs" },
+      { "label": "Dental hygienist visit: Airflow clean, includes fluoride treatment", "find": "Professional dental hygienist visit" },
+      { "label": "Take-home teeth whitening kit", "find": "Take-home teeth whitening kit" }
+    ],
+    "note": "Fees are a guide only and depend on your individual needs. Our full price list also covers X-rays, fillings, crowns, root canal treatment, implants, veneers, dentures and Invisalign. Enter your details below and we will send it to you."
+  },
   "payment": {
     "hicaps": "We accept most private health insurance benefits using HICAPS, so you can claim on the spot and pay only the gap. No manual lodgement needed.",
     "methods": "We welcome EFTPOS, Visa, Mastercard, American Express and cash.",

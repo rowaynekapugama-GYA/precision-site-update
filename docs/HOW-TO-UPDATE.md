@@ -212,9 +212,10 @@ People ask for the price list through the form on the homepage, the New Patients
 Payment Options. Each request goes to SmileOx (tagged "Price List Download"), to reception, and to
 **Enquiries** (choose **Price list downloads** to see just these).
 
-- **Prices are only in the PDF, and the PDF is only given out through the form.** The website shows
-  no fee table and no "from" prices (apart from the $229 offer), so every price request comes in as a
-  SmileOx enquiry you can follow up. After someone fills in the form they can open the PDF straight
+- **Most prices are only in the PDF, and the PDF is only given out through the form.** The Prices and
+  Payment Options page shows just four everyday fees above the form (the $229 offer, examination,
+  hygienist visit and take-home whitening), so requests for everything else come in as SmileOx
+  enquiries you can follow up. To change which fees show there, ask GYA. After someone fills in the form they can open the PDF straight
   away, and SmileOx emails it as well. The PDF's address is private: it is not linked anywhere on the
   site and search engines are told not to index it, so please do not post it publicly.
 - **To change a fee,** ask GYA: we update the designed PDF and replace it.

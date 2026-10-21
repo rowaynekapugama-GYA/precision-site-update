@@ -11,7 +11,7 @@
     "canonical": "",
     "noindex": false
   },
-  "lastmod": "2026-10-20",
+  "lastmod": "2026-10-21",
   "layout": {
     "head": "std",
     "pre": "std",
@@ -116,7 +116,7 @@
       "alt": false,
       "label": "Download Our Price List",
       "pinned": false,
-      "template": "<section class=\"body-section{{alt}}\" id=\"price-list\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<p>{{f3}}</p>\n<div class=\"form-card pl-card\" data-pl-location=\"price-list\">{{site:priceListForm}}</div></div></div></section>",
+      "template": "<section class=\"body-section{{alt}}\" id=\"price-list\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p>\n<p>{{f3}}</p>\n{{site:priceTeaser}}<div class=\"form-card pl-card\" data-pl-location=\"price-list\">{{site:priceListForm}}</div></div></div></section>",
       "fields": [
         {
           "id": "f1",

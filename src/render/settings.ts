@@ -8,7 +8,7 @@
  */
 import type { HoursDay, Settings } from './types'
 import { attr, esc, ORIGIN } from './util'
-import { fundsList, priceTable } from './priceList'
+import { fundsList, priceTable, priceTeaser } from './priceList'
 import { offerBanner, offerPopup, offerSection, offerTerms, priceListForm, reviewsBadge, reviewsBand, schemeLines, withLeadDefaults } from './leads'
 
 const SHORT: Record<string, string> = {
@@ -140,6 +140,7 @@ export function siteTokens(settings: Settings): Record<string, string> {
     reviewsBand: reviewsBand(s),
     priceListForm: priceListForm(s),
     priceTable: priceTable(s),
+    priceTeaser: priceTeaser(s),
     fundsList: fundsList(s),
     ...schemeLines(s),
   }

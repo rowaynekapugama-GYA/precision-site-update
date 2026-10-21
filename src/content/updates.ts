@@ -696,3 +696,22 @@ UPDATES.push({
     return done
   },
 })
+
+// ---------------------------------------------------------------- 21 October 2026: a few everyday fees
+// Client feedback: do not list every fee on Prices and Payment Options, prompt people to download the
+// price list with their details. A few everyday fees ({{site:priceTeaser}}, from data/price-list.json)
+// sit just above the form; everything else stays in the PDF.
+UPDATES.push({
+  id: '2026-10-21-price-teaser',
+  description: 'A few everyday fees above the price list form on Prices and Payment Options',
+  apply(c) {
+    const done: string[] = []
+    const prices = page(c, 'price-list')
+    const dl = prices?.sections.find((x) => (x.label || '').startsWith('Download Our Price List'))
+    if (editTemplate(dl, '<div class="form-card pl-card"', '{{site:priceTeaser}}<div class="form-card pl-card"', '{{site:priceTeaser}}')) {
+      if (prices && (!prices.lastmod || prices.lastmod < '2026-10-21')) prices.lastmod = '2026-10-21'
+      done.push('price-list: everyday fees above the form')
+    }
+    return done
+  },
+})

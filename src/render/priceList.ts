@@ -25,6 +25,8 @@ export interface PriceData {
   disclaimer: string
   planNote: string
   categories: PriceCategory[]
+  /** the few fees shown on Prices and Payment Options above the form (v3.4.0) */
+  teaser?: { heading: string; rows: { label?: string; find?: string; offer?: boolean }[]; note: string }
   payment: { hicaps: string; methods: string; plans: { name: string; points: string[] }[]; plansNote: string; terms: string }
   funds: { intro: string; heading: string; list: string[] }
 }
@@ -94,6 +96,31 @@ export function priceTable(settings: Settings): string {
     (anyPlan ? `<p class="fee-note"><sup>*</sup> ${esc(PRICE_DATA.planNote).replace('Payment Options', '<a href="#payment-plans">Payment Options</a>')}</p>` : '') +
     `<p class="fee-edition">Fees current as at ${esc(PRICE_DATA.edition)}.</p>` +
     `</div>`
+}
+
+/**
+ * A few everyday fees above the price list form (client feedback, 21 October 2026): enough to
+ * show the fees are reasonable, while the full list stays in the PDF that the form hands out.
+ * Prices come from the categories (single source); the offer row from Site Settings.
+ */
+export function priceTeaser(settings: Settings): string {
+  const t = PRICE_DATA.teaser
+  if (!t || !t.rows?.length) return ''
+  const s = withLeadDefaults(settings)
+  const all = PRICE_DATA.categories.flatMap((c) => c.rows)
+  const rows = t.rows.flatMap((r) => {
+    if (r.offer) {
+      if (!offerLive(s)) return []
+      const terms = `<a class="pt-terms" href="${attr(s.offer.termsUrl || '/new-patient-offer-terms/')}">${esc(s.offer.termsLine || 'Terms and conditions apply.')}</a>`
+      return [`<li class="pt-offer"><span class="pt-name"><strong>${esc(s.offer.title || 'New Patient Offer')}</strong>: ${esc(sentenceList(inclusionList(s)))}.${terms}</span><span class="pt-price">${esc(offerPrice(s))}</span></li>`]
+    }
+    const row = all.find((x) => !x.offer && x.service.startsWith(r.find || '\u0000'))
+    if (!row) throw new Error(`price teaser: no fee in data/price-list.json starts with "${r.find}"`)
+    return [`<li><span class="pt-name">${esc(r.label || row.service)}</span><span class="pt-price">${esc(row.price)}</span></li>`]
+  })
+  if (!rows.length) return ''
+  return `<div class="price-teaser"><h3>${esc(t.heading)}</h3><ul>${rows.join('')}</ul>` +
+    (t.note ? `<p class="pt-note">${esc(fillText(t.note, s))}</p>` : '') + `</div>`
 }
 
 export function fundsList(settings: Settings): string {
