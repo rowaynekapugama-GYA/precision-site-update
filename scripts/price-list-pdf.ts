@@ -292,8 +292,7 @@ function paymentPage() {
     }
     y += 10
   }
-  doc.font('SB').fontSize(8.8).fillColor(C.navy).text(P.plansNote, rx, y, { width: rw, lineGap: 2 })
-  y = doc.y + 4
+  if (P.plansNote) { doc.font('SB').fontSize(8.8).fillColor(C.navy).text(P.plansNote, rx, y, { width: rw, lineGap: 2 }); y = doc.y + 4 }
   doc.font('R').fontSize(7.8).fillColor(C.ink3).text(P.terms, rx, y, { width: rw })
   y = doc.y + 14
   if (s.serviceAreaLine) doc.font('R').fontSize(8.8).fillColor(C.ink2).text(s.serviceAreaLine, rx, y, { width: rw, lineGap: 2 })

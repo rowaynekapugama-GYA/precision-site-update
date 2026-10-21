@@ -1,4 +1,4 @@
-# Precision Dental: the client dashboard (v3.2.0)
+# Precision Dental: the client dashboard (v3.3.0)
 
 The Precision Dental website (precisiondentistry.com.au) now has a dashboard at **/admin**.
 The practice can sign in, change wording and photos, reorder sections, write blog posts, update
@@ -13,6 +13,10 @@ on a public page reads the database.
 - v3.1.0 (14 October 2026) adds the $229 new patient offer, the gated price list with SmileOx, the
   Health Funds and Government Schemes page, AHPRA registration lines, the reviews badge (off) and
   before and after galleries. See "v3.1.0: the 14 October revisions" below.
+- v3.3.0 (20 October 2026): the price list is only given out through the form (no fee table on the
+  site, PDF under a non-guessable name, noindex, not linked), Invisalign from $6,000, American
+  Express, no Flexible Payment Plans section, the address exactly as on Google, and the $229 offer
+  ongoing. See CHANGELOG.md.
 
 ---
 
@@ -240,7 +244,7 @@ npm run render && npm run dev # http://localhost:3000 and http://localhost:3000/
 | Health Funds and Government Schemes | `/health-funds/`, Patients menu, footer, HTML sitemap, homepage CDBS and health fund cards, CDBS and DVA sections of `/price-list/` | Pages > Health Funds and Government Schemes; the three "only if confirmed" lines in Site Settings > Health funds and government schemes |
 | AHPRA registration | Footer of every page, Dr Choi's profile ("Registration" row), his Meet the Team card | Team (registration type and number); his profile's row in Pages |
 | Google reviews band (v3.1.2) | "Over 500 Google Reviews" band under the homepage offer strip, linked to Google; stars when a rating is entered | Site Settings > Google reviews band (on, 500 reviews, no rating yet) |
-| Price list fees and PDF (v3.2.0) | "Our Fees" table on `/price-list/` (`#fees`) and the PDF at `/downloads/Precision-Dental-Price-List-October-2026.pdf`, built on every deploy | `data/price-list.json` in the repo (GYA); the offer row and practice details from Site Settings |
+| Price list PDF (v3.3.0) | Not on any page. The PDF at `/downloads/precision-dental-price-list-2026-118de1bb6ba774f7.pdf` (noindex, disallowed in robots.txt, not in the sitemap) is handed out only by `/api/price-list` after a valid form request, and emailed by SmileOx | The Claude Design canvas (export and replace the file); `data/price-list.json` (GYA) for the filename and the fallback generator |
 | Service area and cross street (v3.2.0) | Under the address in the footer and the contact section; `areaServed` in the schema | Site Settings > Practice details (cross street, service area line, areas served) |
 | Before and after | A collapsed gallery on 11 treatment pages, absent until a case is ready | Before & After (new screen) |
 
@@ -256,7 +260,9 @@ npm run render && npm run dev # http://localhost:3000 and http://localhost:3000/
      referrer and the consent time;
    - posts the same lead as JSON to `SMILEOX_WEBHOOK_URL` when set;
    - saves it to Enquiries (type "Price list", with the lead source and what SmileOx was sent);
-   - when Site Settings says the website sends the price list, emails the visitor a link to the PDF.
+   - when Site Settings says the website sends the price list, emails the visitor a link to the PDF;
+   - answers `{ ok: true, pdf: "<address>" }` (v3.3.0). The page puts that address on the "Open the
+     price list (PDF)" button, which has none before. Invalid and bot-trap requests get no address.
 3. The page shows the thank-you message and fires `dataLayer` `price_list_download`, GA4
    `generate_lead`, the Google Ads conversion (Site Settings > Tracking: Ads ID and label) and Meta `Lead`.
    Offer buttons push `offer_cta_click`, the pop-up `offer_popup_shown` and `offer_popup_closed`.
@@ -264,8 +270,10 @@ npm run render && npm run dev # http://localhost:3000 and http://localhost:3000/
    so a visitor who lands from an ad and asks for the price list three pages later is still credited.
 
 **SmileOx automation to set up (GYA):** when a contact is tagged "Price List Download", email them the
-price list PDF. Until the practice sends the PDF, either leave the form as it is (requests are still
-captured) or switch Site Settings > Price list to "The website" once the PDF is uploaded there.
+price list PDF at https://precisiondentistry.com.au/downloads/precision-dental-price-list-2026-118de1bb6ba774f7.pdf
+(v3.3.0; the October address used before now returns 404). Keep that address private: it is not linked
+or indexed anywhere, so the form stays the only way in. If it ever leaks, rename the file in
+`public/downloads/` and `pdfFile` in `data/price-list.json`, deploy, and update SmileOx.
 
 ### Sites already in the dashboard (content updates)
 
@@ -326,8 +334,11 @@ For GYA when writing the next release: add an update to `UPDATES` with a new id,
 
 | Item | Brief or standard | The site | Decision or action |
 |---|---|---|---|
-| **v3.1.0: $229 offer terms and period** | Offers must state price, inclusions and the period; terms from the practice | Price and inclusions shown; terms page shows a marked placeholder and "Offer period: To be confirmed" | **Before go-live:** the practice confirms the terms and the dates (or that it is ongoing). Enter both in Site Settings > New patient offer. |
-| **v3.2.0: price list PDF** | SmileOx emails the PDF | The designed October 2026 PDF (`/downloads/Precision-Dental-Price-List-October-2026.pdf`, exported from the Claude Design canvas and kept by the build because `pdfDesigned` is true in `data/price-list.json`), linked from every form's thank-you, and in `lead-config` for the website-sends-it mode | Set up the SmileOx automation on the "Price List Download" tag to send that address (or choose "The website" in Site Settings). To change a fee, edit `data/price-list.json` (the Prices page) and export the canvas again to replace the PDF, then deploy. |
+| **v3.3.0: address and Google Business Profile** | NAP identical everywhere | "S13, HQ South Tower, 520 Wickham St, Fortitude Valley QLD 4006" and (07) 3852 1160 on every page, in the schema and the PDF; the corner is only a directions note on Contact. Dr Choi's email signature writes "Fortitude Valley, QLD 4006" (comma before QLD) | **Check the live Google Business Profile character for character** (unit, "St" or "Street", commas). If it differs, change Site Settings > Practice details to match it, or change the profile, so the two are identical. |
+| **v3.3.0: SmileOx PDF link** | Price list only through the form | New secret PDF address; the old one returns 404 | Update the SmileOx "Price List Download" automation to the new address (above) before deploying, or new requests get a broken link. |
+| **v3.3.0: other "interest-free" mentions** | Billy: remove the Flexible Payment Plans section and other flexible plan mentions; DentiCare is the only plan | Section removed. 37 pages still say "interest-free", each naming DentiCare (the approved line on 29 treatment pages, the DentiCare section, the homepage card, About Us, New Patients, two Invisalign pages, two blog posts). The PDF fee pages keep "* Interest-free payment plan available (see Payment Options)", which points at the DentiCare page | Kept, because interest-free is DentiCare's own term. If Billy wants the word gone too, it is a copy change in those places and a canvas edit. |
+| **v3.1.0: $229 offer terms and period** | Offers must state price, inclusions and the period; terms from the practice | v3.3.0: ongoing, confirmed by the practice on 20 October. Terms line "Ongoing offer for new patients. Additional X-rays or treatment are charged separately if required."; the terms page says "Offer period: Ongoing" and lists the inclusions | No action. If the offer ever gets an end date, enter it under Offer period. |
+| **v3.2.0/v3.3.0: price list PDF** | SmileOx emails the PDF | The designed 2026 PDF (`/downloads/precision-dental-price-list-2026-118de1bb6ba774f7.pdf`, rendered from the Claude Design canvas and kept by the build because `pdfDesigned` is true in `data/price-list.json`), handed out after the form and in `lead-config` for the website-sends-it mode. No fee table on the site since v3.3.0 | To change a fee, edit the canvas and export it again over the same file (and the figure in `data/price-list.json`, which only feeds the fallback generator), then deploy. |
 | **v3.1.0: SmileOx intake address** | All new forms feed SmileOx with source tracking | Built for `SMILEOX_INTAKE_EMAIL` (and an optional webhook) | Set `SMILEOX_INTAKE_EMAIL` in Vercel before go-live, and `SMILEOX_WEBHOOK_URL` if SmileOx gives one. Confirm SmileOx maps the `Label: value` lines (Tag, Lead source, utm_*). |
 | **v3.1.0: price list copy** | "SmileOx emails the price list" | The approved Prices page says "we will send it to your mobile and email" | Confirm whether SmileOx also sends it by SMS; if not, change "your mobile and email" to "your email" in Pages > Prices and Payment Options. |
 | **v3.1.2: Google reviews** | Confirm the rating from the Google Business Profile; client sign-off | The practice asked for the 500 reviews to be highlighted (15 Oct), so the band is on with "Over 500". No star rating or Google logo yet, and the link opens a Google Maps search for the practice | Enter the star rating as Google shows it, the Google Business Profile link, and upload Google's official logo file (Site Settings > Google reviews band). |
@@ -335,7 +346,7 @@ For GYA when writing the next release: add an update to `UPDATES` with a new id,
 | **v3.2.0: CDBS bulk billing, DVA billing** | Add only if confirmed | Not confirmed. The site says "Ask our team how CDBS billing works at our practice." and, for DVA, only that eligible patients are welcome and should bring their Veteran Card. The bulk-bill and direct-bill lines stay off | Ask the practice whether CDBS is bulk billed and how DVA (Gold and White card) is billed; switch the lines on in Site Settings once confirmed. |
 | **v3.1.0: Dr Choi's registration** | "Dr Billy Choi – General Dentist – AHPRA Registration: DEN0000958417"; confirm the number | Shown as "Dr Billy Choi, General Dentist, AHPRA Registration: DEN0000958417" (commas in place of the dashes, house style). Not found in a web search, so not independently checked | Check DEN0000958417 on the AHPRA public register before go-live. |
 | **v3.1.3: other practitioners** | AHPRA numbers for other clinicians, from the practice | Ivan Yang (DEN0004030046) and Mobina Rezayee (DEN0004029897), Dental Hygienists, added on 16 October: footer and Meet the Team. Their cards have initials until photos and bios are supplied | Photos (with approval) and short bios for Ivan and Mobina, entered under Team. Lizzy (Oral Health Therapist) still has no number on the site: ask whether she is still with the practice and, if so, for her registration. Check all three numbers on the AHPRA public register. |
-| **v3.2.0: payment plan sentence** | Client doc: "No credit-check, no-deposit or interest-free payment plans are available at Precision Dental." | Not published. It reads as if no plans are available, and "no-deposit" contradicts DentiCare's 20% deposit. The site says "Flexible payment plan options are available, including interest-free plans. Contact us to find the right option for you." | Ask the practice what was meant (which plan has no credit check, and whether any has no deposit) and update Pages > Prices and Payment Options > Flexible Payment Plans. |
+| **v3.2.0: payment plan sentence** | Client doc: "No credit-check, no-deposit or interest-free payment plans are available at Precision Dental." | Not published. v3.3.0 removed the Flexible Payment Plans section at the practice's request, so DentiCare is the only plan described | Closed. |
 | **v3.2.0: CDBS wording** | Check against the latest official CDBS guide (an October 2026 version may exist) | Checked against the Guide to the CDBS Version 14 (effective 1 January 2026, the current PDF on health.gov.au) and Services Australia (updated 1 January 2026): caps $1,158 (2026 starts) and $1,132 (2025 starts), 0 to 17, services list, exclusions. The health.gov.au publication page refuses automated readers, so a newer edition could not be ruled out | Open the guide page in a browser before go-live; if a newer version changed a figure, edit Pages > Health Funds and Government Schemes > CDBS. |
 | **v3.2.0: whitening product names** | No medicine or whitening brand names (TGA) | The client's price list names two whitening products; the fee table and PDF say "In-chair teeth whitening" and "Take-home teeth whitening kit" | Keep as is unless the practice insists; if so, note the TGA advertising rules. |
 | **v3.1.0: new copy** | Content team copy used as written | The New Patients page ("What to Bring", "Health Funds and Payment") and the homepage price list paragraph are GYA drafts; the Health Funds page follows the 14 October notes, with CDBS facts checked against Services Australia and the Department of Health CDBS guide (cap $1,158, partial dentures covered) | Content team and Dr Choi to review. |
@@ -347,7 +358,7 @@ For GYA when writing the next release: add an update to `UPDATES` with a new id,
 | From-address | Must be on an SMTP2GO-verified domain | `website@precisiondentistry.com.au` | Confirm precisiondentistry.com.au is verified in SMTP2GO, or set `ENQUIRY_FROM`. |
 | Google Tag Manager | The 9 October booking brief names `GTM-MPN8W8JL`; the original project brief names `GTM-NFTDF44` | No container on the site | Confirm which container is current, then enter it in Site Settings > Tracking (GYA only) and publish. |
 | Health funds | The brief lists none | The copy says the practice is a preferred provider for Bupa, HCF and CBHS | Confirm with the practice. Changed in one place: Site Settings > Booking and payments. |
-| Phone, address, hours, email, ABN | (07) 3852 1160; S13, HQ South Tower, 520 Wickham St (Corner of Brookes St), Fortitude Valley QLD 4006; Mon, Wed, Thu 9 to 6, Tue 10 to 7, Fri 8 to 5; admin@precisiondentistry.com.au; ABN 45 166 034 199 | Same (v3.2.0 added the corner, shown in brackets after the street and left out of the schema) | No conflict. |
+| Phone, address, hours, email, ABN | (07) 3852 1160; S13, HQ South Tower, 520 Wickham St, Fortitude Valley QLD 4006 (v3.3.0, from Dr Choi on 20 October); Mon, Wed, Thu 9 to 6, Tue 10 to 7, Fri 8 to 5; admin@precisiondentistry.com.au; ABN 45 166 034 199 | Same everywhere, schema included; the corner is only in the Contact page directions | Check against the Google Business Profile (above). |
 | Principal's name | The project brief flags "Choi" vs "Chun" on the scrubs | Choi throughout, matching the URL | Confirmed spelling still to be recorded. |
 | Social links | Socials editable in settings | Footer icons link to `#` | Add the profile URLs in Site Settings > Social media. |
 | Meet the Team | Practitioner photos and roster from the client | Pending new staff photos and introductions (9 October feedback) | Edit under Team when supplied. |

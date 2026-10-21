@@ -11,7 +11,6 @@
 import type { BeforeAfterCase, Settings, TeamMember } from './types'
 import { attr, esc } from './util'
 import { phoneDigits } from './settings'
-import { priceListFile } from './priceList'
 
 // ------------------------------------------------------------------ icons
 export const ICON_PILL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg>'
@@ -169,20 +168,20 @@ export function offerPopup(s: Settings): string {
     `</div></div>`
 }
 
-/** The facts of the offer on the terms page, then the full terms (or a clear placeholder). */
+/** The facts of the offer on the terms page, then the full terms from Site Settings. */
 export function offerTerms(s: Settings): string {
   const price = offerPrice(s)
   const rows: [string, string][] = [
     ['Offer', `${s.offer.title}${price ? `: ${price}` : ''}`],
     ['Includes', inclusionList(s).join(', ')],
     ['Who it is for', 'New patients of Precision Dental'],
-    ['Offer period', s.offer.period || 'To be confirmed by Precision Dental'],
+    ['Offer period', s.offer.period || 'Ongoing'],
   ]
   const facts = `<dl class="terms-facts">${rows.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>`
   const body = String(s.offer.terms || '').trim()
   const text = body
     ? body.split(/\n\s*\n/).map((p) => `<p>${esc(p.trim()).replace(/\n/g, '<br>')}</p>`).join('\n')
-    : `<div class="placeholder-note"><strong>Placeholder.</strong> The full terms and conditions of this offer are being confirmed by Precision Dental and will appear here.</div>`
+    : ''
   return facts + '\n' + text
 }
 
@@ -246,9 +245,10 @@ export function priceListForm(s: Settings): string {
     `<div class="pl-hp" aria-hidden="true"><label for="pl-company">Company</label><input id="pl-company" name="company" type="text" tabindex="-1" autocomplete="off"></div>` +
     `<label class="consent full"><input type="checkbox" name="consent" value="yes" required> <span>${esc(p.consentText || DEFAULTS.priceList.consentText)} Read our <a href="/privacy-policy/">Privacy Statement</a>.</span></label>` +
     `<p class="form-status" role="status" aria-live="polite" data-pl-status></p>` +
-    // once the details are in, the visitor can open the PDF straight away as well
+    // once the details are in, the visitor can open the PDF straight away as well. The page never
+    // carries the PDF's address: /api/price-list returns it only after a valid request (20 Oct 2026)
     `<div class="pl-thanks" hidden data-pl-thanks><p>${esc(p.thankYou || DEFAULTS.priceList.thankYou)}</p>` +
-    `<a class="btn btn-blue pl-pdf" href="${attr(priceListFile(s))}" target="_blank" rel="noopener" data-pl-pdf>Open the price list (PDF) ${ICON_ARR}</a></div>` +
+    `<a class="btn btn-blue pl-pdf" hidden target="_blank" rel="noopener" data-pl-pdf>Open the price list (PDF) ${ICON_ARR}</a></div>` +
     `<div class="full"><button class="btn btn-dark" type="submit" data-pl-submit>${esc(p.buttonLabel || DEFAULTS.priceList.buttonLabel)} ${ICON_ARR}</button></div>` +
     `</form>`
 }

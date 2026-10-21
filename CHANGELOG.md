@@ -1,5 +1,117 @@
 # Changelog
 
+## 2026-10-20 - v3.3.0: client revisions round 3 (Dr Billy Choi, email of 20 October)
+
+### What changed
+
+- **1. The price list is only available through the form.**
+  - Prices and Payment Options:
+    - The "Our Fees" table (with the ADA item numbers) is gone.
+    - The page now leads with the "Download Our Price List" section and the existing SmileOx form. Its intro reads: "Get our full 2026 price list, with the fees for our most common treatments, from check-ups and cleans to restorative and cosmetic care. Enter your details and we'll send it straight to you."
+    - The Payment Options, HICAPS, health fund, DentiCare, My SuperCare, CDBS and DVA sections are kept.
+  - No "from $X" prices remain on any page. The only prices left are the $229 offer and the DentiCare range ($3,000 to $12,000), which is a plan condition rather than a fee. The Invisalign page did not show a price.
+  - No prices appear in the schema (the fee table never fed it) or in any meta tag.
+  - The PDF is now `public/downloads/precision-dental-price-list-2026-118de1bb6ba774f7.pdf`, a filename that cannot be guessed. The old `Precision-Dental-Price-List-October-2026.pdf` is deleted, so its address returns 404.
+  - Nothing on the site links to the PDF. The "Open the price list (PDF)" button after the form has no address until the request is accepted; `/api/price-list` then returns it (`pdf` in the response). A bot-trap or invalid request never gets it.
+  - The PDF is kept out of search:
+    - it is not in `sitemap.xml`;
+    - `robots.txt` has `Disallow: /downloads/`;
+    - `/downloads/*` is served with `X-Robots-Tag: noindex, nofollow, noarchive` and `Cache-Control: private`.
+  - SmileOx still receives every request, unchanged ("Price List Download" tag, lead source, UTM and click IDs), and so do reception, GYA and the Enquiries list.
+- **2. Invisalign is "From $6,000"** in `data/price-list.json` and in the price list PDF, with the qualifier kept. The PDF was re-rendered from the same Claude Design canvas in the same layout. It is now a vector PDF (7 pages, about 1.4 MB) instead of the earlier raster export.
+- **3. American Express** has been added wherever payment methods are listed:
+  - Prices and Payment Options;
+  - the PDF;
+  - the blog post "Dental care at Precision Dental: what can you expect";
+  - Site Settings;
+  - the schema's `paymentAccepted`, which is now "EFTPOS, Visa, Mastercard, American Express, Cash".
+
+  HICAPS (for health fund claims) and DentiCare are listed alongside them.
+- **4. Flexible payment plans removed.**
+  - The "Flexible Payment Plans" section on Prices and Payment Options and its paragraph in the PDF are gone. Payment plans now mean DentiCare (and My SuperCare, the superannuation release service, which stays as before).
+  - About Us: the heading is now "Transparent Fees and Payment Options".
+  - Every generic "interest-free payment plans" line now names DentiCare: About Us, the homepage "Why Choose" paragraph, Invisalign SmileView, the Invisalign page and the implant cost blog post FAQ.
+  - No anchors pointed at the removed section, and no links needed fixing.
+- **5. NAP.** The address is now "S13, HQ South Tower, 520 Wickham St, Fortitude Valley QLD 4006" and the phone is (07) 3852 1160. Both are identical in:
+  - the header, footer and contact block;
+  - the local pages;
+  - the Dentist schema;
+  - the PDF.
+
+  The cross street is cleared in Site Settings. The Contact page's Getting Here section now says "You'll find us on the corner of Wickham and Brookes Streets." The service area line stays on its own line under the address.
+- **6. The $229 offer is ongoing.**
+  - The terms line is now "Ongoing offer for new patients. Additional X-rays or treatment are charged separately if required." It is used in the homepage strip, the pop-up and the New Patients page.
+  - The terms page shows "Offer period: Ongoing" and the full terms:
+    - the offer is ongoing for new patients;
+    - it includes a comprehensive examination, 2 intraoral X-rays, intraoral photos, a scale and polish (professional clean) and a fluoride treatment;
+    - additional X-rays or treatment are charged separately.
+  - No dates, countdown, placeholder or "To be confirmed" text remains. The dashboard no longer warns about an empty period, because empty now means ongoing.
+- **Not changed:** the Ivan and Mobina team cards, the before and after galleries (still hidden), CDBS, DVA and health funds content, whitening wording, the Google reviews band, AHPRA numbers and tracking scripts.
+- **Existing sites get the changes on the next build** through content update `2026-10-20-client-round-3`. It also edits blog posts now (`scripts/content-updates.ts`). There is no database migration.
+
+### Files changed (against GitHub `main` e57c70f)
+
+| File | Items |
+|---|---|
+| `data/price-list.json` | 1 (new PDF filename), 2 (Invisalign $6,000), 3 (Amex), 4 (no flexible plans note) |
+| `public/downloads/precision-dental-price-list-2026-118de1bb6ba774f7.pdf` (new) | 1, 2, 3, 4, 5, 6 |
+| `public/downloads/Precision-Dental-Price-List-October-2026.pdf` (deleted) | 1 |
+| `src/app/api/price-list/route.ts` | 1 (returns the PDF address only after a valid request) |
+| `src/render/leads.ts` | 1 (PDF button without an address), 6 (period "Ongoing", no placeholder note) |
+| `public/assets/js/leads.js` | 1 (shows the PDF button with the address from the API) |
+| `scripts/render-site.ts`, `src/generated/lead-config.json` | 1 (PDF address only in server config) |
+| `src/render/site.ts` | 1 (robots.txt disallows /downloads/) |
+| `next.config.mjs` | 1 (X-Robots-Tag noindex on /downloads/) |
+| `scripts/price-list-pdf.ts` | 4 (fallback PDF without the flexible plans note) |
+| `src/dashboard/editors/SettingsForm.tsx` | 1 (PDF help text), 5 (cross street help: leave empty), 6 (offer period help, empty means ongoing) |
+| `src/content/updates.ts` | 1, 3, 4, 5, 6 (content update `2026-10-20-client-round-3`) |
+| `scripts/content-updates.ts` | 3, 4 (content updates can edit blog posts) |
+| `content/site-settings.json` | 3, 5, 6 |
+| `content/pages/price-list.json` | 1, 3, 4 |
+| `content/pages/contact.json` | 5 |
+| `content/pages/about-us.json`, `content/pages/index.json`, `content/pages/invisalign-smileview-fortitude-valley.json`, `content/pages/service__invisalign.json` | 4 |
+| `content/posts/dental-care-at-precision-dental-what-can-you-expect.json` | 3 |
+| `content/posts/who-performs-a-dental-implant-surgery-and-how-much-do-they-cost.json` | 4 |
+| `package.json`, `package-lock.json` | version 3.3.0 |
+| `CHANGELOG.md`, `README-CMS.md`, `docs/HOW-TO-UPDATE.md` | documentation |
+
+Generated on every build and not in git: all 128 HTML pages (address, Amex and offer line), `sitemap.xml` and `robots.txt`.
+
+### QA (20 October 2026)
+
+- **Build and checks:**
+  - `npm run build` passes both with the database (upgrade from v3.2.0) and without it, and both produce identical public files.
+  - `tsc` passes clean.
+  - `qa:banned` and `qa:secrets` are clean.
+- **Greps of the built site** (all HTML, XML, TXT and JSON in `public/`):
+
+| Search | Hits |
+|---|---|
+| `5,800` / `5800` (old Invisalign price) | 0 |
+| `Flexible payment` / `Flexible Payment` / `flexible payment` | 0 |
+| `Corner of Brookes` | 0 (the Contact page says "corner of Wickham and Brookes Streets" in Getting Here only) |
+| `limited time` / `offer ends` / `To be confirmed` / `Placeholder` | 0 |
+| `fee-table` / `priceTable` / `ADA item` / `Item no` | 0 |
+| any link ending `.pdf"` | 0 |
+| old PDF name | 0 |
+| `interest-free` | 37 pages, every one naming DentiCare (or under the homepage card "Interest-Free Payment Plans", whose points say "Spread the cost of treatment with DentiCare") |
+
+- **Remaining source hits, all expected:**
+  - `src/content/updates.ts` holds the old strings it replaces.
+  - `scripts/qa/banned.mjs` holds the banned word list.
+  - The dashboard settings and HOW-TO-UPDATE mention the corner and "limited time" as guidance.
+  - `src/render/priceList.ts` and `scripts/price-list-pdf.ts` still contain the unused fee table and fallback PDF generator.
+- **Browser run (49 of 49 checks passed):**
+  - The form on Prices, New Patients and the homepage hands out the PDF only after sending. The SmileOx email and webhook are unchanged.
+  - The old PDF address returns 404. The new one returns 200 with noindex. robots.txt and the sitemap are correct.
+  - Amex appears on the page, in the schema and in the blog post.
+  - The flexible plans section is gone.
+  - The footer address and schema address are exact on five pages, with the suburbs line kept separate.
+  - The Contact page has the directions note.
+  - The offer is shown as ongoing in the strip, the pop-up, New Patients and the terms page.
+  - JSON-LD parses on all 127 pages, and there are no console errors.
+  - The Prices page at 375 px has no sideways scroll.
+
 ## 2026-10-19 - v3.2.0: client changes round 2 (email thread 14 to 17 October)
 
 - **October 2026 price list.** Fees now live in one file, `data/price-list.json`, which builds the fee table on Prices and Payment Options (new "Our Fees" section, `#fees`: 13 categories, 25 fees, ADA item numbers, asterisks for the payment plan note, the practice's disclaimer). The downloadable PDF, `public/downloads/Precision-Dental-Price-List-October-2026.pdf`, is the designed 7-page price list made on the Claude Design canvas in the new website's style (cover, three fee pages, Payment options, Preferred providers, back cover), exported on 20 October; `"pdfDesigned": true` in the data file tells the build to keep it. Set it to false and the build writes a plain PDF from the same data instead (`scripts/price-list-pdf.ts`, which also stays as the fallback when the designed file is missing). After a fee change, update the canvas and export it again. On phones the table stacks into cards. The New Patient Offer row takes its price and inclusions from Site Settings, so it reads the same everywhere.

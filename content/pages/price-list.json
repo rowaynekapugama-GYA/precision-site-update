@@ -11,7 +11,7 @@
     "canonical": "",
     "noindex": false
   },
-  "lastmod": "2026-10-19",
+  "lastmod": "2026-10-20",
   "layout": {
     "head": "std",
     "pre": "std",
@@ -109,31 +109,6 @@
       ]
     },
     {
-      "key": "s13",
-      "kind": "content",
-      "before": "\n",
-      "altAuto": true,
-      "alt": false,
-      "pinned": false,
-      "ref": "fee-table",
-      "label": "Our Fees (the table comes from data/price-list.json)",
-      "template": "<section class=\"body-section{{alt}}\" id=\"fees\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose fee-intro\"><p>{{f2}}</p></div>{{site:priceTable}}</div></section>",
-      "fields": [
-        {
-          "id": "f1",
-          "label": "Heading",
-          "type": "text",
-          "value": "Our Fees"
-        },
-        {
-          "id": "f2",
-          "label": "Paragraph",
-          "type": "text",
-          "value": "Fees for our most common treatments, with their ADA item numbers. You can also download the price list as a PDF using the form below."
-        }
-      ]
-    },
-    {
       "key": "s3",
       "kind": "content",
       "before": "\n",
@@ -153,7 +128,7 @@
           "id": "f2",
           "label": "Paragraph",
           "type": "text",
-          "value": "Our price list outlines the fees for many of our most common treatments, from a dental check-up and clean through to restorative and cosmetic care. Request a copy using the form on this page, and we will send it to your mobile and email."
+          "value": "Get our full 2026 price list, with the fees for our most common treatments, from check-ups and cleans to restorative and cosmetic care. Enter your details and we&#x27;ll send it straight to you."
         },
         {
           "id": "f3",
@@ -231,7 +206,7 @@
           "id": "f2",
           "label": "Paragraph",
           "type": "text",
-          "value": "We accept EFTPOS, Visa, Mastercard and cash."
+          "value": "We accept EFTPOS, Visa, Mastercard, American Express and cash."
         }
       ]
     },
@@ -280,31 +255,6 @@
           "label": "Paragraph",
           "type": "rich",
           "value": "My SuperCare helps Australians access necessary dental treatment by easing the financial pressure of its cost. It works with the Australian Taxation Office under strict guidelines, and the application process is simple, so you can get the treatment you need sooner. For some patients, early release of superannuation on compassionate grounds may be an option for treatment such as dental implants, root canal therapy, gum treatment, and restorative treatment for tooth decay, erosion and other damage using <a href=\"/service/white-tooth-filling-restorations/\">composite resin fillings</a> or <a href=\"/service/dental-crowns-and-bridges/\">crowns</a>. Treatment that helps restore everyday function, such as eating and speaking comfortably, may be considered. My SuperCare is an independent service that guides eligible patients through the application process. Eligibility is determined under Australian Taxation Office criteria, and approval is not assured. We recommend seeking independent financial advice before accessing your super."
-        }
-      ]
-    },
-    {
-      "key": "s14",
-      "kind": "content",
-      "before": "\n",
-      "altAuto": true,
-      "alt": false,
-      "pinned": false,
-      "ref": "payment-plan-options",
-      "label": "Flexible Payment Plans",
-      "template": "<section class=\"body-section{{alt}}\" id=\"payment-plan-options\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
-      "fields": [
-        {
-          "id": "f1",
-          "label": "Heading",
-          "type": "text",
-          "value": "Flexible Payment Plans"
-        },
-        {
-          "id": "f2",
-          "label": "Paragraph",
-          "type": "text",
-          "value": "Flexible payment plan options are available, including interest-free plans. Contact us to find the right option for you."
         }
       ]
     },

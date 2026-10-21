@@ -27,6 +27,8 @@ const FALLBACK_RECIPIENTS = [
 ]
 const TAG = 'Price List Download'
 const PHONE = leadConfig.phone || '(07) 3852 1160'
+/** The price list for the visitor's browser: a site path, or the full address of a PDF uploaded in the dashboard. */
+const PDF_LINK: string = (leadConfig.priceList as { link?: string })?.link || leadConfig.priceList?.file || ''
 
 function esc(s = '') {
   return String(s).replace(/[<>&"]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' }[c] as string))
@@ -140,7 +142,7 @@ export async function POST(req: Request) {
   if (!apiKey) {
     console.error('SMTP2GO_API_KEY is not set')
     await logEnquiry({ ...record, emailStatus: 'not-configured', crmStatus: crm.join('; ') || 'SmileOx: not sent (email not set up)' })
-    return webhookOk ? json(200, { ok: true }) : json(500, { error: `The form is not set up yet. Please call ${PHONE}.` })
+    return webhookOk ? json(200, { ok: true, pdf: PDF_LINK }) : json(500, { error: `The form is not set up yet. Please call ${PHONE}.` })
   }
   const extra = [intake, ...(process.env.PRICE_LIST_RECIPIENTS || process.env.ENQUIRY_RECIPIENTS || '').split(',')]
     .map((s) => s.trim()).filter(Boolean)
@@ -169,5 +171,6 @@ export async function POST(req: Request) {
 
   await logEnquiry({ ...record, emailStatus: sent ? 'sent' : 'failed', crmStatus: crm.join('; ') })
   if (!sent && !webhookOk) return json(502, { error: `Sorry, that did not send. Please call ${PHONE} and we will send you the price list.` })
-  return json(200, { ok: true })
+  // the PDF's address is only ever given out here, after a valid request
+  return json(200, { ok: true, pdf: PDF_LINK })
 }

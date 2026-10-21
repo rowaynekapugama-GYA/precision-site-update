@@ -11,7 +11,7 @@
     "canonical": "",
     "noindex": false
   },
-  "lastmod": "2026-10-02",
+  "lastmod": "2026-10-20",
   "layout": {
     "head": "std",
     "pre": "std",
@@ -300,7 +300,7 @@
       "before": "\n",
       "altAuto": true,
       "alt": false,
-      "label": "Transparent Fees and Flexible Payment",
+      "label": "Transparent Fees and Payment Options",
       "pinned": false,
       "template": "<section class=\"body-section{{alt}}\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
       "fields": [
@@ -308,13 +308,13 @@
           "id": "f1",
           "label": "Heading",
           "type": "text",
-          "value": "Transparent Fees and Flexible Payment"
+          "value": "Transparent Fees and Payment Options"
         },
         {
           "id": "f2",
           "label": "Paragraph",
           "type": "text",
-          "value": "We believe you should understand the cost of your care before you commit to it. You can explore our Prices and Payment Options, including HICAPS claiming, preferred provider arrangements and interest-free payment plans."
+          "value": "We believe you should understand the cost of your care before you commit to it. You can explore our Prices and Payment Options, including HICAPS claiming, preferred provider arrangements and interest-free payment plans through DentiCare."
         }
       ]
     },

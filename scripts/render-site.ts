@@ -54,6 +54,7 @@ fs.writeFileSync(path.join(root, 'src', 'generated', 'lead-config.json'), JSON.s
   priceList: {
     delivery: leadSettings.priceList?.delivery === 'website' ? 'website' : 'smileox',
     file: /^https?:\/\//i.test(plFile) ? plFile : siteOrigin + (plFile.startsWith('/') ? plFile : '/' + plFile),
+    link: /^https?:\/\//i.test(plFile) ? plFile : (plFile.startsWith('/') ? plFile : '/' + plFile),
   },
 }, null, 1) + '\n')
 

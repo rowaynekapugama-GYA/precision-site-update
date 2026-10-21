@@ -9,6 +9,7 @@ import { ImageSlot } from '../ui/MediaPicker'
 import { PublishButton } from '../ui/PublishButton'
 import { useToast } from '../ui/Toast'
 import { Icon } from '../ui/icons'
+import { PRICE_LIST_PDF } from '@/render/priceList'
 
 type S = Settings & { logoMedia?: number | string | null }
 
@@ -134,7 +135,7 @@ export function SettingsForm({ initial, isAdmin }: { initial: S; isAdmin: boolea
             <TextInput label="State" value={s.address.state} onChange={(v) => setA({ state: v })} />
             <TextInput label="Postcode" value={s.address.postcode} onChange={(v) => setA({ postcode: v })} />
           </div>
-          <TextInput label="Cross street or landmark (optional)" value={s.address.crossStreet || ''} onChange={(v) => setA({ crossStreet: v })} help="Shown in brackets after the street, for example Corner of Brookes St. Google gets the address without it." />
+          <TextInput label="Cross street or landmark (optional)" value={s.address.crossStreet || ''} onChange={(v) => setA({ crossStreet: v })} help="Leave this empty. The address must match the Google Business Profile exactly, so directions such as the cross street belong in the Getting Here section of the Contact page. Anything entered here is shown in brackets after the street." />
           <TextInput label="Parking note" value={s.parking} onChange={(v) => set({ parking: v })} />
           <TextInput label="Service area line" value={s.serviceAreaLine || ''} onChange={(v) => set({ serviceAreaLine: v })} help="One sentence, shown in the footer and on the contact section. Leave blank to hide it." />
           <TextInput label="Areas served (for Google)" value={s.areaServed || ''} onChange={(v) => set({ areaServed: v })} help="Suburbs and areas separated by commas, for example Newstead, New Farm, Teneriffe. Not shown on the page." />
@@ -190,16 +191,15 @@ export function SettingsForm({ initial, isAdmin }: { initial: S; isAdmin: boolea
         </Panel>
 
         <Panel id="offer" title="New patient offer" intro="The offer strip under the homepage hero, the offer panel on the New Patients page, the small pop-up and the terms page all come from here.">
-          <Notice tone="info" icon={Icon.info()}><p>AHPRA: an offer must show its exact price, what is included, who it is for and the dates it runs, with the terms easy to find. No wording that pushes people to book quickly, and no &ldquo;free&rdquo; unless the practice has approved it.</p></Notice>
+          <Notice tone="info" icon={Icon.info()}><p>AHPRA: an offer must show its exact price, what is included, who it is for and the dates it runs (or that it is ongoing), with the terms easy to find. No wording that pushes people to book quickly, and no &ldquo;free&rdquo; unless the practice has approved it.</p></Notice>
           <Toggle label="Show the new patient offer on the website" checked={s.offer.enabled} onChange={(v) => setO({ enabled: v })} />
           <div className="row">
             <TextInput label="Price (dollars)" value={s.offer.price} onChange={(v) => setO({ price: v })} placeholder="229" help="Numbers only. Shown as $229." />
             <TextInput label="Name of the offer" value={s.offer.title} onChange={(v) => setO({ title: v })} />
           </div>
           <TextArea label="What is included (one item per line)" value={s.offer.inclusions} onChange={(v) => setO({ inclusions: v })} rows={5} />
-          <TextInput label="Offer period" value={s.offer.period} onChange={(v) => setO({ period: v })} placeholder="Available from 15 October to 31 December 2026."
-            help="The dates the offer runs, shown next to the terms line and on the terms page." />
-          {s.offer.enabled && !s.offer.period.trim() ? <Notice tone="warn" icon={Icon.info()}><p>The offer period is empty. The terms page says &ldquo;To be confirmed&rdquo; until it is filled in.</p></Notice> : null}
+          <TextInput label="Offer period" value={s.offer.period} onChange={(v) => setO({ period: v })} placeholder="Leave empty for an ongoing offer"
+            help="Only for an offer with set dates, for example Available from 1 November to 31 December 2026. Empty means ongoing: the terms page says Ongoing." />
           <div className="row">
             <TextInput label="Terms line" value={s.offer.termsLine} onChange={(v) => setO({ termsLine: v })} help="Links to the terms page." />
             <TextInput label="Booking button wording" value={s.offer.bookLabel} onChange={(v) => setO({ bookLabel: v })} />
@@ -230,14 +230,14 @@ export function SettingsForm({ initial, isAdmin }: { initial: S; isAdmin: boolea
         <Panel id="pricelist" title="Price list" intro="The Download Our Price List form on the homepage, the New Patients page and Prices and Payment Options (the footer button links to it).">
           <div className="field"><span className="lab">Price list PDF</span>
             <div className="actions">
-              <a className="btn small ghost" href={s.priceList.file || '/downloads/Precision-Dental-Price-List-October-2026.pdf'} target="_blank" rel="noopener">{Icon.external()} Open the current PDF</a>
+              <a className="btn small ghost" href={s.priceList.file || PRICE_LIST_PDF} target="_blank" rel="noopener">{Icon.external()} Open the current PDF</a>
               <label className="btn small">{Icon.upload()} {pdfBusy ? 'Uploading...' : s.priceList.file ? 'Replace the PDF' : 'Upload a different PDF'}
                 <input type="file" accept="application/pdf" hidden onChange={(e) => { uploadPdf(e.target.files?.[0]); e.target.value = '' }} /></label>
               {s.priceList.file ? <button type="button" className="btn small ghost" onClick={() => setP({ file: '', fileDoc: undefined })}>Use the built-in PDF again</button> : null}
             </div>
             <div className="help">{s.priceList.file
               ? 'An uploaded PDF is being sent out. Remove it to go back to the built-in one.'
-              : 'The designed October 2026 price list is built into the website. To change a fee, ask GYA, who update it together with the Prices page. Upload a PDF only if you need to send something different.'}</div>
+              : 'The designed October 2026 price list is built into the website. It is only handed out after someone fills in the form, so it is never linked on the site. To change a fee, ask GYA. Upload a PDF only if you need to send something different.'}</div>
           </div>
           <Select label="Who emails the price list" value={s.priceList.delivery} onChange={(v) => setP({ delivery: v === 'website' ? 'website' : 'smileox' })}
             options={[{ value: 'smileox', label: 'SmileOx automation (the contact is tagged Price List Download)' }, { value: 'website', label: 'The website, straight away (a link to the PDF above)' }]}

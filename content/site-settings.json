@@ -13,7 +13,7 @@
     "latitude": -27.453,
     "longitude": 153.0377,
     "mapEmbed": "https://www.google.com/maps?q=HQ%20South%20Tower%2C%20520%20Wickham%20Street%2C%20Fortitude%20Valley%20QLD%204006&output=embed",
-    "crossStreet": "Corner of Brookes St"
+    "crossStreet": ""
   },
   "parking": "Free on-site parking for patients.",
   "serviceAreaLine": "Located in Fortitude Valley, serving patients from Newstead, New Farm, Teneriffe, Bowen Hills and all Brisbane metro areas.",
@@ -65,7 +65,7 @@
   ],
   "bookingUrl": "https://booking.au.hsone.app/soe/new/Precision%20Dental?pid=AUSHC01",
   "preferredFunds": "Bupa, HCF and CBHS",
-  "paymentAccepted": "EFTPOS, Visa, Mastercard, Cash",
+  "paymentAccepted": "EFTPOS, Visa, Mastercard, American Express, Cash",
   "socials": {
     "facebook": "",
     "instagram": "",
@@ -102,9 +102,9 @@
     "price": "229",
     "inclusions": "Comprehensive examination\n2 intraoral X-rays\nIntraoral photos\nScale and polish (professional clean)\nFluoride treatment",
     "period": "",
-    "termsLine": "New patients only. Terms and conditions apply.",
+    "termsLine": "Ongoing offer for new patients. Additional X-rays or treatment are charged separately if required.",
     "termsUrl": "/new-patient-offer-terms/",
-    "terms": "",
+    "terms": "The $229 New Patient Offer is an ongoing offer for new patients of Precision Dental.\n\nIt includes a comprehensive examination, 2 intraoral X-rays, intraoral photos, a scale and polish (professional clean) and a fluoride treatment.\n\nAdditional X-rays or treatment are charged separately if required.",
     "bookLabel": "Book Now"
   },
   "reviews": {

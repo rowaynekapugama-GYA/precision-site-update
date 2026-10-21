@@ -20,15 +20,19 @@ const repo = loadContent()
 if (process.argv.includes('--files')) {
   const c: Editable = {
     pages: repo.pages, blocks: repo.blocks, team: repo.team, settings: repo.settings,
-    beforeAfter: repo.beforeAfter, chrome: { ...repo.chrome },
+    beforeAfter: repo.beforeAfter, chrome: { ...repo.chrome }, posts: repo.posts,
   }
   const before = new Map(repo.pages.map((p) => [p.key, JSON.stringify(p)]))
+  const postsBefore = new Map(repo.posts.map((p) => [p.slug, JSON.stringify(p)]))
   for (const u of UPDATES) {
     const done = u.apply(c, repo)
     console.log(`${u.id}: ${done.length ? done.join('; ') : 'nothing to change'}`)
   }
   for (const p of c.pages) {
     if (before.get(p.key) !== JSON.stringify(p)) writeJson(path.join(CONTENT_DIR, 'pages', pageFileName(p.key)), p)
+  }
+  for (const p of c.posts || []) {
+    if (postsBefore.get(p.slug) !== JSON.stringify(p)) writeJson(path.join(CONTENT_DIR, 'posts', `${p.slug}.json`), p)
   }
   writeJson(path.join(CONTENT_DIR, 'chrome.json'), c.chrome)
   for (const b of Object.values(c.blocks)) writeJson(path.join(CONTENT_DIR, 'blocks', `${b.key}.json`), b)
@@ -67,12 +71,14 @@ try {
   const pageDocs = await all('pages')
   const teamDocs = await all('team')
   const settingsDoc = await payload.findGlobal({ slug: 'site-settings', depth: 0, overrideAccess: true }) as Record<string, any>
-  // shared blocks (the contact section, the Book Your Visit band) live in the database too
+  // shared blocks (the contact section, the Book Your Visit band) and posts live in the database too
   const blockDocs = await all('shared-blocks')
+  const postDocs = await all('posts')
 
   const c: Editable = {
     pages: pageDocs.map((d) => sync.pageFromDoc(d, media)),
     blocks: Object.fromEntries(blockDocs.map((d) => [d.key, sync.blockFromDoc(d, media)])),
+    posts: postDocs.map((d) => sync.postFromDoc(d, media)),
     team: teamDocs.map((d) => sync.teamFromDoc(d, media)),
     settings: sync.settingsFromDoc(settingsDoc, media, await sync.loadDocumentMap(payload)),
     beforeAfter: [],
@@ -81,6 +87,7 @@ try {
   const teamBefore = c.team.map((t) => JSON.stringify(sync.teamToDoc(t)))
   const settingsBefore = JSON.stringify(sync.settingsToDoc(c.settings))
   const blocksBefore = new Map(Object.values(c.blocks).map((b) => [b.key, JSON.stringify(sync.blockToDoc(b))]))
+  const postsBefore = (c.posts || []).map((p) => JSON.stringify(sync.postToDoc(p)))
   const nPages = c.pages.length
 
   for (const u of pending) {
@@ -104,6 +111,10 @@ try {
     if (!b) continue
     const doc = sync.blockToDoc(b)
     if (JSON.stringify(doc) !== blocksBefore.get(b.key)) await payload.update({ collection: 'shared-blocks', id: d.id, data: doc as any, ...ctx })
+  }
+  for (let i = 0; i < postDocs.length; i++) {
+    const doc = sync.postToDoc((c.posts || [])[i])
+    if (JSON.stringify(doc) !== postsBefore[i]) await payload.update({ collection: 'posts', id: postDocs[i].id, data: doc as any, ...ctx })
   }
   const sDoc = sync.settingsToDoc(c.settings)
   if (JSON.stringify(sDoc) !== settingsBefore) await payload.updateGlobal({ slug: 'site-settings', data: sDoc as any, context: sync.CTX, overrideAccess: true })

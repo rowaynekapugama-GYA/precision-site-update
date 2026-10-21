@@ -1,7 +1,7 @@
 /* Precision Dental: lead capture (14 October 2026 revisions)
    1. remembers where a visitor came from (UTM tags, ad click IDs, referrer)
    2. the new patient offer pop-up: once per browser session, never blocks the page
-   3. the price list form: posts to /api/price-list, then fires the conversion events
+   3. the price list form: posts to /api/price-list, shows the PDF link it returns, then fires the conversion events
    4. click events for the offer and price list buttons, and opening the price list PDF */
 (function(){
   var KEY='pd_attr', DAY=864e5;
@@ -114,7 +114,10 @@
         .then(function(res){
           if(!res.ok){status.className='form-status err';status.textContent=(res.d&&res.d.error)||FAIL;return;}
           status.className='form-status';status.textContent='';
-          f.classList.add('is-done'); if(thanks){thanks.hidden=false; thanks.setAttribute('tabindex','-1'); thanks.focus();}
+          f.classList.add('is-done');
+          var pdf=thanks&&thanks.querySelector('[data-pl-pdf]');
+          if(pdf&&res.d&&typeof res.d.pdf==='string'&&/^(\/|https:\/\/)/.test(res.d.pdf)){pdf.href=res.d.pdf;pdf.hidden=false;}
+          if(thanks){thanks.hidden=false; thanks.setAttribute('tabindex','-1'); thanks.focus();}
           window.dataLayer.push({event:'price_list_download',form_location:location_,lead_source:at.utm_source||'website'});
           if(typeof window.gtag==='function'){
             window.gtag('event','generate_lead',{form_name:'price_list',form_location:location_});

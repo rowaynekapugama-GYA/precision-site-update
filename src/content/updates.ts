@@ -11,7 +11,7 @@
  *   npx tsx scripts/content-updates.ts --files   apply to content/ (GYA, once, when writing the release)
  *   npx tsx scripts/content-updates.ts           apply to the database (every build, before the pull)
  */
-import type { BeforeAfterCase, Block, Content, Field, Page, Section, Settings, TeamMember } from '../render/types'
+import type { BeforeAfterCase, Block, Content, Field, Page, Post, Section, Settings, TeamMember } from '../render/types'
 import { ICON_PILL } from '../render/leads'
 
 export interface Editable {
@@ -21,6 +21,8 @@ export interface Editable {
   settings: Settings
   beforeAfter: BeforeAfterCase[]
   chrome?: { head: string; pre: string; post: string }
+  /** blog posts; an update that changes one is written back (20 October 2026) */
+  posts?: Post[]
 }
 
 export interface ContentUpdate {
@@ -586,6 +588,110 @@ UPDATES.push({
     if (contact && contact.template && !contact.template.includes('{{site:mapServiceArea}}') && contact.template.includes('<p>{{site:addressLines}}</p>')) {
       contact.template = contact.template.replace('<p>{{site:addressLines}}</p>', '<p>{{site:addressLines}}</p>{{site:mapServiceArea}}')
       done.push('contact block: service area')
+    }
+    return done
+  },
+})
+
+
+// ------------------------------------------------------------- 20 Oct 2026
+// Dr Choi's email of 20 October: the price list only through the form, Invisalign $6,000
+// (data/price-list.json and the PDF), American Express, no "Flexible Payment Plans" section,
+// the address exactly as on the Google Business Profile, and the $229 offer is ongoing.
+const ROUND3 = '2026-10-20'
+const touch3 = (p: Page | undefined) => { if (p && (!p.lastmod || p.lastmod < ROUND3)) p.lastmod = ROUND3 }
+export const PAYMENT_METHODS = 'EFTPOS, Visa, Mastercard, American Express, Cash'
+export const OFFER_TERMS_LINE = 'Ongoing offer for new patients. Additional X-rays or treatment are charged separately if required.'
+export const OFFER_TERMS = [
+  'The $229 New Patient Offer is an ongoing offer for new patients of Precision Dental.',
+  'It includes a comprehensive examination, 2 intraoral X-rays, intraoral photos, a scale and polish (professional clean) and a fluoride treatment.',
+  'Additional X-rays or treatment are charged separately if required.',
+].join('\n\n')
+const FINDING_US = 'You&#x27;ll find us on the corner of Wickham and Brookes Streets.'
+
+/** Replace text in a field once (when the old text is there and the new is not). */
+function swapText(sec: Section | undefined, id: string, from: string, to: string): boolean {
+  const f = field(sec, id)
+  if (!f || !f.value.includes(from) || f.value.includes(to)) return false
+  f.value = f.value.replace(from, to)
+  return true
+}
+
+UPDATES.push({
+  id: '2026-10-20-client-round-3',
+  description: 'Price list only through the form, American Express, no Flexible Payment Plans section, address as on Google, $229 offer ongoing',
+  apply(c) {
+    const done: string[] = []
+    const s = c.settings
+
+    // ---- Site Settings
+    if (s.paymentAccepted !== PAYMENT_METHODS) { s.paymentAccepted = PAYMENT_METHODS; done.push('settings: American Express') }
+    if (s.address && String(s.address.crossStreet || '').trim()) { s.address.crossStreet = ''; done.push('settings: address without the cross street') }
+    if (s.offer) {
+      if (s.offer.termsLine !== OFFER_TERMS_LINE) { s.offer.termsLine = OFFER_TERMS_LINE; done.push('settings: offer terms line (ongoing)') }
+      if (String(s.offer.period || '').trim()) { s.offer.period = ''; done.push('settings: no offer dates') }
+      if (!String(s.offer.terms || '').trim()) { s.offer.terms = OFFER_TERMS; done.push('settings: full offer terms') }
+    }
+
+    // ---- Prices and Payment Options: no fee table, no Flexible Payment Plans
+    const prices = page(c, 'price-list')
+    if (prices) {
+      const n = done.length
+      const before = prices.sections.length
+      prices.sections = prices.sections.filter((x) => x.ref !== 'fee-table' && x.ref !== 'payment-plan-options')
+      if (prices.sections.length !== before) done.push(`price-list: removed ${before - prices.sections.length} section(s) (fee table, Flexible Payment Plans)`)
+      const dl = prices.sections.find((x) => (x.label || '').startsWith('Download Our Price List'))
+      if (setField(dl, 'f2', 'Get our full 2026 price list, with the fees for our most common treatments, from check-ups and cleans to restorative and cosmetic care. Enter your details and we&#x27;ll send it straight to you.')) done.push('price-list: download intro')
+      if (setField(prices.sections.find((x) => (x.label || '').startsWith('Payment Methods')), 'f2', 'We accept EFTPOS, Visa, Mastercard, American Express and cash.')) done.push('price-list: American Express')
+      if (done.length > n) touch3(prices)
+    }
+
+    // ---- Contact: the corner as a directions note, not part of the address
+    const contact = page(c, 'contact')
+    const getting = contact?.sections.find((x) => (x.label || '').startsWith('Getting Here'))
+    const g2 = field(getting, 'f2')
+    if (g2 && !g2.value.includes('corner of Wickham and Brookes')) {
+      const i = g2.value.indexOf('. ')
+      g2.value = i > 0 ? `${g2.value.slice(0, i + 1)} ${FINDING_US}${g2.value.slice(i + 1)}` : `${g2.value} ${FINDING_US}`
+      touch3(contact)
+      done.push('contact: finding us note')
+    }
+
+    // ---- About Us: no "Flexible Payment" heading
+    const about = page(c, 'about-us')
+    const fees = about?.sections.find((x) => (x.label || '').startsWith('Transparent Fees and Flexible Payment'))
+    if (fees) {
+      if (setField(fees, 'f1', 'Transparent Fees and Payment Options')) { fees.label = 'Transparent Fees and Payment Options'; done.push('about-us: heading') }
+      if (swapText(fees, 'f2', 'and interest-free payment plans.', 'and interest-free payment plans through DentiCare.')) done.push('about-us: DentiCare named')
+      touch3(about)
+    }
+
+    // ---- other "interest-free" mentions: DentiCare named, so it is the only plan on the site
+    const home = page(c, 'index')
+    const why = home?.sections.find((x) => (x.label || '').startsWith('Why Choose Precision Dental'))
+    if (swapText(why, 'f10', 'and interest-free payment plans help', 'and interest-free payment plans through DentiCare help')) { touch3(home); done.push('index: DentiCare named') }
+    const smileview = page(c, 'invisalign-smileview-fortitude-valley')
+    const consult = smileview?.sections.find((x) => (x.label || '').startsWith('Your Invisalign Consultation'))
+    if (swapText(consult, 'f3', 'including interest-free plans for eligible patients.', 'including interest-free payment plans through DentiCare for eligible patients.')) { touch3(smileview); done.push('invisalign-smileview: DentiCare named') }
+    const invis = page(c, 'service/invisalign')
+    const whyInvis = invis?.sections.find((x) => (x.label || '').startsWith('Why Choose Precision Dental for Invisalign'))
+    if (swapText(whyInvis, 'f2', 'interest-free payment plans are available to eligible patients.', 'interest-free payment plans are available through DentiCare for eligible patients.')) { touch3(invis); done.push('service/invisalign: DentiCare named') }
+    for (const p of c.posts || []) {
+      for (const q of p.faq || []) {
+        q.a = q.a.map((a) => {
+          if (a !== 'Yes, interest-free payment plans are available to eligible patients, subject to terms and conditions.') return a
+          done.push(`post ${p.slug}: DentiCare named`)
+          return 'Yes, interest-free payment plans are available through DentiCare for eligible patients, subject to terms and conditions.'
+        })
+      }
+    }
+
+    // ---- the blog post that lists payment methods
+    for (const p of c.posts || []) {
+      if (p.body && p.body.includes('We accept EFTPOS, Visa, Mastercard and cash.')) {
+        p.body = p.body.replace('We accept EFTPOS, Visa, Mastercard and cash.', 'We accept EFTPOS, Visa, Mastercard, American Express and cash.')
+        done.push(`post ${p.slug}: American Express`)
+      }
     }
     return done
   },

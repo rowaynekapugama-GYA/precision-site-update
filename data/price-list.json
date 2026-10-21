@@ -2,8 +2,9 @@
   "_howTo": "The one place to change prices. This file builds the fee table on /price-list/ and the downloadable PDF (public/downloads/<pdfFile>) on every deploy. Change a price, commit, and both update. For a new edition, change 'edition' and 'pdfFile' too. Rows with \"plan\": true get an asterisk and the payment plan note. The row with \"offer\": true shows the New Patient Offer from Site Settings (price and inclusions) while the offer is switched on, and is hidden when it is off. Keep medicine and whitening product brand names out (TGA advertising rules).",
   "title": "Price List",
   "edition": "October 2026",
-  "pdfFile": "Precision-Dental-Price-List-October-2026.pdf",
+  "pdfFile": "precision-dental-price-list-2026-118de1bb6ba774f7.pdf",
   "pdfDesigned": true,
+  "_pdfFile": "Deliberately hard to guess (20 October 2026): the PDF is only handed out after the price list form is sent, so it is never linked on the site, kept out of the sitemap and search engines, and its address only goes to SmileOx and to people who fill in the form. Use a new random name for each edition.",
   "_pdfDesigned": "true: public/downloads/<pdfFile> is the designed PDF exported from the Claude Design canvas (20 October 2026), and the build leaves it alone. After a fee change, update the canvas, export it again and replace that file, or set this to false to have the build write a plain PDF from this file instead.",
   "disclaimer": "This price list is only a guide. The cost depends on your needs, your mouth, teeth, material required and time required for treatment. It also depends on which private health fund you have, as we are a preferred provider for some. For a final quotation, book an appointment with one of our gentle and compassionate dentists on {phone}.",
   "planNote": "Interest-free payment plan available (see Payment Options).",
@@ -95,13 +96,13 @@
     {
       "name": "Invisalign",
       "rows": [
-        { "items": "825 x2", "service": "Invisalign®", "price": "From $5,800", "plan": true }
+        { "items": "825 x2", "service": "Invisalign®", "price": "From $6,000", "plan": true }
       ]
     }
   ],
   "payment": {
     "hicaps": "We accept most private health insurance benefits using HICAPS, so you can claim on the spot and pay only the gap. No manual lodgement needed.",
-    "methods": "We welcome EFTPOS, Visa, Mastercard and cash.",
+    "methods": "We welcome EFTPOS, Visa, Mastercard, American Express and cash.",
     "plans": [
       {
         "name": "DentiCare",
@@ -120,7 +121,7 @@
         ]
       }
     ],
-    "plansNote": "Flexible payment plan options are available, including interest-free plans. Contact us to find the right option for you.",
+    "plansNote": "",
     "terms": "Eligibility criteria, terms and conditions apply."
   },
   "funds": {

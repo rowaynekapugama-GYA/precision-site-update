@@ -194,13 +194,14 @@ The $229 offer appears in three places: the strip under the homepage hero, the N
 a pop-up in the middle of the screen, shown once per visit a couple of seconds after the first page opens. All three, and the terms page, come from one place.
 
 1. Click **Site Settings**, then **New patient offer**.
-2. Change the price (numbers only), what is included (one item per line), the **Offer period** (the
-   dates it runs) or the **Full terms and conditions**.
+2. Change the price (numbers only), what is included (one item per line), the **Offer period** or the
+   **Full terms and conditions**. The offer is ongoing, so the Offer period is left empty (the terms
+   page then says "Ongoing"). Only fill it in if the offer is ever given set dates.
 3. Use the switches to show or hide the homepage strip or the pop-up, or the whole offer.
 4. **Save settings**, then **Publish website**.
 
-The rules: the price, what is included and the dates must be clear, and the terms must be easy to
-find. No wording that pushes people to book quickly, such as "hurry" or "limited time": the dashboard
+The rules: the price, what is included and the period (ongoing, or the dates) must be clear, and the
+terms must be easy to find. No wording that pushes people to book quickly, such as "hurry" or "limited time": the dashboard
 will not save it. Do not call anything "free" unless the practice has approved it.
 
 ---
@@ -211,9 +212,12 @@ People ask for the price list through the form on the homepage, the New Patients
 Payment Options. Each request goes to SmileOx (tagged "Price List Download"), to reception, and to
 **Enquiries** (choose **Price list downloads** to see just these).
 
-- **The PDF is built in.** The designed October 2026 price list is part of the website. To change a
-  fee, ask GYA: we update the Prices and Payment Options page and the PDF together. After someone fills in the form they can
-  open the PDF straight away, and SmileOx emails it as well.
+- **Prices are only in the PDF, and the PDF is only given out through the form.** The website shows
+  no fee table and no "from" prices (apart from the $229 offer), so every price request comes in as a
+  SmileOx enquiry you can follow up. After someone fills in the form they can open the PDF straight
+  away, and SmileOx emails it as well. The PDF's address is private: it is not linked anywhere on the
+  site and search engines are told not to index it, so please do not post it publicly.
+- **To change a fee,** ask GYA: we update the designed PDF and replace it.
 - **To send a different PDF instead:** Site Settings > **Price list** > **Upload a different PDF**,
   then **Save settings**. "Use the built-in PDF again" switches back.
 - **Who emails it:** normally SmileOx. If SmileOx is not set up yet, choose "The website" and the
@@ -260,8 +264,10 @@ schemes**: on-the-spot claiming with HICAPS (on), bulk billing for the Child Den
 and billing DVA directly (both off until confirmed). The CDBS amounts ($1,158 for periods starting in
 2026, $1,132 for 2025) change each January: check them with Services Australia and update the page.
 
-The address, the "(Corner of Brookes St)" note and the service area line under it are in Site Settings >
-**Practice details**, and change everywhere at once.
+The address and the service area line under it are in Site Settings > **Practice details**, and change
+everywhere at once. The address must be written exactly as on the Google Business Profile, so leave
+"Cross street or landmark" empty: directions such as "on the corner of Wickham and Brookes Streets"
+belong in the Getting Here section of the Contact page (Pages > Contact).
 
 ---
 

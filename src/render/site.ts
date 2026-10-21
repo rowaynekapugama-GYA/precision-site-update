@@ -50,7 +50,8 @@ export function sitemapXml(content: Content): string {
 }
 
 export function robotsTxt(): string {
-  return `User-agent: *\nAllow: /\n\nSitemap: ${ORIGIN}/sitemap.xml\n`
+  // the price list PDF is handed out through the form, never found through a search engine
+  return `User-agent: *\nAllow: /\nDisallow: /downloads/\n\nSitemap: ${ORIGIN}/sitemap.xml\n`
 }
 
 /** Every public file the site needs, keyed by path relative to the web root. */
