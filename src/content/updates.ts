@@ -715,3 +715,19 @@ UPDATES.push({
     return done
   },
 })
+
+// ---------------------------------------------------------------- 21 October 2026: shorter price list section
+// The everyday fees move to the left column under the heading, so the intro and the form on the right
+// are no longer one long column. Mobile order: heading, intro, fees, form.
+const PL_TEMPLATE_OLD = '<div class="container split reveal"><h2>{{f1}}</h2><div class="prose"><p>{{f2}}</p>\n<p>{{f3}}</p>\n{{site:priceTeaser}}<div class="form-card pl-card" data-pl-location="price-list">{{site:priceListForm}}</div></div></div>'
+const PL_TEMPLATE_NEW = '<div class="container pl-split reveal"><h2 class="pl-head">{{f1}}</h2><div class="prose pl-copy"><p>{{f2}}</p>\n<p>{{f3}}</p></div>\n{{site:priceTeaser}}<div class="form-card pl-card" data-pl-location="price-list">{{site:priceListForm}}</div></div>'
+UPDATES.push({
+  id: '2026-10-21-price-list-layout',
+  description: 'Price list section: everyday fees in the left column, intro and form on the right',
+  apply(c) {
+    const prices = page(c, 'price-list')
+    const dl = prices?.sections.find((x) => (x.label || '').startsWith('Download Our Price List'))
+    if (!editTemplate(dl, PL_TEMPLATE_OLD, PL_TEMPLATE_NEW, 'pl-split')) return []
+    return ['price-list: two-column price list section']
+  },
+})

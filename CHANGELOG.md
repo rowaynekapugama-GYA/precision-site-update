@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-10-21 - v3.4.1: shorter price list section
+
+- **Download Our Price List** is now two columns. On the left, under the heading, is "A Few of Our Everyday Fees", which stays in view while scrolling on desktop. On the right are the intro and the form. Before, the fees and the form were stacked in one long column. On phones the order is heading, intro, fees, form.
+- **The fees box is more compact:**
+  - the New Patient Offer shows its title and price on one line, with the inclusions and terms link in smaller text underneath;
+  - the labels are shorter ("Comprehensive examination", "Hygienist visit: Airflow clean and fluoride");
+  - the note no longer repeats "enter your details", because the form is right beside it.
+- Content update `2026-10-21-price-list-layout` swaps the section's layout on sites already in the dashboard. The wording in the dashboard is not touched.
+- Files: `src/content/updates.ts`, `src/render/priceList.ts`, `data/price-list.json`, `content/pages/price-list.json`, `public/assets/css/styles.css`, `package.json`, `package-lock.json`, `CHANGELOG.md`.
+- **QA:**
+  - The build passes both with and without the database, and both produce identical output.
+  - The browser run passed 51 of 51 checks.
+  - There is no sideways scroll at 375 px or 1440 px.
+
 ## 2026-10-21 - v3.4.0: a few everyday fees above the price list form
 
 From the practice's feedback: do not list every fee on Prices and Payment Options, prompt people to download the price list with their details instead.

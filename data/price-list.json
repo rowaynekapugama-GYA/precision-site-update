@@ -105,11 +105,11 @@
     "heading": "A Few of Our Everyday Fees",
     "rows": [
       { "offer": true },
-      { "label": "Comprehensive examination or consultation", "find": "Understand your needs" },
-      { "label": "Dental hygienist visit: Airflow clean, includes fluoride treatment", "find": "Professional dental hygienist visit" },
+      { "label": "Comprehensive examination", "find": "Understand your needs" },
+      { "label": "Hygienist visit: Airflow clean and fluoride", "find": "Professional dental hygienist visit" },
       { "label": "Take-home teeth whitening kit", "find": "Take-home teeth whitening kit" }
     ],
-    "note": "Fees are a guide only and depend on your individual needs. Our full price list also covers X-rays, fillings, crowns, root canal treatment, implants, veneers, dentures and Invisalign. Enter your details below and we will send it to you."
+    "note": "Fees are a guide only and depend on your individual needs. The full price list also covers X-rays, fillings, crowns, root canal treatment, implants, veneers, dentures and Invisalign."
   },
   "payment": {
     "hicaps": "We accept most private health insurance benefits using HICAPS, so you can claim on the spot and pay only the gap. No manual lodgement needed.",

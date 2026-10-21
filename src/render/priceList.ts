@@ -112,7 +112,10 @@ export function priceTeaser(settings: Settings): string {
     if (r.offer) {
       if (!offerLive(s)) return []
       const terms = `<a class="pt-terms" href="${attr(s.offer.termsUrl || '/new-patient-offer-terms/')}">${esc(s.offer.termsLine || 'Terms and conditions apply.')}</a>`
-      return [`<li class="pt-offer"><span class="pt-name"><strong>${esc(s.offer.title || 'New Patient Offer')}</strong>: ${esc(sentenceList(inclusionList(s)))}.${terms}</span><span class="pt-price">${esc(offerPrice(s))}</span></li>`]
+      const incl = sentenceList(inclusionList(s))
+      return [`<li class="pt-offer"><span class="pt-name"><strong>${esc(s.offer.title || 'New Patient Offer')}</strong>` +
+        `<span class="pt-incl">${esc(incl[0].toUpperCase() + incl.slice(1))}.</span>${terms}</span>` +
+        `<span class="pt-price">${esc(offerPrice(s))}</span></li>`]
     }
     const row = all.find((x) => !x.offer && x.service.startsWith(r.find || '\u0000'))
     if (!row) throw new Error(`price teaser: no fee in data/price-list.json starts with "${r.find}"`)
