@@ -1,5 +1,100 @@
 # Changelog
 
+## 2026-10-23 - v3.5.0: client revisions (Dr Billy Choi, emails of 20 and 23 October)
+
+### 20 October items (most were already live in v3.3.0 and v3.4.x; finished here)
+- **A1 Prices page.** The "everyday fees" box is gone. Beside the download form there is now only the $229 New Patient Offer card, with its inclusions and the ongoing terms line, and one line saying every other fee is in the full price list. The form button now reads "Get Our Full Price List" (Site Settings > Price list, changed only where it still said "Email Me the Price List"). The form, SmileOx lead, instant PDF and tracking are unchanged.
+  - The rest of the site was searched for prices: none are left outside the $229 offer. The DentiCare range ($3,000 to $12,000) stays, since it is a plan condition, not a fee. There are no prices in the schema or meta tags. The Invisalign page never showed a price, so none was added.
+- **A2 Invisalign "From $6,000".** Already in the data and the PDF since v3.3.0. The PDF has been regenerated (see A5).
+- **A3 American Express.** Already listed everywhere payment methods appear since v3.3.0, including the schema. Checked again.
+- **A4 Payment plans.** The Flexible Payment Plans section was removed in v3.3.0. "Interest-free" now appears only in the DentiCare section of Prices and Payment Options and in the DentiCare box of the PDF.
+  - Everywhere else, "interest-free payment plans" now reads "payment plans through DentiCare": the line on 29 treatment pages, the homepage card and paragraph, About Us, New Patients, both Invisalign pages, Bowen Hills, Hamilton and three blog posts.
+  - The PDF footnote now reads "Payment plan available through DentiCare (see Payment Options)."
+  - No "no deposit" wording anywhere.
+- **A5 Address (NAP).** The address is now exactly as on the Google Business Profile: **S13/520 Wickham St, Fortitude Valley QLD 4006**, (07) 3852 1160. It appears that way in:
+  - the footer, the contact section and the Contact page;
+  - New Patients and every page that mentions the address;
+  - the Contact page description;
+  - the Dentist schema (`streetAddress` "S13/520 Wickham St");
+  - the map title;
+  - every page of the PDF.
+
+  How it works:
+  - Site Settings > Unit is now "S13". A short unit code is joined to the street with a slash (`streetLine()` in `src/render/util.ts`).
+  - "HQ South Tower" and the corner of Wickham and Brookes Streets stay in the Contact page directions ("Getting Here") and on the PDF back cover, never in the address line.
+  - The suburbs line is unchanged.
+- **A6 $229 offer ongoing.** Done in v3.3.0. No dates, countdowns or "limited time" wording; the existing terms are kept.
+
+### 23 October items
+- **B1 Bigger logo.** The header logo is 68px on desktop (was 42px), 56px on tablet and 44px on phones. It is 52px once the header shrinks on scroll (50px tablet, 44px phone). The header is taller to keep the menu centred (96px desktop), and the breadcrumbs moved down to suit. The footer logo is 58px. The 348 x 160 PNG stays sharp at these sizes, including on retina screens.
+- **B2 Map.** The map now embeds the Precision Dental Google listing itself, using its Google feature ID, so it shows the red Precision Dental pin and the place card with name, address, star rating, review count and Open in Maps. It no longer shows the building's other tenants.
+  - **View on Google Maps** goes to the listing (`maps.google.com/?cid=17715398836985474154`, now saved as Site Settings > Google Business Profile). **Get directions** goes to Google Maps directions to "Precision Dental, S13/520 Wickham St...".
+  - The footer Google icon and the reviews band now link to the listing too.
+  - The map is still lazy-loaded and responsive. No review count is hard-coded; the "Over 500 Google Reviews" band is unchanged.
+- **B3 Media from the current website.** The practice's own Vimeo videos (vimeo.com/precisiondental) are now on the site as click-to-play cards: a poster, a play button and the length. The Vimeo player only loads when someone presses play.
+
+  | Where | Videos |
+  |---|---|
+  | Homepage and Blog: "Videos from Our Practice" | Mark's Invisalign makeover; the porcelain veneers explainer |
+  | Invisalign page | Mark's and Bridget's Invisalign makeovers |
+  | Porcelain Veneers page | the veneers explainer |
+  | Smile Gallery: "Smile Makeover Videos" | Bridget, Brandon, Emma, Mia, Ana, Jessa, Peter, Casey, Carmi and Catherine (10 cards) |
+
+  - Grids that show patients carry the AHPRA line: "Individual results may vary. Any surgical or invasive procedure carries risks. Before proceeding, you should seek a second opinion from an appropriately qualified health practitioner."
+  - Captions and intros are our own words. The video list lives in `data/videos.json`.
+  - Not found: "3 Causes of Toothache" and "How Do You Look After Anxious Patients?". The old site's pages hide their video addresses, and those videos are not on the first page of the practice's Vimeo channel. Add their Vimeo IDs to `data/videos.json` when the practice sends them.
+  - The old site's practice and team photos were already on the new site; Ivan and Mobina still need photos from the practice.
+- **B4 HICAPS fund logos.**
+  - **Health Funds:** a new section, "Convenient On-the-Spot Claims with HICAPS", has one intro line and a grid of 16 fund logos, in equal-size cards with alt text, lazy-loaded. It is 4 columns on desktop, 3 on tablet and 2 on phones.
+  - **Preferred Provider badge:** Bupa, HCF and CBHS carry it, taken from Site Settings > Preferred funds.
+  - **Prices and Payment Options:** a compact version of the grid sits under HICAPS.
+  - **Logo files:** cut from the practice's own screenshot of the old site (`public/assets/img/funds/*.webp`, transparent, about 4 KB each). Replace them with official artwork under the same names when available.
+  - **DVA and Medicare logos:** not added, as no files were available. Those schemes keep their own sections.
+
+### Files changed (against GitHub `main` be251e3)
+| File | Items |
+|---|---|
+| `src/render/util.ts` (`streetLine`), `src/render/settings.ts` | A5 address tokens and schema; B2/B3/B4 new tokens (`mapLinks`, `fundLogos`, `fundLogosCompact`, `videosFeatured`, `videosInvisalign`, `videosVeneers`, `videosMakeovers`) |
+| `src/render/media.ts` (new) | B2 map links, B3 video cards |
+| `src/render/priceList.ts` | A1 offer-only box; B4 fund logo grid |
+| `data/price-list.json` | A1 offer-only box; A4 footnote; B4 fund logo list |
+| `data/videos.json` (new) | B3 |
+| `src/content/updates.ts` | content update `2026-10-23-client-round-4` (A1 button, A4, A5, B2, B3, B4) |
+| `content/**` (14 pages, 29 treatment pages, 3 posts, the contact block, site settings) | the same update, applied to the repo JSON |
+| `public/assets/css/styles.css` | B1 header and logo; B2 map links; B3 video cards; B4 fund grid; A1 offer card |
+| `public/assets/js/main.js` | B3 click-to-play |
+| `public/assets/img/funds/*.webp` (16, new) | B4 |
+| `public/downloads/precision-dental-price-list-2026-118de1bb6ba774f7.pdf` | A2/A4/A5 regenerated from the canvas, same private address |
+| `scripts/price-list-pdf.ts` | A5 address in the fallback PDF |
+| `src/dashboard/editors/SettingsForm.tsx` | A5 Unit help; B2 map and Google listing help |
+| `src/generated/site-images.json` | written by the render (new images) |
+| `package.json`, `package-lock.json` | 3.5.0 |
+| `CHANGELOG.md`, `README-CMS.md`, `docs/HOW-TO-UPDATE.md` | documentation |
+
+### QA (23 October 2026)
+- **Builds:** `npm run build` passes with the database (an upgrade from a copy at v3.4.1) and without it, and both produce identical public files. `tsc`, `qa:banned` and `qa:secrets` are clean.
+- **Browser run: 91 of 91 checks passed.**
+  - Price list form end to end: the SmileOx intake email and webhook are received, the PDF is revealed only after sending and is served with noindex, and the PDF shows Invisalign From $6,000, the Google address and the DentiCare footnote.
+  - Prices page: only $229.
+  - Address: exact in the footer on three pages and in the schema on every page; JSON-LD parses on all 130 files.
+  - Map: embed and links.
+  - Fund grid: 16 logos, three Preferred Provider badges, all files load, and 4/3/2 columns at 1440/768/375 px.
+  - Videos: card counts on five pages, and no player loads until play is pressed.
+  - Logo sizes, including scrolled, at each width.
+  - No sideways scroll on 10 changed pages at 375, 768 and 1440 px, and no console errors.
+- **Searches of the built site:** 0 hits for "Flexible payment", "no deposit", "limited time", "offer ends", "To be confirmed", "Corner of Brookes", "S13, HQ", "HQ South Tower, 520", "5,800", fee-table and "ADA item no". "Interest-free" appears only on `price-list.html` (the DentiCare section).
+- **Lighthouse (mobile, static pages, old to new):**
+
+  | Page | Score | LCP |
+  |---|---|---|
+  | Home | 90 to 88 | 3.1 to 3.2 s |
+  | Smile Gallery | 92 to 91 | |
+  | Invisalign | 95 to 94 | |
+  | Health Funds | 93 to 91 | +79 KB for the logos |
+
+  TBT is 0 ms and CLS is 0 throughout.
+- **Not verified here:** Google Maps and the Vimeo posters, because this sandbox cannot reach either. Check both on staging.
+
 ## 2026-10-21 - v3.4.1: shorter price list section
 
 - **Download Our Price List** is now two columns. On the left, under the heading, is "A Few of Our Everyday Fees", which stays in view while scrolling on desktop. On the right are the intro and the form. Before, the fees and the form were stacked in one long column. On phones the order is heading, intro, fees, form.

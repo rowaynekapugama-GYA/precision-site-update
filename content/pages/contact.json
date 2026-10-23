@@ -6,12 +6,12 @@
   "group": "Main pages",
   "seo": {
     "title": "Contact Us | Precision Dental Fortitude Valley",
-    "description": "Contact Precision Dental at HQ South Tower, {{site:street}}, {{site:suburb}}. Call {{site:phone}}, book online or send an enquiry. Free on-site parking.",
+    "description": "Contact Precision Dental at {{site:address}}. Call {{site:phone}}, book online or send an enquiry. Free on-site parking.",
     "ogImage": "",
     "canonical": "",
     "noindex": false
   },
-  "lastmod": "2026-10-20",
+  "lastmod": "2026-10-23",
   "layout": {
     "head": "std",
     "pre": "std",

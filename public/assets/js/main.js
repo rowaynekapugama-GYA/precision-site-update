@@ -243,3 +243,22 @@
 
   render();
 })();
+
+/* ---------- click-to-play practice videos (23 October 2026): the Vimeo player loads only on press ---------- */
+(function(){
+  document.addEventListener('click',function(e){
+    var btn=e.target.closest&&e.target.closest('.lite-video .lv-btn');
+    if(!btn)return;
+    var fig=btn.closest('.lite-video'); var id=fig&&fig.getAttribute('data-vimeo');
+    if(!id||!/^\d+$/.test(id))return;
+    var f=document.createElement('iframe');
+    f.src='https://player.vimeo.com/video/'+id+'?autoplay=1&dnt=1&title=0&byline=0&portrait=0';
+    f.title=btn.getAttribute('aria-label')||'Video';
+    f.allow='autoplay; fullscreen; picture-in-picture';
+    f.setAttribute('allowfullscreen','');
+    f.className='lv-frame';
+    btn.replaceWith(f);
+    fig.classList.add('is-playing');
+    if(window.dataLayer)window.dataLayer.push({event:'video_play',video_id:id});
+  });
+})();

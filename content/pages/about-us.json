@@ -11,7 +11,7 @@
     "canonical": "",
     "noindex": false
   },
-  "lastmod": "2026-10-20",
+  "lastmod": "2026-10-23",
   "layout": {
     "head": "std",
     "pre": "std",
@@ -314,7 +314,7 @@
           "id": "f2",
           "label": "Paragraph",
           "type": "text",
-          "value": "We believe you should understand the cost of your care before you commit to it. You can explore our Prices and Payment Options, including HICAPS claiming, preferred provider arrangements and interest-free payment plans through DentiCare."
+          "value": "We believe you should understand the cost of your care before you commit to it. You can explore our Prices and Payment Options, including HICAPS claiming, preferred provider arrangements and payment plans through DentiCare."
         }
       ]
     },

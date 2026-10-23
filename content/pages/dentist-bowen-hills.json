@@ -11,7 +11,7 @@
     "canonical": "",
     "noindex": false
   },
-  "lastmod": "2026-10-09",
+  "lastmod": "2026-10-23",
   "layout": {
     "head": "std",
     "pre": "std",
@@ -350,7 +350,7 @@
           "id": "f2",
           "label": "Paragraph",
           "type": "text",
-          "value": "Precision Dental is a preferred provider for {{site:preferredFunds}}, and we accept most other major funds. Eligible patients can also spread treatment costs through DentiCare with no interest, subject to eligibility, terms and conditions. A deposit and a small set-up fee apply. See our Prices and Payment Options for full details."
+          "value": "Precision Dental is a preferred provider for {{site:preferredFunds}}, and we accept most other major funds. Eligible patients can also spread treatment costs through DentiCare, subject to eligibility, terms and conditions. A deposit and a small set-up fee apply. See our Prices and Payment Options for full details."
         }
       ]
     },

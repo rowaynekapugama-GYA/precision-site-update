@@ -11,7 +11,7 @@
     "canonical": "",
     "noindex": false
   },
-  "lastmod": "2026-10-02",
+  "lastmod": "2026-10-23",
   "layout": {
     "head": "std",
     "pre": "std",
@@ -340,7 +340,32 @@
           "id": "f2",
           "label": "Paragraph",
           "type": "text",
-          "value": "The cost of your treatment depends on your individual needs. After your examination, we talk you through your options and the expected fees before any treatment begins. We accept most major health funds, process claims on the spot through HICAPS and are a preferred provider for {{site:preferredFunds}}. Interest-free payment plans are available through DentiCare for eligible patients, subject to terms and conditions. You can learn more on our Prices and Payment Options page."
+          "value": "The cost of your treatment depends on your individual needs. After your examination, we talk you through your options and the expected fees before any treatment begins. We accept most major health funds, process claims on the spot through HICAPS and are a preferred provider for {{site:preferredFunds}}. Payment plans are available through DentiCare for eligible patients, subject to terms and conditions. You can learn more on our Prices and Payment Options page."
+        }
+      ]
+    },
+    {
+      "key": "s14",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "pinned": false,
+      "ref": "videos-veneers",
+      "label": "Porcelain Veneers Explained (videos come from data/videos.json)",
+      "template": "<section class=\"body-section{{alt}} video-section\" id=\"videos\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div>{{site:videosVeneers}}</div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Porcelain Veneers Explained"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "A short video on three common concerns porcelain veneers may help with, and what to discuss at your consultation."
         }
       ]
     },

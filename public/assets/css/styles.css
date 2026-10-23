@@ -1185,3 +1185,63 @@ body.om-open{overflow:hidden}
 .price-teaser .pt-note{margin:10px 0 0;font-size:.84rem;line-height:1.5;color:var(--ink-3)}
 @media(max-width:900px){.price-teaser{max-width:640px}}
 @media(max-width:560px){.price-teaser{padding:20px 18px 16px}.price-teaser li{font-size:.93rem;gap:12px}}
+
+/* ---------- v3.5.0 (23 October 2026) ---------- */
+/* bigger header logo: 68px desktop, 56px tablet, 44px phone; at least 50px once the header shrinks */
+.nav{height:96px}
+.nav .logo img{height:68px}
+.header.scrolled .nav{height:74px}
+.header.scrolled .nav .logo img{height:52px}
+@media(max-width:1000px){.nav{height:84px}.nav .logo img{height:56px}.header.scrolled .nav{height:72px}.header.scrolled .nav .logo img{height:50px}}
+@media(max-width:560px){.nav{height:68px}.nav .logo img{height:44px}.header.scrolled .nav{height:62px}.header.scrolled .nav .logo img{height:44px}}
+.breadcrumbs{padding-top:122px}
+@media(max-width:1000px){.breadcrumbs{padding-top:106px}}
+@media(max-width:560px){.breadcrumbs{padding-top:90px}}
+.footer .brand img{height:58px}
+
+/* map: links to the Google listing under the map */
+.map-links{display:flex;flex-wrap:wrap;gap:10px 18px;margin:14px 0 0}
+.map-links a{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-head);font-weight:600;font-size:.92rem;color:var(--blue-700);text-decoration:underline;text-underline-offset:3px}
+.map-links a:hover{color:var(--navy)}
+.map-links svg{width:17px;height:17px;flex:none}
+
+/* HICAPS health fund logo grid */
+.fund-logos{list-style:none;margin:30px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.fund-logo{position:relative;display:flex;align-items:center;justify-content:center;height:112px;padding:20px 18px;background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:0 18px 36px -32px rgba(1,42,65,.35);transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.fund-logo img{max-width:100%;max-height:58px;width:auto;height:auto;object-fit:contain}
+.fund-logo:hover{transform:translateY(-2px);box-shadow:0 22px 40px -30px rgba(1,42,65,.45)}
+.fund-logo.is-preferred{border-color:rgba(26,154,212,.45);padding-top:30px}
+.fund-badge{position:absolute;top:8px;left:50%;transform:translateX(-50%);white-space:nowrap;padding:3px 10px;border-radius:var(--r-pill);background:var(--blue-600);color:#fff;font-family:var(--font-head);font-weight:600;font-size:.68rem;letter-spacing:.04em}
+.fund-logos-compact{gap:12px;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:22px;max-width:980px}
+.fund-logos-compact .fund-logo{height:92px;padding:16px 12px}
+.fund-logos-compact .fund-logo.is-preferred{padding-top:34px}.fund-logos-compact .fund-logo.is-preferred img{max-height:38px}
+.fund-logos-compact .fund-logo img{max-height:44px}
+@media(max-width:1000px){.fund-logos{grid-template-columns:repeat(3,minmax(0,1fr))}.fund-logos-compact{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.fund-logo.is-preferred img{max-height:48px}
+@media(max-width:620px){.fund-logos,.fund-logos-compact{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.fund-logo,.fund-logos-compact .fund-logo{height:100px;padding:16px 14px}.fund-logo img,.fund-logos-compact .fund-logo img{max-height:42px;max-width:88%}.fund-logo.is-preferred,.fund-logos-compact .fund-logo.is-preferred{padding-top:36px}.fund-logo.is-preferred img{max-height:36px}.fund-badge{font-size:.62rem;padding:2px 8px;top:7px}}
+.fund-logos-section .section-head{margin-bottom:0}
+
+/* click-to-play videos */
+.video-grid{display:grid;gap:22px;margin-top:28px}
+.video-grid-1{grid-template-columns:minmax(0,760px)}
+.video-grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.video-grid-many{grid-template-columns:repeat(3,minmax(0,1fr))}
+.lite-video{margin:0}
+.lv-btn,.lv-frame{display:block;position:relative;width:100%;aspect-ratio:16/9;border:0;border-radius:var(--r-lg);overflow:hidden;background:linear-gradient(135deg,var(--navy),var(--blue-700));cursor:pointer;padding:0}
+.lv-btn img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s var(--ease)}
+.lv-btn:hover img{transform:scale(1.03)}
+.lv-icon{position:absolute;left:50%;top:50%;width:66px;height:66px;margin:-33px 0 0 -33px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.94);color:var(--blue-700);box-shadow:0 14px 30px -12px rgba(1,42,65,.6);transition:transform .25s var(--ease)}
+.lv-icon svg{width:28px;height:28px;margin-left:4px}
+.lv-btn:hover .lv-icon,.lv-btn:focus-visible .lv-icon{transform:scale(1.08)}
+.lv-time{position:absolute;right:12px;bottom:12px;padding:3px 9px;border-radius:var(--r-pill);background:rgba(1,28,44,.78);color:#fff;font-size:.78rem;font-weight:600}
+.lite-video figcaption{margin-top:12px;font-family:var(--font-head);font-weight:600;font-size:1rem;color:var(--navy);line-height:1.35}
+.video-note{margin-top:18px;font-size:.86rem;color:var(--ink-3);max-width:80ch}
+@media(max-width:900px){.video-grid-many{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.video-grid-2,.video-grid-many{grid-template-columns:1fr}.lv-icon{width:56px;height:56px;margin:-28px 0 0 -28px}}
+.section-alt .lv-btn{box-shadow:0 20px 40px -30px rgba(1,42,65,.5)}
+
+/* Prices page: the New Patient Offer on its own beside the form */
+.price-teaser-single{padding:8px 10px}
+.price-teaser-single .pt-offer{margin:0;padding:18px 16px}
+.price-teaser-single .pt-note{margin:12px 6px 6px}
+.video-more{margin-top:24px}

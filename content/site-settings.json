@@ -4,7 +4,7 @@
   "phone": "(07) 3852 1160",
   "email": "admin@precisiondentistry.com.au",
   "address": {
-    "unit": "S13, HQ South Tower",
+    "unit": "S13",
     "street": "520 Wickham St",
     "streetShort": "520 Wickham St",
     "suburb": "Fortitude Valley",
@@ -12,7 +12,7 @@
     "postcode": "4006",
     "latitude": -27.453,
     "longitude": 153.0377,
-    "mapEmbed": "https://www.google.com/maps?q=HQ%20South%20Tower%2C%20520%20Wickham%20Street%2C%20Fortitude%20Valley%20QLD%204006&output=embed",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1770.2!2d153.0377!3d-27.453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9159ed28ef9657%3A0xf5d9bd61cce32c6a!2sPrecision%20Dental!5e0!3m2!1sen!2sau!4v1761177600000!5m2!1sen!2sau",
     "crossStreet": ""
   },
   "parking": "Free on-site parking for patients.",
@@ -71,7 +71,7 @@
     "instagram": "",
     "youtube": "",
     "linkedin": "",
-    "googleBusiness": ""
+    "googleBusiness": "https://maps.google.com/?cid=17715398836985474154"
   },
   "colours": {
     "navy": "",
@@ -117,7 +117,7 @@
   "priceList": {
     "file": "",
     "delivery": "smileox",
-    "buttonLabel": "Email Me the Price List",
+    "buttonLabel": "Get Our Full Price List",
     "consentText": "I agree to Precision Dental emailing me the price list and contacting me about my enquiry. I can opt out at any time.",
     "thankYou": "Thank you. Our price list is on its way to your inbox. If it has not arrived within a few minutes, please check your junk folder or give us a call."
   },

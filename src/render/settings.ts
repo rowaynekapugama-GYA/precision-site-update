@@ -7,8 +7,10 @@
  * is changed in exactly one place.
  */
 import type { HoursDay, Settings } from './types'
-import { attr, esc, ORIGIN } from './util'
-import { fundsList, priceTable, priceTeaser } from './priceList'
+import { attr, esc, ORIGIN, streetLine } from './util'
+export { streetLine }
+import { fundLogos, fundsList, priceTable, priceTeaser } from './priceList'
+import { mapLinks, videoGrid } from './media'
 import { offerBanner, offerPopup, offerSection, offerTerms, priceListForm, reviewsBadge, reviewsBand, schemeLines, withLeadDefaults } from './leads'
 
 const SHORT: Record<string, string> = {
@@ -99,17 +101,20 @@ export function siteTokens(settings: Settings): Record<string, string> {
   const s = withLeadDefaults(settings)
   const a = s.address
   const social = (u: string) => (u && u.trim() ? attr(u.trim()) : '#')
-  // the street as people read it: "520 Wickham St (Corner of Brookes St)"; the schema keeps the plain street
-  const streetFull = streetWithCross(s)
+  // the street exactly as on the Google Business Profile: "S13/520 Wickham St" (23 October 2026)
+  const streetFull = streetLineFull(s)
+  const place = `${a.suburb} ${a.state} ${a.postcode}`
+  const full = `${streetFull}, ${place}`
   const area = String(s.serviceAreaLine || '').trim()
   return {
     phone: esc(s.phone),
     phoneTel: esc(phoneDigits(s.phone)),
     email: esc(s.email),
-    address: esc(`${a.unit}, ${streetFull}, ${a.suburb} ${a.state} ${a.postcode}`),
-    addressLines: `${esc(a.unit)}<br>${esc(streetFull)}<br>${esc(`${a.suburb} ${a.state} ${a.postcode}`)}`,
-    addressShort: esc(`${a.unit}, ${a.suburb} ${a.state} ${a.postcode}`),
-    addressStreet: esc(`${a.unit}, ${streetFull}`),
+    // NAP: every form of the address is the same string, so Google sees one address everywhere
+    address: esc(full),
+    addressLines: `${esc(streetFull)}<br>${esc(place)}`,
+    addressShort: esc(full),
+    addressStreet: esc(streetFull),
     serviceAreaLine: esc(area),
     footServiceArea: area ? `<p class="foot-area">${esc(area)}</p>` : '',
     mapServiceArea: area ? `<p class="map-area">${esc(area)}</p>` : '',
@@ -142,14 +147,32 @@ export function siteTokens(settings: Settings): Record<string, string> {
     priceTable: priceTable(s),
     priceTeaser: priceTeaser(s),
     fundsList: fundsList(s),
+    fundLogos: fundLogos(s, false),
+    fundLogosCompact: fundLogos(s, true),
+    mapLinks: mapLinks(s),
+    videosFeatured: videoGrid('featured'),
+    videosInvisalign: videoGrid('invisalign'),
+    videosVeneers: videoGrid('veneers'),
+    videosMakeovers: videoGrid('makeovers'),
     ...schemeLines(s),
   }
 }
 
-/** "520 Wickham St (Corner of Brookes St)", or just the street when there is no cross street. */
-export function streetWithCross(s: Settings): string {
+/** The street line, plus a cross street in brackets only if one is set (not recommended: keep NAP exact). */
+export function streetLineFull(s: Settings): string {
   const cross = String(s.address.crossStreet || '').trim()
-  return cross ? `${s.address.street} (${cross})` : s.address.street
+  return cross ? `${streetLine(s.address)} (${cross})` : streetLine(s.address)
+}
+
+/** @deprecated kept for older imports: the street with the cross street */
+export function streetWithCross(s: Settings): string {
+  return streetLineFull(s)
+}
+
+/** "S13/520 Wickham St, Fortitude Valley QLD 4006", exactly as on Google. */
+export function napAddress(s: Settings): string {
+  const a = s.address
+  return `${streetLine(a)}, ${a.suburb} ${a.state} ${a.postcode}`
 }
 
 /** The schema's areaServed, from the comma-separated list in Site Settings. */
@@ -206,7 +229,7 @@ export function practiceNode(s: Settings): Record<string, unknown> {
     email: s.email,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: `${a.unit}, ${a.street}`,
+      streetAddress: streetLine(a),
       addressLocality: a.suburb,
       addressRegion: a.state,
       postalCode: a.postcode,

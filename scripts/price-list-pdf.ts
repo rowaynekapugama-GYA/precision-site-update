@@ -23,7 +23,7 @@ import PDFDocument from 'pdfkit'
 import { loadContent } from '../src/content/load'
 import { withLeadDefaults } from '../src/render/leads'
 import { PRICE_DATA, priceCategories, fillText, type PriceRow } from '../src/render/priceList'
-import { streetWithCross } from '../src/render/settings'
+import { streetLineFull } from '../src/render/settings'
 
 const root = process.cwd()
 const outDir = path.join(root, 'public', 'downloads')
@@ -44,8 +44,9 @@ const s = withLeadDefaults(loadContent().settings)
 const a = s.address
 const cats = priceCategories(s)
 const website = 'www.precisiondentistry.com.au'
-const streetLine = streetWithCross(s)
-const addressLine = `${a.unit}, ${streetLine}, ${a.suburb} ${a.state} ${a.postcode}`
+// NAP: the street exactly as on the Google Business Profile, e.g. "S13/520 Wickham St"
+const streetLine = streetLineFull(s)
+const addressLine = `${streetLine}, ${a.suburb} ${a.state} ${a.postcode}`
 
 // the website's palette (public/assets/css/styles.css)
 const C = {
@@ -102,7 +103,7 @@ function header() {
     }
     return y
   }
-  let y = right([{ t: a.unit }, { t: streetLine }, { t: `${a.suburb} ${a.state} ${a.postcode}` }], 32)
+  let y = right([{ t: streetLine }, { t: `${a.suburb} ${a.state} ${a.postcode}` }], 32)
   right([{ t: s.phone, size: 8.2 }, { t: s.email, font: 'SB', color: C.ink2 }, { t: website, font: 'SB', color: C.ink2 }], y + 8)
   doc.y = TOP
 }
@@ -163,8 +164,7 @@ function cover() {
   doc.font('B').fontSize(10.5).fillColor(C.navy).text('BOOK APPOINTMENT:', L, 740, { lineBreak: false, characterSpacing: 0.5 })
   doc.font('XB').fontSize(20).fillColor(C.blue5).text(s.phone, L, 756, { lineBreak: false })
   doc.font('B').fontSize(9.5).fillColor(C.navy)
-  doc.text(a.unit, L, 740, { width: W, align: 'right', lineBreak: false })
-  doc.text(a.streetShort || a.street, L, 754, { width: W, align: 'right', lineBreak: false })
+  doc.text(streetLine, L, 754, { width: W, align: 'right', lineBreak: false })
   doc.text(`${a.suburb} ${a.state} ${a.postcode}`, L, 768, { width: W, align: 'right', lineBreak: false })
   wave(PH - 44)
   doc.page.margins.bottom = 86
@@ -341,8 +341,7 @@ function backCover() {
   photo('reception-room.jpg', 0, 0, PW, 400)
   if (has(logo)) doc.image(logo, (PW - 170) / 2, 440, { width: 170 })
   doc.font('B').fontSize(10.5).fillColor(C.navy)
-  doc.text(a.unit, L, 540, { width: W, align: 'center' })
-  doc.text(streetLine, L, doc.y + 1, { width: W, align: 'center' })
+  doc.text(streetLine, L, 540, { width: W, align: 'center' })
   doc.text(`${a.suburb} ${a.state} ${a.postcode}`, L, doc.y + 1, { width: W, align: 'center' })
   doc.font('XB').fontSize(30).fillColor(C.navy).text(s.phone, L, 612, { width: W, align: 'center', lineBreak: false })
   doc.font('B').fontSize(11).fillColor(C.navy).text(website, L, 660, { width: W, align: 'center', lineBreak: false })

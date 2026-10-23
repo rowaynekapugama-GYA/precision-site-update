@@ -266,9 +266,14 @@ and billing DVA directly (both off until confirmed). The CDBS amounts ($1,158 fo
 2026, $1,132 for 2025) change each January: check them with Services Australia and update the page.
 
 The address and the service area line under it are in Site Settings > **Practice details**, and change
-everywhere at once. The address must be written exactly as on the Google Business Profile, so leave
-"Cross street or landmark" empty: directions such as "on the corner of Wickham and Brookes Streets"
-belong in the Getting Here section of the Contact page (Pages > Contact).
+everywhere at once. The address must read exactly as on the Google Business Profile:
+**S13/520 Wickham St, Fortitude Valley QLD 4006**. Unit is "S13" (the website joins it to the street
+with a slash). Leave "Cross street or landmark" empty: directions such as "in HQ South Tower, on the
+corner of Wickham and Brookes Streets" belong in the Getting Here section of the Contact page
+(Pages > Contact). If the Google listing ever changes, change Site Settings to match it.
+
+The map on the contact section shows the Precision Dental Google listing, with View on Google Maps and
+Get directions under it. Both use Site Settings > Social media > Google Business Profile.
 
 ---
 
@@ -292,3 +297,14 @@ rules, patient reviews used in advertising are testimonials. Only the number and
 - Keep sentences short and plain, and use Australian spelling.
 - Do not paste text straight from Word with lots of formatting: paste, then tidy it up.
 - If something looks wrong after publishing, change it back and publish again, or contact GYA.
+
+---
+
+## Videos and health fund logos
+
+- **Videos** (homepage, Blog, Invisalign, Porcelain Veneers, Smile Gallery) are the practice's own
+  Vimeo videos. They play when someone presses play. To add, remove or rename one, ask GYA (the list
+  is in `data/videos.json`). Only show a patient video if that patient has agreed to it being on the
+  website.
+- **Health fund logos** (Health Funds page and under HICAPS on Prices and Payment Options) show a
+  Preferred Provider badge for the funds named in Site Settings > Preferred funds.

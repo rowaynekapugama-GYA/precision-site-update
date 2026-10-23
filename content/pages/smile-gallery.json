@@ -11,7 +11,7 @@
     "canonical": "",
     "noindex": false
   },
-  "lastmod": "2026-10-02",
+  "lastmod": "2026-10-23",
   "layout": {
     "head": "std",
     "pre": "std",
@@ -3705,6 +3705,31 @@
           "label": "Text",
           "type": "text",
           "value": "Results vary between individuals. Any dental procedure carries risks and benefits."
+        }
+      ]
+    },
+    {
+      "key": "s8",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "pinned": false,
+      "ref": "videos-makeovers",
+      "label": "Smile Makeover Videos (videos come from data/videos.json)",
+      "template": "<section class=\"body-section{{alt}} video-section\" id=\"videos\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div>{{site:videosMakeovers}}</div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Smile Makeover Videos"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Patients who agreed to share their smile makeover with us. Every treatment plan is different, so ask us what would suit you."
         }
       ]
     },

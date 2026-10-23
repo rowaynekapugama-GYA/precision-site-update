@@ -1,0 +1,30 @@
+{
+  "_howTo": "Practice videos on Vimeo (vimeo.com/precisiondental), shown as click-to-play cards (23 October 2026). Nothing loads from Vimeo until a visitor presses play. Groups: featured (homepage and Blog), invisalign (Invisalign page), veneers (Porcelain Veneers page), makeovers (Smile Gallery). Patient videos have patient: true, which adds the AHPRA results disclaimer under the grid; confirm patient consent with the practice before launch.",
+  "disclaimer": "Individual results may vary. Any surgical or invasive procedure carries risks. Before proceeding, you should seek a second opinion from an appropriately qualified health practitioner.",
+  "videos": [
+    { "id": "924872713", "title": "Mark's smile makeover with Invisalign", "duration": 76, "patient": true, "groups": ["featured", "invisalign"],
+      "poster": "https://i.vimeocdn.com/video/1818119803-fd31a3ca987ac531f36e99c22c3f4af15cad59f7a90840da9e37b1e5cd06e10c-d_640x360" },
+    { "id": "759442441", "title": "Three concerns porcelain veneers can address", "duration": 136, "patient": false, "groups": ["featured", "veneers"],
+      "poster": "https://i.vimeocdn.com/video/1525371151-d98431963500abf9beadabe55128358d82c7bc0668663e16b23c248d83741b46-d_640x360" },
+    { "id": "876951382", "title": "Bridget's Invisalign smile makeover", "duration": 85, "patient": true, "groups": ["invisalign", "makeovers"],
+      "poster": "https://i.vimeocdn.com/video/1742244346-c05ca59d11a02ddeac25c70f5af94fedbf244984314837526f3e6957cc512de5-d_640x360" },
+    { "id": "925271790", "title": "Brandon's smile makeover", "duration": 98, "patient": true, "groups": ["makeovers"],
+      "poster": "https://i.vimeocdn.com/video/1818844756-f06642520a074ef41cf3f0d79e19fab02b90a0288644e3f49c2d02d73f2e0a49-d_640x360" },
+    { "id": "924993419", "title": "Emma's smile makeover", "duration": 84, "patient": true, "groups": ["makeovers"],
+      "poster": "https://i.vimeocdn.com/video/1818376216-19d26c864ed0309cecf31355989bef2379f7632db38d4076ad557cb4999a96e3-d_640x360" },
+    { "id": "924522367", "title": "Mia's smile makeover", "duration": 78, "patient": true, "groups": ["makeovers"],
+      "poster": "https://i.vimeocdn.com/video/1817493823-c4fc10ef23e29582ae878642f08eae55699e77d237d3cd71bc0807df1216583d-d_640x360" },
+    { "id": "877362525", "title": "Ana's smile makeover", "duration": 65, "patient": true, "groups": ["makeovers"],
+      "poster": "https://i.vimeocdn.com/video/1742869440-4fea250c66e68631b0491cbd17a5982a556f32bd192a149918bc8c2b3f830cf4-d_640x360" },
+    { "id": "877352842", "title": "Jessa's smile makeover", "duration": 57, "patient": true, "groups": ["makeovers"],
+      "poster": "https://i.vimeocdn.com/video/1742837509-7d02fe2cd2b93a57eeadd08c26659c7ddc6708c8dfac8a0153fa1fc388fa6cd5-d_640x360" },
+    { "id": "877323229", "title": "Peter's smile makeover", "duration": 74, "patient": true, "groups": ["makeovers"],
+      "poster": "https://i.vimeocdn.com/video/1742793988-6d4509f6055a4f58dad5037085629a58f0b0ed6bf417bcdca11038d92d611b31-d_640x360" },
+    { "id": "876983601", "title": "Casey's smile makeover", "duration": 72, "patient": true, "groups": ["makeovers"],
+      "poster": "https://i.vimeocdn.com/video/1742291568-f5858b6a31e4871c262a0f4331f2769cef2ace5e7e87baf4525bced153e45759-d_640x360" },
+    { "id": "876963589", "title": "Carmi's smile makeover", "duration": 65, "patient": true, "groups": ["makeovers"],
+      "poster": "https://i.vimeocdn.com/video/1742263094-9fe080841e70398a4bd2c8deb177266bec371817c2c1f0d9a1f8b7d4304f9d32-d_640x360" },
+    { "id": "876956354", "title": "Catherine's smile makeover", "duration": 70, "patient": true, "groups": ["makeovers"],
+      "poster": "https://i.vimeocdn.com/video/1742251707-d8e47f5b1fa8cc4eb17f29a29ea7ace0b2aa19ae29e9c604e15a8c8609561303-d_640x360" }
+  ]
+}

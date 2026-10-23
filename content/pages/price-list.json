@@ -11,7 +11,7 @@
     "canonical": "",
     "noindex": false
   },
-  "lastmod": "2026-10-21",
+  "lastmod": "2026-10-23",
   "layout": {
     "head": "std",
     "pre": "std",
@@ -146,7 +146,7 @@
       "alt": true,
       "label": "Health Fund Claims with HICAPS",
       "pinned": false,
-      "template": "<section class=\"body-section{{alt}}\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div>{{site:fundLogosCompact}}</div></section>",
       "fields": [
         {
           "id": "f1",

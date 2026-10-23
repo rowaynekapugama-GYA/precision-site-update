@@ -118,3 +118,16 @@ export function friendlyToTokens(s: string): string {
   return String(s ?? '').replace(/\{([a-z-]+)\}/g, (m, k: string) =>
     FRIENDLY_TO_KEY[k] ? `{{site:${FRIENDLY_TO_KEY[k]}}}` : m)
 }
+
+/**
+ * The street line as the Google Business Profile writes it. A short unit code ("S13", "2",
+ * "G04") joins the street with a slash, "S13/520 Wickham St"; a longer unit ("Level 2") with
+ * a comma. Empty unit: just the street.
+ */
+export function streetLine(a: { unit?: string; street?: string }): string {
+  const unit = String(a.unit || '').trim()
+  const street = String(a.street || '').trim()
+  if (!unit) return street
+  return /^[A-Za-z]{0,3}\d+[A-Za-z]?$/.test(unit) ? `${unit}/${street}` : `${unit}, ${street}`
+}
+

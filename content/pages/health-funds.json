@@ -11,7 +11,7 @@
     "canonical": "",
     "noindex": false
   },
-  "lastmod": "2026-10-19",
+  "lastmod": "2026-10-23",
   "layout": {
     "head": "std",
     "pre": "std",
@@ -135,6 +135,31 @@
           "label": "Subheading",
           "type": "text",
           "value": "Funds and schemes we accept"
+        }
+      ]
+    },
+    {
+      "key": "s8",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "pinned": false,
+      "ref": "hicaps-logos",
+      "label": "Convenient On-the-Spot Claims with HICAPS (fund logos)",
+      "template": "<section class=\"body-section{{alt}} fund-logos-section\" id=\"hicaps\"><div class=\"container reveal\"><div class=\"section-head center\"><h2>{{f1}}</h2><p>{{f2}}</p></div>{{site:fundLogos}}</div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Convenient On-the-Spot Claims with HICAPS"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We accept most private health funds and process your claim on the spot with HICAPS, so you only pay the gap on the day."
         }
       ]
     },

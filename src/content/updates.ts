@@ -731,3 +731,157 @@ UPDATES.push({
     return ['price-list: two-column price list section']
   },
 })
+
+// ---------------------------------------------------------------- 23 October 2026: client revisions round 4
+// Billy's emails of 20 and 23 October: address exactly as on Google, the $229 offer as the only price
+// on the site, DentiCare the only place that says interest-free, the Google listing in the map, a HICAPS
+// health fund logo grid, and the practice's own videos on the pages where they fit.
+const ROUND4 = '2026-10-23'
+const touch4 = (p: Page | undefined) => { if (p && (!p.lastmod || p.lastmod < ROUND4)) p.lastmod = ROUND4 }
+export const GOOGLE_LISTING = 'https://maps.google.com/?cid=17715398836985474154'
+/** The Precision Dental listing itself (place card, pin and rating), from its Google feature ID. */
+export const MAP_EMBED = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1770.2!2d153.0377!3d-27.453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9159ed28ef9657%3A0xf5d9bd61cce32c6a!2sPrecision%20Dental!5e0!3m2!1sen!2sau!4v1761177600000!5m2!1sen!2sau'
+
+/** "interest-free" only where DentiCare itself is described (the DentiCare section of Prices and Payment Options). */
+export function withoutInterestFree(text: string): string {
+  return String(text ?? '')
+    .replace(/Interest-Free Payment Plans(?! with DentiCare)/g, 'Payment Plans with DentiCare')
+    .replace(/Interest-free payment plans/g, 'Payment plans')
+    .replace(/interest-free payment plans/g, 'payment plans')
+    .replace(/spread interest-free over time/g, 'spread over time')
+    .replace(/No interest, though a deposit/g, 'A deposit')
+    .replace(/ with no interest, subject to/g, ', subject to')
+}
+
+const sectionKind = (x: Section) => (x as unknown as { kind?: string }).kind
+
+function videoSection(ref: string, token: string, f1: string, f2: string, more?: [string, string]): Omit<Section, 'key'> {
+  const fields: Field[] = [
+    { id: 'f1', label: 'Heading', type: 'text', value: f1 },
+    { id: 'f2', label: 'Paragraph', type: 'text', value: f2 },
+  ]
+  if (more) fields.push({ id: 'f3', label: 'Link address', type: 'text', value: more[0] }, { id: 'f4', label: 'Link text', type: 'text', value: more[1] })
+  return {
+    kind: 'content', before: '\n', altAuto: true, alt: false, pinned: false, ref,
+    label: `${f1} (videos come from data/videos.json)`,
+    template: `<section class="body-section{{alt}} video-section" id="videos"><div class="container reveal"><h2>{{f1}}</h2><div class="prose"><p>{{f2}}</p></div>{{site:${token}}}` +
+      (more ? `<p class="video-more"><a class="btn btn-white btn-plain" href="{{f3}}">{{f4}} ${ARR}</a></p>` : '') + `</div></section>`,
+    fields,
+  } as Omit<Section, 'key'>
+}
+
+function fundLogosSection(): Omit<Section, 'key'> {
+  return {
+    kind: 'content', before: '\n', altAuto: true, alt: false, pinned: false, ref: 'hicaps-logos',
+    label: 'Convenient On-the-Spot Claims with HICAPS (fund logos)',
+    template: '<section class="body-section{{alt}} fund-logos-section" id="hicaps"><div class="container reveal"><div class="section-head center"><h2>{{f1}}</h2><p>{{f2}}</p></div>{{site:fundLogos}}</div></section>',
+    fields: [
+      { id: 'f1', label: 'Heading', type: 'text', value: 'Convenient On-the-Spot Claims with HICAPS' },
+      { id: 'f2', label: 'Paragraph', type: 'text', value: 'We accept most private health funds and process your claim on the spot with HICAPS, so you only pay the gap on the day.' },
+    ],
+  } as Omit<Section, 'key'>
+}
+
+UPDATES.push({
+  id: '2026-10-23-client-round-4',
+  description: 'Address as on Google (S13/520 Wickham St), Google listing in the map, HICAPS fund logos, practice videos, interest-free only for DentiCare, price list button',
+  apply(c) {
+    const done: string[] = []
+    const s = c.settings
+
+    // ---- Site Settings
+    if (s.address) {
+      if (String(s.address.unit || '').trim() === 'S13, HQ South Tower') { s.address.unit = 'S13'; done.push('settings: unit S13 (address S13/520 Wickham St, as on Google)') }
+      if (String(s.address.crossStreet || '').trim()) { s.address.crossStreet = ''; done.push('settings: no cross street in the address') }
+      if (!String(s.address.mapEmbed || '').includes('/maps/embed?pb=')) { s.address.mapEmbed = MAP_EMBED; done.push('settings: map shows the Google listing') }
+    }
+    if (s.socials && !String(s.socials.googleBusiness || '').trim()) { s.socials.googleBusiness = GOOGLE_LISTING; done.push('settings: Google Business Profile link') }
+    if (s.priceList && s.priceList.buttonLabel === 'Email Me the Price List') { s.priceList.buttonLabel = 'Get Our Full Price List'; done.push('settings: price list button') }
+
+    // ---- "interest-free" only in the DentiCare section of Prices and Payment Options
+    const keepDentiCare = (p: Page, x: Section) => p.key === 'price-list' && (x.label || '').startsWith('Interest-Free Payment Plans with DentiCare')
+    for (const p of c.pages) {
+      let changed = false
+      for (const x of p.sections) {
+        if (keepDentiCare(p, x)) continue
+        for (const f of x.fields || []) {
+          const v = withoutInterestFree(f.value)
+          if (v !== f.value) { f.value = v; changed = true }
+        }
+        if (x.template) { const t = withoutInterestFree(x.template); if (t !== x.template) { x.template = t; changed = true } }
+        if (x.label) { const l = withoutInterestFree(x.label); if (l !== x.label) x.label = l }
+      }
+      if (p.seo) {
+        for (const k of Object.keys(p.seo) as (keyof typeof p.seo)[]) {
+          const v = p.seo[k]
+          if (typeof v === 'string') { const n = withoutInterestFree(v); if (n !== v) { (p.seo as unknown as Record<string, string>)[k as string] = n; changed = true } }
+        }
+      }
+      if (changed) { touch4(p); done.push(`${p.key}: payment plans named as DentiCare, without "interest-free"`) }
+    }
+    for (const b of Object.values(c.blocks || {})) {
+      for (const f of b.fields || []) { const v = withoutInterestFree(f.value); if (v !== f.value) { f.value = v; done.push(`block ${b.key}: interest-free`) } }
+    }
+    for (const p of c.posts || []) {
+      const body = withoutInterestFree(p.body); const ex = withoutInterestFree(p.excerpt)
+      let changed = body !== p.body || ex !== p.excerpt
+      p.body = body; p.excerpt = ex
+      for (const q of p.faq || []) {
+        const a = q.a.map(withoutInterestFree)
+        if (a.some((x, i) => x !== q.a[i])) { q.a = a; changed = true }
+      }
+      if (changed) done.push(`post ${p.slug}: interest-free`)
+    }
+
+    // ---- the map: links to the Google listing under it (shared contact block)
+    const contactBlock = c.blocks?.contact
+    if (contactBlock && editTemplate(contactBlock as unknown as Section, '<p>{{site:addressLines}}</p>{{site:mapServiceArea}}</div>', '<p>{{site:addressLines}}</p>{{site:mapServiceArea}}{{site:mapLinks}}</div>', '{{site:mapLinks}}')) {
+      done.push('contact block: View on Google Maps and Get directions')
+    }
+
+    // ---- NAP in page descriptions and the map title: the address exactly as on Google
+    for (const p of c.pages) {
+      const seo = p.seo as unknown as Record<string, unknown> | undefined
+      if (!seo) continue
+      for (const k of Object.keys(seo)) {
+        const v = seo[k]
+        if (typeof v === 'string' && v.includes('HQ South Tower, {{site:street}}, {{site:suburb}}')) {
+          seo[k] = v.replace('HQ South Tower, {{site:street}}, {{site:suburb}}', '{{site:address}}')
+          touch4(p); done.push(`${p.key}: address in the page description`)
+        }
+      }
+    }
+    if (contactBlock && editTemplate(contactBlock as unknown as Section, 'Map showing Precision Dental at {{site:street}}, {{site:suburb}}', 'Map showing Precision Dental at {{site:address}}', 'Precision Dental at {{site:address}}')) {
+      done.push('contact block: map title with the full address')
+    }
+
+    // ---- HICAPS fund logos: Health Funds (own section) and Prices and Payment Options (compact, under HICAPS)
+    const hf = page(c, 'health-funds')
+    if (hf && insertSection(hf, fundLogosSection(), (x) => (x.label || '').startsWith('Child Dental Benefits Schedule'))) { touch4(hf); done.push('health-funds: HICAPS fund logos') }
+    const prices = page(c, 'price-list')
+    const hicaps = prices?.sections.find((x) => (x.label || '').startsWith('Health Fund Claims with HICAPS'))
+    if (editTemplate(hicaps, '<div class="prose"><p>{{f2}}</p></div>', '<div class="prose"><p>{{f2}}</p></div>{{site:fundLogosCompact}}', '{{site:fundLogosCompact}}')) { touch4(prices); done.push('price-list: fund logos under HICAPS') }
+    if (prices && prices.sections.some((x) => (x.template || '').includes('{{site:priceTeaser}}'))) touch4(prices)
+
+    // ---- practice videos (Vimeo, click to play)
+    const add = (key: string, sec: Omit<Section, 'key'>, before: (x: Section) => boolean) => {
+      const p = page(c, key)
+      if (p && insertSection(p, sec, before)) { touch4(p); done.push(`${key}: ${sec.ref}`) }
+    }
+    const beforeCta = (x: Section) => sectionKind(x) === 'cta'
+    const beforeGallery = (x: Section) => x.ref === 'before-after' || sectionKind(x) === 'faq'
+    add('index', videoSection('videos-home', 'videosFeatured', 'Videos from Our Practice',
+      'Watch a patient&#x27;s Invisalign journey at Precision Dental, and a short explainer on porcelain veneers.',
+      ['/smile-gallery/#videos', 'More Smile Makeover Videos']), beforeCta)
+    add('blog', videoSection('videos-blog', 'videosFeatured', 'Videos from Our Practice',
+      'Short videos from Precision Dental, from a patient&#x27;s Invisalign journey to how porcelain veneers work.',
+      ['/smile-gallery/#videos', 'More Smile Makeover Videos']), beforeCta)
+    add('service/invisalign', videoSection('videos-invisalign', 'videosInvisalign', 'Invisalign Smile Makeover Videos',
+      'Two of our patients share their Invisalign treatment at Precision Dental.'), beforeGallery)
+    add('service/porcelain-veneers', videoSection('videos-veneers', 'videosVeneers', 'Porcelain Veneers Explained',
+      'A short video on three common concerns porcelain veneers may help with, and what to discuss at your consultation.'), beforeGallery)
+    add('smile-gallery', videoSection('videos-makeovers', 'videosMakeovers', 'Smile Makeover Videos',
+      'Patients who agreed to share their smile makeover with us. Every treatment plan is different, so ask us what would suit you.'), beforeCta)
+    return done
+  },
+})

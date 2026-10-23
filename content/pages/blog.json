@@ -11,7 +11,7 @@
     "canonical": "",
     "noindex": false
   },
-  "lastmod": "2026-10-02",
+  "lastmod": "2026-10-23",
   "layout": {
     "head": "std",
     "pre": "std",
@@ -86,6 +86,43 @@
       "generated": "articleIndex",
       "template": "{{gen:articleIndex}}",
       "fields": []
+    },
+    {
+      "key": "s5",
+      "kind": "content",
+      "before": "\n",
+      "altAuto": true,
+      "alt": false,
+      "pinned": false,
+      "ref": "videos-blog",
+      "label": "Videos from Our Practice (videos come from data/videos.json)",
+      "template": "<section class=\"body-section{{alt}} video-section\" id=\"videos\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div>{{site:videosFeatured}}<p class=\"video-more\"><a class=\"btn btn-white btn-plain\" href=\"{{f3}}\">{{f4}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a></p></div></section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Videos from Our Practice"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Short videos from Precision Dental, from a patient&#x27;s Invisalign journey to how porcelain veneers work."
+        },
+        {
+          "id": "f3",
+          "label": "Link address",
+          "type": "text",
+          "value": "/smile-gallery/#videos"
+        },
+        {
+          "id": "f4",
+          "label": "Link text",
+          "type": "text",
+          "value": "More Smile Makeover Videos"
+        }
+      ]
     },
     {
       "key": "s4",

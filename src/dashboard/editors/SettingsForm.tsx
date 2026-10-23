@@ -124,7 +124,7 @@ export function SettingsForm({ initial, isAdmin }: { initial: S; isAdmin: boolea
             <TextInput label="Email" type="email" value={s.email} onChange={(v) => set({ email: v })} />
           </div>
           <div className="row">
-            <TextInput label="Unit and building" value={s.address.unit} onChange={(v) => setA({ unit: v })} />
+            <TextInput label="Unit" value={s.address.unit} onChange={(v) => setA({ unit: v })} help="As on the Google Business Profile, for example S13 (shown as S13/520 Wickham St). The building name goes in the Contact page directions, not here." />
             <TextInput label="Street" value={s.address.street} onChange={(v) => setA({ street: v })} />
           </div>
           <div className="row">
@@ -139,7 +139,7 @@ export function SettingsForm({ initial, isAdmin }: { initial: S; isAdmin: boolea
           <TextInput label="Parking note" value={s.parking} onChange={(v) => set({ parking: v })} />
           <TextInput label="Service area line" value={s.serviceAreaLine || ''} onChange={(v) => set({ serviceAreaLine: v })} help="One sentence, shown in the footer and on the contact section. Leave blank to hide it." />
           <TextInput label="Areas served (for Google)" value={s.areaServed || ''} onChange={(v) => set({ areaServed: v })} help="Suburbs and areas separated by commas, for example Newstead, New Farm, Teneriffe. Not shown on the page." />
-          <TextInput label="Google Maps embed link" value={s.address.mapEmbed} onChange={(v) => setA({ mapEmbed: v.trim() })} help="The address of the map shown on the contact page. Only change this if the practice moves." />
+          <TextInput label="Google Maps embed link" value={s.address.mapEmbed} onChange={(v) => setA({ mapEmbed: v.trim() })} help="The map on the contact section. Use the embed link from the practice's own Google Maps listing (Share > Embed a map, copy only the src address), so the map shows the Precision Dental pin, rating and reviews." />
           <div className="row">
             <TextInput label="Map latitude" value={geo.lat} onChange={(v) => { setGeo({ ...geo, lat: v }); if (Number.isFinite(Number(v)) && v.trim() !== '' && v.trim() !== '-') setA({ latitude: Number(v) }) }} help="Used by Google Maps and search. Only change if the practice moves." />
             <TextInput label="Map longitude" value={geo.lng} onChange={(v) => { setGeo({ ...geo, lng: v }); if (Number.isFinite(Number(v)) && v.trim() !== '' && v.trim() !== '-') setA({ longitude: Number(v) }) }} />
@@ -171,7 +171,7 @@ export function SettingsForm({ initial, isAdmin }: { initial: S; isAdmin: boolea
             <TextInput label="Instagram" value={s.socials.instagram} onChange={(v) => setSoc({ instagram: v.trim() })} placeholder="https://www.instagram.com/..." /></div>
           <div className="row"><TextInput label="YouTube" value={s.socials.youtube} onChange={(v) => setSoc({ youtube: v.trim() })} />
             <TextInput label="LinkedIn" value={s.socials.linkedin} onChange={(v) => setSoc({ linkedin: v.trim() })} /></div>
-          <TextInput label="Google Business Profile" value={s.socials.googleBusiness} onChange={(v) => setSoc({ googleBusiness: v.trim() })} />
+          <TextInput label="Google Business Profile" value={s.socials.googleBusiness} onChange={(v) => setSoc({ googleBusiness: v.trim() })} help="The practice's Google listing. Used by the footer icon, the reviews band and View on Google Maps under the map." />
         </Panel>
 
         <Panel id="brand" title="Logo and colours">

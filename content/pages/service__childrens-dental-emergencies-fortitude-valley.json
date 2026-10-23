@@ -11,7 +11,7 @@
     "canonical": "",
     "noindex": false
   },
-  "lastmod": "2026-10-02",
+  "lastmod": "2026-10-23",
   "layout": {
     "head": "std",
     "pre": "std",
@@ -382,7 +382,7 @@
           "id": "f2",
           "label": "Paragraph",
           "type": "text",
-          "value": "The cost of your treatment depends on your individual needs. After your examination, we talk you through your options and the expected fees before any treatment begins. We accept most major health funds, process claims on the spot through HICAPS and are a preferred provider for {{site:preferredFunds}}. Interest-free payment plans are available through DentiCare for eligible patients, subject to terms and conditions. You can learn more on our Prices and Payment Options page."
+          "value": "The cost of your treatment depends on your individual needs. After your examination, we talk you through your options and the expected fees before any treatment begins. We accept most major health funds, process claims on the spot through HICAPS and are a preferred provider for {{site:preferredFunds}}. Payment plans are available through DentiCare for eligible patients, subject to terms and conditions. You can learn more on our Prices and Payment Options page."
         }
       ]
     },

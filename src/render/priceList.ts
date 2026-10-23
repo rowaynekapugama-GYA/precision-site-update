@@ -28,7 +28,7 @@ export interface PriceData {
   /** the few fees shown on Prices and Payment Options above the form (v3.4.0) */
   teaser?: { heading: string; rows: { label?: string; find?: string; offer?: boolean }[]; note: string }
   payment: { hicaps: string; methods: string; plans: { name: string; points: string[] }[]; plansNote: string; terms: string }
-  funds: { intro: string; heading: string; list: string[] }
+  funds: { intro: string; heading: string; list: string[]; logos?: { name: string; file: string; preferredMatch?: string }[] }
 }
 
 export const PRICE_DATA = data as unknown as PriceData
@@ -122,8 +122,26 @@ export function priceTeaser(settings: Settings): string {
     return [`<li><span class="pt-name">${esc(r.label || row.service)}</span><span class="pt-price">${esc(row.price)}</span></li>`]
   })
   if (!rows.length) return ''
-  return `<div class="price-teaser"><h3>${esc(t.heading)}</h3><ul>${rows.join('')}</ul>` +
+  return `<div class="price-teaser${rows.length === 1 ? ' price-teaser-single' : ''}">${t.heading ? `<h3>${esc(t.heading)}</h3>` : ''}<ul>${rows.join('')}</ul>` +
     (t.note ? `<p class="pt-note">${esc(fillText(t.note, s))}</p>` : '') + `</div>`
+}
+
+/**
+ * The HICAPS health fund logo grid (client request, 23 October 2026). Funds named in Site
+ * Settings > Preferred funds get a "Preferred Provider" badge. `compact` is the smaller
+ * version under HICAPS on Prices and Payment Options.
+ */
+export function fundLogos(settings: Settings, compact: boolean): string {
+  const logos = (PRICE_DATA.funds.logos || []).filter((l) => l.name && l.file)
+  if (!logos.length) return ''
+  const preferred = String(settings.preferredFunds || '').toLowerCase()
+  const items = logos.map((l) => {
+    const pref = !!l.preferredMatch && preferred.includes(l.preferredMatch.toLowerCase())
+    return `<li class="fund-logo${pref ? ' is-preferred' : ''}">` +
+      `<img src="${attr(l.file)}" alt="${attr(l.name)}" loading="lazy" decoding="async">` +
+      (pref ? '<span class="fund-badge">Preferred Provider</span>' : '') + `</li>`
+  }).join('')
+  return `<ul class="fund-logos${compact ? ' fund-logos-compact' : ''}" aria-label="Health funds we claim on the spot with HICAPS">${items}</ul>`
 }
 
 export function fundsList(settings: Settings): string {
