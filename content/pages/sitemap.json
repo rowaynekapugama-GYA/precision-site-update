@@ -11,7 +11,7 @@
     "canonical": "",
     "noindex": false
   },
-  "lastmod": "2026-10-14",
+  "lastmod": "2026-10-26",
   "layout": {
     "head": "std",
     "pre": "std",
@@ -87,7 +87,7 @@
       "generated": "sitemapArticles",
       "label": "Practice",
       "pinned": false,
-      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><div class=\"sitemap-cols\"><div><h3>{{f1}}</h3><ul><li><a href=\"{{f2}}\">{{f3}}</a></li><li><a href=\"{{f4}}\">{{f5}}</a></li><li><a href=\"{{f6}}\">{{f7}}</a></li><li><a href=\"{{f8}}\">{{f9}}</a></li><li><a href=\"{{f10}}\">{{f11}}</a></li><li><a href=\"{{f12}}\">{{f13}}</a></li><li><a href=\"{{f14}}\">{{f15}}</a></li><li><a href=\"{{f16}}\">{{f17}}</a></li><li><a href=\"{{f18}}\">{{f19}}</a></li><li><a href=\"{{f20}}\">{{f21}}</a></li><li><a href=\"{{f22}}\">{{f23}}</a></li><li><a href=\"{{f114}}\">{{f115}}</a></li><li><a href=\"{{f116}}\">{{f117}}</a></li><li><a href=\"{{f24}}\">{{f25}}</a></li></ul></div><div><h3>{{f26}}</h3><ul><li><a href=\"{{f27}}\">{{f28}}</a></li><li><a href=\"{{f29}}\">{{f30}}</a></li><li><a href=\"{{f31}}\">{{f32}}</a></li><li><a href=\"{{f33}}\">{{f34}}</a></li><li><a href=\"{{f35}}\">{{f36}}</a></li><li><a href=\"{{f37}}\">{{f38}}</a></li><li><a href=\"{{f39}}\">{{f40}}</a></li><li><a href=\"{{f41}}\">{{f42}}</a></li><li><a href=\"{{f43}}\">{{f44}}</a></li><li><a href=\"{{f45}}\">{{f46}}</a></li><li><a href=\"{{f47}}\">{{f48}}</a></li><li><a href=\"{{f49}}\">{{f50}}</a></li><li><a href=\"{{f51}}\">{{f52}}</a></li><li><a href=\"{{f53}}\">{{f54}}</a></li><li><a href=\"{{f55}}\">{{f56}}</a></li><li><a href=\"{{f57}}\">{{f58}}</a></li><li><a href=\"{{f59}}\">{{f60}}</a></li><li><a href=\"{{f61}}\">{{f62}}</a></li><li><a href=\"{{f63}}\">{{f64}}</a></li><li><a href=\"{{f65}}\">{{f66}}</a></li><li><a href=\"{{f67}}\">{{f68}}</a></li><li><a href=\"{{f69}}\">{{f70}}</a></li><li><a href=\"{{f71}}\">{{f72}}</a></li><li><a href=\"{{f73}}\">{{f74}}</a></li><li><a href=\"{{f75}}\">{{f76}}</a></li><li><a href=\"{{f77}}\">{{f78}}</a></li><li><a href=\"{{f79}}\">{{f80}}</a></li><li><a href=\"{{f81}}\">{{f82}}</a></li><li><a href=\"{{f83}}\">{{f84}}</a></li><li><a href=\"{{f85}}\">{{f86}}</a></li><li><a href=\"{{f87}}\">{{f88}}</a></li><li><a href=\"{{f89}}\">{{f90}}</a></li></ul></div><div><h3>{{f91}}</h3><ul><li><a href=\"{{f92}}\">{{f93}}</a></li><li><a href=\"{{f94}}\">{{f95}}</a></li><li><a href=\"{{f96}}\">{{f97}}</a></li><li><a href=\"{{f98}}\">{{f99}}</a></li><li><a href=\"{{f100}}\">{{f101}}</a></li><li><a href=\"{{f102}}\">{{f103}}</a></li><li><a href=\"{{f104}}\">{{f105}}</a></li></ul></div>{{f106}}<div><h3>{{f107}}</h3><ul><li><a href=\"{{f108}}\">{{f109}}</a></li><li><a href=\"{{f110}}\">{{f111}}</a></li><li><a href=\"{{f112}}\">{{f113}}</a></li></ul></div></div></div></section>",
+      "template": "<section class=\"body-section{{alt}}\"><div class=\"container\"><div class=\"sitemap-cols\"><div><h3>{{f1}}</h3><ul><li><a href=\"{{f2}}\">{{f3}}</a></li><li><a href=\"{{f4}}\">{{f5}}</a></li><li><a href=\"{{f6}}\">{{f7}}</a></li><li><a href=\"{{f8}}\">{{f9}}</a></li><li><a href=\"{{f10}}\">{{f11}}</a></li><li><a href=\"{{f12}}\">{{f13}}</a></li><li><a href=\"{{f14}}\">{{f15}}</a></li><li><a href=\"{{f16}}\">{{f17}}</a></li><li><a href=\"{{f18}}\">{{f19}}</a></li><li><a href=\"{{f20}}\">{{f21}}</a></li><li><a href=\"{{f22}}\">{{f23}}</a></li><li><a href=\"{{f114}}\">{{f115}}</a></li><li><a href=\"{{f116}}\">{{f117}}</a></li><li><a href=\"{{f24}}\">{{f25}}</a></li><li><a href=\"{{f118}}\">{{f119}}</a></li></ul></div><div><h3>{{f26}}</h3><ul><li><a href=\"{{f27}}\">{{f28}}</a></li><li><a href=\"{{f29}}\">{{f30}}</a></li><li><a href=\"{{f31}}\">{{f32}}</a></li><li><a href=\"{{f33}}\">{{f34}}</a></li><li><a href=\"{{f35}}\">{{f36}}</a></li><li><a href=\"{{f37}}\">{{f38}}</a></li><li><a href=\"{{f39}}\">{{f40}}</a></li><li><a href=\"{{f41}}\">{{f42}}</a></li><li><a href=\"{{f43}}\">{{f44}}</a></li><li><a href=\"{{f45}}\">{{f46}}</a></li><li><a href=\"{{f47}}\">{{f48}}</a></li><li><a href=\"{{f49}}\">{{f50}}</a></li><li><a href=\"{{f51}}\">{{f52}}</a></li><li><a href=\"{{f53}}\">{{f54}}</a></li><li><a href=\"{{f55}}\">{{f56}}</a></li><li><a href=\"{{f57}}\">{{f58}}</a></li><li><a href=\"{{f59}}\">{{f60}}</a></li><li><a href=\"{{f61}}\">{{f62}}</a></li><li><a href=\"{{f63}}\">{{f64}}</a></li><li><a href=\"{{f65}}\">{{f66}}</a></li><li><a href=\"{{f67}}\">{{f68}}</a></li><li><a href=\"{{f69}}\">{{f70}}</a></li><li><a href=\"{{f71}}\">{{f72}}</a></li><li><a href=\"{{f73}}\">{{f74}}</a></li><li><a href=\"{{f75}}\">{{f76}}</a></li><li><a href=\"{{f77}}\">{{f78}}</a></li><li><a href=\"{{f79}}\">{{f80}}</a></li><li><a href=\"{{f81}}\">{{f82}}</a></li><li><a href=\"{{f83}}\">{{f84}}</a></li><li><a href=\"{{f85}}\">{{f86}}</a></li><li><a href=\"{{f87}}\">{{f88}}</a></li><li><a href=\"{{f89}}\">{{f90}}</a></li></ul></div><div><h3>{{f91}}</h3><ul><li><a href=\"{{f92}}\">{{f93}}</a></li><li><a href=\"{{f94}}\">{{f95}}</a></li><li><a href=\"{{f96}}\">{{f97}}</a></li><li><a href=\"{{f98}}\">{{f99}}</a></li><li><a href=\"{{f100}}\">{{f101}}</a></li><li><a href=\"{{f102}}\">{{f103}}</a></li><li><a href=\"{{f104}}\">{{f105}}</a></li></ul></div>{{f106}}<div><h3>{{f107}}</h3><ul><li><a href=\"{{f108}}\">{{f109}}</a></li><li><a href=\"{{f110}}\">{{f111}}</a></li><li><a href=\"{{f112}}\">{{f113}}</a></li></ul></div></div></div></section>",
       "fields": [
         {
           "id": "f1",
@@ -898,6 +898,18 @@
           "label": "Link text",
           "type": "text",
           "value": "Health Funds and Government Schemes"
+        },
+        {
+          "id": "f118",
+          "label": "Link address",
+          "type": "link",
+          "value": "/dental-videos/"
+        },
+        {
+          "id": "f119",
+          "label": "Link text",
+          "type": "text",
+          "value": "Dental Videos"
         }
       ]
     },

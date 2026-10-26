@@ -11,7 +11,7 @@
     "canonical": "",
     "noindex": false
   },
-  "lastmod": "2026-10-23",
+  "lastmod": "2026-10-26",
   "layout": {
     "head": "std",
     "pre": "std",
@@ -114,13 +114,13 @@
           "id": "f3",
           "label": "Link address",
           "type": "text",
-          "value": "/smile-gallery/#videos"
+          "value": "/dental-videos/"
         },
         {
           "id": "f4",
           "label": "Link text",
           "type": "text",
-          "value": "More Smile Makeover Videos"
+          "value": "Watch All Our Videos"
         }
       ]
     },

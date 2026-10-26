@@ -12,6 +12,7 @@ import { siteTokens, practiceNode } from './settings'
 import { attr, deepEqual, esc, ORIGIN, plain, pyJson, unescapeHtml } from './util'
 import { articleIndex, sitemapArticles, teamGrid, itemListNode } from './posts'
 import { BA_DISCLAIMER, beforeAfterCards, casesFor, registrationTokens, withLeadDefaults } from './leads'
+import { videoNodes } from './media'
 
 export interface RenderCtx {
   content: Content
@@ -160,6 +161,7 @@ function pageSchema(page: Page, mainHtml: string, ctx: RenderCtx): string {
   if (bc) nodes.push(bc)
   const faq = faqNode(mainHtml)
   if (faq) nodes.push(faq)
+  nodes.push(...videoNodes(mainHtml))
   if (page.layout.schemaLiteral) {
     // the homepage's hand-formatted JSON-LD is kept while it still says the same thing
     try {

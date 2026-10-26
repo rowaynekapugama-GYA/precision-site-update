@@ -1,5 +1,37 @@
 # Changelog
 
+## 2026-10-26 - v3.6.0: Dental Videos page
+
+Built on v3.5.0 (GitHub `main` 5551099). Content update `2026-10-26-dental-videos` makes the same changes in the dashboard database on the next build, without touching anything else the practice has edited.
+
+- **Dental Videos page (`/dental-videos/`).** All 12 videos from the old site's Dental Videos category (`/category/dental-videos/`, both pages), in a 3, 2 and 1 column grid (desktop, tablet, phone). Each card has the poster, a play button, the length, the title and a short summary in our own words. The Vimeo IDs were taken from each post's own source on the old site, not guessed:
+
+  | # | Title | Topic | Vimeo ID | Old address (redirects to the card) |
+  |---|---|---|---|---|
+  | 1 | Mark's Smile Makeover with Invisalign | Invisalign | `924872713` | `/mark-of-newsteads-invisalign-makeover/` |
+  | 2 | 3 Causes of Toothache | General | `759417476` | `/3-causes-of-toothache/` |
+  | 3 | How We Look After Anxious Patients | About Us | `759417314` | `/how-do-you-look-after-anxious-patients/` |
+  | 4 | Three Concerns Porcelain Veneers Can Address | Cosmetic | `759442441` | `/3-problems-dental-veneers-can-fix/` |
+  | 5 | The Porcelain Veneer Process, Step by Step | Cosmetic | `759417638` | `/what-is-the-process-of-dental-veneers/` |
+  | 6 | Do Wisdom Teeth Always Need to Come Out? | General | `759443595` | `/do-i-need-to-remove-my-wisdom-teeth/` |
+  | 7 | The Dental Implant Process | Implants | `759442887` | `/what-is-the-process-of-dental-implants/` |
+  | 8 | Early Signs of Tooth Decay | General | `759442715` | `/early-signs-of-tooth-decay/` |
+  | 9 | What Can Invisalign Help With? | Invisalign | `759443075` | `/what-problems-can-invisalign-fix/` |
+  | 10 | Why Dental Fees Differ Between Practices | About Us | `759436603` | `/why-are-there-price-differences-between-different-dental-practices/` |
+  | 11 | 3 Things That Make Precision Dental Different | About Us | `759454675` | `/3-things-that-make-precision-dental-different/` |
+  | 12 | What Happens at Your First Consultation | About Us | `759443230` | `/what-happens-at-your-initial-consultation/` |
+
+  - **Pop-up player.** Pressing play opens the video in a pop-up (Vimeo, with Do Not Track on). It closes with the X button, the Esc key or a click outside, and closing removes the player, so the video stops. The keyboard stays inside the pop-up while it is open and returns to the card afterwards. Nothing loads from Vimeo until someone presses play. The same player is used for the videos on the homepage, Blog, Invisalign, Porcelain Veneers and Smile Gallery.
+  - **Topic filters:** All, Cosmetic, Invisalign, Implants, General and About Us, with a count on each.
+  - **SEO:** title "Dental Videos | Precision Dental Fortitude Valley", meta description, H1 "Dental Videos", and a `VideoObject` (name, description, thumbnail, upload date, length, embed address) for each of the 12 videos in the page schema.
+  - **Bottom of the page:** the Smile Makeover Videos link and the shared Book Your Visit band (Book Online and (07) 3852 1160).
+  - "3 Things That Make Precision Dental Different" is included. It still needs Dr Choi's OK (see README-CMS.md, "Where the site and the brief disagree").
+- **Menus.** Blog is now a menu with **Dental Articles** (`/blog/`) and **Dental Videos**, on desktop and in the phone menu. Dental Videos is also in the footer's Our Practice links, the HTML sitemap and `sitemap.xml`. The homepage and Blog video sections link to it ("Watch All Our Videos").
+- **Blog posts.** 14 posts on the same topic as a video now end with a short "Prefer to watch?" link to it: the anxiety post, two tooth decay posts, the dental emergencies post, five implant posts, two veneer posts, the overbite post and two first visit posts.
+- **Redirects (permanent).** Each old video post address goes to its card on the new page. `/dental-videos/page/2/`, `/category/dental-videos/` and `/category/dental-videos/page/2/` go to the page.
+- **Fix.** The Book Online and Call buttons at the end of blog posts showed underlined blue text (the article link style). They now keep their normal button colours.
+- Version 3.6.0.
+
 ## 2026-10-23 - v3.5.0: client revisions (Dr Billy Choi, emails of 20 and 23 October)
 
 ### 20 October items (most were already live in v3.3.0 and v3.4.x; finished here)

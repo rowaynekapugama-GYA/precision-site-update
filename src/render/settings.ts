@@ -154,6 +154,7 @@ export function siteTokens(settings: Settings): Record<string, string> {
     videosInvisalign: videoGrid('invisalign'),
     videosVeneers: videoGrid('veneers'),
     videosMakeovers: videoGrid('makeovers'),
+    videosLibrary: videoGrid('library'),
     ...schemeLines(s),
   }
 }

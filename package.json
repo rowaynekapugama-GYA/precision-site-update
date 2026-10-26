@@ -1,6 +1,6 @@
 {
   "name": "precision-dental-site",
-  "version": "3.5.0",
+  "version": "3.6.0",
   "description": "Precision Dental website (static) with the GYA client dashboard at /admin.",
   "private": true,
   "type": "module",

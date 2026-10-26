@@ -1,30 +1,292 @@
 {
-  "_howTo": "Practice videos on Vimeo (vimeo.com/precisiondental), shown as click-to-play cards (23 October 2026). Nothing loads from Vimeo until a visitor presses play. Groups: featured (homepage and Blog), invisalign (Invisalign page), veneers (Porcelain Veneers page), makeovers (Smile Gallery). Patient videos have patient: true, which adds the AHPRA results disclaimer under the grid; confirm patient consent with the practice before launch.",
+  "_howTo": "Practice videos on Vimeo (vimeo.com/precisiondental), shown as click-to-play cards (23 October 2026). Nothing loads from Vimeo until a visitor presses play. Groups: featured (homepage and Blog), invisalign (Invisalign page), veneers (Porcelain Veneers page), makeovers (Smile Gallery), library (the Dental Videos page, /dental-videos/, ordered by libraryOrder, filtered by category: Cosmetic, Invisalign, Implants, General, About Us). slug is the old website address of the video post, now redirected to the video on /dental-videos/. hidden: true keeps a video off the site. Patient videos have patient: true, which adds the AHPRA results disclaimer under the grid; confirm patient consent with the practice before launch. uploaded (the Vimeo upload date) feeds the VideoObject schema; the embed IDs were read from the old website posts on 26 October 2026.",
   "disclaimer": "Individual results may vary. Any surgical or invasive procedure carries risks. Before proceeding, you should seek a second opinion from an appropriately qualified health practitioner.",
   "videos": [
-    { "id": "924872713", "title": "Mark's smile makeover with Invisalign", "duration": 76, "patient": true, "groups": ["featured", "invisalign"],
-      "poster": "https://i.vimeocdn.com/video/1818119803-fd31a3ca987ac531f36e99c22c3f4af15cad59f7a90840da9e37b1e5cd06e10c-d_640x360" },
-    { "id": "759442441", "title": "Three concerns porcelain veneers can address", "duration": 136, "patient": false, "groups": ["featured", "veneers"],
-      "poster": "https://i.vimeocdn.com/video/1525371151-d98431963500abf9beadabe55128358d82c7bc0668663e16b23c248d83741b46-d_640x360" },
-    { "id": "876951382", "title": "Bridget's Invisalign smile makeover", "duration": 85, "patient": true, "groups": ["invisalign", "makeovers"],
-      "poster": "https://i.vimeocdn.com/video/1742244346-c05ca59d11a02ddeac25c70f5af94fedbf244984314837526f3e6957cc512de5-d_640x360" },
-    { "id": "925271790", "title": "Brandon's smile makeover", "duration": 98, "patient": true, "groups": ["makeovers"],
-      "poster": "https://i.vimeocdn.com/video/1818844756-f06642520a074ef41cf3f0d79e19fab02b90a0288644e3f49c2d02d73f2e0a49-d_640x360" },
-    { "id": "924993419", "title": "Emma's smile makeover", "duration": 84, "patient": true, "groups": ["makeovers"],
-      "poster": "https://i.vimeocdn.com/video/1818376216-19d26c864ed0309cecf31355989bef2379f7632db38d4076ad557cb4999a96e3-d_640x360" },
-    { "id": "924522367", "title": "Mia's smile makeover", "duration": 78, "patient": true, "groups": ["makeovers"],
-      "poster": "https://i.vimeocdn.com/video/1817493823-c4fc10ef23e29582ae878642f08eae55699e77d237d3cd71bc0807df1216583d-d_640x360" },
-    { "id": "877362525", "title": "Ana's smile makeover", "duration": 65, "patient": true, "groups": ["makeovers"],
-      "poster": "https://i.vimeocdn.com/video/1742869440-4fea250c66e68631b0491cbd17a5982a556f32bd192a149918bc8c2b3f830cf4-d_640x360" },
-    { "id": "877352842", "title": "Jessa's smile makeover", "duration": 57, "patient": true, "groups": ["makeovers"],
-      "poster": "https://i.vimeocdn.com/video/1742837509-7d02fe2cd2b93a57eeadd08c26659c7ddc6708c8dfac8a0153fa1fc388fa6cd5-d_640x360" },
-    { "id": "877323229", "title": "Peter's smile makeover", "duration": 74, "patient": true, "groups": ["makeovers"],
-      "poster": "https://i.vimeocdn.com/video/1742793988-6d4509f6055a4f58dad5037085629a58f0b0ed6bf417bcdca11038d92d611b31-d_640x360" },
-    { "id": "876983601", "title": "Casey's smile makeover", "duration": 72, "patient": true, "groups": ["makeovers"],
-      "poster": "https://i.vimeocdn.com/video/1742291568-f5858b6a31e4871c262a0f4331f2769cef2ace5e7e87baf4525bced153e45759-d_640x360" },
-    { "id": "876963589", "title": "Carmi's smile makeover", "duration": 65, "patient": true, "groups": ["makeovers"],
-      "poster": "https://i.vimeocdn.com/video/1742263094-9fe080841e70398a4bd2c8deb177266bec371817c2c1f0d9a1f8b7d4304f9d32-d_640x360" },
-    { "id": "876956354", "title": "Catherine's smile makeover", "duration": 70, "patient": true, "groups": ["makeovers"],
-      "poster": "https://i.vimeocdn.com/video/1742251707-d8e47f5b1fa8cc4eb17f29a29ea7ace0b2aa19ae29e9c604e15a8c8609561303-d_640x360" }
+    {
+      "id": "924872713",
+      "title": "Mark's Smile Makeover with Invisalign",
+      "duration": 76,
+      "patient": true,
+      "groups": [
+        "featured",
+        "invisalign",
+        "library"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1818119803-fd31a3ca987ac531f36e99c22c3f4af15cad59f7a90840da9e37b1e5cd06e10c-d_640x360",
+      "slug": "mark-of-newsteads-invisalign-makeover",
+      "summary": "Mark had two overlapping front teeth and chose Invisalign. Every treatment plan is different.",
+      "libraryOrder": 1,
+      "category": "Invisalign",
+      "uploaded": "2024-03-19"
+    },
+    {
+      "id": "759442441",
+      "title": "Three Concerns Porcelain Veneers Can Address",
+      "duration": 136,
+      "patient": false,
+      "groups": [
+        "featured",
+        "veneers",
+        "library"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1525371151-d98431963500abf9beadabe55128358d82c7bc0668663e16b23c248d83741b46-d_640x360",
+      "slug": "3-problems-dental-veneers-can-fix",
+      "summary": "Slightly uneven front teeth, tooth size and shape, and colour that whitening has not changed.",
+      "libraryOrder": 4,
+      "category": "Cosmetic",
+      "uploaded": "2022-10-12"
+    },
+    {
+      "id": "876951382",
+      "title": "Bridget's Invisalign Smile Makeover",
+      "duration": 85,
+      "patient": true,
+      "groups": [
+        "invisalign",
+        "makeovers"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1742244346-c05ca59d11a02ddeac25c70f5af94fedbf244984314837526f3e6957cc512de5-d_640x360"
+    },
+    {
+      "id": "925271790",
+      "title": "Brandon's Smile Makeover",
+      "duration": 98,
+      "patient": true,
+      "groups": [
+        "makeovers"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1818844756-f06642520a074ef41cf3f0d79e19fab02b90a0288644e3f49c2d02d73f2e0a49-d_640x360"
+    },
+    {
+      "id": "924993419",
+      "title": "Emma's Smile Makeover",
+      "duration": 84,
+      "patient": true,
+      "groups": [
+        "makeovers"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1818376216-19d26c864ed0309cecf31355989bef2379f7632db38d4076ad557cb4999a96e3-d_640x360"
+    },
+    {
+      "id": "924522367",
+      "title": "Mia's Smile Makeover",
+      "duration": 78,
+      "patient": true,
+      "groups": [
+        "makeovers"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1817493823-c4fc10ef23e29582ae878642f08eae55699e77d237d3cd71bc0807df1216583d-d_640x360"
+    },
+    {
+      "id": "877362525",
+      "title": "Ana's Smile Makeover",
+      "duration": 65,
+      "patient": true,
+      "groups": [
+        "makeovers"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1742869440-4fea250c66e68631b0491cbd17a5982a556f32bd192a149918bc8c2b3f830cf4-d_640x360"
+    },
+    {
+      "id": "877352842",
+      "title": "Jessa's Smile Makeover",
+      "duration": 57,
+      "patient": true,
+      "groups": [
+        "makeovers"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1742837509-7d02fe2cd2b93a57eeadd08c26659c7ddc6708c8dfac8a0153fa1fc388fa6cd5-d_640x360"
+    },
+    {
+      "id": "877323229",
+      "title": "Peter's Smile Makeover",
+      "duration": 74,
+      "patient": true,
+      "groups": [
+        "makeovers"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1742793988-6d4509f6055a4f58dad5037085629a58f0b0ed6bf417bcdca11038d92d611b31-d_640x360"
+    },
+    {
+      "id": "876983601",
+      "title": "Casey's Smile Makeover",
+      "duration": 72,
+      "patient": true,
+      "groups": [
+        "makeovers"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1742291568-f5858b6a31e4871c262a0f4331f2769cef2ace5e7e87baf4525bced153e45759-d_640x360"
+    },
+    {
+      "id": "876963589",
+      "title": "Carmi's Smile Makeover",
+      "duration": 65,
+      "patient": true,
+      "groups": [
+        "makeovers"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1742263094-9fe080841e70398a4bd2c8deb177266bec371817c2c1f0d9a1f8b7d4304f9d32-d_640x360"
+    },
+    {
+      "id": "876956354",
+      "title": "Catherine's Smile Makeover",
+      "duration": 70,
+      "patient": true,
+      "groups": [
+        "makeovers"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1742251707-d8e47f5b1fa8cc4eb17f29a29ea7ace0b2aa19ae29e9c604e15a8c8609561303-d_640x360"
+    },
+    {
+      "id": "759417476",
+      "slug": "3-causes-of-toothache",
+      "title": "3 Causes of Toothache",
+      "duration": 211,
+      "patient": false,
+      "groups": [
+        "library"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1525357882-f168d302f8b02fe3df9e2975b32885cbb95cc7846f9732e156d63774e5a387e8-d_640x360",
+      "summary": "Three common reasons a tooth starts to ache: decay that reaches the nerve, an abscess, and a gum infection around a wisdom tooth.",
+      "libraryOrder": 2,
+      "category": "General",
+      "uploaded": "2022-10-12"
+    },
+    {
+      "id": "759417314",
+      "slug": "how-do-you-look-after-anxious-patients",
+      "title": "How We Look After Anxious Patients",
+      "duration": 207,
+      "patient": false,
+      "groups": [
+        "library"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1525353188-04198910d54eb3c793b63e4231d3b732344ea61c11d9267fb1c6dfb4e9e15cc1-d_640x360",
+      "summary": "A first visit that can be a check-up only, extra time to talk, happy gas and headphones, and when sedation is worth discussing.",
+      "libraryOrder": 3,
+      "category": "About Us",
+      "uploaded": "2022-10-12"
+    },
+    {
+      "id": "759417638",
+      "slug": "what-is-the-process-of-dental-veneers",
+      "title": "The Porcelain Veneer Process, Step by Step",
+      "duration": 173,
+      "patient": false,
+      "groups": [
+        "library"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1525361145-d38e90a49382755eaebd6cdd93627c75146941c7ea279a695a6b239a44d32459-d_640x360",
+      "summary": "From digital smile design and a trial smile to preparing the teeth, temporary veneers and fitting the final veneers.",
+      "libraryOrder": 5,
+      "category": "Cosmetic",
+      "uploaded": "2022-10-12"
+    },
+    {
+      "id": "759443595",
+      "slug": "do-i-need-to-remove-my-wisdom-teeth",
+      "title": "Do Wisdom Teeth Always Need to Come Out?",
+      "duration": 112,
+      "patient": false,
+      "groups": [
+        "library"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1525362877-f667f41762c3018fb0b0ecdb9163924d636f25b2ee0d5810058ab577b2981bf2-d_640x360",
+      "summary": "Why many people keep their wisdom teeth, and the problems that can mean removal is recommended.",
+      "libraryOrder": 6,
+      "category": "General",
+      "uploaded": "2022-10-12"
+    },
+    {
+      "id": "759442887",
+      "slug": "what-is-the-process-of-dental-implants",
+      "title": "The Dental Implant Process",
+      "duration": 161,
+      "patient": false,
+      "groups": [
+        "library"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1525367803-9c571ceea6d81a79b96d99f841a45b97fd4379b761139cefa4333fb7e9afa6a9-d_640x360",
+      "summary": "Examination and 3D scans, placing the implant, a healing period, then the crown. Any surgical or invasive procedure carries risks.",
+      "libraryOrder": 7,
+      "category": "Implants",
+      "uploaded": "2022-10-12"
+    },
+    {
+      "id": "759442715",
+      "slug": "early-signs-of-tooth-decay",
+      "title": "Early Signs of Tooth Decay",
+      "duration": 120,
+      "patient": false,
+      "groups": [
+        "library"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1525369795-36bb16f922d16f58222286c58e488f2b8f72468d74ec7a6275cbb7a56e9f3721-d_640x360",
+      "summary": "Sensitivity to hot and cold, a hole or dark spot, and bad breath: signs it is time for a check-up.",
+      "libraryOrder": 8,
+      "category": "General",
+      "uploaded": "2022-10-12"
+    },
+    {
+      "id": "759443075",
+      "slug": "what-problems-can-invisalign-fix",
+      "title": "What Can Invisalign Help With?",
+      "duration": 130,
+      "patient": false,
+      "groups": [
+        "library"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1525366064-839243dec34f18d2780d6f7f1da905de0392f5661e0cd9e2c4114c84cb747581-d_640x360",
+      "summary": "Crowded teeth, gaps, and evening out teeth before other cosmetic treatment.",
+      "libraryOrder": 9,
+      "category": "Invisalign",
+      "uploaded": "2022-10-12"
+    },
+    {
+      "id": "759436603",
+      "slug": "why-are-there-price-differences-between-different-dental-practices",
+      "title": "Why Dental Fees Differ Between Practices",
+      "duration": 220,
+      "patient": false,
+      "groups": [
+        "library"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1525372954-5b5aef6fa92d32a253973423cda1376a9285e0f65819e6af316d3f9d687e15a0-d_640x360",
+      "summary": "What goes into a fee: materials and equipment, the time spent planning and treating, and the clinician’s experience.",
+      "libraryOrder": 10,
+      "category": "About Us",
+      "uploaded": "2022-10-12"
+    },
+    {
+      "id": "759443230",
+      "slug": "what-happens-at-your-initial-consultation",
+      "title": "What Happens at Your First Consultation",
+      "duration": 152,
+      "patient": false,
+      "groups": [
+        "library"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1525364840-faa01787670050fad16d23b80524e87d82a8742c9b3c2fe4ae5453d21f22090e-d_640x360",
+      "summary": "Your history and concerns, an examination and X-rays, then a plan with fees so you can decide before any treatment.",
+      "libraryOrder": 12,
+      "category": "About Us",
+      "uploaded": "2022-10-12"
+    },
+    {
+      "id": "759454675",
+      "slug": "3-things-that-make-precision-dental-different",
+      "title": "3 Things That Make Precision Dental Different",
+      "duration": 166,
+      "patient": false,
+      "groups": [
+        "library"
+      ],
+      "poster": "https://i.vimeocdn.com/video/1525374156-b87320cd5ce6d8c9137866adc1e28ed17e6741feb9e9e926b67a95f2ee8ff43b-d_640x360",
+      "summary": "Dr Choi talks about patient comfort, being upfront about treatment, and the materials the practice uses.",
+      "_review": "Shown at GYA request (all 12 old videos). Dr Choi should still review it: the talk says treatment will be redone if not up to standard, \"no substandard materials\" and \"highest quality treatment\", which can read as guarantees or superlatives under AHPRA advertising rules. Set \"hidden\": true to take it off the site.",
+      "libraryOrder": 11,
+      "category": "About Us",
+      "uploaded": "2022-10-12"
+    }
   ]
 }

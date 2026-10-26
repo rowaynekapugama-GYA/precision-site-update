@@ -7,9 +7,9 @@
  */
 import data from '../../data/videos.json'
 import type { Settings } from './types'
-import { attr, esc, streetLine } from './util'
+import { attr, esc, ORIGIN, streetLine } from './util'
 
-export interface Video { id: string; title: string; duration: number; patient: boolean; groups: string[]; poster: string }
+export interface Video { id: string; title: string; duration: number; patient: boolean; groups: string[]; poster: string; slug?: string; summary?: string; hidden?: boolean; libraryOrder?: number; category?: string; uploaded?: string }
 const VIDEOS = (data as unknown as { videos: Video[]; disclaimer: string })
 
 /** The Google Business listing: Site Settings > Social media > Google Business Profile, else a Maps search for the practice. */
@@ -45,22 +45,68 @@ function mmss(sec: number): string {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-/** One click-to-play video card. */
-export function videoCard(v: Video): string {
+/** One click-to-play video card (with the summary and an anchor on the Dental Videos page). */
+export function videoCard(v: Video, withSummary = false): string {
   if (!/^\d+$/.test(v.id)) return ''
-  return `<figure class="lite-video" data-vimeo="${attr(v.id)}">` +
+  const anchor = withSummary && v.slug && /^[a-z0-9-]+$/.test(v.slug) ? ` id="${attr(v.slug)}"` : ''
+  const cat = withSummary && v.category ? ` data-cat="${attr(v.category)}"` : ''
+  return `<figure class="lite-video"${anchor}${cat} data-vimeo="${attr(v.id)}" data-title="${attr(v.title)}">` +
     `<button type="button" class="lv-btn" aria-label="Play video: ${attr(v.title)}">` +
     (v.poster ? `<img src="${attr(v.poster)}" alt="" width="640" height="360" loading="lazy" decoding="async" onerror="this.remove()">` : '') +
     `<span class="lv-icon">${PLAY}</span>` +
     (v.duration ? `<span class="lv-time">${mmss(v.duration)}</span>` : '') +
-    `</button><figcaption>${esc(v.title)}</figcaption></figure>`
+    `</button><figcaption>${esc(v.title)}${withSummary && v.summary ? `<span class="lv-sum">${esc(v.summary)}</span>` : ''}</figcaption></figure>`
+}
+
+const CATEGORIES = ['Cosmetic', 'Invisalign', 'Implants', 'General', 'About Us']
+
+/** Filter chips over the Dental Videos grid (All plus each category that has a video). */
+function videoFilters(list: Video[]): string {
+  const cats = CATEGORIES.filter((c) => list.some((v) => v.category === c))
+  if (cats.length < 2) return ''
+  const chip = (name: string, n: number, on: boolean) =>
+    `<button type="button" class="filter-chip${on ? ' is-on' : ''}" data-vfilter="${attr(name)}" aria-pressed="${on}">${esc(name)}<span class="c">${n}</span></button>`
+  return `<div class="gallery-filters video-filters" role="group" aria-label="Filter videos by topic">` +
+    chip('All', list.length, true) + cats.map((c) => chip(c, list.filter((v) => v.category === c).length, false)).join('') + `</div>`
+}
+
+/** ISO 8601 duration for schema: 211 -> PT3M31S */
+function isoDuration(sec: number): string {
+  const m = Math.floor(sec / 60)
+  const s = Math.round(sec % 60)
+  return `PT${m ? m + 'M' : ''}${s}S`
+}
+
+/** VideoObject nodes for the videos shown in a page's HTML (only those with an upload date). */
+export function videoNodes(mainHtml: string): Record<string, unknown>[] {
+  const ids = [...new Set([...String(mainHtml).matchAll(/data-vimeo="(\d+)"/g)].map((m) => m[1]))]
+  return ids.map((id) => VIDEOS.videos.find((v) => v.id === id)).filter((v): v is Video => !!v && !!v.uploaded && !v.hidden)
+    .map((v) => ({
+      '@type': 'VideoObject',
+      name: v.title,
+      description: v.summary || v.title,
+      thumbnailUrl: v.poster,
+      uploadDate: v.uploaded,
+      duration: isoDuration(v.duration),
+      embedUrl: `https://player.vimeo.com/video/${v.id}`,
+      publisher: { '@id': ORIGIN + '/#practice' },
+    }))
 }
 
 /** The videos in a group as a grid, with the results disclaimer when any shows a patient. */
 export function videoGrid(group: string): string {
-  const list = VIDEOS.videos.filter((v) => v.groups.includes(group))
+  const library = group === 'library'
+  const list = VIDEOS.videos.filter((v) => v.groups.includes(group) && !v.hidden)
+  if (library) list.sort((x, y) => (x.libraryOrder ?? 999) - (y.libraryOrder ?? 999))
   if (!list.length) return ''
   const patient = list.some((v) => v.patient)
-  return `<div class="video-grid video-grid-${list.length > 2 ? 'many' : list.length}">${list.map(videoCard).join('')}</div>` +
+  return (library ? videoFilters(list) : '') +
+    `<div class="video-grid video-grid-${list.length > 2 ? 'many' : list.length}${library ? ' video-library' : ''}">${list.map((v) => videoCard(v, library)).join('')}</div>` +
     (patient ? `<p class="video-note">${esc(VIDEOS.disclaimer)}</p>` : '')
+}
+
+/** Old website addresses of the video posts, each sent to its video on /dental-videos/ (next.config.mjs reads data/videos.json). */
+export function videoRedirects(): { from: string; to: string }[] {
+  return VIDEOS.videos.filter((v) => v.slug && v.groups.includes('library'))
+    .map((v) => ({ from: `/${v.slug}`, to: v.hidden ? '/dental-videos/' : `/dental-videos/#${v.slug}` }))
 }

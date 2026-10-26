@@ -13,6 +13,7 @@
  */
 import type { BeforeAfterCase, Block, Content, Field, Page, Post, Section, Settings, TeamMember } from '../render/types'
 import { ICON_PILL } from '../render/leads'
+import videoData from '../../data/videos.json'
 
 export interface Editable {
   pages: Page[]
@@ -882,6 +883,120 @@ UPDATES.push({
       'A short video on three common concerns porcelain veneers may help with, and what to discuss at your consultation.'), beforeGallery)
     add('smile-gallery', videoSection('videos-makeovers', 'videosMakeovers', 'Smile Makeover Videos',
       'Patients who agreed to share their smile makeover with us. Every treatment plan is different, so ask us what would suit you.'), beforeCta)
+    return done
+  },
+})
+
+// ---------------------------------------------------------------- 26 October 2026: Dental Videos page
+// All 12 videos from the old website's Dental Videos category, on a page at /dental-videos/, under a new
+// Blog menu (desktop and mobile) and in the footer and sitemap. Old video post addresses redirect to each
+// video (next.config.mjs, from data/videos.json). Related blog posts link to their video.
+const TODAY6 = '2026-10-26'
+const touch6 = (p: Page | undefined) => { if (p && (!p.lastmod || p.lastmod < TODAY6)) p.lastmod = TODAY6 }
+const GO = '<svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>'
+const NAV_CHEV = '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>'
+
+const megaItem = (href: string, img: string, text: string, indent: string) =>
+  `${indent}<a class="mega-item" href="${href}"><span class="mi-img"><img src="/assets/img/menu/${img}.webp" alt="" loading="lazy" width="120" height="120"></span><span class="mi-txt"><strong>${text}</strong></span>${GO}</a>\n`
+
+/** Blog becomes a menu with Dental Articles and Dental Videos (desktop and mobile). */
+export function patchNavVideos(pre: string): string {
+  if (!pre || pre.includes('href="/dental-videos/"')) return pre
+  const desktop = /\n([ \t]*)<li><a href="\/blog\/">Blog<\/a><\/li>\n/.exec(pre)
+  if (desktop) {
+    const ind = desktop[1]
+    const li = `\n${ind}<li>\n${ind}  <button type="button" aria-haspopup="true" aria-expanded="false">Blog ${NAV_CHEV}</button>\n` +
+      `${ind}  <div class="dropdown panel"><div class="mega-col">\n` +
+      megaItem('/blog/', 'articles', 'Dental Articles', ind + '    ') +
+      megaItem('/dental-videos/', 'videos', 'Dental Videos', ind + '    ') +
+      `${ind}  </div></div>\n${ind}</li>\n`
+    pre = pre.replace(desktop[0], li)
+  }
+  const mobile = /\n([ \t]*)<a href="\/blog\/">Blog<\/a>\n/.exec(pre)
+  if (mobile) {
+    const ind = mobile[1]
+    pre = pre.replace(mobile[0], `\n${ind}<details><summary>Blog</summary><ul>\n${ind}  <li><a href="/blog/">Dental Articles</a></li><li><a href="/dental-videos/">Dental Videos</a></li></ul></details>\n`)
+  }
+  return pre
+}
+
+/** Dental Videos in the footer's Our Practice links, after New Patients. */
+export function patchFooterVideos(post: string): string {
+  if (!post || post.includes('href="/dental-videos/"')) return post
+  const m = /\n([ \t]*)<li><a href="\/new-patients\/">New Patients<\/a><\/li>\n/.exec(post)
+  if (!m) return post
+  return post.replace(m[0], `${m[0]}${m[1]}<li><a href="/dental-videos/">Dental Videos</a></li>\n`)
+}
+
+/** Blog posts on the same topic as a video, and the video they link to. */
+export const POST_VIDEOS: Record<string, string> = {
+  'fear-of-the-dentist-how-to-transcend-dental-anxiety': 'how-do-you-look-after-anxious-patients',
+  'brisbane-dentist-tips-cavities-prevention-and-treatment': 'early-signs-of-tooth-decay',
+  'filling-cavities-can-improve-your-smile': 'early-signs-of-tooth-decay',
+  'top-3-dental-emergencies-and-what-to-do-about-them': '3-causes-of-toothache',
+  '5-reasons-dental-implants-are-worth-the-investment': 'what-is-the-process-of-dental-implants',
+  'top-5-benefits-of-dental-implants-over-other-treatments': 'what-is-the-process-of-dental-implants',
+  'modern-dental-implants-at-precision-dental-in-fortitude-valley': 'what-is-the-process-of-dental-implants',
+  'who-performs-a-dental-implant-surgery-and-how-much-do-they-cost': 'what-is-the-process-of-dental-implants',
+  'the-simplicity-of-homecare-for-dental-implants': 'what-is-the-process-of-dental-implants',
+  'dentist-teneriffe-veneers-to-enhance-your-smile': 'what-is-the-process-of-dental-veneers',
+  'stain-removal-and-tooth-repairs-with-dental-veneers-in-bowen-hills': '3-problems-dental-veneers-can-fix',
+  'the-importance-of-correcting-your-overbite-from-precision-dental': 'what-problems-can-invisalign-fix',
+  '6-tips-to-help-you-get-ready-for-dental-visits-in-fortitude-valley': 'what-happens-at-your-initial-consultation',
+  'dental-care-at-precision-dental-what-can-you-expect': 'what-happens-at-your-initial-consultation',
+}
+
+export function postVideoLink(slug: string): string {
+  const v = (videoData as unknown as { videos: { slug?: string; title: string }[] }).videos.find((x) => x.slug === slug)
+  if (!v) return ''
+  const title = v.title.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/'/g, '&#x27;')
+  return `<p class="post-video-link">Prefer to watch? <a href="/dental-videos/#${slug}">${title}</a> is a short video from our team.</p>`
+}
+
+UPDATES.push({
+  id: '2026-10-26-dental-videos',
+  description: 'Dental Videos page (/dental-videos/) with all 12 practice videos, in a new Blog menu, the footer and the sitemap; related posts link to their video',
+  apply(c, repo) {
+    const done: string[] = []
+    if (!page(c, 'dental-videos')) {
+      const p = repo.pages.find((x) => x.key === 'dental-videos')
+      if (p) { c.pages.push(JSON.parse(JSON.stringify(p))); done.push('added page /dental-videos/') }
+    }
+    if (c.chrome) {
+      const pre = patchNavVideos(c.chrome.pre)
+      if (pre !== c.chrome.pre) { c.chrome.pre = pre; done.push('menus: Blog menu with Dental Videos') }
+      const post = patchFooterVideos(c.chrome.post)
+      if (post !== c.chrome.post) { c.chrome.post = post; done.push('footer: Dental Videos') }
+    }
+    const home = page(c, 'index')
+    const layout = home?.layout as unknown as { pre?: string; post?: string } | undefined
+    if (layout && typeof layout.pre === 'string') {
+      const pre = patchNavVideos(layout.pre)
+      if (pre !== layout.pre) { layout.pre = pre; touch6(home); done.push('index: Blog menu with Dental Videos') }
+    }
+    if (layout && typeof layout.post === 'string') {
+      const post = patchFooterVideos(layout.post)
+      if (post !== layout.post) { layout.post = post; touch6(home); done.push('index: Dental Videos in the footer') }
+    }
+    // the featured videos on the homepage and Blog lead to the full list
+    for (const key of ['index', 'blog']) {
+      const p = page(c, key)
+      const sec = p?.sections.find((x) => x.ref === `videos-${key === 'index' ? 'home' : 'blog'}`)
+      if (sec && setField(sec, 'f3', '/dental-videos/')) { setField(sec, 'f4', 'Watch All Our Videos'); touch6(p); done.push(`${key}: link to Dental Videos`) }
+    }
+    const sm = page(c, 'sitemap')
+    const smSec = sm?.sections.find((s) => s.generated === 'sitemapArticles')
+    if (addSitemapLinks(smSec, '/smile-gallery/', [['/dental-videos/', 'Dental Videos']])) { touch6(sm); done.push('sitemap: Dental Videos') }
+    // related blog posts link to their video
+    for (const p of c.posts || []) {
+      const v = POST_VIDEOS[p.slug]
+      if (!v || !p.body || p.body.includes('/dental-videos/')) continue
+      const link = postVideoLink(v)
+      if (!link) continue
+      const marker = '<div class="article-cta-marker"></div>'
+      p.body = p.body.includes(marker) ? p.body.replace(marker, `${link}\n${marker}`) : `${p.body}\n${link}`
+      done.push(`post ${p.slug}: link to video`)
+    }
     return done
   },
 })

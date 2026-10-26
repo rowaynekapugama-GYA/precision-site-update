@@ -1,4 +1,23 @@
+import { readFileSync } from 'node:fs'
 import { withPayload } from '@payloadcms/next/withPayload'
+
+/** Old website video posts, each sent to its video on /dental-videos/ (data/videos.json, 23 and 26 October 2026). */
+function videoRedirects() {
+  let list = []
+  try { list = JSON.parse(readFileSync(new URL('./data/videos.json', import.meta.url), 'utf8')).videos || [] } catch { return [] }
+  const out = []
+  for (const v of list) {
+    if (!v.slug || !(v.groups || []).includes('library') || !/^[a-z0-9-]+$/.test(v.slug)) continue
+    const to = v.hidden ? '/dental-videos/' : `/dental-videos/#${v.slug}`
+    out.push({ source: `/${v.slug}`, destination: to, permanent: true }, { source: `/${v.slug}/`, destination: to, permanent: true })
+  }
+  out.push({ source: '/dental-videos/page/:n', destination: '/dental-videos/', permanent: true })
+  // the old website's video category (26 October 2026)
+  for (const source of ['/category/dental-videos', '/category/dental-videos/', '/category/dental-videos/page/:n', '/category/dental-videos/page/:n/']) {
+    out.push({ source, destination: '/dental-videos/', permanent: true })
+  }
+  return out
+}
 
 /** The headers the static site had in vercel.json, now applied by Next.js. */
 const securityHeaders = [
@@ -19,6 +38,9 @@ const nextConfig = {
     '/api/dashboard/import': ['./content/**/*'],
     '/admin/preview/[kind]/[id]': ['./content/chrome.json'],
     '/api/dashboard/preview/[kind]/[id]': ['./content/chrome.json'],
+  },
+  async redirects() {
+    return videoRedirects()
   },
   async headers() {
     return [

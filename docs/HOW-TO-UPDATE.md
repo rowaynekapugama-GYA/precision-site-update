@@ -302,9 +302,12 @@ rules, patient reviews used in advertising are testimonials. Only the number and
 
 ## Videos and health fund logos
 
-- **Videos** (homepage, Blog, Invisalign, Porcelain Veneers, Smile Gallery) are the practice's own
+- **Videos** (Dental Videos page, homepage, Blog, Invisalign, Porcelain Veneers, Smile Gallery) are the practice's own
   Vimeo videos. They play when someone presses play. To add, remove or rename one, ask GYA (the list
   is in `data/videos.json`). Only show a patient video if that patient has agreed to it being on the
-  website.
+  website. On the Dental Videos page each video has a topic (Cosmetic, Invisalign, Implants, General
+  or About Us) for the filter buttons, and plays in a pop-up player that stops when it is closed.
+- **The page wording** on Dental Videos (heading, intro, "Watch and Learn" paragraph) is edited in the
+  dashboard under Pages > Dental Videos, like any other page.
 - **Health fund logos** (Health Funds page and under HICAPS on Prices and Payment Options) show a
   Preferred Provider badge for the funds named in Site Settings > Preferred funds.

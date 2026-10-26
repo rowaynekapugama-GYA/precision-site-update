@@ -244,21 +244,63 @@
   render();
 })();
 
-/* ---------- click-to-play practice videos (23 October 2026): the Vimeo player loads only on press ---------- */
+/* ---------- practice videos (23 and 26 October 2026): play in a pop-up player, filters on Dental Videos ---------- */
 (function(){
+  var modal=null, frameBox=null, titleEl=null, closeBtn=null, lastFocus=null;
+  function build(){
+    modal=document.createElement('div');
+    modal.className='video-modal'; modal.hidden=true;
+    modal.setAttribute('role','dialog'); modal.setAttribute('aria-modal','true'); modal.setAttribute('aria-labelledby','vmTitle');
+    modal.innerHTML='<div class="vm-backdrop" data-vm-close></div><div class="vm-box"><button type="button" class="vm-close" aria-label="Close video" data-vm-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button><div class="vm-frame"></div><p class="vm-title" id="vmTitle"></p></div>';
+    document.body.appendChild(modal);
+    frameBox=modal.querySelector('.vm-frame'); titleEl=modal.querySelector('.vm-title'); closeBtn=modal.querySelector('.vm-close');
+    modal.addEventListener('click',function(e){ if(e.target.closest('[data-vm-close]')) close(); });
+    modal.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){ e.preventDefault(); close(); return; }
+      if(e.key==='Tab'){ // keep the keyboard inside the player
+        var f=[closeBtn, frameBox.querySelector('iframe')].filter(Boolean);
+        var i=f.indexOf(document.activeElement);
+        if(e.shiftKey && i<=0){ e.preventDefault(); f[f.length-1].focus(); }
+        else if(!e.shiftKey && i===f.length-1){ e.preventDefault(); f[0].focus(); }
+      }
+    });
+  }
+  function open(id,title,from){
+    if(!modal) build();
+    lastFocus=from||document.activeElement;
+    var f=document.createElement('iframe');
+    f.src='https://player.vimeo.com/video/'+id+'?autoplay=1&dnt=1&title=0&byline=0&portrait=0';
+    f.title=title||'Video'; f.allow='autoplay; fullscreen; picture-in-picture'; f.setAttribute('allowfullscreen','');
+    frameBox.innerHTML=''; frameBox.appendChild(f);
+    titleEl.textContent=title||'';
+    modal.hidden=false; document.documentElement.classList.add('vm-open');
+    requestAnimationFrame(function(){ modal.classList.add('is-in'); closeBtn.focus(); });
+    if(window.dataLayer)window.dataLayer.push({event:'video_play',video_id:id,video_title:title||''});
+  }
+  function close(){
+    if(!modal||modal.hidden)return;
+    frameBox.innerHTML=''; // removing the player stops the video
+    modal.classList.remove('is-in'); modal.hidden=true; document.documentElement.classList.remove('vm-open');
+    if(lastFocus&&lastFocus.focus)lastFocus.focus();
+  }
   document.addEventListener('click',function(e){
     var btn=e.target.closest&&e.target.closest('.lite-video .lv-btn');
     if(!btn)return;
     var fig=btn.closest('.lite-video'); var id=fig&&fig.getAttribute('data-vimeo');
     if(!id||!/^\d+$/.test(id))return;
-    var f=document.createElement('iframe');
-    f.src='https://player.vimeo.com/video/'+id+'?autoplay=1&dnt=1&title=0&byline=0&portrait=0';
-    f.title=btn.getAttribute('aria-label')||'Video';
-    f.allow='autoplay; fullscreen; picture-in-picture';
-    f.setAttribute('allowfullscreen','');
-    f.className='lv-frame';
-    btn.replaceWith(f);
-    fig.classList.add('is-playing');
-    if(window.dataLayer)window.dataLayer.push({event:'video_play',video_id:id});
+    e.preventDefault();
+    open(id, fig.getAttribute('data-title')||btn.getAttribute('aria-label'), btn);
   });
+  // filters on the Dental Videos page
+  var chips=[].slice.call(document.querySelectorAll('[data-vfilter]'));
+  if(chips.length){
+    var cards=[].slice.call(document.querySelectorAll('.video-library .lite-video'));
+    chips.forEach(function(ch){
+      ch.addEventListener('click',function(){
+        var name=ch.getAttribute('data-vfilter');
+        cards.forEach(function(c){ c.hidden = !(name==='All' || c.getAttribute('data-cat')===name); });
+        chips.forEach(function(o){ var on=o===ch; o.classList.toggle('is-on',on); o.setAttribute('aria-pressed',on?'true':'false'); });
+      });
+    });
+  }
 })();
