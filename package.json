@@ -1,6 +1,6 @@
 {
   "name": "precision-dental-site",
-  "version": "3.6.2",
+  "version": "3.7.0",
   "description": "Precision Dental website (static) with the GYA client dashboard at /admin.",
   "private": true,
   "type": "module",
@@ -23,7 +23,8 @@
     "typecheck": "tsc --noEmit",
     "qa:parity": "tsx scripts/qa/parity.ts",
     "qa:banned": "node scripts/qa/banned.mjs",
-    "qa:secrets": "node scripts/qa/secrets.mjs"
+    "qa:secrets": "node scripts/qa/secrets.mjs",
+    "qa:editor": "tsx scripts/qa/editable-parity.ts"
   },
   "dependencies": {
     "@dnd-kit/core": "6.3.1",

@@ -308,3 +308,53 @@ body.pd { font-family: var(--pd-font); font-size: 14px; line-height: 1.5; color:
   .tabs { overflow-x: auto; }
   .pd-head { gap: 8px; }
 }
+
+/* ------------------------------------------------------------ visual page editor (Coastal Dental layout, 29 Oct 2026) */
+body.pe-full .pd-wrap { max-width: none; }
+body.pe-full .pd-main { padding-bottom: 16px; padding-top: calc(var(--pd-top) + 16px); }
+.pe { display: flex; flex-direction: column; height: calc(100vh - var(--pd-top) - 32px); min-height: 560px; }
+.pe-bar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 0 0 12px; }
+.pe-title { flex: 1; min-width: 180px; font-size: 19px !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pe-seg { display: inline-flex; background: #e6e9ed; border-radius: 999px; padding: 3px; }
+.pe-seg button { border: 0; background: none; padding: 6px 14px; border-radius: 999px; font-size: 13.5px; color: var(--pd-muted); cursor: pointer; font-weight: 500; }
+.pe-seg button.on { background: #fff; color: var(--pd-text); font-weight: 600; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.pe-status { color: var(--pd-muted); font-size: 13px; min-width: 112px; text-align: right; }
+.pe-status.warn { color: var(--pd-warn); font-weight: 600; }
+.pe-body { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 380px; border: 1px solid var(--pd-line); border-radius: var(--pd-radius); overflow: hidden; background: #fff; }
+.pe-stage { position: relative; min-height: 0; overflow: hidden; background: #e9ecef; display: flex; justify-content: center; }
+.pe-frame { height: 100%; overflow: hidden; background: #fff; }
+.pe-stage.mobile { padding: 14px 0; }
+.pe-stage.mobile .pe-frame { border-radius: 22px; box-shadow: 0 0 0 8px #1d2327, 0 18px 40px rgba(0,0,0,.25); }
+.pe-frame iframe { border: 0; display: block; transform-origin: 0 0; background: #fff; }
+.pe-loading { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); background: var(--pd-navy); color: #fff; font-size: 13px; padding: 6px 14px; border-radius: 999px; box-shadow: 0 6px 18px rgba(0,0,0,.2); pointer-events: none; }
+.pe-error { position: absolute; top: 12px; left: 12px; right: 12px; }
+.pe-panel { border-left: 1px solid var(--pd-line); display: flex; flex-direction: column; min-height: 0; background: #fff; }
+.pe-panel .tabs { margin: 0; padding: 0 12px; flex: none; }
+.pe-scroll { flex: 1; overflow-y: auto; padding: 16px; }
+.pe-tip { background: var(--pd-sky); border: 1px solid #b9dcee; color: #0d4f70; border-radius: var(--pd-radius); padding: 12px 14px; margin-bottom: 16px; }
+.pe-tip p { margin: 0 0 3px !important; }
+.pe-card { border: 2px solid var(--pd-blue); border-radius: var(--pd-radius); padding: 12px 14px; margin-bottom: 16px; background: #fff; }
+.pe-card-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.pe-card-head b { flex: none; }
+.pe-card-head .chip { overflow: hidden; text-overflow: ellipsis; max-width: 170px; }
+.pe-card-head .btn { margin-left: auto; font-size: 18px; line-height: 1; padding: 2px 8px; }
+.pe-card .slot { flex-direction: column; align-items: flex-start; }
+.pe-format { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.pe-h { font-size: 14px !important; margin: 4px 0 10px !important; }
+.pe-imgs { display: flex; flex-direction: column; gap: 8px; }
+.pe-img { display: flex; align-items: center; gap: 8px; border: 1px solid var(--pd-line); border-radius: var(--pd-radius); padding: 7px; }
+.pe-img.on { border-color: var(--pd-blue); box-shadow: 0 0 0 1px var(--pd-blue); }
+.pe-img .input { flex: 1; min-width: 0; padding: 6px 8px; font-size: 13px; }
+.pe-img .grow { flex: 1; }
+.pe-thumb { flex: none; width: 64px; height: 48px; border: 0; padding: 0; border-radius: 5px; overflow: hidden; background: #eef0f3; cursor: pointer; }
+.pe-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.btn.icon-only { padding: 5px 7px; }
+@media (max-width: 1280px) { .pe-body { grid-template-columns: minmax(0, 1fr) 330px; } }
+@media (max-width: 1024px) {
+  .pe { height: auto; }
+  .pe-body { grid-template-columns: 1fr; }
+  .pe-stage { height: 68vh; }
+  .pe-panel { border-left: 0; border-top: 1px solid var(--pd-line); }
+  .pe-scroll { max-height: none; }
+  .pe-status { min-width: 0; text-align: left; }
+}

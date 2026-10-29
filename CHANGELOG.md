@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-10-29 - v3.7.0: page editor laid out like Coastal Dental's
+
+Built on v3.6.2 (GitHub `main` 2e82461). The website itself does not change; only the dashboard's page editor.
+
+- **Edit on the page.** Opening a page in Pages now shows the page exactly as it looks on the website. Click any words to change them in place (headings, paragraphs, lists, questions and answers, button wording). Click any photo to replace it. Practice details such as the phone number are shaded and fill in from Site Settings, so they cannot be typed over by mistake.
+- **Panel on the right**, as on Coastal Dental:
+  - **Content:** what is selected (Bold, Italic, Link and Unlink for paragraphs that allow formatting; where a button goes; a photo's description, Choose from library, Upload, Put back the original photo), then every photo on the page with its description and Replace.
+  - **SEO:** unchanged.
+  - **Sections:** drag to reorder, hide or show, click to jump to a section, open a section as a form (the previous editor, for anything hard to click on the page).
+- **Top bar:** Pages, Desktop and Mobile preview, save status, View, Save changes (or Ctrl+S / Cmd+S), Publish website.
+- Clicking the menu, footer, team cards, blog list, offer, reviews band or price list form explains where that is changed. Links in the preview do not navigate away; forms in it do not send.
+- New: `src/render/editable.ts` (the page with every editable spot marked), `/admin/preview/edit` (signed-in only; section templates always come from the database, only words, photos, links, order and hidden state from the editor), `npm run qa:editor`.
+- Tested: all 60 pages show exactly as they go live (`qa:editor`: 3,424 editable words, 151 photos, 317 links); all 60 editors open in under a second; 29 of 29 browser checks (typing, saving, Ctrl+S, shaded practice details kept, photo replace and put back, descriptions, hide and show, section forms, mobile, FAQ questions with spaces, bold, shared Book Your Visit band, button links, menu clicks); no sideways scroll at 1366, 1024 and 768.
+- `docs/HOW-TO-UPDATE.md` updated for practice staff.
+- Version 3.7.0.
+
 ## 2026-10-28 - v3.6.2: dashboard page editor on staging
 
 Built on v3.6.1. No change to the website itself.

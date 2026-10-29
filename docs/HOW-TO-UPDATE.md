@@ -44,33 +44,43 @@ you sign in.
 
 ## Change the wording on a page
 
-1. Click **Pages** in the menu on the left.
-2. Find the page (use **Find a page** at the top) and click its name.
-3. Each part of the page is listed as a section, for example "Page header", "Why Choose Us" or
-   "Questions and answers". Click a section to open it.
-4. Change the words in the boxes. Headings, paragraphs, list items, button wording and links each
-   have their own box.
-5. Click **Save changes**, then **Preview** to see the page as it will look.
-6. When you are happy, click **Publish website**.
+1. Click **Pages** in the menu on the left, then click the page's name.
+2. The page opens as it looks on the website. Move the mouse over it: anything with a thin blue
+   outline can be changed.
+3. **Click the words and type.** Headings, paragraphs, list items, questions and answers and button
+   wording are all changed this way, straight on the page.
+4. Click **Save changes** at the top (or press Ctrl+S, Cmd+S on a Mac).
+5. When you are happy, click **Publish website**. The change is live within about two minutes.
 
-**Words in curly brackets**, like `{phone}` or `{booking-link}`, are filled in automatically from
-Site Settings. Leave them as they are. If the phone number changes, change it once in Site Settings,
-not on each page.
+**Desktop** and **Mobile** at the top switch between the computer and phone layouts. **View** opens
+the live page in a new tab.
 
-Some boxes allow bold, italic and links: select the words, then click **B**, **I** or **Link**.
+**Shaded words**, like the phone number, fill in automatically from Site Settings. They cannot be
+typed over on the page. If the phone number changes, change it once in Site Settings, not on each page.
+
+**Bold, italic and links:** some paragraphs allow formatting. Select the words, then use **Bold**,
+**Italic**, **Link** or **Unlink** in the panel on the right.
+
+**Where a button goes:** click the button's wording. The panel on the right shows **Link goes to**.
+A page on this website starts with /, for example /contact/.
+
+**Things that are not changed on the page:** the menu and footer (phone, address, hours and social
+links come from Site Settings), the team cards (Team), the blog list (Blog Posts), the before and
+after photos (Before & After), and the new patient offer, reviews band and price list form (Site
+Settings). Clicking one of these shows where it is changed.
 
 ---
 
 ## Swap a photo
 
-1. Open the page and the section with the photo.
-2. Under the photo, click **Choose from library** to use a photo you have already uploaded, or
-   **Upload** to add one from your computer.
-3. Fill in **Photo description (alt text)**: describe what is in the photo for someone who cannot
-   see it, for example "Dr Billy Choi explaining an X-ray to a patient".
+1. Open the page and **click the photo**, or use **Photos on this page** in the panel on the right.
+2. Click **Choose from library** to use a photo you have already uploaded, or **Upload** to add one
+   from your computer. In the list, **Replace** does the same.
+3. Fill in **Photo description**: describe what is in the photo for someone who cannot see it, for
+   example "Dr Billy Choi explaining an X-ray to a patient".
 4. **Save changes**, then **Publish website**.
 
-To undo, click **Put back the original photo**.
+To undo, click the photo, then **Put back the original photo**.
 
 Photos are resized and compressed automatically, so a photo straight from a phone or camera is fine.
 Only use photos the practice owns or has permission to use, and photos of patients only with their
@@ -80,12 +90,16 @@ written consent.
 
 ## Move or hide a section
 
-- **Move:** in the page's list of sections, drag the dotted handle on the left of a section up or
-  down. (On a keyboard: Tab to the handle, press Space, use the arrow keys, press Space again.)
-- **Hide:** click **Hide** on the section. It stays in the dashboard so you can show it again later.
+Open the **Sections** tab in the panel on the right.
+
+- **Move:** drag the dotted handle on the left of a section up or down. (On a keyboard: Tab to the
+  handle, press Space, use the arrow keys, press Space again.)
+- **Hide:** click the eye. The section leaves the page but stays in the list so you can show it again.
+- **Jump to a section:** click its name. Clicking it also opens it as a form, with a box for every
+  word, photo and link in it, including ones that are hard to click on the page.
 - The page header always stays at the top.
 
-**Save changes**, check with **Preview**, then **Publish website**.
+**Save changes**, then **Publish website**.
 
 ---
 

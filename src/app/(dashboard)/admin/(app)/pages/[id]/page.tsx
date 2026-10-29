@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { payloadClient, requireUser } from '@/dashboard/lib/server'
 import { PageEditor } from '@/dashboard/editors/PageEditor'
@@ -31,8 +30,6 @@ export default async function EditPage({ params }: { params: Promise<{ id: strin
   const ogId = doc.ogImageMedia && typeof doc.ogImageMedia === 'object' ? (doc.ogImageMedia as { id: number }).id : doc.ogImageMedia
   return (
     <>
-      <div className="pd-crumb"><Link href="/admin/pages">Pages</Link> &rsaquo; {String(doc.label)}</div>
-      <div className="pd-head"><div className="grow"><h1>{String(doc.label)}</h1><p className="pd-sub">{doc.url ? `precisiondentistry.com.au${doc.url}` : 'Shown when someone visits an address that does not exist'}</p></div></div>
       <PageEditor
         id={doc.id}
         label={String(doc.label)}

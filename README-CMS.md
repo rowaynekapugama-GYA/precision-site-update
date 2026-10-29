@@ -31,6 +31,10 @@ on a public page reads the database.
   its closest page (`data/legacy-redirects.json`), footer social links, enquiry form spam protection,
   16px form text on phones, keyboard and screen reader fixes, HSTS. See CHANGELOG.md and the audit
   report.
+- v3.7.0 (29 October 2026): the page editor works like Coastal Dental's. The page shows as it looks
+  on the website; click words to change them in place, click a photo to replace it; Content, SEO and
+  Sections tabs; Desktop and Mobile preview. Preview route `/admin/preview/edit`
+  (`src/render/editable.ts`); `npm run qa:editor` checks the editor shows every page exactly as it goes live.
 - v3.6.2 (28 October 2026): database migration for the Vercel Blob add-on (`_objectkey` column on
   Media and Documents). Fixes the page editor and Site Settings crashing once Blob is connected.
 
@@ -398,5 +402,5 @@ For GYA when writing the next release: add an update to `UPDATES` with a new id,
 | Blog footer link | Publishing a post adds it to /blog, the sitemap, Article schema and the footer link | The blog is already linked from the main menu (desktop and mobile) and the Patients menu; the approved footer has no blog link | Posts are added to /blog, both sitemaps and the schema automatically. No footer link was added, so the footer stays as approved. Say if you want one. |
 | Feature flags | Pre-opening, emergency, CDBS, Zip/Afterpay, countdown | Only Emergency dentistry has matching content (it removes the Emergency menu column when off) | The other switches are stored and labelled "not used on this website yet". |
 | Standard stack | New builds render pages with Next.js App Router components from the GYA Site Kit | This retrofit keeps the approved static HTML and generates it at build time; Next.js hosts the dashboard and API only | By the retrofit rule: keep every template and URL pixel for pixel, never rebuild. |
-| Page editor | This brief: collapsed sections with labels, drag to reorder, expand to edit | Built to this brief, with a Preview link on every page | Cronulla v2.2 moved to a click-on-the-page visual editor at Rowayne's request. Say if Precision should get that instead. |
+| Page editor | This brief: collapsed sections with labels, drag to reorder, expand to edit | Since v3.7.0 (29 October 2026) the click-on-the-page visual editor, laid out like Coastal Dental's, at Rowayne's request. The section forms are still there in its Sections tab | Done. |
 | Hero media consent | Patients in hero media need consent | Unchanged from the approved build | Still on the go-live list from the project brief. |
