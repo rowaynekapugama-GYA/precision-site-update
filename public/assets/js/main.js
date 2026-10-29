@@ -32,9 +32,25 @@
   var onScroll=function(){header.classList.toggle('scrolled',window.scrollY>24)};
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 
-  var mm=document.getElementById('mobileMenu');
-  document.getElementById('burger').addEventListener('click',function(){mm.classList.add('open');mm.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'});
-  document.getElementById('closeMenu').addEventListener('click',function(){mm.classList.remove('open');mm.setAttribute('aria-hidden','true');document.body.style.overflow=''});
+  var mm=document.getElementById('mobileMenu'), burger=document.getElementById('burger'), closeBtn=document.getElementById('closeMenu');
+  // keyboard support (pre-launch audit, 27 October 2026): focus moves into the menu, stays there, Esc closes it
+  function openMenu(){mm.classList.add('open');mm.setAttribute('aria-hidden','false');burger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';setTimeout(function(){closeBtn.focus()},50)}
+  function closeMenu(back){mm.classList.remove('open');mm.setAttribute('aria-hidden','true');burger.setAttribute('aria-expanded','false');document.body.style.overflow='';if(back)burger.focus()}
+  burger.setAttribute('aria-expanded','false'); burger.setAttribute('aria-controls','mobileMenu');
+  burger.addEventListener('click',openMenu);
+  closeBtn.addEventListener('click',function(){closeMenu(true)});
+  mm.addEventListener('click',function(e){if(e.target.closest('a[href]'))closeMenu(false)});
+  document.addEventListener('keydown',function(e){
+    if(!mm.classList.contains('open'))return;
+    if(e.key==='Escape'){e.preventDefault();closeMenu(true);return}
+    if(e.key==='Tab'){
+      var f=[].slice.call(mm.querySelectorAll('a[href],button,summary')).filter(function(x){return x.offsetParent!==null});
+      if(!f.length)return;
+      var i=f.indexOf(document.activeElement);
+      if(e.shiftKey&&i<=0){e.preventDefault();f[f.length-1].focus()}
+      else if(!e.shiftKey&&i===f.length-1){e.preventDefault();f[0].focus()}
+    }
+  });
 
   /* FAQ accordion (all answers stay in the DOM) */
   document.querySelectorAll('.faq-q').forEach(function(btn){
@@ -79,12 +95,19 @@
 (function(){
   var f=document.getElementById('enquiryForm'); if(!f)return;
   var s=document.getElementById('formStatus'), btn=document.getElementById('formSubmit');
+  // spam protection (pre-launch audit, 27 October 2026): a hidden box only bots fill in, and the time taken
+  var hp=document.createElement('div'); hp.setAttribute('aria-hidden','true');
+  hp.style.cssText='position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden';
+  hp.innerHTML='<label>Company <input type="text" name="company" tabindex="-1" autocomplete="off"></label>';
+  f.appendChild(hp);
+  var started=Date.now();
+  var ph=f.phone; ph.setAttribute('pattern','\\D*(\\d\\D*){8,}'); ph.setAttribute('title','Please enter a phone number with at least 8 digits');
   f.addEventListener('submit',function(e){
     e.preventDefault();
     if(!f.checkValidity()){f.reportValidity();return;}
     s.className='form-status';s.textContent='Sending your enquiry...';btn.disabled=true;
     fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({name:f.name.value,phone:f.phone.value,email:f.email.value,service:f.service.value,message:f.message.value})})
+      body:JSON.stringify({name:f.name.value,phone:f.phone.value,email:f.email.value,service:f.service.value,message:f.message.value,company:f.company.value,elapsed:Date.now()-started})})
       .then(function(r){return r.json().then(function(d){return {ok:r.ok,d:d}})})
       .then(function(res){
         if(res.ok){f.reset();s.className='form-status ok';s.textContent='Thank you. Your enquiry has been sent and our team will be in touch during opening hours.';}
@@ -270,7 +293,7 @@
     lastFocus=from||document.activeElement;
     var f=document.createElement('iframe');
     f.src='https://player.vimeo.com/video/'+id+'?autoplay=1&dnt=1&title=0&byline=0&portrait=0';
-    f.title=title||'Video'; f.allow='autoplay; fullscreen; picture-in-picture'; f.setAttribute('allowfullscreen','');
+    f.title=title||'Video'; f.allow='autoplay; fullscreen; picture-in-picture';
     frameBox.innerHTML=''; frameBox.appendChild(f);
     titleEl.textContent=title||'';
     modal.hidden=false; document.documentElement.classList.add('vm-open');

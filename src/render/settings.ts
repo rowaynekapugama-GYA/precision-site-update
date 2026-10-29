@@ -82,9 +82,11 @@ export function hoursSummary(hours: HoursDay[]): string {
     .join(' ')
 }
 
-/** (07) 3852 1160 -> 0738521160 */
+/** For tel: links, in international format so they dial from any phone: (07) 3852 1160 -> +61738521160 (pre-launch audit, 27 October 2026) */
 export function phoneDigits(phone: string): string {
-  return String(phone || '').replace(/[^\d+]/g, '')
+  const d = String(phone || '').replace(/[^\d+]/g, '')
+  if (/^0[2-478]\d{8}$/.test(d)) return '+61' + d.slice(1)
+  return d
 }
 
 /** (07) 3852 1160 -> +61 7 3852 1160, 0412 345 678 -> +61 412 345 678 */
@@ -226,6 +228,9 @@ export function practiceNode(s: Settings): Record<string, unknown> {
     '@id': ORIGIN + '/#practice',
     name: s.practiceName,
     url: ORIGIN + '/',
+    // a photo and the logo for Google's business details (pre-launch audit, 27 October 2026)
+    image: ORIGIN + '/assets/img/og-image.jpg',
+    logo: /^https?:\/\//.test(String(s.logo || '')) ? String(s.logo) : ORIGIN + (/^\//.test(String(s.logo || '')) ? String(s.logo) : '/assets/img/logo.png'),
     telephone: phoneIntl(s.phone),
     email: s.email,
     address: {

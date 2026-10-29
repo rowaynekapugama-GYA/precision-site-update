@@ -67,10 +67,10 @@
   "preferredFunds": "Bupa, HCF and CBHS",
   "paymentAccepted": "EFTPOS, Visa, Mastercard, American Express, Cash",
   "socials": {
-    "facebook": "",
-    "instagram": "",
-    "youtube": "",
-    "linkedin": "",
+    "facebook": "https://www.facebook.com/PrecisionDentalBrisbane",
+    "instagram": "https://www.instagram.com/precisiondentalau/",
+    "youtube": "https://www.youtube.com/user/PrecisionDentalTV",
+    "linkedin": "https://www.linkedin.com/company/precision-dental-fortitude-valley",
     "googleBusiness": "https://maps.google.com/?cid=17715398836985474154"
   },
   "colours": {

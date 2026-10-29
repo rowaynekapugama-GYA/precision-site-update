@@ -168,7 +168,7 @@
       "before": "\n",
       "altAuto": true,
       "alt": false,
-      "label": "Preferred Provider for {{site:preferredFunds}}",
+      "label": "Preferred Provider funds (set in Site Settings)",
       "pinned": false,
       "template": "<section class=\"body-section{{alt}}\"><div class=\"container split reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div></div></section>",
       "fields": [

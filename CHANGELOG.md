@@ -1,5 +1,41 @@
 # Changelog
 
+## 2026-10-28 - v3.6.2: dashboard page editor on staging
+
+Built on v3.6.1. No change to the website itself.
+
+- **Page editor crash fixed.** With Vercel Blob connected, every page in the dashboard (Pages) and Site Settings showed "Application error: a server-side exception has occurred". Blog posts still opened. The Blob storage add-on needs one extra database column on Media and Documents (`_objectkey`) that the earlier database migrations did not create, so every query that read media failed. New migration `20261028_004622_blob_object_key` adds it. The build runs it automatically; it is safe to run more than once and on a database that already has the column.
+- **Build reads the dashboard again.** The same missing column made the build's "content updates" and "pull" steps fail on staging, so the build fell back to the content saved in the repo. Both now read the database, so edits made in the dashboard reach the website on the next build.
+- No content reset is needed. Nothing in the database is changed apart from the two new empty columns.
+- Version 3.6.2.
+
+## 2026-10-27 - v3.6.1: pre-launch audit fixes
+
+Built on v3.6.0 (GitHub `main` 28fe0ce). Nothing in the approved design changed. The audit report lists what was checked and what still needs a decision. Content update `2026-10-27-prelaunch-audit` makes the dashboard changes in the database once, on the next build.
+
+- **Old website addresses (301).** 52 pages and articles from the current precisiondentistry.com.au, its WordPress category pages, the testimonial pages and the old gallery plugin pages returned "page not found". They now redirect permanently to the closest page (`data/legacy-redirects.json`, read by `next.config.mjs`):
+  - retired articles go to the newer article on the same topic, or to the blog;
+  - patient makeover and clinical case posts go to the Smile Gallery;
+  - categories go to the blog, Dental Videos or the Smile Gallery;
+  - testimonial pages go to About Us.
+
+  All 1,041 old addresses tested (with and without the trailing slash) now load in one step. Redirects are 301, including the dashboard's own Redirects (were 308 and 307).
+- **Social media links.** The footer icons linked to "#". They now go to the practice's profiles as listed on the current website (Facebook, Instagram, YouTube, LinkedIn), set in Site Settings. An icon with no address set is now left out instead of linking to "#".
+- **Links.** Links to other websites open in a new tab with `rel="noopener noreferrer"` (the footer Google icon opened in the same tab). Phone links use the international format (`tel:+61738521160`) so they dial from any phone.
+- **Enquiry form.** It now has spam protection: a hidden box that only bots fill in, and a minimum time to fill in the form. Phone numbers need at least 8 digits, checked in the browser and on the server.
+- **Phones and tablets.** Form fields use 16px text up to 1024px wide, so iOS no longer zooms in when a field is tapped (was 15.2px).
+- **Accessibility.**
+  - A "Skip to main content" link appears when you press Tab.
+  - The phone menu moves focus into the menu, keeps the keyboard inside it, closes with Esc and returns focus to the menu button.
+  - Video play buttons and the Google reviews link have accessible names that include their visible text.
+  - Footer column headings read as level 2.
+  - The phone and booking bar at the bottom of the screen is a labelled region.
+- **Security headers.** HSTS (`max-age=63072000`, no subdomains) and `frame-ancestors 'self'` added to every response.
+- **SEO.** The Dentist schema now has an `image` and a `logo`. The copyright year is in the page HTML, not only added by the script. `/favicon.ico` added (browsers and crawlers ask for it; it returned 404).
+- **Dashboard.** Section labels no longer mention `data/videos.json` or show a `{{site:...}}` code.
+- **Contact page.** The virtual tour no longer sets both `allowfullscreen` and `allow="fullscreen"` (browser warning).
+- Version 3.6.1.
+
 ## 2026-10-26 - v3.6.0: Dental Videos page
 
 Built on v3.5.0 (GitHub `main` 5551099). Content update `2026-10-26-dental-videos` makes the same changes in the dashboard database on the next build, without touching anything else the practice has edited.

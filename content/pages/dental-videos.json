@@ -116,7 +116,7 @@
       "alt": false,
       "pinned": false,
       "ref": "videos-library",
-      "label": "Dental videos (the list comes from data/videos.json)",
+      "label": "Dental videos (the videos are set up by GYA)",
       "template": "<section class=\"body-section{{alt}} video-section\" id=\"videos\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div>{{site:videosLibrary}}</div></section>",
       "fields": [
         {

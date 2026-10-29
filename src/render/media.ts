@@ -51,7 +51,7 @@ export function videoCard(v: Video, withSummary = false): string {
   const anchor = withSummary && v.slug && /^[a-z0-9-]+$/.test(v.slug) ? ` id="${attr(v.slug)}"` : ''
   const cat = withSummary && v.category ? ` data-cat="${attr(v.category)}"` : ''
   return `<figure class="lite-video"${anchor}${cat} data-vimeo="${attr(v.id)}" data-title="${attr(v.title)}">` +
-    `<button type="button" class="lv-btn" aria-label="Play video: ${attr(v.title)}">` +
+    `<button type="button" class="lv-btn" aria-label="Play video: ${attr(v.title)}${v.duration ? `, ${mmss(v.duration)}` : ''}">` +
     (v.poster ? `<img src="${attr(v.poster)}" alt="" width="640" height="360" loading="lazy" decoding="async" onerror="this.remove()">` : '') +
     `<span class="lv-icon">${PLAY}</span>` +
     (v.duration ? `<span class="lv-time">${mmss(v.duration)}</span>` : '') +

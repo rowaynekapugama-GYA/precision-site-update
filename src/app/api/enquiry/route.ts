@@ -48,6 +48,14 @@ export async function POST(req: Request) {
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
     return json(400, { error: 'Please check the email address.' })
   }
+  if (phone.replace(/\D/g, '').length < 8) {
+    return json(400, { error: 'Please check the phone number.' })
+  }
+  // spam protection (pre-launch audit, 27 October 2026): the hidden "company" box is only filled in by
+  // bots, and nobody fills in the form in under two seconds. Say thanks and drop it.
+  if (String(body.company ?? '').trim() || (body.elapsed !== undefined && Number(body.elapsed) < 2000)) {
+    return json(200, { ok: true })
+  }
 
   let page = ''
   try { page = new URL(req.headers.get('referer') || '').pathname } catch { /* no referrer */ }

@@ -1000,3 +1000,36 @@ UPDATES.push({
     return done
   },
 })
+
+// ---------------------------------------------------------------- 27 October 2026: pre-launch audit
+// Dashboard labels in plain English (no file names or code tokens), and the practice's social media
+// profiles from the footer of the current precisiondentistry.com.au (the footer icons linked to "#").
+export const SOCIALS = {
+  facebook: 'https://www.facebook.com/PrecisionDentalBrisbane',
+  instagram: 'https://www.instagram.com/precisiondentalau/',
+  youtube: 'https://www.youtube.com/user/PrecisionDentalTV',
+  linkedin: 'https://www.linkedin.com/company/precision-dental-fortitude-valley',
+}
+
+UPDATES.push({
+  id: '2026-10-27-prelaunch-audit',
+  description: 'Plain-English section labels in the dashboard; social media links from the current website',
+  apply(c) {
+    const done: string[] = []
+    for (const p of c.pages) {
+      for (const s of p.sections || []) {
+        const label = s.label || ''
+        let next = label
+          .replace(' (videos come from data/videos.json)', ' (the videos are set up by GYA)')
+          .replace(' (the list comes from data/videos.json)', ' (the videos are set up by GYA)')
+        if (next === 'Preferred Provider for {{site:preferredFunds}}') next = 'Preferred Provider funds (set in Site Settings)'
+        if (next !== label) { s.label = next; done.push(`${p.key}: section label "${next}"`) }
+      }
+    }
+    const soc = c.settings.socials as unknown as Record<string, string>
+    for (const [k, v] of Object.entries(SOCIALS)) {
+      if (!String(soc[k] || '').trim()) { soc[k] = v; done.push(`settings: ${k} link`) }
+    }
+    return done
+  },
+})

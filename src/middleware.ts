@@ -32,7 +32,7 @@ export async function middleware(req: NextRequest) {
   const r = REDIRECTS.get(withSlash) || REDIRECTS.get(p)
   if (r) {
     const dest = /^https?:\/\//i.test(r.to) ? r.to : new URL(r.to, url.origin).toString()
-    return NextResponse.redirect(dest, r.permanent ? 308 : 307)
+    return NextResponse.redirect(dest, r.permanent ? 301 : 302)
   }
 
   if (/\.html$/i.test(p)) {

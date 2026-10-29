@@ -152,7 +152,7 @@ export function offerPopup(s: Settings): string {
     `<div class="om-dialog" role="dialog" aria-modal="true" aria-labelledby="offerPopTitle" aria-describedby="offerPopInc" tabindex="-1">` +
     `<button class="om-x" type="button" aria-label="Close this offer" data-pop-close>${ICON_X}</button>` +
     `<div class="om-main">` +
-    `<img class="om-logo" src="${attr(s.logo)}" alt="${esc(s.practiceName)}" width="200" height="52">` +
+    `<img class="om-logo" src="${attr(s.logo)}" alt="${esc(s.practiceName)}" width="113" height="52">` +
     `<h2 class="om-title" id="offerPopTitle">${splitTitle(s.offer.title)}</h2>` +
     `<p class="om-inc-label">Includes</p>` +
     `<ul class="om-list" id="offerPopInc">${inclusionList(s).map((i) => `<li>${ICON_CHECK}<span>${esc(i)}</span></li>`).join('')}</ul>` +
@@ -215,7 +215,8 @@ export function reviewsBand(s: Settings): string {
   const rating = Number(String(r.rating || '').replace(',', '.'))
   const hasRating = rating > 0 && rating <= 5
   const shown = hasRating ? rating.toFixed(1) : ''
-  const label = `${num ? `Over ${num}` : raw} Google reviews${hasRating ? `, rated ${shown} out of 5` : ''}. Opens Google in a new tab.`
+  // screen readers get one clear sentence; the words on screen are unchanged (pre-launch audit, 27 October 2026)
+  const label = `${num ? `Over ${num}` : raw} Google reviews${hasRating ? `, rated ${shown} out of 5` : ''}. See our reviews on Google (opens in a new tab).`
   const brand = r.logo
     ? `<img class="gr-logo" src="${attr(r.logo)}" alt="Google" width="240" height="80">`
     : `<span class="gr-word">Google</span>`
@@ -224,10 +225,10 @@ export function reviewsBand(s: Settings): string {
     : ''
   return `<section class="gr-band" id="google-reviews" aria-label="Google reviews">` +
     `<div class="gr-bg" aria-hidden="true"><img src="${REVIEWS_BG}" alt="" width="1400" height="933" loading="lazy"></div>` +
-    `<div class="container"><a class="gr-link reveal" href="${attr(reviewsUrl(s))}" target="_blank" rel="noopener" aria-label="${esc(label)}">` +
-    `<span class="gr-count">${num ? `<small>Over</small><b>${esc(num)}</b>` : `<b class="gr-count-text">${esc(raw)}</b>`}</span>` +
-    `<span class="gr-brand">${brand}<span class="gr-sub">Reviews ${stars}</span></span>` +
-    `<span class="gr-cta">See our reviews on Google <span class="arr" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>` +
+    `<div class="container"><a class="gr-link reveal" href="${attr(reviewsUrl(s))}" target="_blank" rel="noopener"><span class="sr-only">${esc(label)}</span>` +
+    `<span class="gr-count" aria-hidden="true">${num ? `<small>Over</small><b>${esc(num)}</b>` : `<b class="gr-count-text">${esc(raw)}</b>`}</span>` +
+    `<span class="gr-brand" aria-hidden="true">${brand}<span class="gr-sub">Reviews ${stars}</span></span>` +
+    `<span class="gr-cta" aria-hidden="true">See our reviews on Google <span class="arr" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>` +
     `</a></div></section>`
 }
 
@@ -248,7 +249,7 @@ export function priceListForm(s: Settings): string {
     // once the details are in, the visitor can open the PDF straight away as well. The page never
     // carries the PDF's address: /api/price-list returns it only after a valid request (20 Oct 2026)
     `<div class="pl-thanks" hidden data-pl-thanks><p>${esc(p.thankYou || DEFAULTS.priceList.thankYou)}</p>` +
-    `<a class="btn btn-blue pl-pdf" hidden target="_blank" rel="noopener" data-pl-pdf>Open the price list (PDF) ${ICON_ARR}</a></div>` +
+    `<a class="btn btn-blue pl-pdf" href="/price-list/" hidden target="_blank" rel="noopener" data-pl-pdf>Open the price list (PDF) ${ICON_ARR}</a></div>` +
     `<div class="full"><button class="btn btn-dark" type="submit" data-pl-submit>${esc(p.buttonLabel || DEFAULTS.priceList.buttonLabel)} ${ICON_ARR}</button></div>` +
     `</form>`
 }

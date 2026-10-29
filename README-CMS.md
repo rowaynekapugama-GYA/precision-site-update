@@ -27,6 +27,24 @@ on a public page reads the database.
   site's Dental Videos category, topic filters and a pop-up player; Blog is now a menu (Dental Articles,
   Dental Videos); Dental Videos in the footer and sitemaps; 14 related blog posts link to their video;
   old video addresses and `/category/dental-videos/` redirect to the page.
+- v3.6.1 (27 October 2026): pre-launch audit fixes. Every old website address now redirects (301) to
+  its closest page (`data/legacy-redirects.json`), footer social links, enquiry form spam protection,
+  16px form text on phones, keyboard and screen reader fixes, HSTS. See CHANGELOG.md and the audit
+  report.
+- v3.6.2 (28 October 2026): database migration for the Vercel Blob add-on (`_objectkey` column on
+  Media and Documents). Fixes the page editor and Site Settings crashing once Blob is connected.
+
+### Old website addresses
+
+`data/legacy-redirects.json` lists every address from the old WordPress site that has no page at the same
+address on this site, and where it goes. `next.config.mjs` turns it into permanent (301) redirects, so they
+work on every deployment without the database. The practice adds any new redirects in the dashboard
+(Redirects); those are kept in the database and applied by `src/middleware.ts`.
+
+### Build settings on Vercel
+
+Framework preset: Next.js (detected; `vercel.json` sets it). Install command `npm ci`, build command
+`npm run build`, output directory: the Next.js default (`.next`). No other settings are needed.
 
 ---
 

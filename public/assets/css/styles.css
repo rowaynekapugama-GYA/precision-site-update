@@ -1273,3 +1273,9 @@ html.vm-open{overflow:hidden}
 @media(max-width:620px){.video-modal{padding:12px}.vm-close{top:-50px}}
 @media(prefers-reduced-motion:reduce){.video-modal,.vm-box{transition:none}}
 .post-video-link{margin-top:22px;padding:14px 18px;border-left:4px solid var(--blue-500);border-radius:0 var(--r-md,12px) var(--r-md,12px) 0;background:var(--sky-50)}
+/* Pre-launch audit (27 October 2026): form text at 16px on phones and tablets, so iOS does not zoom in on the field */
+@media(max-width:1024px){.field input,.field select,.field textarea{font-size:16px}}
+/* Pre-launch audit (27 October 2026): skip link, shown only when it has keyboard focus */
+.skip-link{position:absolute;left:12px;top:-60px;z-index:2000;padding:10px 16px;border-radius:999px;background:var(--navy);color:#fff;font-weight:600;transition:top .2s}
+.skip-link:focus{top:12px;outline:3px solid var(--blue-400);outline-offset:2px}
+main#main:focus{outline:none}

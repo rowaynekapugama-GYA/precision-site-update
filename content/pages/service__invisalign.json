@@ -352,7 +352,7 @@
       "alt": false,
       "pinned": false,
       "ref": "videos-invisalign",
-      "label": "Invisalign Smile Makeover Videos (videos come from data/videos.json)",
+      "label": "Invisalign Smile Makeover Videos (the videos are set up by GYA)",
       "template": "<section class=\"body-section{{alt}} video-section\" id=\"videos\"><div class=\"container reveal\"><h2>{{f1}}</h2><div class=\"prose\"><p>{{f2}}</p></div>{{site:videosInvisalign}}</div></section>",
       "fields": [
         {

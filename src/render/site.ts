@@ -58,14 +58,66 @@ export function robotsTxt(): string {
 export function renderSite(content: Content): Map<string, string> {
   const ctx = makeCtx(content)
   const out = new Map<string, string>()
-  for (const pg of content.pages) out.set(pg.file, renderPage(pg, ctx))
+  for (const pg of content.pages) out.set(pg.file, externalLinks(renderPage(pg, ctx)))
   for (const p of content.posts) {
     if (!isLive(p)) continue
-    out.set(`${p.slug}.html`, renderPost(p, ctx))
+    out.set(`${p.slug}.html`, externalLinks(renderPost(p, ctx)))
   }
   out.set('sitemap.xml', sitemapXml(content))
   out.set('robots.txt', robotsTxt())
   return out
+}
+
+const OWN_HOST = /^https?:\/\/(www\.)?precisiondentistry\.com\.au(\/|$)/i
+
+/**
+ * Links to other websites open in a new tab with rel="noopener noreferrer" (pre-launch audit,
+ * 27 October 2026). Applied to the finished HTML, so page content, posts and the header and
+ * footer are covered whether they come from the dashboard or the repo.
+ */
+export function externalLinks(html: string): string {
+  // accessibility (pre-launch audit, 27 October 2026): a skip link to the main content, the footer column
+  // headings read as level 2 (they follow the page's h2s), and the phone bar at the bottom is a labelled region
+  if (!html.includes('class="skip-link"')) html = html.replace(/<body([^>]*)>/, '<body$1>\n<a class="skip-link" href="#main">Skip to main content</a>')
+  html = html.replace(/<main>/, '<main id="main">')
+  // where a page goes straight from its h1 to h3s (the blog list, the sitemap), those h3s read as level 2
+  const h1 = html.indexOf('<h1')
+  if (h1 > 0) {
+    const firstH2 = html.indexOf('<h2', h1)
+    const end = firstH2 > 0 ? firstH2 : html.indexOf('<footer')
+    if (end > h1) {
+      const mid = html.slice(h1, end)
+      if (/<h3>/.test(mid)) html = html.slice(0, h1) + mid.replace(/<h3>/g, '<h3 role="heading" aria-level="2">') + html.slice(end)
+    }
+  }
+  const foot = html.indexOf('<footer')
+  if (foot > 0) html = html.slice(0, foot) + html.slice(foot).replace(/<h4>/g, '<h4 role="heading" aria-level="2">')
+  // the copyright year is in the page itself, not only added by the script
+  html = html.replace('<span id="year"></span>', `<span id="year">${new Date().getFullYear()}</span>`)
+  html = html.replace('<div class="sticky-bar">', '<div class="sticky-bar" role="region" aria-label="Call or book online">')
+  // an iframe whose allow list already grants fullscreen does not also need allowfullscreen (browsers warn about it)
+  // a social icon with no profile address set in Site Settings is left out rather than linking to "#"
+  html = html.replace(/\s*<a href="#" aria-label="(Facebook|Instagram|YouTube|LinkedIn|Google Business Profile)">[\s\S]*?<\/a>/g, '')
+  // "Learn more" buttons say what they are about to screen readers and search engines (the words on screen are unchanged)
+  html = html.replace(/(<h3>((?:(?!<\/h3>)[\s\S]){3,160})<\/h3>(?:(?!<h3>)[\s\S]){0,2500}?<a class="btn btn-white" href="[^"]*">)Learn more( <span class="arr">)/g,
+    (_m, before: string, heading: string, after: string) => {
+      const words = heading.replace(/<sup>[\s\S]*?<\/sup>/g, '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()
+      return `${before}Learn more<span class="sr-only"> about ${words}</span>${after}`
+    })
+  // the virtual tour's "web-share" permission is not recognised by current browsers and logs a warning
+  html = html.replace(/(<iframe\b[^>]*\sallow="[^"]*?)\s*web-share;?/g, '$1')
+  html = html.replace(/<iframe\b[^>]*>/g, (tag) => /\sallow="[^"]*fullscreen/.test(tag) ? tag.replace(/\sallowfullscreen(="[^"]*")?/, '') : tag)
+  return html.replace(/<a\b[^>]*>/g, (tag) => {
+    const href = /\shref="([^"]*)"/.exec(tag)?.[1] ?? ''
+    if (!/^https?:\/\//i.test(href) || OWN_HOST.test(href)) return tag
+    let t = tag
+    if (!/\starget=/.test(t)) t = t.replace(/^<a\b/, '<a target="_blank"')
+    const rel = /\srel="([^"]*)"/.exec(t)
+    const want = new Set([...(rel ? rel[1].split(/\s+/).filter(Boolean) : []), 'noopener', 'noreferrer'])
+    const value = [...want].join(' ')
+    t = rel ? t.replace(rel[0], ` rel="${value}"`) : t.replace(/^<a\b/, `<a rel="${value}"`)
+    return t
+  })
 }
 
 /** Every public address, for the middleware's 404 decision. */

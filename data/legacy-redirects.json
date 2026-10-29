@@ -1,0 +1,255 @@
+{
+  "_note": "Old precisiondentistry.com.au addresses (WordPress, Yoast sitemaps read 27 October 2026) that have no page at the same address on the new site, with the page each one now goes to. Read by next.config.mjs. The practice adds its own redirects in the dashboard (Redirects).",
+  "exact": [
+    {
+      "from": "/anxiety-control-pain-management",
+      "to": "/service/anxious-patients/"
+    },
+    {
+      "from": "/department-of-veterans-affairs",
+      "to": "/health-funds/#dva"
+    },
+    {
+      "from": "/high-grade-filtered-water",
+      "to": "/exceptional-infection-control/"
+    },
+    {
+      "from": "/location-parking",
+      "to": "/contact/"
+    },
+    {
+      "from": "/your-first-visit",
+      "to": "/new-patients/"
+    },
+    {
+      "from": "/terms-and-conditions",
+      "to": "/disclaimer/"
+    },
+    {
+      "from": "/instagram-links",
+      "to": "/"
+    },
+    {
+      "from": "/book-an-appointment",
+      "to": "/contact/"
+    },
+    {
+      "from": "/appointments",
+      "to": "/contact/"
+    },
+    {
+      "from": "/gallery",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/work-ethic-our-philosophy",
+      "to": "/about-us/"
+    },
+    {
+      "from": "/service/preventative-care",
+      "to": "/service/preventive-care-for-adults/"
+    },
+    {
+      "from": "/dentist-in-fortitude-valley-qld",
+      "to": "/"
+    },
+    {
+      "from": "/service",
+      "to": "/service/general-treatments/"
+    },
+    {
+      "from": "/service/smile-makeover",
+      "to": "/service/cosmetic-dentistry/"
+    },
+    {
+      "from": "/my-supercare",
+      "to": "/price-list/"
+    },
+    {
+      "from": "/patient-journeys",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/payment-systems",
+      "to": "/price-list/"
+    },
+    {
+      "from": "/preferred-providers",
+      "to": "/health-funds/"
+    },
+    {
+      "from": "/dipi_popup_maker/price-list-download-gf",
+      "to": "/price-list/"
+    },
+    {
+      "from": "/5-tips-to-keep-teeth-healthy-over-the-holidays-from-precision-dental",
+      "to": "/oral-hygiene-tips-for-the-holidays-from-your-fortitude-valley-dentist/"
+    },
+    {
+      "from": "/be-mouthproud-world-oral-health-day-2022-tips-from-precision-dental",
+      "to": "/blog/"
+    },
+    {
+      "from": "/covid-19-update-announcing-eased-dental-restrictions-from-27-april-2020",
+      "to": "/blog/"
+    },
+    {
+      "from": "/dental-insurance-4-reasons-to-use-it-before-new-year",
+      "to": "/dental-insurance-benefits-use-it-or-lose-it-precision-dental/"
+    },
+    {
+      "from": "/dental-resolutions-for-2022-precision-dental",
+      "to": "/blog/"
+    },
+    {
+      "from": "/dental-health-week-2021-keep-your-smile-for-life-precision-dental",
+      "to": "/blog/"
+    },
+    {
+      "from": "/dentist-fortitude-valley-tips-dental-insurance-use-it-or-lose-it",
+      "to": "/dental-insurance-benefits-use-it-or-lose-it-precision-dental/"
+    },
+    {
+      "from": "/how-long-will-dental-crowns-last-answers-from-precision-dental",
+      "to": "/how-long-do-dental-crowns-last/"
+    },
+    {
+      "from": "/national-cabinet-approves-the-move-to-level-1-restrictions",
+      "to": "/blog/"
+    },
+    {
+      "from": "/stop-the-spread-of-covid-19-a-simple-guide-from-precision-dental",
+      "to": "/blog/"
+    },
+    {
+      "from": "/world-oral-health-day-2020-lets-unite-for-mouth-health-dentist-fortitude-valley",
+      "to": "/blog/"
+    },
+    {
+      "from": "/bad-breath-solutions-in-fortitude-valley",
+      "to": "/the-causes-and-treatment-for-bad-breath/"
+    },
+    {
+      "from": "/world-no-tobacco-day-2021-in-fortitude-valley-commit-to-quit",
+      "to": "/top-5-reasons-to-quit-smoking-now-from-your-fortitude-valley-dentist/"
+    },
+    {
+      "from": "/world-no-tobacco-day-2019-observe-it-with-precision-dental",
+      "to": "/top-5-reasons-to-quit-smoking-now-from-your-fortitude-valley-dentist/"
+    },
+    {
+      "from": "/how-to-overcome-your-dental-fear",
+      "to": "/fear-of-the-dentist-how-to-transcend-dental-anxiety/"
+    },
+    {
+      "from": "/carmi-of-brisbanes-invisalign-makeover",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/peter-of-fortitude-valleys-dental-crowns-makeover",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/jessa-of-fortitude-valleys-invisalign-makeover",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/casey-of-melbournes-composite-veneers-makeover",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/ana-of-fortitude-valleys-porcelain-veneer-makeover",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/reubin-of-luchwyes-porcelain-veneers-makeover",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/mia-of-fortitude-valleys-invisalign-crown-and-bridge-makeover",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/emma-of-teneriffes-dental-crown-makeover",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/brandon-of-fortitude-valleys-dental-crowns-and-bridges-makeover",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/dental-implant-rehabilitation-clinical-case-in-redland-bay",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/porcelain-veneer-rehabilitation-clinical-case-in-northgate",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/clear-aligner-orthodontics-clinical-case-in-murarrie",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/full-mouth-rehabilitation-clinical-case-in-slacks-creek",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/anterior-crown-and-bridge-restoration-clinical-case-in-fortitude-valley",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/clear-aligner-therapy-clinical-case-in-brisbane",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/full-mouth-rehabilitation-clinical-case-in-fortitude-valley",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/clear-aligner-crowding-treatment-clinical-case-in-brisbane",
+      "to": "/smile-gallery/"
+    }
+  ],
+  "patterns": [
+    {
+      "from": "/category/dental-videos/:slug",
+      "to": "/dental-videos/"
+    },
+    {
+      "from": "/category/dental-articles/:path*",
+      "to": "/blog/"
+    },
+    {
+      "from": "/category/patient-journey/:path*",
+      "to": "/smile-gallery/"
+    },
+    {
+      "from": "/category/:slug",
+      "to": "/blog/"
+    },
+    {
+      "from": "/blog/page/:n",
+      "to": "/blog/"
+    },
+    {
+      "from": "/page/:n",
+      "to": "/blog/"
+    },
+    {
+      "from": "/testimonials/:path*",
+      "to": "/about-us/"
+    },
+    {
+      "from": "/b3m_testimonial_category/:path*",
+      "to": "/about-us/"
+    },
+    {
+      "from": "/b3m_testimonial_tag/:path*",
+      "to": "/about-us/"
+    },
+    {
+      "from": "/dipi_media_category/:path*",
+      "to": "/smile-gallery/"
+    }
+  ]
+}
