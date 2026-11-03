@@ -31,6 +31,8 @@ on a public page reads the database.
   its closest page (`data/legacy-redirects.json`), footer social links, enquiry form spam protection,
   16px form text on phones, keyboard and screen reader fixes, HSTS. See CHANGELOG.md and the audit
   report.
+- v3.7.1 (3 November 2026): both forms email reception (admin@precisiondentistry.com.au), with
+  rowayne@gyaclients.com in CC.
 - v3.7.0 (29 October 2026): the page editor works like Coastal Dental's. The page shows as it looks
   on the website; click words to change them in place, click a photo to replace it; Content, SEO and
   Sections tabs; Desktop and Mobile preview. Preview route `/admin/preview/edit`
@@ -285,7 +287,7 @@ npm run render && npm run dev # http://localhost:3000 and http://localhost:3000/
 1. The visitor fills in first name, last name, email, mobile (Australian mobile, checked in the browser
    and on the server) and ticks consent. A hidden field catches bots.
 2. `POST /api/price-list` (`src/app/api/price-list/route.ts`):
-   - emails the lead to `SMILEOX_INTAKE_EMAIL`, reception and rowayne@gyaclients.com through SMTP2GO,
+   - emails the lead to `SMILEOX_INTAKE_EMAIL` and reception, with rowayne@gyaclients.com in CC, through SMTP2GO,
      subject `Price List Download: <name>`, one `Label: value` per line: names, email, mobile,
      `Tag: Price List Download`, `Lead source` (for example `google / cpc`), the form and page, every
      UTM tag and click ID present (gclid, gbraid, wbraid, fbclid, msclkid), the landing page, the
@@ -391,7 +393,7 @@ For GYA when writing the next release: add an update to `UPDATES` with a new id,
 | **v3.1.0: before and after photos** | Consent, unedited, consistent lighting, risk statement | Galleries ready and invisible; the existing Smile Gallery (87 cases) is unchanged | When the photos arrive, add them under Before & After. The Smile Gallery cases could be reused once consent for each is confirmed. |
 | **v3.1.0: treatment pages** | Pending Dr Choi's review | Unchanged | Revisions to follow. |
 | **v3.1.0: footer price list button** | "Clicking opens a form" | On the three pages with the form it is on the page; the footer button takes visitors to the form on Prices and Payment Options | Say if a pop-up form on every page is preferred. |
-| Enquiry recipients | Reception, the practice's SmileOx intake address and rowayne@gyaclients.com | Reception (admin@precisiondentistry.com.au) and rowayne@gyaclients.com, hard-coded as before, plus `SMILEOX_INTAKE_EMAIL` when set (v3.1.0) | Set `SMILEOX_INTAKE_EMAIL` in Vercel when the practice provides it. No code change needed. |
+| Enquiry recipients | Reception, the practice's SmileOx intake address and rowayne@gyaclients.com | To reception (admin@precisiondentistry.com.au) with rowayne@gyaclients.com in CC, both hard-coded (v3.7.1), plus `SMILEOX_INTAKE_EMAIL` in To when set (v3.1.0) | Set `SMILEOX_INTAKE_EMAIL` in Vercel when the practice provides it. No code change needed. |
 | From-address | Must be on an SMTP2GO-verified domain | `website@precisiondentistry.com.au` | Confirm precisiondentistry.com.au is verified in SMTP2GO, or set `ENQUIRY_FROM`. |
 | Google Tag Manager | The 9 October booking brief names `GTM-MPN8W8JL`; the original project brief names `GTM-NFTDF44` | No container on the site | Confirm which container is current, then enter it in Site Settings > Tracking (GYA only) and publish. |
 | Health funds | The brief lists none | The copy says the practice is a preferred provider for Bupa, HCF and CBHS | Confirm with the practice. Changed in one place: Site Settings > Booking and payments. |

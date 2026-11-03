@@ -10,10 +10,9 @@ import { logEnquiry } from '@/lib/enquiries'
 export const dynamic = 'force-dynamic'
 
 const FROM = process.env.ENQUIRY_FROM || 'website@precisiondentistry.com.au'
-const FALLBACK_RECIPIENTS = [
-  'admin@precisiondentistry.com.au', // reception
-  'rowayne@gyaclients.com',          // GYA
-]
+// every enquiry goes to reception, with GYA copied in (Rowayne, 3 November 2026)
+const TO = 'admin@precisiondentistry.com.au'
+const CC = 'rowayne@gyaclients.com'
 
 function esc(s = '') {
   return String(s).replace(/[<>&"]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' }[c] as string))
@@ -71,7 +70,8 @@ export async function POST(req: Request) {
   // the SmileOx intake address (when set) gets every enquiry, as on our other builds
   const extra = [process.env.SMILEOX_INTAKE_EMAIL || '', ...(process.env.ENQUIRY_RECIPIENTS || '').split(',')]
     .map((s) => s.trim()).filter(Boolean)
-  const to = [...new Set([...FALLBACK_RECIPIENTS, ...extra])]
+  const to = [...new Set([TO, ...extra])].filter((a) => a.toLowerCase() !== CC)
+  const cc = [CC]
 
   const html = `<h2>Website enquiry</h2>
 <p><strong>Name:</strong> ${esc(name)}<br>
@@ -88,6 +88,7 @@ export async function POST(req: Request) {
       body: JSON.stringify({
         sender: `Precision Dental Website <${FROM}>`,
         to,
+        cc,
         reply_to: email,
         subject: `Website enquiry from ${name}`,
         html_body: html,

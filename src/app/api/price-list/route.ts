@@ -21,10 +21,9 @@ import { leadSource, normaliseMobile, ATTR_KEYS, type Attr } from '@/lib/leads'
 export const dynamic = 'force-dynamic'
 
 const FROM = process.env.ENQUIRY_FROM || 'website@precisiondentistry.com.au'
-const FALLBACK_RECIPIENTS = [
-  'admin@precisiondentistry.com.au', // reception
-  'rowayne@gyaclients.com',          // GYA
-]
+// every enquiry goes to reception, with GYA copied in (Rowayne, 3 November 2026)
+const TO = 'admin@precisiondentistry.com.au'
+const CC = 'rowayne@gyaclients.com'
 const TAG = 'Price List Download'
 const PHONE = leadConfig.phone || '(07) 3852 1160'
 /** The price list for the visitor's browser: a site path, or the full address of a PDF uploaded in the dashboard. */
@@ -146,11 +145,12 @@ export async function POST(req: Request) {
   }
   const extra = [intake, ...(process.env.PRICE_LIST_RECIPIENTS || process.env.ENQUIRY_RECIPIENTS || '').split(',')]
     .map((s) => s.trim()).filter(Boolean)
-  const to = [...new Set([...FALLBACK_RECIPIENTS, ...extra])]
+  const to = [...new Set([TO, ...extra])].filter((a) => a.toLowerCase() !== CC)
+  const cc = [CC]
   const html = `<h2>Price list download</h2>\n<p>${rows.map(([k, v]) => `<strong>${esc(k)}:</strong> ${esc(v)}`).join('<br>\n')}</p>\n` +
     `<hr><p style="color:#667">Sent from precisiondentistry.com.au. SmileOx: tag this contact "${TAG}".</p>`
   const sent = await smtp2go(apiKey, {
-    to, reply_to: email, subject: `${TAG}: ${name}`, html_body: html,
+    to, cc, reply_to: email, subject: `${TAG}: ${name}`, html_body: html,
     text_body: `Price list download\n\n${rows.map(([k, v]) => `${k}: ${v}`).join('\n')}\n`,
   })
   crm.push(intake ? (sent ? 'SmileOx intake email: sent' : 'SmileOx intake email: failed') : 'SmileOx intake address not set')

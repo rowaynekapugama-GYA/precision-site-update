@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-03 - v3.7.1: form emails to reception, GYA copied in
+
+Built on v3.7.0 (GitHub `main` 669202a). The website looks the same.
+
+- **Enquiry form and price list form** now email **To:** admin@precisiondentistry.com.au with **CC:** rowayne@gyaclients.com. Before, both addresses were in To. Replying goes to the patient, as before. `SMILEOX_INTAKE_EMAIL`, `ENQUIRY_RECIPIENTS` and `PRICE_LIST_RECIPIENTS`, when set, are added to To.
+- Tested against a stand-in SMTP2GO: both forms send exactly To admin@precisiondentistry.com.au, CC rowayne@gyaclients.com, Reply-To the visitor.
+- The forms only send once `SMTP2GO_API_KEY` is set in Vercel (Production and Preview) and the site is redeployed. The sender, `ENQUIRY_FROM` (default website@precisiondentistry.com.au), must be on a domain verified in that SMTP2GO account.
+- Version 3.7.1.
+
 ## 2026-10-29 - v3.7.0: page editor laid out like Coastal Dental's
 
 Built on v3.6.2 (GitHub `main` 2e82461). The website itself does not change; only the dashboard's page editor.
