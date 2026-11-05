@@ -31,6 +31,8 @@ on a public page reads the database.
   its closest page (`data/legacy-redirects.json`), footer social links, enquiry form spam protection,
   16px form text on phones, keyboard and screen reader fixes, HSTS. See CHANGELOG.md and the audit
   report.
+- v3.8.0 (5 November 2026): Google Analytics 4 (G-SZ5Z524SBD), Google Tag Manager (GTM-MPN8W8JL) and the
+  Google Search Console verification tag on every page, set in Site Settings, Tracking (new Search Console box).
 - v3.7.1 (3 November 2026): both forms email reception (admin@precisiondentistry.com.au), with
   rowayne@gyaclients.com in CC.
 - v3.7.0 (29 October 2026): the page editor works like Coastal Dental's. The page shows as it looks

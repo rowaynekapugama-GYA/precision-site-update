@@ -275,6 +275,10 @@ export function SettingsForm({ initial, isAdmin }: { initial: S; isAdmin: boolea
               <TextInput label="Google Ads ID" value={s.tracking.googleAdsId} onChange={(v) => setT({ googleAdsId: v.trim() })} placeholder="AW-123456789" />
               <TextInput label="Price list conversion label" value={s.tracking.adsPriceListLabel} onChange={(v) => setT({ adsPriceListLabel: v.trim() })} placeholder="AbC-D_efG-h12" />
             </div>
+            <div className="row">
+              <TextInput label="Google Search Console verification" value={s.tracking.searchConsole ?? ''} onChange={(v) => setT({ searchConsole: (/content="([^"]*)"/.exec(v)?.[1] ?? v).trim() })}
+                placeholder="The code from the HTML tag method" help="Paste the code, or the whole meta tag from Search Console. It goes in the head of every page." />
+            </div>
             <p className="help">If GA4 runs inside Tag Manager, fill in only the Tag Manager ID so visits are not counted twice. A sent price list form fires GA4 generate_lead, the Google Ads conversion above, Meta Lead, and the dataLayer event price_list_download for Tag Manager.</p>
           </Panel>
         ) : null}

@@ -1,6 +1,6 @@
 /** The whole public site, as a map of file path to contents. */
 import type { Content, Post } from './types'
-import { abs, applyFeatures, applyReplacements, fill, fillTokens, graphJson, makeCtx, renderPage, resolvePlain, type RenderCtx } from './page'
+import { abs, applyFeatures, applyReplacements, fill, fillTokens, graphJson, makeCtx, renderPage, resolvePlain, withTrackingSlots, type RenderCtx } from './page'
 import { practiceNode } from './settings'
 import { articleMain, articleNodes, isLive, postImage, postUrl } from './posts'
 import { ORIGIN } from './util'
@@ -13,7 +13,7 @@ export function renderPost(p: Post, ctx: RenderCtx): string {
   const main = articleMain(p, ctx.content.posts, ctaHtml)
   const url = ORIGIN + postUrl(p)
   const img = ctx.replacements.get(p.seo.ogImage || postImage(p)) ?? (p.seo.ogImage || postImage(p))
-  let html = ch.head + ch.pre + main + ch.post
+  let html = withTrackingSlots(ch.head + ch.pre + main + ch.post)
   html = fillTokens(html, ctx, {
     title: resolvePlain(p.seo.title || `${p.title} | Precision Dental`, ctx),
     description: resolvePlain(p.seo.description, ctx),
@@ -78,7 +78,11 @@ const OWN_HOST = /^https?:\/\/(www\.)?precisiondentistry\.com\.au(\/|$)/i
 export function externalLinks(html: string): string {
   // accessibility (pre-launch audit, 27 October 2026): a skip link to the main content, the footer column
   // headings read as level 2 (they follow the page's h2s), and the phone bar at the bottom is a labelled region
-  if (!html.includes('class="skip-link"')) html = html.replace(/<body([^>]*)>/, '<body$1>\n<a class="skip-link" href="#main">Skip to main content</a>')
+  // (after the Tag Manager noscript, which Google asks to be first in the body)
+  if (!html.includes('class="skip-link"')) {
+    html = html.replace(/<body([^>]*)>(\n<!-- Google Tag Manager \(noscript\) -->[\s\S]*?<!-- End Google Tag Manager \(noscript\) -->)?/,
+      (_m, attrs: string, ns?: string) => `<body${attrs}>${ns ?? ''}\n<a class="skip-link" href="#main">Skip to main content</a>`)
+  }
   html = html.replace(/<main>/, '<main id="main">')
   // where a page goes straight from its h1 to h3s (the blog list, the sitemap), those h3s read as level 2
   const h1 = html.indexOf('<h1')

@@ -79,11 +79,12 @@
     "blueDark": ""
   },
   "tracking": {
-    "ga4Id": "",
-    "gtmId": "",
+    "ga4Id": "G-SZ5Z524SBD",
+    "gtmId": "GTM-MPN8W8JL",
     "metaPixelId": "",
     "googleAdsId": "",
-    "adsPriceListLabel": ""
+    "adsPriceListLabel": "",
+    "searchConsole": "xK3Re-XFObu5QcxES59bbUeIXT1f5RER9pDlcj0aDE8"
   },
   "features": {
     "mode": "open",

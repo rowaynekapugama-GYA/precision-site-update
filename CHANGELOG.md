@@ -1,5 +1,33 @@
 # Changelog
 
+## 2026-11-05 - v3.8.0: Google Analytics 4, Google Tag Manager and Search Console verification
+
+Built on v3.7.1 (GitHub `main` 28be449). No change to design, layout, wording or styling: with the three codes taken out, all 129 pages are byte for byte the same as v3.7.1.
+
+Added to every page (all 60 pages, the 69 blog posts and the 404 page), in the server-rendered HTML:
+- in the head, straight after the viewport tag: the Search Console tag `<meta name="google-site-verification" content="xK3Re-XFObu5QcxES59bbUeIXT1f5RER9pDlcj0aDE8">`, one shared `window.dataLayer` and `gtag()` (defined once), Google's official Tag Manager snippet for `GTM-MPN8W8JL`, then gtag.js with `gtag('config','G-SZ5Z524SBD')`;
+- straight after `<body>`: Google's Tag Manager noscript iframe for `GTM-MPN8W8JL` (the "Skip to main content" link now follows it).
+
+The client's GTM snippet loaded gtm.js directly and repeated the gtag setup; Google's standard container snippet is used instead. The codes live in Site Settings, Tracking (GYA only), so they can be changed in the dashboard without a release.
+
+Files edited:
+- `content/chrome.json`: a `{{site:headTop}}` slot after the viewport meta tag in the shared head.
+- `content/site-settings.json`: tracking `ga4Id` G-SZ5Z524SBD, `gtmId` GTM-MPN8W8JL, new `searchConsole` code.
+- `src/render/settings.ts`: new `headTop()` (verification, shared dataLayer and gtag, Tag Manager, gtag.js, in that order) and `searchConsoleCode()` (accepts the code or the whole meta tag); `headExtra()` keeps only brand colours and the Meta Pixel; the Tag Manager noscript has Google's comments.
+- `src/render/page.ts`: `withTrackingSlots()`, so pages with a hand-built head or body (the 404 page) get the codes too.
+- `src/render/site.ts`: blog posts use the same slots; the skip link goes after the Tag Manager noscript.
+- `src/render/types.ts`, `src/render/leads.ts`, `src/cms/sync.ts`, `src/cms/globals/SiteSettings.ts`: the new `searchConsole` setting.
+- `migrations/20261105_014246_search_console.ts` (+ `.json`, `index.ts`): adds the `tracking_search_console` column (IF NOT EXISTS); the Vercel build runs it.
+- `src/content/updates.ts`: update `2026-11-05-tracking-codes` writes the three codes into the dashboard database once, on the next build.
+- `src/dashboard/editors/SettingsForm.tsx`: "Google Search Console verification" box in Site Settings, Tracking.
+- `src/app/(dashboard)/admin/preview/edit/route.ts`, `src/app/(dashboard)/admin/preview/[kind]/[id]/route.ts`, `scripts/qa/editable-parity.ts`: previews and the page editor carry no tracking, so editing never counts as a visit.
+
+Content Security Policy: the site only sends `frame-ancestors 'self'`, which does not restrict scripts, so nothing needed allowing for googletagmanager.com or google-analytics.com.
+
+Tested: full Vercel-style build on a copy of the database (migration, content update, pull, render, Next.js build) with no new errors or warnings; every page has each code exactly once and in order; in a browser gtm.js and gtag.js load and the dataLayer reads gtm.js, js, config with no script errors; Site Settings shows the three values; `qa:editor`, `qa:banned`, `qa:secrets` and `tsc` clean.
+
+Version 3.8.0.
+
 ## 2026-11-03 - v3.7.1: form emails to reception, GYA copied in
 
 Built on v3.7.0 (GitHub `main` 669202a). The website looks the same.

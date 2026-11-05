@@ -50,7 +50,8 @@ export async function POST(req: Request) {
     if (b && db.blocks[b.key]) db.blocks[b.key] = { ...db.blocks[b.key], fields: cleanFields(b.fields) }
   }
 
-  const content: Content = { ...db, chrome: chrome as Chrome, articleCta: '' }
+  // no analytics or verification in the editor: previews must not count as visits
+  const content: Content = { ...db, settings: { ...db.settings, tracking: { ga4Id: '', gtmId: '', metaPixelId: '', googleAdsId: '', adsPriceListLabel: '', searchConsole: '' } }, chrome: chrome as Chrome, articleCta: '' }
   const html = renderEditable(page, makeCtx(content))
   return new Response(html, { headers: { 'content-type': 'text/html; charset=utf-8', 'x-robots-tag': 'noindex, nofollow', 'cache-control': 'no-store' } })
 }

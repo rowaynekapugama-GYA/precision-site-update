@@ -1033,3 +1033,19 @@ UPDATES.push({
     return done
   },
 })
+
+// the codes Dr Billy Choi's team sent on 5 November 2026 ("publish the new codes on the backend")
+export const TRACKING_CODES = { ga4Id: 'G-SZ5Z524SBD', gtmId: 'GTM-MPN8W8JL', searchConsole: 'xK3Re-XFObu5QcxES59bbUeIXT1f5RER9pDlcj0aDE8' }
+
+UPDATES.push({
+  id: '2026-11-05-tracking-codes',
+  description: 'Google Analytics 4, Google Tag Manager and Google Search Console verification in Site Settings',
+  apply(c) {
+    const done: string[] = []
+    const t = c.settings.tracking as unknown as Record<string, string>
+    for (const [k, v] of Object.entries(TRACKING_CODES)) {
+      if (t[k] !== v) { t[k] = v; done.push(`settings: tracking ${k}`) }
+    }
+    return done
+  },
+})

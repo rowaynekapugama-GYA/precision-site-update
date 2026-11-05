@@ -19,7 +19,8 @@ export async function GET(req: Request, { params }: { params: Promise<{ kind: st
   const { kind, id } = await params
   const db = await pullContent(payload)
   if (!db) return new Response('The dashboard has no content yet. Run Import first.', { status: 404 })
-  const content: Content = { ...db, chrome: chrome as Chrome, articleCta: '' }
+  // no analytics or verification in a preview: previews must not count as visits
+  const content: Content = { ...db, settings: { ...db.settings, tracking: { ga4Id: '', gtmId: '', metaPixelId: '', googleAdsId: '', adsPriceListLabel: '', searchConsole: '' } }, chrome: chrome as Chrome, articleCta: '' }
   const ctx = makeCtx(content)
   let html = ''
   if (kind === 'page') {

@@ -70,6 +70,7 @@ export const SiteSettings: GlobalConfig = {
         { name: 'metaPixelId', type: 'text' },
         { name: 'googleAdsId', type: 'text' },
         { name: 'adsPriceListLabel', type: 'text' },
+        { name: 'searchConsole', type: 'text' },
       ],
     },
     {

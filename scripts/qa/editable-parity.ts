@@ -21,7 +21,9 @@ const TRACKING = /<script>\(function\(w,d,s,l,i\)[\s\S]*?<\/script>|<script asyn
 const noSchema = (h: string) => h.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '<script type="application/ld+json"></script>')
   .replace(/<span class="sr-only"> about [^<]*<\/span>/g, '')
 
-const content = loadContent()
+const loaded = loadContent()
+// the editor never carries analytics, so compare both without it
+const content = { ...loaded, settings: { ...loaded.settings, tracking: { ga4Id: '', gtmId: '', metaPixelId: '', googleAdsId: '', adsPriceListLabel: '', searchConsole: '' } } }
 const ctx = makeCtx(content)
 let bad = 0, words = 0, photos = 0, links = 0
 for (const page of content.pages) {

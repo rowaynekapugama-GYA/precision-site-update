@@ -137,6 +137,7 @@ export function siteTokens(settings: Settings): Record<string, string> {
     youtube: social(s.socials.youtube),
     linkedin: social(s.socials.linkedin),
     googleBusiness: social(s.socials.googleBusiness),
+    headTop: headTop(s),
     headExtra: headExtra(s),
     bodyStart: bodyStart(s),
     offerBanner: offerBanner(s),
@@ -186,7 +187,40 @@ export function areaServed(s: Settings): Record<string, string>[] {
 
 const ID_RE = /^[A-Za-z0-9-]+$/
 
-/** Brand colour overrides and tracking tags, injected only when set. */
+/** The Search Console code, from either the bare code or the whole meta tag pasted in. */
+export function searchConsoleCode(v: string | undefined): string {
+  const raw = String(v || '').trim()
+  const code = /content="([^"]*)"/.exec(raw)?.[1] ?? raw
+  return /^[A-Za-z0-9_-]{10,100}$/.test(code) ? code : ''
+}
+
+/**
+ * Google verification, Tag Manager and Analytics, as high in the head as possible
+ * (5 November 2026): the Search Console meta tag, one shared dataLayer and gtag(),
+ * Google's official Tag Manager snippet, then gtag.js for GA4 (and Google Ads).
+ * Each part only when its ID is set in Site Settings, Tracking.
+ */
+function headTop(s: Settings): string {
+  const t = s.tracking
+  const out: string[] = []
+  const verify = searchConsoleCode(t.searchConsole)
+  if (verify) out.push(`<meta name="google-site-verification" content="${verify}">`)
+  const gtm = t.gtmId && ID_RE.test(t.gtmId) ? t.gtmId : ''
+  // GA4 and Google Ads share one gtag.js; the Ads tag is only needed for the price list conversion
+  const ga = t.ga4Id && ID_RE.test(t.ga4Id) ? t.ga4Id : ''
+  const aw = t.googleAdsId && /^AW-\d+$/.test(t.googleAdsId.trim()) ? t.googleAdsId.trim() : ''
+  if (gtm || ga || aw) out.push(`<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}</script>`)
+  if (gtm) {
+    out.push(`<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${gtm}');</script>\n<!-- End Google Tag Manager -->`)
+  }
+  if (ga || aw) {
+    out.push(`<!-- Google tag (gtag.js) -->\n<script async src="https://www.googletagmanager.com/gtag/js?id=${ga || aw}"></script>`)
+    out.push(`<script>gtag('js',new Date());${ga ? `gtag('config','${ga}');` : ''}${aw ? `gtag('config','${aw}');` : ''}</script>`)
+  }
+  return out.length ? '\n' + out.join('\n') : ''
+}
+
+/** Brand colour overrides and the Meta Pixel, injected only when set. */
 function headExtra(s: Settings): string {
   const out: string[] = []
   const vars: string[] = []
@@ -196,16 +230,6 @@ function headExtra(s: Settings): string {
   if (hex(s.colours.blueDark)) vars.push(`--blue-700:${s.colours.blueDark.trim()}`)
   if (vars.length) out.push(`<style>:root{${vars.join(';')}}</style>`)
   const t = s.tracking
-  if (t.gtmId && ID_RE.test(t.gtmId)) {
-    out.push(`<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${t.gtmId}');</script>`)
-  }
-  // GA4 and Google Ads share one gtag.js; the Ads tag is only needed for the price list conversion
-  const ga = t.ga4Id && ID_RE.test(t.ga4Id) ? t.ga4Id : ''
-  const aw = t.googleAdsId && /^AW-\d+$/.test(t.googleAdsId.trim()) ? t.googleAdsId.trim() : ''
-  if (ga || aw) {
-    out.push(`<script async src="https://www.googletagmanager.com/gtag/js?id=${ga || aw}"></script>`)
-    out.push(`<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());${ga ? `gtag('config','${ga}');` : ''}${aw ? `gtag('config','${aw}');` : ''}</script>`)
-  }
   if (t.metaPixelId && /^\d+$/.test(t.metaPixelId)) {
     out.push(`<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${t.metaPixelId}');fbq('track','PageView');</script>`)
   }
@@ -215,7 +239,7 @@ function headExtra(s: Settings): string {
 function bodyStart(s: Settings): string {
   const id = s.tracking.gtmId
   if (id && ID_RE.test(id)) {
-    return `<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${id}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>\n`
+    return `<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${id}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->\n`
   }
   return ''
 }

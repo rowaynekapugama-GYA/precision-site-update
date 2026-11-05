@@ -241,13 +241,28 @@ export function seoFor(page: Page, ctx: RenderCtx): SeoValues {
   }
 }
 
+/**
+ * Every page carries the tracking slots, including the ones with a hand-built head
+ * (the 404 page): Google verification and tags straight after the viewport tag,
+ * the Tag Manager noscript straight after <body>.
+ */
+export function withTrackingSlots(html: string): string {
+  if (!html.includes('{{site:headTop}}')) {
+    html = /<meta name="viewport"[^>]*>/.test(html)
+      ? html.replace(/<meta name="viewport"[^>]*>/, (m) => m + '{{site:headTop}}')
+      : html.replace(/<head>/, '<head>{{site:headTop}}')
+  }
+  if (!html.includes('{{site:bodyStart}}')) html = html.replace(/<body([^>]*)>\n?/, (m) => (m.endsWith('\n') ? m : m + '\n') + '{{site:bodyStart}}')
+  return html
+}
+
 export function renderPage(page: Page, ctx: RenderCtx): string {
   const ch = ctx.content.chrome
   const head = page.layout.head === 'std' ? ch.head : page.layout.head
   const pre = page.layout.pre === 'std' ? ch.pre : page.layout.pre
   const post = page.layout.post === 'std' ? ch.post : page.layout.post
   const main = renderMain(page, ctx)
-  let html = head + pre + main + post
+  let html = withTrackingSlots(head + pre + main + post)
   html = fillTokens(html, ctx, seoFor(page, ctx))
   html = applyReplacements(html, ctx)
   html = applyFeatures(html, ctx)

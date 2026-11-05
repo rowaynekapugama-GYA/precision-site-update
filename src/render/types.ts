@@ -184,7 +184,7 @@ export interface Settings {
   paymentAccepted: string
   socials: { facebook: string; instagram: string; youtube: string; linkedin: string; googleBusiness: string }
   colours: { navy: string; blue: string; blueDark: string }
-  tracking: { ga4Id: string; gtmId: string; metaPixelId: string; googleAdsId: string; adsPriceListLabel: string }
+  tracking: { ga4Id: string; gtmId: string; metaPixelId: string; googleAdsId: string; adsPriceListLabel: string; /** Google Search Console HTML-tag verification code */ searchConsole?: string }
   features: {
     mode: 'open' | 'pre-opening'
     emergencyDentistry: boolean
