@@ -1,5 +1,85 @@
 # Changelog
 
+## 2026-11-12 - v3.10.0: Google Ads landing page
+
+Built on v3.9.0 (which was not pushed yet, so one push carries both). The rest of the website is unchanged apart from the 5.0 Google rating now shown beside the review count.
+
+- **New page `/lp/dentist-brisbane/`** for the Dentist Near Me, suburb (Herston, Spring Hill, Hamilton, Newstead, Teneriffe, New Farm, Bowen Hills) and Emergency Dentist ad groups. It is in the site's design and built for phones first, in this order:
+  1. **Header:** New Patient Offer pill and card ($229, inclusions and terms, from Site Settings), photo, H1 "Dentist in Fortitude Valley, Brisbane", 5.0 stars and "Over 500 Google reviews", Book Now and Call, HICAPS, free parking, late Tuesdays, address.
+  2. **Health funds straight under it:** HICAPS claim on the spot; preferred provider funds (Bupa, HCF and CBHS, from Site Settings) large and badged; every other fund's logo below.
+  3. **Over 500 Google reviews band**, rated 5.0.
+  4. **Payment options:** DentiCare interest-free payment plans, access your super with SuperCare, HICAPS and cards.
+  5. **Location:** map, address, phone, opening hours, parking, directions, photo of the practice.
+  6. **Team** (from the Team screen), **services** (6 cards linking to the service pages, with the risk statement), **suburbs** (linking to each suburb page), **why us**, **emergency dentist**, **FAQ** (with FAQ schema) and the Book Your Visit band.
+- **Built for Quality Score:**
+  - the ad group keywords in the title, H1, headings and copy;
+  - fast: one small extra stylesheet (16 KB, about 3 KB compressed), lazy images;
+  - clear contact details, privacy and terms links;
+  - mobile call and book bar;
+  - no offer pop-up on this page, since the header already shows the offer.
+  It is kept out of Google's organic results (noindex, not in the sitemap), so it does not compete with the homepage. Google Ads still crawls it.
+- **Call tracking, Google Ads number 07 4079 0713:**
+  - Visitors to the landing page, and anyone arriving from an ad (a click id in the address), see and dial it on every page for the rest of their visit.
+  - Everyone else gets the website number 07 5236 0707.
+  - The HTML, schema and crawlers (Googlebot, AdsBot) only ever have (07) 3852 1160. Same mechanism as v3.9.0.
+  - New setting in Site Settings, Tracking: "Google Ads call tracking number".
+- **Editable in the dashboard:** Pages, then "Google Ads landing pages". Every heading, paragraph, photo, link and button can be changed with the page editor. The offer, reviews, funds, hours, team and contact details come from Site Settings and the Team screen.
+- Files:
+  - **New:**
+    - `content/pages/lp__dentist-brisbane.json`
+    - `public/assets/css/landing.css`
+    - `src/render/landing.ts`: offer pill and card, review score, preferred and other fund logos
+    - `migrations/20261112_113737_call_tracking_ads_number.ts` (+ `.json`)
+  - **Edited:**
+    - `src/render/settings.ts`: new tokens, and the Google Ads number in `call-tracking.js`
+    - `src/render/types.ts`, `src/render/leads.ts`, `src/cms/sync.ts`, `src/cms/globals/SiteSettings.ts`, `src/dashboard/editors/SettingsForm.tsx`
+    - `src/content/updates.ts`: update `2026-11-12-google-ads-landing-page` adds the page, the number and the 5.0 rating; the 23 October "interest-free" clean-up skips the landing pages
+    - `public/assets/js/leads.js`: no pop-up on /lp/ pages
+    - `content/site-settings.json`, `migrations/index.ts`, `.gitignore`
+- Tested:
+  - Full Vercel-style build on a fresh copy of the database: the page, number and rating go in, and the page comes back out byte for byte.
+  - In a browser, 13 of 13 checks:
+    - the landing page shows and dials 07 4079 0713, and the visit keeps it on other pages;
+    - other visitors get 07 5236 0707, and an ad click to the homepage gets the Ads number;
+    - Googlebot and AdsBot see (07) 3852 1160;
+    - no pop-up; sticky bar on phones;
+    - the page in the editor, with an in-place edit.
+  - No sideways scroll at 1440 and 390.
+  - Accessibility scan clean on the page's own content.
+  - `qa:editor` (61 pages), `qa:banned`, `qa:secrets` and `tsc` clean.
+- Version 3.10.0.
+
+## 2026-11-12 - v3.9.0: website call tracking number
+
+Built on v3.8.0 (GitHub `main` ed12767). No change to design, layout, wording or styling.
+
+- **Visitors see and call 07 5236 0707**, the tracking number bought for website calls and diverted to the practice. In their browser, the practice number is swapped wherever it appears on screen, and every call button and phone link dials +61 7 5236 0707. That includes messages that appear later, such as a form's "please call" message.
+- **Google keeps (07) 3852 1160.** The page HTML, the schema, page titles, descriptions and the sitemap are unchanged: with the new script tag taken out, all 129 pages are byte for byte the same as v3.8.0. The swap lives in `/call-tracking.js`, which is:
+  - blocked in robots.txt, so Google never fetches it when it renders a page;
+  - served with `X-Robots-Tag: noindex`;
+  - skipped for crawlers and page speed tools.
+  The tracking number never appears in the HTML. The script is loaded with a fingerprint, not the number.
+- **Site Settings, Tracking** (GYA only) has two new settings:
+  - **Call tracking number**: blank switches it off.
+  - **Show the tracking number on screen**: on by default. Off keeps (07) 3852 1160 on screen, and only taps on a call button or phone link dial the tracking number.
+  Publish website after changing either. The page editor and dashboard previews never load the swap.
+- Files edited:
+  - `src/render/settings.ts`: `callTracking()` and `callTrackingScript()`, plus the script tag at the end of the head.
+  - `src/render/site.ts`: writes `call-tracking.js`; robots.txt `Disallow: /call-tracking.js`.
+  - `next.config.mjs`: noindex header for the file.
+  - `src/render/types.ts`, `src/render/leads.ts`, `src/cms/sync.ts`, `src/cms/globals/SiteSettings.ts`: the two settings.
+  - `src/dashboard/editors/SettingsForm.tsx`: the two settings in the dashboard.
+  - `migrations/20261112_110639_call_tracking_number.ts` (+ `.json`, `index.ts`): two columns, IF NOT EXISTS.
+  - `src/content/updates.ts`: update `2026-11-12-call-tracking-number` sets 07 5236 0707 once.
+  - `content/site-settings.json`, `.gitignore`.
+- Tested:
+  - Full Vercel-style build on a copy of the database: the migration and the update ran.
+  - In a browser as a visitor (desktop and phone): every visible number and all tel links switched on Home, Contact and Dental Implants, with no script errors.
+  - As Googlebot: everything stays (07) 3852 1160.
+  - Tick box off: links switch, the words stay.
+  - `qa:editor`, `qa:banned`, `qa:secrets` and `tsc` clean.
+- Version 3.9.0.
+
 ## 2026-11-05 - v3.8.0: Google Analytics 4, Google Tag Manager and Search Console verification
 
 Built on v3.7.1 (GitHub `main` 28be449). No change to design, layout, wording or styling: with the three codes taken out, all 129 pages are byte for byte the same as v3.7.1.

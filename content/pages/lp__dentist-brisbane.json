@@ -1,0 +1,996 @@
+{
+  "key": "lp/dentist-brisbane",
+  "file": "lp/dentist-brisbane.html",
+  "url": "/lp/dentist-brisbane/",
+  "label": "Google Ads: Dentist Fortitude Valley, Brisbane",
+  "group": "Google Ads landing pages",
+  "seo": {
+    "title": "Dentist Fortitude Valley, Brisbane | New Patients Welcome | Precision Dental",
+    "description": "Dentist in Fortitude Valley, near the Brisbane CBD. New patient offer, HICAPS on the spot and preferred provider for Bupa, HCF and CBHS. Free parking. Book online.",
+    "ogImage": "/assets/img/team-photo.webp",
+    "canonical": "",
+    "noindex": true
+  },
+  "lastmod": "2026-11-12",
+  "layout": {
+    "head": "std",
+    "pre": "std",
+    "post": "std",
+    "schema": "gen"
+  },
+  "tail": "",
+  "sections": [
+    {
+      "key": "s1",
+      "kind": "header",
+      "label": "Page header and New Patient Offer",
+      "before": "",
+      "template": "<link rel=\"stylesheet\" href=\"/assets/css/landing.css\">\n<section class=\"lp-hero\" id=\"top\">\n  <div class=\"lp-hero-bg\" aria-hidden=\"true\"></div>\n  <div class=\"container lp-hero-grid\">\n    <div class=\"lp-hero-copy hero-up\">\n      {{site:offerPill}}\n      <h1>{{f1}}</h1>\n      <p class=\"lp-sub\">{{f2}}</p>\n      <p class=\"lp-lead\">{{f3}}</p>\n      {{site:reviewsScore}}\n      <div class=\"btn-group lp-cta\">\n        <a class=\"btn btn-blue\" href=\"{{site:booking}}\" target=\"_blank\" rel=\"noopener\" data-track=\"book\">{{f4}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a>\n        <a class=\"btn btn-white lp-call\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z\"/></svg><span>{{f5}}</span></a>\n      </div>\n      <ul class=\"lp-trust\">\n        <li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"5\" width=\"20\" height=\"14\" rx=\"2.5\"/><path d=\"M2 10h20M6 15h4\"/></svg><span>{{f6}}</span></li>\n        <li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"4\" y=\"3\" width=\"16\" height=\"18\" rx=\"3\"/><path d=\"M9 17V7h4a3 3 0 0 1 0 6H9\"/></svg><span>{{f7}}</span></li>\n        <li><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/></svg><span>{{f8}}</span></li>\n      </ul>\n      <a class=\"lp-where\" href=\"#location\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg><span>{{site:address}}</span></a>\n    </div>\n    <div class=\"lp-hero-media hero-up d2\">\n      <div class=\"lp-photo\"><img src=\"{{f9}}\" alt=\"{{f10}}\" width=\"1400\" height=\"933\" fetchpriority=\"high\" decoding=\"async\"></div>\n      {{site:offerCard}}\n    </div>\n  </div>\n</section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Main heading",
+          "type": "text",
+          "value": "Dentist in Fortitude Valley, Brisbane"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "General, family and cosmetic dentistry, minutes from the Brisbane CBD"
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Precision Dental is a modern dental clinic in Fortitude Valley, close to Newstead, New Farm, Teneriffe, Bowen Hills, Spring Hill, Herston and Hamilton. Claim on the spot with HICAPS, park for free on site and book online in minutes."
+        },
+        {
+          "id": "f4",
+          "label": "Button text",
+          "type": "text",
+          "value": "Book Now"
+        },
+        {
+          "id": "f5",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        },
+        {
+          "id": "f6",
+          "label": "Text",
+          "type": "text",
+          "value": "HICAPS claims on the spot"
+        },
+        {
+          "id": "f7",
+          "label": "Text",
+          "type": "text",
+          "value": "Free on-site parking"
+        },
+        {
+          "id": "f8",
+          "label": "Text",
+          "type": "text",
+          "value": "Open until 7pm Tuesdays"
+        },
+        {
+          "id": "f9",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/team-photo.webp"
+        },
+        {
+          "id": "f10",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Dr Billy Choi and a dental assistant with a smiling patient at Precision Dental, Fortitude Valley"
+        }
+      ],
+      "pinned": true
+    },
+    {
+      "key": "s2",
+      "kind": "content",
+      "label": "Health funds and HICAPS",
+      "before": "\n",
+      "template": "<section class=\"lp-funds\" id=\"health-funds\">\n  <div class=\"container\">\n    <div class=\"lp-funds-head reveal\">\n      <span class=\"lp-hicaps\">HICAPS</span>\n      <h2>{{f1}}</h2>\n      <p>{{f2}}</p>\n    </div>\n    <div class=\"lp-pref reveal\">\n      <div class=\"lp-pref-copy\">\n        <h3>{{f3}}</h3>\n        <p>{{f4}}</p>\n      </div>\n      {{site:fundsPreferredLogos}}\n    </div>\n    <div class=\"lp-others reveal\">\n      <h3>{{f5}}</h3>\n      {{site:fundsOtherLogos}}\n      <p class=\"lp-note\">{{f6}}</p>\n    </div>\n  </div>\n</section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Claim on the Spot with Your Health Fund"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Bring your health fund card. We process your claim on the spot with HICAPS, so you only pay the gap on the day."
+        },
+        {
+          "id": "f3",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Preferred Provider for {{site:preferredFunds}}"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Members of these funds may receive higher rebates on eligible treatments, depending on their level of cover."
+        },
+        {
+          "id": "f5",
+          "label": "Subheading",
+          "type": "text",
+          "value": "We also claim on the spot with most other health funds, including"
+        },
+        {
+          "id": "f6",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Out-of-pocket costs depend on your fund and level of cover. If you are with another fund, ask us about your policy and we will help where we can."
+        }
+      ]
+    },
+    {
+      "key": "s3",
+      "kind": "content",
+      "label": "Google reviews band (number of reviews, rating and link are in Site Settings)",
+      "before": "\n",
+      "template": "{{site:reviewsBand}}",
+      "fields": []
+    },
+    {
+      "key": "s4",
+      "kind": "content",
+      "label": "Payment options: DentiCare and SuperCare",
+      "before": "\n",
+      "template": "<section class=\"lp-pay\" id=\"payment-options\">\n  <div class=\"container\">\n    <div class=\"section-head center reveal\">\n      <span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span>\n      <h2>{{f2}}</h2>\n    </div>\n    <div class=\"lp-pay-grid\">\n      <article class=\"lp-pay-card reveal\" data-delay=\"1\"><span class=\"lp-ic\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"/></svg></span><h3>{{f3}}</h3><p>{{f4}}</p></article>\n      <article class=\"lp-pay-card reveal\" data-delay=\"2\"><span class=\"lp-ic\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/><path d=\"m9 12 2 2 4-4\"/></svg></span><h3>{{f5}}</h3><p>{{f6}}</p></article>\n      <article class=\"lp-pay-card reveal\" data-delay=\"3\"><span class=\"lp-ic\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2\" y=\"5\" width=\"20\" height=\"14\" rx=\"2.5\"/><path d=\"M2 10h20M6 15h4\"/></svg></span><h3>{{f7}}</h3><p>{{f8}}</p></article>\n    </div>\n    <p class=\"lp-more reveal\"><a href=\"{{f9}}\">{{f10}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a></p>\n  </div>\n</section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Payment options"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "Treatment That Fits Your Budget"
+        },
+        {
+          "id": "f3",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Interest-Free Payment Plans with DentiCare",
+          "group": "1"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Spread the cost of your treatment with DentiCare interest-free payment plans. A deposit and a small set-up fee apply. Eligibility criteria, terms and conditions apply.",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Access Your Super for Eligible Treatment",
+          "group": "2"
+        },
+        {
+          "id": "f6",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "With SuperCare, you may be able to use your superannuation to pay for eligible dental procedures. Early release of super is assessed by the Australian Taxation Office, and eligibility criteria apply.",
+          "group": "2"
+        },
+        {
+          "id": "f7",
+          "label": "Subheading",
+          "type": "text",
+          "value": "HICAPS and All Major Cards",
+          "group": "3"
+        },
+        {
+          "id": "f8",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Claim your health fund rebate on the spot, then pay the gap by EFTPOS, Visa, Mastercard, American Express or cash.",
+          "group": "3"
+        },
+        {
+          "id": "f9",
+          "label": "Link address",
+          "type": "link",
+          "value": "/price-list/"
+        },
+        {
+          "id": "f10",
+          "label": "Link text",
+          "type": "text",
+          "value": "See our prices and payment options"
+        }
+      ]
+    },
+    {
+      "key": "s5",
+      "kind": "content",
+      "label": "Location, map and contact details",
+      "before": "\n",
+      "template": "<section class=\"lp-location\" id=\"location\">\n  <div class=\"container\">\n    <div class=\"section-head reveal\">\n      <span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span>\n      <h2>{{f2}}</h2>\n      <p>{{f3}}</p>\n    </div>\n    <div class=\"lp-loc-grid\">\n      <div class=\"lp-map reveal-left\"><iframe title=\"Map showing Precision Dental at {{site:address}}\" src=\"{{site:mapEmbed}}\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" allowfullscreen></iframe></div>\n      <div class=\"lp-loc-card reveal-right\">\n        <div class=\"lp-loc-photo\"><img src=\"{{f4}}\" alt=\"{{f5}}\" width=\"1400\" height=\"945\" loading=\"lazy\"></div>\n        <dl class=\"lp-details\">\n          <div><dt><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg>{{f6}}</dt><dd>{{site:addressLines}}{{site:mapLinks}}</dd></div>\n          <div><dt><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z\"/></svg>{{f7}}</dt><dd><a class=\"lp-phone\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{site:phone}}</a></dd></div>\n          <div><dt><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/></svg>{{f8}}</dt><dd><ul class=\"lp-hours\">{{site:hoursRows}}</ul></dd></div>\n          <div><dt><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"4\" y=\"3\" width=\"16\" height=\"18\" rx=\"3\"/><path d=\"M9 17V7h4a3 3 0 0 1 0 6H9\"/></svg>{{f9}}</dt><dd>{{site:parking}}</dd></div>\n        </dl>\n        <div class=\"btn-group\">\n          <a class=\"btn btn-blue\" href=\"{{site:booking}}\" target=\"_blank\" rel=\"noopener\" data-track=\"book\">{{f10}} <span class=\"arr\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a>\n          <a class=\"btn btn-white btn-plain\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\">{{f11}}</a>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Visit us"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "Find Us in Fortitude Valley"
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Find us in HQ South Tower on the corner of Wickham and Brookes Streets, a short trip from the Brisbane CBD. Free on-site parking is available for patients."
+        },
+        {
+          "id": "f4",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/exterior.webp"
+        },
+        {
+          "id": "f5",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "The front of Precision Dental in Fortitude Valley"
+        },
+        {
+          "id": "f6",
+          "label": "Text",
+          "type": "text",
+          "value": "Address"
+        },
+        {
+          "id": "f7",
+          "label": "Text",
+          "type": "text",
+          "value": "Phone"
+        },
+        {
+          "id": "f8",
+          "label": "Text",
+          "type": "text",
+          "value": "Opening hours"
+        },
+        {
+          "id": "f9",
+          "label": "Text",
+          "type": "text",
+          "value": "Parking"
+        },
+        {
+          "id": "f10",
+          "label": "Button text",
+          "type": "text",
+          "value": "Book Now"
+        },
+        {
+          "id": "f11",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        }
+      ]
+    },
+    {
+      "key": "s6",
+      "kind": "content",
+      "label": "Our team (the cards come from the Team screen)",
+      "before": "\n",
+      "template": "<section class=\"lp-team\" id=\"team\">\n  <div class=\"container\">\n    <div class=\"section-head center reveal\">\n      <span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span>\n      <h2>{{f2}}</h2>\n      <p>{{f3}}</p>\n    </div>\n    <div class=\"team-grid\">{{gen:team}}</div>\n  </div>\n</section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Our team"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "Meet Your Fortitude Valley Dental Team"
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Led by principal dentist Dr Billy Choi, our team looks after individuals, couples and families from across Brisbane."
+        }
+      ],
+      "generated": "team"
+    },
+    {
+      "key": "s7",
+      "kind": "content",
+      "label": "Our dental services",
+      "before": "\n",
+      "template": "<section class=\"lp-services\" id=\"services\">\n  <div class=\"container\">\n    <div class=\"section-head center reveal\">\n      <span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span>\n      <h2>{{f2}}</h2>\n      <p>{{f3}}</p>\n    </div>\n    <div class=\"lp-svc-grid\">\n      <article class=\"lp-svc reveal\" data-delay=\"1\">\n        <a class=\"lp-svc-img\" href=\"{{f4}}\" tabindex=\"-1\" aria-hidden=\"true\"><img src=\"{{f5}}\" alt=\"{{f6}}\" width=\"600\" height=\"400\" loading=\"lazy\"></a>\n        <div class=\"lp-svc-tx\"><h3><a href=\"{{f7}}\">{{f8}}</a></h3><p>{{f9}}</p></div>\n      </article>\n      <article class=\"lp-svc reveal\" data-delay=\"2\">\n        <a class=\"lp-svc-img\" href=\"{{f10}}\" tabindex=\"-1\" aria-hidden=\"true\"><img src=\"{{f11}}\" alt=\"{{f12}}\" width=\"600\" height=\"400\" loading=\"lazy\"></a>\n        <div class=\"lp-svc-tx\"><h3><a href=\"{{f13}}\">{{f14}}</a></h3><p>{{f15}}</p></div>\n      </article>\n      <article class=\"lp-svc reveal\" data-delay=\"3\">\n        <a class=\"lp-svc-img\" href=\"{{f16}}\" tabindex=\"-1\" aria-hidden=\"true\"><img src=\"{{f17}}\" alt=\"{{f18}}\" width=\"600\" height=\"400\" loading=\"lazy\"></a>\n        <div class=\"lp-svc-tx\"><h3><a href=\"{{f19}}\">{{f20}}</a></h3><p>{{f21}}</p></div>\n      </article>\n      <article class=\"lp-svc reveal\" data-delay=\"1\">\n        <a class=\"lp-svc-img\" href=\"{{f22}}\" tabindex=\"-1\" aria-hidden=\"true\"><img src=\"{{f23}}\" alt=\"{{f24}}\" width=\"600\" height=\"400\" loading=\"lazy\"></a>\n        <div class=\"lp-svc-tx\"><h3><a href=\"{{f25}}\">{{f26}}</a></h3><p>{{f27}}</p></div>\n      </article>\n      <article class=\"lp-svc reveal\" data-delay=\"2\">\n        <a class=\"lp-svc-img\" href=\"{{f28}}\" tabindex=\"-1\" aria-hidden=\"true\"><img src=\"{{f29}}\" alt=\"{{f30}}\" width=\"600\" height=\"400\" loading=\"lazy\"></a>\n        <div class=\"lp-svc-tx\"><h3><a href=\"{{f31}}\">{{f32}}</a></h3><p>{{f33}}</p></div>\n      </article>\n      <article class=\"lp-svc reveal\" data-delay=\"3\">\n        <a class=\"lp-svc-img\" href=\"{{f34}}\" tabindex=\"-1\" aria-hidden=\"true\"><img src=\"{{f35}}\" alt=\"{{f36}}\" width=\"600\" height=\"400\" loading=\"lazy\"></a>\n        <div class=\"lp-svc-tx\"><h3><a href=\"{{f37}}\">{{f38}}</a></h3><p>{{f39}}</p></div>\n      </article>\n    </div>\n    <p class=\"lp-risk\">{{f40}}</p>\n  </div>\n</section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Our services"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "General, Family and Cosmetic Dentistry in Brisbane"
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "From routine check-ups to Invisalign and dental implants, we offer a full range of care at our Fortitude Valley clinic."
+        },
+        {
+          "id": "f4",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/general-treatments/",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/general.webp",
+          "group": "1"
+        },
+        {
+          "id": "f6",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Hygienist and dentist carrying out a check-up and clean at Precision Dental",
+          "group": "1"
+        },
+        {
+          "id": "f7",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/general-treatments/",
+          "group": "1"
+        },
+        {
+          "id": "f8",
+          "label": "Link text",
+          "type": "text",
+          "value": "General and Family Dentistry",
+          "group": "1"
+        },
+        {
+          "id": "f9",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Check-ups and cleans, children&#x27;s dentistry, fillings and gum care for the whole family.",
+          "group": "1"
+        },
+        {
+          "id": "f10",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/cosmetic-dentistry/",
+          "group": "2"
+        },
+        {
+          "id": "f11",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/cosmetic.webp",
+          "group": "2"
+        },
+        {
+          "id": "f12",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Matching a tooth shade guide for cosmetic dentistry at Precision Dental",
+          "group": "2"
+        },
+        {
+          "id": "f13",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/cosmetic-dentistry/",
+          "group": "2"
+        },
+        {
+          "id": "f14",
+          "label": "Link text",
+          "type": "text",
+          "value": "Cosmetic Dentistry",
+          "group": "2"
+        },
+        {
+          "id": "f15",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Porcelain and composite veneers, professional teeth whitening and smile makeovers, planned around your goals.",
+          "group": "2"
+        },
+        {
+          "id": "f16",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/invisalign/",
+          "group": "3"
+        },
+        {
+          "id": "f17",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/invisalign-aligners.webp",
+          "group": "3"
+        },
+        {
+          "id": "f18",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Invisalign clear aligners",
+          "group": "3"
+        },
+        {
+          "id": "f19",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/invisalign/",
+          "group": "3"
+        },
+        {
+          "id": "f20",
+          "label": "Link text",
+          "type": "text",
+          "value": "Invisalign<sup>&reg;</sup> in Brisbane",
+          "group": "3"
+        },
+        {
+          "id": "f21",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Clear aligners to straighten teeth, with an Invisalign SmileView simulation to start the conversation.",
+          "group": "3"
+        },
+        {
+          "id": "f22",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-implants/",
+          "group": "4"
+        },
+        {
+          "id": "f23",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/implant-model.webp",
+          "group": "4"
+        },
+        {
+          "id": "f24",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "A dental implant model used to explain treatment",
+          "group": "4"
+        },
+        {
+          "id": "f25",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-implants/",
+          "group": "4"
+        },
+        {
+          "id": "f26",
+          "label": "Link text",
+          "type": "text",
+          "value": "Dental Implants",
+          "group": "4"
+        },
+        {
+          "id": "f27",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Replace one or more missing teeth with dental implants, crowns or bridges, after a full assessment.",
+          "group": "4"
+        },
+        {
+          "id": "f28",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-emergency/",
+          "group": "5"
+        },
+        {
+          "id": "f29",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/emergency.webp",
+          "group": "5"
+        },
+        {
+          "id": "f30",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "A dentist examining a patient during an urgent appointment",
+          "group": "5"
+        },
+        {
+          "id": "f31",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-emergency/",
+          "group": "5"
+        },
+        {
+          "id": "f32",
+          "label": "Link text",
+          "type": "text",
+          "value": "Emergency Dentist",
+          "group": "5"
+        },
+        {
+          "id": "f33",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Toothache, a broken tooth or swelling? We set aside time each day for urgent appointments.",
+          "group": "5"
+        },
+        {
+          "id": "f34",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/restorative-dentistry/",
+          "group": "6"
+        },
+        {
+          "id": "f35",
+          "label": "Photo",
+          "type": "image",
+          "value": "/assets/img/restorative.webp",
+          "group": "6"
+        },
+        {
+          "id": "f36",
+          "label": "Photo description (alt text)",
+          "type": "alt",
+          "value": "Restorative dental treatment at Precision Dental",
+          "group": "6"
+        },
+        {
+          "id": "f37",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/restorative-dentistry/",
+          "group": "6"
+        },
+        {
+          "id": "f38",
+          "label": "Link text",
+          "type": "text",
+          "value": "Crowns, Root Canals and CEREC",
+          "group": "6"
+        },
+        {
+          "id": "f39",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Crowns, root canal therapy and CEREC crowns, many designed, made and fitted in a single visit.",
+          "group": "6"
+        },
+        {
+          "id": "f40",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Any surgical or invasive procedure carries risks. Before proceeding, you should seek a second opinion from an appropriately qualified health practitioner."
+        }
+      ]
+    },
+    {
+      "key": "s8",
+      "kind": "content",
+      "label": "Suburbs we serve",
+      "before": "\n",
+      "template": "<section class=\"lp-areas\" id=\"areas\">\n  <div class=\"container lp-areas-grid\">\n    <div class=\"reveal-left\">\n      <span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span>\n      <h2>{{f2}}</h2>\n      <p>{{f3}}</p>\n    </div>\n    <ul class=\"lp-chips reveal-right\">\n        <li><a href=\"{{f4}}\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg><span>{{f5}}</span></a></li>\n        <li><a href=\"{{f6}}\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg><span>{{f7}}</span></a></li>\n        <li><a href=\"{{f8}}\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg><span>{{f9}}</span></a></li>\n        <li><a href=\"{{f10}}\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg><span>{{f11}}</span></a></li>\n        <li><a href=\"{{f12}}\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg><span>{{f13}}</span></a></li>\n        <li><a href=\"{{f14}}\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg><span>{{f15}}</span></a></li>\n        <li><a href=\"{{f16}}\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg><span>{{f17}}</span></a></li>\n        <li><a href=\"{{f18}}\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg><span>{{f19}}</span></a></li>\n        <li><a href=\"{{f20}}\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg><span>{{f21}}</span></a></li>\n    </ul>\n  </div>\n</section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Areas we serve"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "A Dentist Near You in Brisbane&#x27;s Inner North"
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Searching for a dentist near me? Precision Dental is in Fortitude Valley, close to the Brisbane CBD and the inner north. Patients visit our dental clinic from Newstead, New Farm, Teneriffe, Bowen Hills, Spring Hill, Herston, Hamilton and across Brisbane."
+        },
+        {
+          "id": "f4",
+          "label": "Link address",
+          "type": "link",
+          "value": "/",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Link text",
+          "type": "text",
+          "value": "Fortitude Valley",
+          "group": "1"
+        },
+        {
+          "id": "f6",
+          "label": "Link address",
+          "type": "link",
+          "value": "/dentist-newstead/",
+          "group": "2"
+        },
+        {
+          "id": "f7",
+          "label": "Link text",
+          "type": "text",
+          "value": "Newstead",
+          "group": "2"
+        },
+        {
+          "id": "f8",
+          "label": "Link address",
+          "type": "link",
+          "value": "/dentist-new-farm/",
+          "group": "3"
+        },
+        {
+          "id": "f9",
+          "label": "Link text",
+          "type": "text",
+          "value": "New Farm",
+          "group": "3"
+        },
+        {
+          "id": "f10",
+          "label": "Link address",
+          "type": "link",
+          "value": "/dentist-teneriffe/",
+          "group": "4"
+        },
+        {
+          "id": "f11",
+          "label": "Link text",
+          "type": "text",
+          "value": "Teneriffe",
+          "group": "4"
+        },
+        {
+          "id": "f12",
+          "label": "Link address",
+          "type": "link",
+          "value": "/dentist-bowen-hills/",
+          "group": "5"
+        },
+        {
+          "id": "f13",
+          "label": "Link text",
+          "type": "text",
+          "value": "Bowen Hills",
+          "group": "5"
+        },
+        {
+          "id": "f14",
+          "label": "Link address",
+          "type": "link",
+          "value": "/dentist-spring-hill/",
+          "group": "6"
+        },
+        {
+          "id": "f15",
+          "label": "Link text",
+          "type": "text",
+          "value": "Spring Hill",
+          "group": "6"
+        },
+        {
+          "id": "f16",
+          "label": "Link address",
+          "type": "link",
+          "value": "/dentist-herston/",
+          "group": "7"
+        },
+        {
+          "id": "f17",
+          "label": "Link text",
+          "type": "text",
+          "value": "Herston",
+          "group": "7"
+        },
+        {
+          "id": "f18",
+          "label": "Link address",
+          "type": "link",
+          "value": "/dentist-hamilton/",
+          "group": "8"
+        },
+        {
+          "id": "f19",
+          "label": "Link text",
+          "type": "text",
+          "value": "Hamilton",
+          "group": "8"
+        },
+        {
+          "id": "f20",
+          "label": "Link address",
+          "type": "link",
+          "value": "/contact/",
+          "group": "9"
+        },
+        {
+          "id": "f21",
+          "label": "Link text",
+          "type": "text",
+          "value": "Brisbane CBD",
+          "group": "9"
+        }
+      ]
+    },
+    {
+      "key": "s9",
+      "kind": "content",
+      "label": "Why choose Precision Dental",
+      "before": "\n",
+      "template": "<section class=\"lp-why\" id=\"why\">\n  <div class=\"container\">\n    <div class=\"section-head center reveal\">\n      <span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span>\n      <h2>{{f2}}</h2>\n    </div>\n    <div class=\"lp-why-grid\">\n      <article class=\"lp-why-tile reveal\" data-delay=\"1\"><span class=\"lp-ic\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 3c-2.5 0-4 2-4 4.5 0 3 1.5 4.5 2 7.5.4 2.8 1 6 2.6 6 1.5 0 1.6-3.5 2.4-5.5.4-1 1.6-1 2 0 .8 2 .9 5.5 2.4 5.5 1.6 0 2.2-3.2 2.6-6 .5-3 2-4.5 2-7.5C21 5 19.5 3 17 3c-2 0-3 1-5 1S9 3 7 3z\"/></svg></span><h3>{{f3}}</h3><p>{{f4}}</p></article>\n      <article class=\"lp-why-tile reveal\" data-delay=\"2\"><span class=\"lp-ic\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/></svg></span><h3>{{f5}}</h3><p>{{f6}}</p></article>\n      <article class=\"lp-why-tile reveal\" data-delay=\"3\"><span class=\"lp-ic\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"4\" y=\"3\" width=\"16\" height=\"18\" rx=\"3\"/><path d=\"M9 17V7h4a3 3 0 0 1 0 6H9\"/></svg></span><h3>{{f7}}</h3><p>{{f8}}</p></article>\n      <article class=\"lp-why-tile reveal\" data-delay=\"4\"><span class=\"lp-ic\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01\"/></svg></span><h3>{{f9}}</h3><p>{{f10}}</p></article>\n    </div>\n  </div>\n</section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "Why Precision Dental"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "Dental Care Built Around You"
+        },
+        {
+          "id": "f3",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Same-Day CEREC Crowns",
+          "group": "1"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Many crowns are designed, made and fitted in one visit at our Fortitude Valley clinic.",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Early and Late Appointments",
+          "group": "2"
+        },
+        {
+          "id": "f6",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Open until 7pm on Tuesdays and from 8am on Fridays, so you can visit around work.",
+          "group": "2"
+        },
+        {
+          "id": "f7",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Free On-Site Parking",
+          "group": "3"
+        },
+        {
+          "id": "f8",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Park on site for free during your appointment, with no meter to watch.",
+          "group": "3"
+        },
+        {
+          "id": "f9",
+          "label": "Subheading",
+          "type": "text",
+          "value": "Care for Nervous Patients",
+          "group": "4"
+        },
+        {
+          "id": "f10",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Tell us if you feel anxious. We take things at your pace and explain each step.",
+          "group": "4"
+        }
+      ]
+    },
+    {
+      "key": "s10",
+      "kind": "content",
+      "label": "Emergency dentist",
+      "before": "\n",
+      "template": "<section class=\"lp-emergency\" id=\"emergency\">\n  <div class=\"container lp-emer-inner reveal\">\n    <span class=\"lp-ic\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 9v4M12 17h.01\"/><path d=\"M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z\"/></svg></span>\n    <div class=\"lp-emer-copy\">\n      <h2>{{f1}}</h2>\n      <p>{{f2}}</p>\n      <p class=\"lp-small\">{{f3}}</p>\n    </div>\n    <div class=\"btn-group\">\n      <a class=\"btn btn-white lp-call\" href=\"tel:{{site:phoneTel}}\" data-track=\"call\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z\"/></svg><span>{{f4}}</span></a>\n      <a class=\"btn btn-outline btn-plain\" href=\"{{f5}}\">{{f6}}</a>\n    </div>\n  </div>\n</section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Heading",
+          "type": "text",
+          "value": "Need an Emergency Dentist in Brisbane?"
+        },
+        {
+          "id": "f2",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "If you have a toothache, a broken tooth or swelling, call us. We set aside time each day for urgent appointments and will do our best to see you on the day you call."
+        },
+        {
+          "id": "f3",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "If swelling is affecting your breathing or swallowing, or bleeding will not stop, go to your nearest hospital emergency department."
+        },
+        {
+          "id": "f4",
+          "label": "Button text",
+          "type": "text",
+          "value": "Call {{site:phone}}"
+        },
+        {
+          "id": "f5",
+          "label": "Link address",
+          "type": "link",
+          "value": "/service/dental-emergency/"
+        },
+        {
+          "id": "f6",
+          "label": "Link text",
+          "type": "text",
+          "value": "Emergency dental care"
+        }
+      ]
+    },
+    {
+      "key": "s11",
+      "kind": "faq",
+      "label": "Questions and answers",
+      "before": "\n",
+      "template": "<section class=\"faq lp-faq\" id=\"faq\">\n  <div class=\"container\">\n    <div class=\"section-head center reveal\">\n      <span class=\"pill\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4\"/></svg>{{f1}}</span>\n      <h2 style=\"margin-top:18px\">{{f2}}</h2>\n    </div>\n    <div class=\"faq-list reveal\">\n      <div class=\"faq-item open\">\n        <h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"true\" aria-controls=\"lpfaq1\"><span class=\"num\">1</span><span class=\"q\">{{f3}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3>\n        <div class=\"faq-a\" id=\"lpfaq1\"><div><p>{{f4}}</p></div></div>\n      </div>\n      <div class=\"faq-item\">\n        <h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"lpfaq2\"><span class=\"num\">2</span><span class=\"q\">{{f5}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3>\n        <div class=\"faq-a\" id=\"lpfaq2\"><div><p>{{f6}}</p></div></div>\n      </div>\n      <div class=\"faq-item\">\n        <h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"lpfaq3\"><span class=\"num\">3</span><span class=\"q\">{{f7}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3>\n        <div class=\"faq-a\" id=\"lpfaq3\"><div><p>{{f8}}</p></div></div>\n      </div>\n      <div class=\"faq-item\">\n        <h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"lpfaq4\"><span class=\"num\">4</span><span class=\"q\">{{f9}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3>\n        <div class=\"faq-a\" id=\"lpfaq4\"><div><p>{{f10}}</p></div></div>\n      </div>\n      <div class=\"faq-item\">\n        <h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"lpfaq5\"><span class=\"num\">5</span><span class=\"q\">{{f11}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3>\n        <div class=\"faq-a\" id=\"lpfaq5\"><div><p>{{f12}}</p></div></div>\n      </div>\n      <div class=\"faq-item\">\n        <h3 class=\"faq-h\"><button class=\"faq-q\" aria-expanded=\"false\" aria-controls=\"lpfaq6\"><span class=\"num\">6</span><span class=\"q\">{{f13}}</span><span class=\"chev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg></span></button></h3>\n        <div class=\"faq-a\" id=\"lpfaq6\"><div><p>{{f14}}</p></div></div>\n      </div>\n    </div>\n  </div>\n</section>",
+      "fields": [
+        {
+          "id": "f1",
+          "label": "Small label",
+          "type": "text",
+          "value": "FAQ"
+        },
+        {
+          "id": "f2",
+          "label": "Heading",
+          "type": "text",
+          "value": "Questions from New Patients"
+        },
+        {
+          "id": "f3",
+          "label": "Question",
+          "type": "text",
+          "value": "Are you accepting new patients?",
+          "group": "1"
+        },
+        {
+          "id": "f4",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Yes. We welcome new patients of all ages, from young children to older adults. Book online at any time or call our team during opening hours.",
+          "group": "1"
+        },
+        {
+          "id": "f5",
+          "label": "Question",
+          "type": "text",
+          "value": "What does the New Patient Offer include?",
+          "group": "2"
+        },
+        {
+          "id": "f6",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Your first visit includes a comprehensive examination, 2 intraoral X-rays, intraoral photos, a scale and polish and a fluoride treatment. Additional X-rays or treatment are charged separately if required.",
+          "group": "2"
+        },
+        {
+          "id": "f7",
+          "label": "Question",
+          "type": "text",
+          "value": "Do you accept my health fund?",
+          "group": "3"
+        },
+        {
+          "id": "f8",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We accept most private health funds and claim on the spot with HICAPS, so you only pay the gap. We are a preferred provider for {{site:preferredFunds}}.",
+          "group": "3"
+        },
+        {
+          "id": "f9",
+          "label": "Question",
+          "type": "text",
+          "value": "Where are you, and is there parking?",
+          "group": "4"
+        },
+        {
+          "id": "f10",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "We are at {{site:addressStreet}}, Fortitude Valley, close to Newstead, New Farm, Spring Hill, Herston and the Brisbane CBD. Free on-site parking is available for patients.",
+          "group": "4"
+        },
+        {
+          "id": "f11",
+          "label": "Question",
+          "type": "text",
+          "value": "Can I pay for my treatment over time?",
+          "group": "5"
+        },
+        {
+          "id": "f12",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Yes. DentiCare interest-free payment plans let you spread the cost of treatment, and you may be able to access your super for eligible procedures through SuperCare. Eligibility criteria, terms and conditions apply.",
+          "group": "5"
+        },
+        {
+          "id": "f13",
+          "label": "Question",
+          "type": "text",
+          "value": "Do you see dental emergencies?",
+          "group": "6"
+        },
+        {
+          "id": "f14",
+          "label": "Paragraph",
+          "type": "text",
+          "value": "Yes. Call us as early in the day as you can. We set aside time each day for urgent appointments and will do our best to see you on the day you call.",
+          "group": "6"
+        }
+      ]
+    },
+    {
+      "key": "s12",
+      "kind": "cta",
+      "before": "\n",
+      "shared": "cta"
+    }
+  ]
+}

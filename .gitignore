@@ -12,8 +12,10 @@ Thumbs.db
 /public/*.html
 /public/service/
 /public/our-team/
+/public/lp/
 /public/sitemap.xml
 /public/robots.txt
+/public/call-tracking.js
 /public/.generated.json
 *.tsbuildinfo
 next-env.d.ts

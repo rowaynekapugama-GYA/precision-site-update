@@ -800,7 +800,9 @@ UPDATES.push({
     if (s.priceList && s.priceList.buttonLabel === 'Email Me the Price List') { s.priceList.buttonLabel = 'Get Our Full Price List'; done.push('settings: price list button') }
 
     // ---- "interest-free" only in the DentiCare section of Prices and Payment Options
-    const keepDentiCare = (p: Page, x: Section) => p.key === 'price-list' && (x.label || '').startsWith('Interest-Free Payment Plans with DentiCare')
+    // (and the Google Ads landing pages, 12 November 2026: their DentiCare card and answer describe DentiCare itself)
+    const keepDentiCare = (p: Page, x: Section) => (p.key === 'price-list' && (x.label || '').startsWith('Interest-Free Payment Plans with DentiCare')) ||
+      p.key.startsWith('lp/')
     for (const p of c.pages) {
       let changed = false
       for (const x of p.sections) {
@@ -1046,6 +1048,43 @@ UPDATES.push({
     for (const [k, v] of Object.entries(TRACKING_CODES)) {
       if (t[k] !== v) { t[k] = v; done.push(`settings: tracking ${k}`) }
     }
+    return done
+  },
+})
+
+// the website's call tracking number (Rowayne, 12 November 2026): bought to track calls from the website,
+// diverted to the practice number. Visitors see 07 5236 0707 and call +61752360707; the pages and Google keep (07) 3852 1160.
+export const CALL_TRACKING_NUMBER = '07 5236 0707'
+
+UPDATES.push({
+  id: '2026-11-12-call-tracking-number',
+  description: 'Website call tracking number in Site Settings, Tracking',
+  apply(c) {
+    const t = c.settings.tracking as unknown as Record<string, string>
+    const tb = c.settings.tracking as unknown as Record<string, boolean>
+    if (t.callTrackingNumber === CALL_TRACKING_NUMBER && tb.callTrackingShowNumber !== false) return []
+    t.callTrackingNumber = CALL_TRACKING_NUMBER
+    tb.callTrackingShowNumber = true
+    return ['settings: tracking callTrackingNumber (shown on screen)']
+  },
+})
+
+// the Google Ads landing page and its call tracking number (Rowayne, 12 November 2026)
+export const CALL_TRACKING_ADS_NUMBER = '07 4079 0713'
+
+UPDATES.push({
+  id: '2026-11-12-google-ads-landing-page',
+  description: 'Google Ads landing page /lp/dentist-brisbane/, its call tracking number 07 4079 0713, and the 5.0 Google rating',
+  apply(c, repo) {
+    const done: string[] = []
+    if (!page(c, 'lp/dentist-brisbane')) {
+      const p = repo.pages.find((x) => x.key === 'lp/dentist-brisbane')
+      if (p) { c.pages.push(JSON.parse(JSON.stringify(p))); done.push('added page /lp/dentist-brisbane/') }
+    }
+    const t = c.settings.tracking as unknown as Record<string, string>
+    if (!t.callTrackingAdsNumber) { t.callTrackingAdsNumber = CALL_TRACKING_ADS_NUMBER; done.push('settings: tracking callTrackingAdsNumber') }
+    // "over 500 reviews on Google, rated 5 stars": the rating shows beside the count wherever the reviews appear
+    if (!String(c.settings.reviews.rating || '').trim()) { c.settings.reviews.rating = '5.0'; done.push('settings: Google rating 5.0') }
     return done
   },
 })

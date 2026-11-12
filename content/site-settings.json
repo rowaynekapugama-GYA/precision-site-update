@@ -84,7 +84,10 @@
     "metaPixelId": "",
     "googleAdsId": "",
     "adsPriceListLabel": "",
-    "searchConsole": "xK3Re-XFObu5QcxES59bbUeIXT1f5RER9pDlcj0aDE8"
+    "searchConsole": "xK3Re-XFObu5QcxES59bbUeIXT1f5RER9pDlcj0aDE8",
+    "callTrackingNumber": "07 5236 0707",
+    "callTrackingShowNumber": true,
+    "callTrackingAdsNumber": "07 4079 0713"
   },
   "features": {
     "mode": "open",
@@ -110,7 +113,7 @@
   },
   "reviews": {
     "enabled": true,
-    "rating": "",
+    "rating": "5.0",
     "count": "500",
     "url": "",
     "logo": ""

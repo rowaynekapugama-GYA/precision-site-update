@@ -278,7 +278,15 @@ export function SettingsForm({ initial, isAdmin }: { initial: S; isAdmin: boolea
             <div className="row">
               <TextInput label="Google Search Console verification" value={s.tracking.searchConsole ?? ''} onChange={(v) => setT({ searchConsole: (/content="([^"]*)"/.exec(v)?.[1] ?? v).trim() })}
                 placeholder="The code from the HTML tag method" help="Paste the code, or the whole meta tag from Search Console. It goes in the head of every page." />
+              <TextInput label="Call tracking number" value={s.tracking.callTrackingNumber ?? ''} onChange={(v) => setT({ callTrackingNumber: v })} placeholder="07 1234 5678"
+                help="Visitors call this number instead of the practice number. The pages, Google and the schema keep the practice number. Leave blank to switch it off. Publish website after changing it." />
             </div>
+            <div className="row">
+              <TextInput label="Google Ads call tracking number" value={s.tracking.callTrackingAdsNumber ?? ''} onChange={(v) => setT({ callTrackingAdsNumber: v })} placeholder="07 1234 5678"
+                help="Used on the Google Ads landing pages (/lp/...) and, for the rest of their visit, for anyone who arrives from an ad. Everyone else gets the call tracking number above." />
+            </div>
+            <Toggle label="Show the tracking number on screen" checked={s.tracking.callTrackingShowNumber !== false} onChange={(v) => setT({ callTrackingShowNumber: v })}
+              help="On: visitors see the tracking number wherever the practice number appears. Off: they still see the practice number, and only tapping a call button or phone link dials the tracking number." />
             <p className="help">If GA4 runs inside Tag Manager, fill in only the Tag Manager ID so visits are not counted twice. A sent price list form fires GA4 generate_lead, the Google Ads conversion above, Meta Lead, and the dataLayer event price_list_download for Tag Manager.</p>
           </Panel>
         ) : null}

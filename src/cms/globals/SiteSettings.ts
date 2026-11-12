@@ -71,6 +71,9 @@ export const SiteSettings: GlobalConfig = {
         { name: 'googleAdsId', type: 'text' },
         { name: 'adsPriceListLabel', type: 'text' },
         { name: 'searchConsole', type: 'text' },
+        { name: 'callTrackingNumber', type: 'text' },
+        { name: 'callTrackingShowNumber', type: 'checkbox', defaultValue: true },
+        { name: 'callTrackingAdsNumber', type: 'text' },
       ],
     },
     {

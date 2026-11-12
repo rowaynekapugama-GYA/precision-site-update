@@ -278,7 +278,9 @@ export function settingsFromDoc(d: Doc, media: MediaMap, docs?: MediaMap): Setti
     tracking: {
       ga4Id: str(d.tracking?.ga4Id), gtmId: str(d.tracking?.gtmId), metaPixelId: str(d.tracking?.metaPixelId),
       googleAdsId: str(d.tracking?.googleAdsId), adsPriceListLabel: str(d.tracking?.adsPriceListLabel),
-      searchConsole: str(d.tracking?.searchConsole),
+      searchConsole: str(d.tracking?.searchConsole), callTrackingNumber: str(d.tracking?.callTrackingNumber),
+      callTrackingShowNumber: d.tracking?.callTrackingShowNumber !== false,
+      callTrackingAdsNumber: str(d.tracking?.callTrackingAdsNumber),
     },
     features: {
       mode: d.features?.mode === 'pre-opening' ? 'pre-opening' : 'open',

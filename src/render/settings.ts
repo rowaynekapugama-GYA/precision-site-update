@@ -11,6 +11,7 @@ import { attr, esc, ORIGIN, streetLine } from './util'
 export { streetLine }
 import { fundLogos, fundsList, priceTable, priceTeaser } from './priceList'
 import { mapLinks, videoGrid } from './media'
+import { fundsOtherLogos, fundsPreferredLogos, offerCard, offerPill, reviewsScore } from './landing'
 import { offerBanner, offerPopup, offerSection, offerTerms, priceListForm, reviewsBadge, reviewsBand, schemeLines, withLeadDefaults } from './leads'
 
 const SHORT: Record<string, string> = {
@@ -138,6 +139,11 @@ export function siteTokens(settings: Settings): Record<string, string> {
     linkedin: social(s.socials.linkedin),
     googleBusiness: social(s.socials.googleBusiness),
     headTop: headTop(s),
+    offerPill: offerPill(s),
+    offerCard: offerCard(s),
+    reviewsScore: reviewsScore(s),
+    fundsPreferredLogos: fundsPreferredLogos(s),
+    fundsOtherLogos: fundsOtherLogos(s),
     headExtra: headExtra(s),
     bodyStart: bodyStart(s),
     offerBanner: offerBanner(s),
@@ -220,6 +226,92 @@ function headTop(s: Settings): string {
   return out.length ? '\n' + out.join('\n') : ''
 }
 
+/** A usable Australian call tracking number that is not the practice number, or null. */
+function trackingNumber(s: Settings, value: string | undefined): { display: string; tel: string } | null {
+  const display = String(value || '').trim()
+  const digits = display.replace(/\D/g, '').replace(/^61(?=[2-478]\d{8}$)/, '0')
+  if (!/^(0[2-478]\d{8}|1[38]00\d{6}|13\d{4})$/.test(digits)) return null
+  if (digits === String(s.phone || '').replace(/\D/g, '').replace(/^61(?=[2-478]\d{8}$)/, '0')) return null
+  return { display, tel: phoneDigits(digits) }
+}
+
+/** The website call tracking number (Site Settings, Tracking), or null. */
+export function callTracking(s: Settings): { display: string; tel: string } | null {
+  return trackingNumber(s, s.tracking?.callTrackingNumber)
+}
+
+/** The Google Ads call tracking number (Site Settings, Tracking), or null. */
+export function callTrackingAds(s: Settings): { display: string; tel: string } | null {
+  return trackingNumber(s, s.tracking?.callTrackingAdsNumber)
+}
+
+/** A short fingerprint of the number, so browsers fetch the script again when it changes without the number being in the page. */
+function shortHash(v: string): string {
+  let h = 5381
+  for (const c of v) h = ((h * 33) ^ c.charCodeAt(0)) >>> 0
+  return h.toString(36)
+}
+
+/**
+ * /call-tracking.js (12 November 2026): in each visitor's browser, swaps the practice number for the call
+ * tracking number, in the words on the page and in every call button and phone link, so calls from the
+ * website ring the tracking number. The HTML, the schema, the page titles and descriptions keep the
+ * practice number. Search engines never see the tracking number: robots.txt blocks this file (so Google
+ * does not run it when it renders a page), it is served with noindex, and it does nothing for crawlers.
+ */
+export function callTrackingScript(s: Settings): string {
+  const ct = callTracking(s)
+  const ads = callTrackingAds(s)
+  if (!ct && !ads) return ''
+  const real = String(s.phone || '').replace(/\D/g, '').replace(/^61(?=[2-478]\d{8}$)/, '0')
+  // the national number without its leading 0, with any spacing or brackets between the digits
+  const nsn = real.replace(/^0/, '')
+  const sep = '[\\s().-]*'
+  const prefix = real.startsWith('0') ? `(?:\\+61${sep}(?:\\(0\\)${sep})?|\\(?0)` : ''
+  const pattern = prefix + nsn.split('').join(sep)
+  return `/* Precision Dental call tracking. The practice number stays in the page for search engines. */
+(function(){
+  var ua=navigator.userAgent||'';
+  if(/bot|crawl|spider|slurp|mediapartners|bingpreview|facebookexternalhit|lighthouse|pagespeed|headless/i.test(ua))return;
+  var RE=/${pattern}/g, REAL='${real}', WORDS=${s.tracking?.callTrackingShowNumber === false ? 'false' : 'true'};
+  var SITE=${ct ? JSON.stringify({ show: ct.display, tel: 'tel:' + ct.tel }) : 'null'}, ADS=${ads ? JSON.stringify({ show: ads.display, tel: 'tel:' + ads.tel }) : 'null'};
+  // visitors from Google Ads (the /lp/ landing pages, or a click id in the address) see the Google Ads number
+  // on every page for the rest of their visit; everyone else sees the website number
+  var fromAds=false;
+  try{fromAds=location.pathname.indexOf('/lp/')===0||/[?&](gclid|gbraid|wbraid|gad_source)=/.test(location.search)||sessionStorage.getItem('pd_ct')==='ads';if(fromAds&&ADS)sessionStorage.setItem('pd_ct','ads');}catch(e){fromAds=location.pathname.indexOf('/lp/')===0;}
+  var USE=(fromAds&&ADS)||SITE;
+  if(!USE)return;
+  var SHOW=USE.show, TEL=USE.tel;
+  function digits(v){return String(v||'').replace(/\\D/g,'').replace(/^61(?=[2-478]\\d{8}$)/,'0');}
+  var SKIP={SCRIPT:1,STYLE:1,NOSCRIPT:1,TEXTAREA:1,TEMPLATE:1,TITLE:1};
+  function text(root){
+    if(!WORDS)return;
+    var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null),n,list=[];
+    while((n=w.nextNode())){var p=n.parentNode;if(p&&!SKIP[p.nodeName]&&RE.test(n.nodeValue))list.push(n);RE.lastIndex=0;}
+    list.forEach(function(t){t.nodeValue=t.nodeValue.replace(RE,SHOW);});
+  }
+  function attrs(root){
+    var els=root.querySelectorAll?root.querySelectorAll('a[href^="tel:"],[aria-label],[title]'):[];
+    [].forEach.call(els,function(el){
+      var h=el.getAttribute('href');
+      if(h&&h.indexOf('tel:')===0&&digits(h.slice(4))===REAL)el.setAttribute('href',TEL);
+      if(WORDS)['aria-label','title'].forEach(function(a){var v=el.getAttribute(a);if(v&&RE.test(v)){RE.lastIndex=0;el.setAttribute(a,v.replace(RE,SHOW));}RE.lastIndex=0;});
+    });
+  }
+  function run(root){if(!root)return;text(root);attrs(root);if(root.nodeType===1&&root.matches&&root.matches('a[href^="tel:"]'))attrs(root.parentNode||root);}
+  function start(){
+    run(document.body);
+    if(window.MutationObserver)new MutationObserver(function(ms){ms.forEach(function(m){
+      if(!WORDS){[].forEach.call(m.addedNodes,function(n){if(n.nodeType===1)attrs(n);});return;}
+      if(m.type==='characterData'){var p=m.target.parentNode;if(p&&!SKIP[p.nodeName]&&RE.test(m.target.nodeValue)){RE.lastIndex=0;m.target.nodeValue=m.target.nodeValue.replace(RE,SHOW);}RE.lastIndex=0;}
+      else [].forEach.call(m.addedNodes,function(n){if(n.nodeType===3){var p=n.parentNode;if(p&&!SKIP[p.nodeName]&&RE.test(n.nodeValue)){RE.lastIndex=0;n.nodeValue=n.nodeValue.replace(RE,SHOW);}RE.lastIndex=0;}else if(n.nodeType===1)run(n);});
+    });}).observe(document.body,{childList:true,subtree:true,characterData:true});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+})();
+`
+}
+
 /** Brand colour overrides and the Meta Pixel, injected only when set. */
 function headExtra(s: Settings): string {
   const out: string[] = []
@@ -230,6 +322,9 @@ function headExtra(s: Settings): string {
   if (hex(s.colours.blueDark)) vars.push(`--blue-700:${s.colours.blueDark.trim()}`)
   if (vars.length) out.push(`<style>:root{${vars.join(';')}}</style>`)
   const t = s.tracking
+  const ct = callTracking(s)
+  const ads = callTrackingAds(s)
+  if (ct || ads) out.push(`<script src="/call-tracking.js?v=${shortHash((ct ? ct.display + ct.tel : '') + '|' + (ads ? ads.display + ads.tel : '') + '|' + (s.tracking?.callTrackingShowNumber === false ? 0 : 1))}" defer></script>`)
   if (t.metaPixelId && /^\d+$/.test(t.metaPixelId)) {
     out.push(`<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${t.metaPixelId}');fbq('track','PageView');</script>`)
   }

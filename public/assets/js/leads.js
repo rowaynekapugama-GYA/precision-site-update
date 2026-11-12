@@ -43,6 +43,7 @@
     var dialog=pop.querySelector('.om-dialog');
     var skip=(pop.getAttribute('data-skip')||'').split(/\s+/).filter(Boolean);
     if(skip.indexOf(location.pathname)>-1) return;
+    if(location.pathname.indexOf('/lp/')===0) return; /* Google Ads landing pages show the offer in the hero */
     if(read('pd_offer_seen')) return;
     var delay=parseInt(pop.getAttribute('data-delay'),10); if(isNaN(delay))delay=2;
     var shown=false, open=false, timer=null, last=null;

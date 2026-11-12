@@ -3,6 +3,8 @@ import * as migration_20261014_011040_revisions_20261014 from './20261014_011040
 import * as migration_20261019_074239_client_round_2_20261019 from './20261019_074239_client_round_2_20261019';
 import * as migration_20261028_004622_blob_object_key from './20261028_004622_blob_object_key';
 import * as migration_20261105_014246_search_console from './20261105_014246_search_console';
+import * as migration_20261112_110639_call_tracking_number from './20261112_110639_call_tracking_number';
+import * as migration_20261112_113737_call_tracking_ads_number from './20261112_113737_call_tracking_ads_number';
 
 export const migrations = [
   {
@@ -28,6 +30,16 @@ export const migrations = [
   {
     up: migration_20261105_014246_search_console.up,
     down: migration_20261105_014246_search_console.down,
-    name: '20261105_014246_search_console'
+    name: '20261105_014246_search_console',
+  },
+  {
+    up: migration_20261112_110639_call_tracking_number.up,
+    down: migration_20261112_110639_call_tracking_number.down,
+    name: '20261112_110639_call_tracking_number',
+  },
+  {
+    up: migration_20261112_113737_call_tracking_ads_number.up,
+    down: migration_20261112_113737_call_tracking_ads_number.down,
+    name: '20261112_113737_call_tracking_ads_number'
   },
 ];

@@ -31,6 +31,10 @@ on a public page reads the database.
   its closest page (`data/legacy-redirects.json`), footer social links, enquiry form spam protection,
   16px form text on phones, keyboard and screen reader fixes, HSTS. See CHANGELOG.md and the audit
   report.
+- v3.10.0 (12 November 2026): Google Ads landing page /lp/dentist-brisbane/ (noindex, dashboard-editable,
+  `public/assets/css/landing.css`), Google Ads call tracking number 07 4079 0713, 5.0 Google rating.
+- v3.9.0 (12 November 2026): website call tracking number 07 5236 0707, swapped in for visitors only
+  (`/call-tracking.js`, blocked in robots.txt); the HTML, schema and Google keep (07) 3852 1160. Site Settings, Tracking.
 - v3.8.0 (5 November 2026): Google Analytics 4 (G-SZ5Z524SBD), Google Tag Manager (GTM-MPN8W8JL) and the
   Google Search Console verification tag on every page, set in Site Settings, Tracking (new Search Console box).
 - v3.7.1 (3 November 2026): both forms email reception (admin@precisiondentistry.com.au), with

@@ -1,0 +1,236 @@
+/* =========================================================
+   Precision Dental | Google Ads landing pages (/lp/...) | GYA
+   12 November 2026. Loaded only on these pages; uses the site's
+   colours, fonts, buttons and FAQ from styles.css.
+   ========================================================= */
+
+/* ---------- hero ---------- */
+.lp-hero{padding:clamp(118px,13vw,150px) 0 clamp(56px,7vw,92px);overflow:hidden}
+.lp-hero-bg{position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(1100px 520px at 88% 8%,rgba(79,178,227,.22),transparent 62%),
+             radial-gradient(800px 480px at 0% 100%,rgba(26,154,212,.12),transparent 60%),
+             linear-gradient(180deg,var(--sky-50),#fff 78%)}
+.lp-hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:clamp(28px,4.5vw,64px);align-items:center}
+.lp-hero h1{font-size:clamp(2.3rem,4.6vw,3.7rem);font-weight:var(--w-head-strong);margin:18px 0 12px}
+.lp-sub{font-family:var(--font-serif);font-style:italic;font-size:clamp(1.35rem,2.2vw,1.8rem);line-height:1.2;color:var(--blue-700);margin-bottom:16px}
+.lp-lead{font-size:1.06rem;max-width:560px}
+
+.lp-offer-pill{display:inline-flex;align-items:center;gap:10px;padding:8px 8px 8px 16px;border-radius:var(--r-pill);
+  background:#fff;border:1px solid rgba(10,132,184,.25);box-shadow:0 12px 28px -18px rgba(10,110,158,.55);
+  font-family:var(--font-head);font-weight:700;font-size:.92rem;color:var(--navy);transition:transform .25s var(--ease)}
+.lp-offer-pill svg{width:18px;height:18px;color:var(--blue-600)}
+.lp-offer-pill b{padding:6px 14px;border-radius:var(--r-pill);color:#fff;background:linear-gradient(135deg,var(--blue-500),var(--blue-700));font-weight:800}
+.lp-offer-pill:hover{transform:translateY(-2px)}
+
+.lp-score{display:inline-flex;align-items:center;flex-wrap:wrap;gap:10px 12px;margin-top:22px;padding:10px 18px 10px 10px;border-radius:var(--r-pill);
+  background:#fff;border:1px solid var(--line);box-shadow:0 12px 30px -20px rgba(1,42,65,.4);font-family:var(--font-head);color:var(--navy)}
+.lp-g{padding:7px 12px;border-radius:var(--r-pill);background:var(--sky-50);font-weight:800;font-size:.95rem;letter-spacing:-.01em;color:var(--navy)}
+.lp-rating{display:inline-flex;align-items:center;gap:8px}
+.lp-rating b{font-size:1.15rem;font-weight:800}
+.lp-count{font-weight:600;font-size:.95rem;color:var(--ink-2)}
+
+.lp-cta{margin-top:24px}
+.lp-cta .btn{font-size:1rem}
+.lp-call{gap:10px;padding:14px 22px}
+.lp-call svg{width:18px;height:18px;color:var(--blue-600)}
+
+.lp-trust{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:24px}
+.lp-trust li{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-head);font-weight:600;font-size:.92rem;color:var(--navy)}
+.lp-trust svg{width:20px;height:20px;color:var(--blue-600);flex:none}
+.lp-where{display:inline-flex;align-items:flex-start;gap:8px;margin-top:16px;font-size:.95rem;color:var(--ink-2);border-bottom:1px dashed rgba(1,42,65,.25)}
+.lp-where svg{width:18px;height:18px;color:var(--blue-600);flex:none;margin-top:3px}
+
+.lp-hero-media{position:relative;padding-bottom:clamp(120px,14vw,170px)}
+.lp-photo{border-radius:var(--r-xl);overflow:hidden;box-shadow:0 40px 80px -40px rgba(1,42,65,.55);aspect-ratio:4/3}
+.lp-photo img{width:100%;height:100%;object-fit:cover}
+.lp-offer{position:absolute;left:clamp(-28px,-2vw,0px);right:clamp(24px,6vw,90px);bottom:0;padding:22px 24px 18px;border-radius:var(--r-lg);
+  background:rgba(255,255,255,.94);-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);
+  border:1px solid rgba(255,255,255,.9);box-shadow:0 30px 60px -28px rgba(1,42,65,.55)}
+.lp-offer-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.lp-offer-title{font-family:var(--font-head);font-weight:700;font-size:1.15rem;color:var(--navy)}
+.lp-offer-price{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:92px;height:92px;flex:none;border-radius:50%;
+  color:#fff;background:linear-gradient(140deg,var(--blue-500),var(--blue-700));box-shadow:0 0 0 6px rgba(79,178,227,.25),0 16px 30px -12px rgba(10,110,158,.8);margin-top:-48px}
+.lp-offer-price b{font-family:var(--font-head);font-weight:800;font-size:1.65rem;line-height:1}
+.lp-offer-price small{font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-top:3px}
+.lp-offer-lead{font-size:.9rem;margin:6px 0 8px}
+.lp-offer-list{display:grid;grid-template-columns:1fr 1fr;gap:6px 16px}
+.lp-offer-list li{display:flex;gap:8px;align-items:flex-start;font-size:.9rem;font-weight:600;color:var(--navy);line-height:1.35}
+.lp-offer-list svg{width:16px;height:16px;flex:none;margin-top:2px;padding:2px;border-radius:50%;color:#fff;background:var(--blue-600)}
+.lp-offer-btn{margin-top:14px}
+.lp-offer-terms{margin-top:10px;font-size:.76rem;line-height:1.4}
+.lp-offer-terms a{text-decoration:underline;text-underline-offset:2px;color:var(--ink-2)}
+
+/* ---------- health funds ---------- */
+.lp-funds{padding:clamp(56px,7vw,88px) 0;background:#fff;border-top:1px solid var(--line)}
+.lp-funds-head{max-width:780px;margin:0 auto 34px;text-align:center}
+.lp-hicaps{display:inline-block;padding:6px 14px;border-radius:8px;font-family:var(--font-head);font-weight:800;letter-spacing:.08em;font-size:.85rem;color:#fff;background:var(--navy);margin-bottom:14px}
+.lp-funds-head p{margin-top:12px;font-size:1.06rem}
+.lp-pref{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:28px;align-items:center;padding:28px;border-radius:var(--r-xl);
+  background:linear-gradient(135deg,var(--sky-50),#fff);border:1px solid rgba(10,132,184,.2);box-shadow:0 26px 60px -40px rgba(10,110,158,.6)}
+.lp-pref h3{font-size:clamp(1.35rem,2.2vw,1.75rem);font-weight:var(--w-head-strong)}
+.lp-pref p{margin-top:10px;font-size:.98rem}
+.lp-pref-logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}
+.lp-pref-logos li{position:relative;display:grid;place-items:center;height:116px;padding:30px 18px 16px;border-radius:var(--r-md);background:#fff;
+  border:2px solid var(--blue-500);box-shadow:0 18px 36px -24px rgba(10,110,158,.7)}
+.lp-pref-logos img{max-height:56px;max-width:100%;width:auto;object-fit:contain}
+.lp-pref-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);white-space:nowrap;padding:4px 12px;border-radius:var(--r-pill);
+  font-family:var(--font-head);font-weight:700;font-size:.74rem;color:#fff;background:linear-gradient(135deg,var(--blue-500),var(--blue-700))}
+.lp-others{margin-top:34px;text-align:center}
+.lp-others h3{font-size:1.1rem;color:var(--ink-2);font-weight:600;margin-bottom:18px}
+.lp-fund-logos{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.lp-fund-logos li{display:grid;place-items:center;height:76px;padding:12px 14px;border-radius:14px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 24px -20px rgba(1,42,65,.5)}
+.lp-fund-logos img{max-height:40px;max-width:100%;width:auto;object-fit:contain}
+.lp-note{margin-top:18px;font-size:.88rem;color:var(--ink-2)}
+
+/* ---------- payment options ---------- */
+.lp-pay{padding:clamp(64px,8vw,104px) 0;background:var(--sky-50)}
+.lp-pay-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.lp-pay-card{padding:28px 26px;border-radius:var(--r-lg);background:#fff;border:1px solid var(--line);box-shadow:0 24px 50px -36px rgba(1,42,65,.5)}
+.lp-pay-card h3{margin:16px 0 10px;font-size:1.22rem}
+.lp-pay-card p{font-size:.95rem}
+.lp-ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--blue-500),var(--blue-700));box-shadow:0 14px 26px -14px rgba(10,110,158,.8)}
+.lp-ic svg{width:24px;height:24px}
+.lp-more{text-align:center;margin-top:28px}
+.lp-more a{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-head);font-weight:600;color:var(--blue-700)}
+.lp-more .arr{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid var(--line)}
+.lp-more .arr svg{width:14px;height:14px}
+
+/* ---------- location ---------- */
+.lp-location{padding:clamp(64px,8vw,104px) 0;background:#fff}
+.lp-loc-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:24px;align-items:stretch}
+.lp-map{border-radius:var(--r-xl);overflow:hidden;min-height:460px;box-shadow:0 30px 60px -40px rgba(1,42,65,.6);border:1px solid var(--line)}
+.lp-map iframe{width:100%;height:100%;min-height:460px;border:0;display:block}
+.lp-loc-card{border-radius:var(--r-xl);background:var(--sky-50);border:1px solid rgba(10,132,184,.18);padding:16px 16px 24px;display:flex;flex-direction:column}
+.lp-loc-photo{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:16/8}
+.lp-loc-photo img{width:100%;height:100%;object-fit:cover}
+.lp-details{display:grid;gap:14px;padding:18px 8px 6px}
+.lp-details>div{display:grid;grid-template-columns:150px 1fr;gap:10px;align-items:start}
+.lp-details dt{display:flex;align-items:center;gap:8px;font-family:var(--font-head);font-weight:700;color:var(--navy);font-size:.95rem}
+.lp-details dt svg{width:18px;height:18px;color:var(--blue-600);flex:none}
+.lp-details dd{color:var(--ink-2);font-size:.95rem;line-height:1.5}
+.lp-details dd p{margin:0}
+.lp-details .map-links,.lp-details dd a:not(.lp-phone){font-size:.9rem}
+.lp-details dd a{color:var(--blue-700);font-weight:600}
+.lp-phone{font-family:var(--font-head);font-size:1.25rem;font-weight:800;color:var(--navy)!important}
+.lp-hours li{display:flex;justify-content:space-between;gap:12px;padding:2px 0;border-bottom:1px dashed rgba(1,42,65,.1)}
+.lp-hours li:last-child{border-bottom:0}
+.lp-loc-card .btn-group{padding:8px 8px 0;margin-top:auto}
+
+/* ---------- team ---------- */
+.lp-team{padding:clamp(64px,8vw,104px) 0;background:var(--sky-50)}
+.lp-team .team-grid{grid-template-columns:repeat(4,1fr);gap:18px}
+.lp-team .team-card .role{color:var(--blue-700)}
+.lp-team .team-card .reg{color:var(--ink-2)}
+.lp-team .team-card h3{font-size:1.12rem;margin-bottom:6px}
+.lp-team .team-card p{font-size:.86rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.lp-team .team-card p~p{display:none}
+
+/* ---------- services ---------- */
+.lp-services{padding:clamp(64px,8vw,104px) 0;background:#fff}
+.lp-svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.lp-svc{border-radius:var(--r-lg);overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 24px 50px -38px rgba(1,42,65,.55);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.lp-svc:hover{transform:translateY(-4px);box-shadow:0 30px 60px -36px rgba(1,42,65,.6)}
+.lp-svc-img{display:block;aspect-ratio:3/2;overflow:hidden}
+.lp-svc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.lp-svc:hover .lp-svc-img img{transform:scale(1.05)}
+.lp-svc-tx{padding:20px 22px 24px}
+.lp-svc h3{font-size:1.2rem}
+.lp-svc h3 a:hover{color:var(--blue-700)}
+.lp-svc p{margin-top:8px;font-size:.95rem}
+.lp-risk{margin-top:26px;text-align:center;font-size:.85rem;color:var(--ink-2)}
+
+/* ---------- suburbs ---------- */
+.lp-areas{padding:clamp(56px,7vw,92px) 0;background:linear-gradient(135deg,var(--navy),var(--navy-800))}
+.lp-areas h2{color:#fff;margin-top:18px}
+.lp-areas p{color:rgba(255,255,255,.82);margin-top:14px}
+.lp-areas .pill{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.2)}
+.lp-areas-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
+.lp-chips{display:flex;flex-wrap:wrap;gap:10px}
+.lp-chips a{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:var(--r-pill);font-family:var(--font-head);font-weight:600;font-size:.95rem;
+  color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);transition:background .25s,transform .25s var(--ease)}
+.lp-chips a:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
+.lp-chips svg{width:16px;height:16px;color:var(--sky-300)}
+
+/* ---------- why ---------- */
+.lp-why{padding:clamp(64px,8vw,104px) 0;background:#fff}
+.lp-why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.lp-why-tile{padding:26px 22px;border-radius:var(--r-lg);background:var(--sky-50);border:1px solid rgba(10,132,184,.15)}
+.lp-why-tile h3{margin:16px 0 8px;font-size:1.12rem}
+.lp-why-tile p{font-size:.93rem}
+
+/* ---------- emergency ---------- */
+.lp-emergency{padding:clamp(40px,5vw,64px) 0;background:#fff}
+.lp-emer-inner{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:24px;align-items:center;padding:clamp(24px,3.5vw,40px);border-radius:var(--r-xl);
+  background:linear-gradient(135deg,var(--blue-600),var(--navy));box-shadow:0 30px 60px -36px rgba(1,42,65,.8)}
+.lp-emergency .lp-ic{background:rgba(255,255,255,.14);box-shadow:none}
+.lp-emergency h2{color:#fff;font-size:clamp(1.5rem,2.6vw,2.1rem)}
+.lp-emergency p{color:rgba(255,255,255,.88);margin-top:10px}
+.lp-emergency .lp-small{font-size:.85rem;color:rgba(255,255,255,.72)}
+.lp-emergency .btn-group{margin-top:0;flex-direction:column}
+
+/* ---------- FAQ ---------- */
+.lp-faq{background:var(--sky-50)}
+
+/* ---------- tablet and phone ---------- */
+@media(max-width:1024px){
+  .lp-hero-grid{grid-template-columns:1fr}
+  .lp-hero-media{max-width:680px;width:100%;margin-inline:auto}
+  .lp-why-grid{grid-template-columns:repeat(2,1fr)}
+  .lp-team .team-grid{grid-template-columns:repeat(3,1fr)}
+  .lp-loc-grid{grid-template-columns:1fr}
+  .lp-map,.lp-map iframe{min-height:360px}
+  .lp-emer-inner{grid-template-columns:1fr;text-align:left}
+  .lp-emergency .btn-group{flex-direction:row}
+}
+@media(max-width:900px){
+  .lp-pay-grid,.lp-svc-grid{grid-template-columns:1fr 1fr}
+  .lp-pref{grid-template-columns:1fr;text-align:center}
+  .lp-areas-grid{grid-template-columns:1fr}
+  .lp-team .team-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .lp-hero{padding-top:104px}
+  .lp-hero h1{font-size:clamp(2rem,9vw,2.5rem);margin-top:16px}
+  .lp-lead{font-size:1rem}
+  .lp-cta{display:grid;grid-template-columns:1fr;gap:10px}
+  .lp-cta .btn{width:100%;justify-content:space-between}
+  .lp-cta .lp-call{justify-content:center}
+  .lp-trust{flex-direction:column;gap:8px}
+  .lp-hero-media{padding-bottom:0}
+  .lp-photo{aspect-ratio:3/2;border-radius:var(--r-lg)}
+  .lp-offer{position:relative;left:auto;right:auto;margin:-36px 10px 0;padding:18px 18px 16px}
+  .lp-offer-price{width:80px;height:80px;margin-top:-40px}
+  .lp-offer-price b{font-size:1.4rem}
+  .lp-offer-list{grid-template-columns:1fr}
+  .lp-offer-btn{width:100%;justify-content:space-between}
+  .lp-pay-grid,.lp-svc-grid,.lp-why-grid{grid-template-columns:1fr}
+  .lp-svc-grid{gap:12px}
+  .lp-svc{display:grid;grid-template-columns:112px minmax(0,1fr);align-items:stretch}
+  .lp-svc-img{aspect-ratio:auto;height:100%}
+  .lp-svc-tx{padding:14px 16px}
+  .lp-svc h3{font-size:1.04rem}
+  .lp-svc p{font-size:.86rem;margin-top:4px}
+  .lp-pref{padding:22px 16px}
+  .lp-pref-logos{grid-template-columns:repeat(3,1fr);gap:8px}
+  .lp-pref-logos li{height:84px;padding:22px 8px 10px;border-radius:12px}
+  .lp-pref-logos img{max-height:38px}
+  .lp-pref-badge{font-size:.6rem;padding:3px 7px;top:-10px}
+  .lp-fund-logos{grid-template-columns:repeat(3,1fr);gap:8px}
+  .lp-fund-logos li{height:60px;padding:8px}
+  .lp-fund-logos img{max-height:30px}
+  .lp-details>div{grid-template-columns:1fr;gap:4px}
+  .lp-loc-card .btn-group{display:grid;grid-template-columns:1fr}
+  .lp-loc-card .btn-group .btn{justify-content:center;width:100%}
+  .lp-emergency .btn-group{flex-direction:column}
+  .lp-emergency .btn{justify-content:center}
+  .lp-chips a{padding:9px 14px;font-size:.9rem}
+  .lp-score{gap:8px;padding:8px 14px 8px 8px;margin-top:18px}
+  .lp-g{padding:6px 10px;font-size:.85rem}
+  .lp-rating b{font-size:1rem}
+  .lp-rating .gr-stars::before{letter-spacing:0;font-size:1em}
+  .lp-count{font-size:.82rem}
+  .lp-team .team-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .lp-team .team-card{padding:10px 10px 16px}
+  .lp-team .team-card p,.lp-team .team-card .explore{display:none}
+}
+@media(prefers-reduced-motion:reduce){.lp-svc,.lp-svc img,.lp-offer-pill,.lp-chips a{transition:none}}

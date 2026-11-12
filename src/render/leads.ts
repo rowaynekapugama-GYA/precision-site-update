@@ -57,7 +57,7 @@ export function withLeadDefaults(s: Settings): Settings {
   const t = s.tracking || ({} as Settings['tracking'])
   return {
     ...s,
-    tracking: { ga4Id: t.ga4Id ?? '', gtmId: t.gtmId ?? '', metaPixelId: t.metaPixelId ?? '', googleAdsId: t.googleAdsId ?? '', adsPriceListLabel: t.adsPriceListLabel ?? '', searchConsole: t.searchConsole ?? '' },
+    tracking: { ga4Id: t.ga4Id ?? '', gtmId: t.gtmId ?? '', metaPixelId: t.metaPixelId ?? '', googleAdsId: t.googleAdsId ?? '', adsPriceListLabel: t.adsPriceListLabel ?? '', searchConsole: t.searchConsole ?? '', callTrackingNumber: t.callTrackingNumber ?? '', callTrackingShowNumber: t.callTrackingShowNumber !== false, callTrackingAdsNumber: t.callTrackingAdsNumber ?? '' },
     offer: { ...DEFAULTS.offer, ...(o || {}) },
     reviews: { ...DEFAULTS.reviews, ...(r || {}) },
     priceList: { ...DEFAULTS.priceList, ...(p || {}) },

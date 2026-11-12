@@ -1,7 +1,7 @@
 /** The whole public site, as a map of file path to contents. */
 import type { Content, Post } from './types'
 import { abs, applyFeatures, applyReplacements, fill, fillTokens, graphJson, makeCtx, renderPage, resolvePlain, withTrackingSlots, type RenderCtx } from './page'
-import { practiceNode } from './settings'
+import { callTrackingScript, practiceNode } from './settings'
 import { articleMain, articleNodes, isLive, postImage, postUrl } from './posts'
 import { ORIGIN } from './util'
 
@@ -51,7 +51,8 @@ export function sitemapXml(content: Content): string {
 
 export function robotsTxt(): string {
   // the price list PDF is handed out through the form, never found through a search engine
-  return `User-agent: *\nAllow: /\nDisallow: /downloads/\n\nSitemap: ${ORIGIN}/sitemap.xml\n`
+  // the call tracking script is never fetched by search engines, so Google only ever sees the practice number
+  return `User-agent: *\nAllow: /\nDisallow: /downloads/\nDisallow: /call-tracking.js\n\nSitemap: ${ORIGIN}/sitemap.xml\n`
 }
 
 /** Every public file the site needs, keyed by path relative to the web root. */
@@ -63,6 +64,8 @@ export function renderSite(content: Content): Map<string, string> {
     if (!isLive(p)) continue
     out.set(`${p.slug}.html`, externalLinks(renderPost(p, ctx)))
   }
+  const ct = callTrackingScript(content.settings)
+  if (ct) out.set('call-tracking.js', ct)
   out.set('sitemap.xml', sitemapXml(content))
   out.set('robots.txt', robotsTxt())
   return out
