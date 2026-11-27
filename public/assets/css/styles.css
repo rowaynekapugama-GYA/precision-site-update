@@ -883,6 +883,22 @@ body.lb-open{overflow:hidden}
   background:var(--sky-50);box-shadow:0 40px 80px -34px rgba(1,42,65,.42)}
 .tour-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
 @media(max-width:640px){.tour-frame{border-radius:var(--r-lg)}}
+/* 27 November 2026: the tour loads only when pressed. A still photo of the practice and a
+   button hold its place, so the box keeps its size and nothing moves when it loads */
+.tour-lite>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.tour-btn{position:absolute;inset:0;width:100%;height:100%;border:0;padding:0;margin:0;cursor:pointer;display:grid;place-items:center;
+  background:linear-gradient(180deg,rgba(1,42,65,.05) 30%,rgba(1,42,65,.5) 100%);color:var(--navy)}
+.tour-btn-label{display:inline-flex;align-items:center;gap:12px;padding:15px 24px;border-radius:var(--r-pill);background:#fff;
+  font-family:var(--font-head);font-weight:700;font-size:1.02rem;line-height:1.2;box-shadow:0 18px 40px -16px rgba(1,42,65,.7);transition:transform .25s var(--ease)}
+.tour-btn-label svg{width:22px;height:22px;color:var(--blue-700);flex:none}
+.tour-btn:hover .tour-btn-label,.tour-btn:focus-visible .tour-btn-label{transform:scale(1.05)}
+.tour-lite:hover>img{transform:scale(1.02)}
+.tour-btn:focus-visible{outline:3px solid #fff;outline-offset:-8px;box-shadow:inset 0 0 0 11px var(--blue-700)}
+.tour-lite iframe:focus-visible{outline:3px solid var(--blue-700);outline-offset:-3px}
+.tour-alt{margin-top:14px;font-size:.92rem;color:var(--ink-2)}
+.tour-alt a{color:var(--blue-700);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+/* a taller box on phones, so the tour and its fullscreen button are big enough to use */
+@media(max-width:640px){.tour-lite{aspect-ratio:4/3}}
 
 /* ===================================================================
    14 October 2026 revisions: new patient offer (homepage strip, New

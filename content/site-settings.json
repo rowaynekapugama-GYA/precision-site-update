@@ -64,6 +64,7 @@
     }
   ],
   "bookingUrl": "https://booking.au.hsone.app/soe/new/Precision%20Dental?pid=AUSHC01",
+  "virtualTourUrl": "https://my.matterport.com/show/?m=hwCcZceUKup",
   "preferredFunds": "Bupa, HCF and CBHS",
   "paymentAccepted": "EFTPOS, Visa, Mastercard, American Express, Cash",
   "socials": {

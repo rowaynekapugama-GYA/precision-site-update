@@ -327,3 +327,21 @@
     });
   }
 })();
+
+/* ---------- 3D tour on the Contact page (27 November 2026): Matterport loads only when the button is pressed ---------- */
+(function(){
+  document.addEventListener('click',function(e){
+    var btn=e.target.closest&&e.target.closest('.tour-lite .tour-btn');
+    if(!btn)return;
+    var box=btn.closest('.tour-lite'); var id=box&&box.getAttribute('data-tour');
+    if(!id||!/^[A-Za-z0-9]{6,32}$/.test(id))return; // only a Matterport model ID, never a pasted address
+    e.preventDefault();
+    var f=document.createElement('iframe');
+    f.src='https://my.matterport.com/show/?m='+id+'&play=1';
+    f.title=box.getAttribute('data-title')||'Virtual tour';
+    f.setAttribute('allowfullscreen','');
+    f.setAttribute('allow','xr-spatial-tracking');
+    box.innerHTML=''; box.appendChild(f); box.classList.add('is-loaded');
+    f.focus(); // the keyboard carries on inside the tour
+  });
+})();

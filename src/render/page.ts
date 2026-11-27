@@ -13,6 +13,7 @@ import { attr, deepEqual, esc, ORIGIN, plain, pyJson, unescapeHtml } from './uti
 import { articleIndex, sitemapArticles, teamGrid, itemListNode } from './posts'
 import { BA_DISCLAIMER, beforeAfterCards, casesFor, registrationTokens, withLeadDefaults } from './leads'
 import { videoNodes } from './media'
+import { matterportId, tourBlock } from './tour'
 
 export interface RenderCtx {
   content: Content
@@ -61,6 +62,7 @@ function genBlock(name: string, ctx: RenderCtx): string {
   }
   if (name === 'articleIndex') return articleIndex(ctx.content.posts)
   if (name === 'sitemapArticles') return sitemapArticles(ctx.content.posts)
+  if (name === 'virtualTour') return tourBlock(ctx.content.settings.virtualTourUrl)
   return ''
 }
 
@@ -76,6 +78,8 @@ export function renderSection(sec: Section, ctx: RenderCtx, alt: boolean | null)
     const fields = (sec.fields ?? []).map((f) => (f.id === 'f4' && !String(f.value).trim() ? { ...f, value: BA_DISCLAIMER } : f))
     return fill(sec.template ?? '', fields, ctx).replace(/\{\{gen:([a-zA-Z]+)\}\}/g, (_m, n: string) => genBlock(n, ctx))
   }
+  // the 3D tour stays out of the page while Site Settings has no Matterport link
+  if (sec.generated === 'virtualTour' && !matterportId(ctx.content.settings.virtualTourUrl)) return ''
   let t = sec.template ?? ''
   if (sec.altAuto) t = t.replace('{{alt}}', (alt ?? sec.alt) ? ' section-alt' : '')
   t = fill(t, sec.fields ?? [], ctx)

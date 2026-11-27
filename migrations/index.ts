@@ -5,6 +5,7 @@ import * as migration_20261028_004622_blob_object_key from './20261028_004622_bl
 import * as migration_20261105_014246_search_console from './20261105_014246_search_console';
 import * as migration_20261112_110639_call_tracking_number from './20261112_110639_call_tracking_number';
 import * as migration_20261112_113737_call_tracking_ads_number from './20261112_113737_call_tracking_ads_number';
+import * as migration_20261127_013708_virtual_tour_url from './20261127_013708_virtual_tour_url';
 
 export const migrations = [
   {
@@ -40,6 +41,11 @@ export const migrations = [
   {
     up: migration_20261112_113737_call_tracking_ads_number.up,
     down: migration_20261112_113737_call_tracking_ads_number.down,
-    name: '20261112_113737_call_tracking_ads_number'
+    name: '20261112_113737_call_tracking_ads_number',
+  },
+  {
+    up: migration_20261127_013708_virtual_tour_url.up,
+    down: migration_20261127_013708_virtual_tour_url.down,
+    name: '20261127_013708_virtual_tour_url'
   },
 ];

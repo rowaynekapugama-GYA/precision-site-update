@@ -14,6 +14,7 @@
 import type { BeforeAfterCase, Block, Content, Field, Page, Post, Section, Settings, TeamMember } from '../render/types'
 import { ICON_PILL } from '../render/leads'
 import videoData from '../../data/videos.json'
+import { matterportId } from '../render/tour'
 
 export interface Editable {
   pages: Page[]
@@ -1085,6 +1086,30 @@ UPDATES.push({
     if (!t.callTrackingAdsNumber) { t.callTrackingAdsNumber = CALL_TRACKING_ADS_NUMBER; done.push('settings: tracking callTrackingAdsNumber') }
     // "over 500 reviews on Google, rated 5 stars": the rating shows beside the count wherever the reviews appear
     if (!String(c.settings.reviews.rating || '').trim()) { c.settings.reviews.rating = '5.0'; done.push('settings: Google rating 5.0') }
+    return done
+  },
+})
+
+// ------------------------------------------------- 27 November 2026: 3D tour
+export const VIRTUAL_TOUR_URL = 'https://my.matterport.com/show/?m=hwCcZceUKup'
+const TOUR_TEMPLATE = '<section class="body-section tour-section"><div class="container reveal"><div class="section-head"><h2>{{f1}}</h2><p>{{f2}}</p></div>{{gen:virtualTour}}</div></section>'
+
+UPDATES.push({
+  id: '2026-11-27-virtual-tour-click-to-load',
+  description: 'Contact page: the 3D tour loads only when pressed, and its Matterport link moves to Site Settings',
+  apply(c) {
+    const done: string[] = []
+    const sec = page(c, 'contact')?.sections.find((s) => s.generated === 'virtualTour' || /class="tour-frame"/.test(s.template || ''))
+    if (!sec || sec.generated === 'virtualTour') return done
+    // keep whichever tour the page already shows; the heading, the paragraph and hidden or shown stay as they are
+    const was = /<iframe\b[^>]*\ssrc="([^"]+)"/.exec(sec.template || '')?.[1] || ''
+    if (!String(c.settings.virtualTourUrl || '').trim()) {
+      c.settings.virtualTourUrl = matterportId(was) ? was : VIRTUAL_TOUR_URL
+      done.push('settings: virtual tour link')
+    }
+    sec.template = TOUR_TEMPLATE
+    sec.generated = 'virtualTour'
+    done.push('contact: the 3D tour loads when pressed')
     return done
   },
 })

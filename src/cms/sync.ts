@@ -218,6 +218,7 @@ export function settingsToDoc(settings: Settings): Doc {
     abn: s.abn,
     hours: s.hours.map((h) => ({ ...h })),
     bookingUrl: s.bookingUrl,
+    virtualTourUrl: s.virtualTourUrl || '',
     preferredFunds: s.preferredFunds,
     paymentAccepted: s.paymentAccepted,
     socials: { ...s.socials },
@@ -268,6 +269,7 @@ export function settingsFromDoc(d: Doc, media: MediaMap, docs?: MediaMap): Setti
     abn: str(d.abn),
     hours: (d.hours || []).map((h: Doc) => ({ day: str(h.day), open: !!h.open, opens: str(h.opens), closes: str(h.closes) })),
     bookingUrl: str(d.bookingUrl),
+    virtualTourUrl: str(d.virtualTourUrl),
     preferredFunds: str(d.preferredFunds),
     paymentAccepted: str(d.paymentAccepted),
     socials: {

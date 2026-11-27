@@ -1,5 +1,34 @@
 # Changelog
 
+## 2026-11-27 - v3.11.0: 3D tour on the Contact page loads when pressed, link in Site Settings
+
+Built on v3.10.0 (`main` 59820ec). The Contact page already had this Matterport tour (`https://my.matterport.com/show/?m=hwCcZceUKup`, added in the 9 October build) as an iframe that loaded as soon as it scrolled near. This release replaces that iframe; there is still one tour on the page.
+
+- **The tour loads only when a visitor presses "Start the 3D tour".** Until then the box shows a photo of the practice's waiting room (`waiting.webp`, already on the site; an 800 pixel copy `waiting-800.webp` for phones) with the button over it. Matterport's scripts and cookies only load for someone who asks for the tour. The box keeps a fixed shape (16:9, 4:3 on phones), so nothing moves when it loads.
+- **The iframe:**
+  - title "Virtual tour of Precision Dental", `allowfullscreen`, `allow="xr-spatial-tracking"`;
+  - focus moves into the tour once it loads;
+  - no tracking attached.
+- **Plain link "Open the 3D tour in a new tab"** under the box, for anyone the embed does not suit.
+- **Site Settings, Practice details: new box "Virtual tour link (Matterport)".**
+  - Paste the Matterport share link there.
+  - Blank hides the whole section.
+  - Only a Matterport link is accepted, both by the dashboard and by the server. The page never prints the pasted text: it reads the tour's ID from the link and builds the address itself.
+  - The heading and paragraph above the tour stay editable on the Contact page as before.
+- **Database:** migration `20261127_013708_virtual_tour_url` adds one column (`site_settings.virtual_tour_url`). Content update `2026-11-27-virtual-tour-click-to-load` moves the tour that the page already shows into the new setting and switches the section to the new layout, once per database. The section's hidden or shown state and wording are kept.
+- **Unchanged:** the address, map, contact details, forms and call tracking on the Contact page. Every other page is byte for byte the same.
+- Files:
+  - **New:**
+    - `src/render/tour.ts`
+    - `migrations/20261127_013708_virtual_tour_url.ts` and `.json`
+    - `public/assets/img/waiting-800.webp`
+  - **Changed:**
+    - `src/render/page.ts`, `src/render/types.ts`, `src/cms/globals/SiteSettings.ts`, `src/cms/sync.ts`, `src/dashboard/editors/SettingsForm.tsx`, `src/content/updates.ts`
+    - `migrations/index.ts`, `src/generated/site-images.json`
+    - `public/assets/css/styles.css`, `public/assets/js/main.js`
+    - `content/pages/contact.json`, `content/site-settings.json`
+    - `package.json`, `package-lock.json`, `CHANGELOG.md`, `README-CMS.md`, `docs/HOW-TO-UPDATE.md`
+
 ## 2026-11-12 - v3.10.0: Google Ads landing page
 
 Built on v3.9.0 (which was not pushed yet, so one push carries both). The rest of the website is unchanged apart from the 5.0 Google rating now shown beside the review count.

@@ -1,6 +1,7 @@
 import type { GlobalConfig } from 'payload'
 import { adminField, loggedIn } from '../access'
 import { markGlobalChanged } from '../hooks'
+import { tourLinkProblem } from '../../render/tour'
 
 const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
@@ -44,6 +45,8 @@ export const SiteSettings: GlobalConfig = {
       ],
     },
     { name: 'bookingUrl', type: 'text' },
+    // the Contact page 3D tour: only a Matterport share link, blank hides it (27 November 2026)
+    { name: 'virtualTourUrl', type: 'text', validate: (v: unknown) => tourLinkProblem(v) ?? true },
     { name: 'preferredFunds', type: 'text' },
     { name: 'paymentAccepted', type: 'text' },
     {

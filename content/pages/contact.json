@@ -204,7 +204,7 @@
       "before": "\n",
       "label": "Take a Virtual Tour",
       "pinned": false,
-      "template": "<section class=\"body-section tour-section\"><div class=\"container reveal\"><div class=\"section-head\"><h2>{{f1}}</h2><p>{{f2}}</p></div><div class=\"tour-frame\"><iframe title=\"Virtual tour of Precision Dental\" src=\"https://my.matterport.com/show/?m=hwCcZceUKup\" loading=\"lazy\" allowfullscreen allow=\"autoplay; fullscreen; web-share; xr-spatial-tracking;\"></iframe></div></div></section>",
+      "template": "<section class=\"body-section tour-section\"><div class=\"container reveal\"><div class=\"section-head\"><h2>{{f1}}</h2><p>{{f2}}</p></div>{{gen:virtualTour}}</div></section>",
       "fields": [
         {
           "id": "f1",
@@ -218,7 +218,8 @@
           "type": "text",
           "value": "Explore our Fortitude Valley practice before your visit."
         }
-      ]
+      ],
+      "generated": "virtualTour"
     },
     {
       "key": "s7",

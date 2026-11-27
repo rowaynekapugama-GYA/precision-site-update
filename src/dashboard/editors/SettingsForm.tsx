@@ -10,6 +10,7 @@ import { PublishButton } from '../ui/PublishButton'
 import { useToast } from '../ui/Toast'
 import { Icon } from '../ui/icons'
 import { PRICE_LIST_PDF } from '@/render/priceList'
+import { TOUR_HELP, tourLinkProblem } from '@/render/tour'
 
 type S = Settings & { logoMedia?: number | string | null }
 
@@ -66,6 +67,7 @@ export function SettingsForm({ initial, isAdmin }: { initial: S; isAdmin: boolea
   async function save() {
     if (!s.phone.trim()) { toast('The phone number cannot be empty.', 'bad'); return }
     if (s.bookingUrl && !/^https?:\/\//.test(s.bookingUrl.trim())) { toast('The booking link must start with https://', 'bad'); return }
+    { const p = tourLinkProblem(s.virtualTourUrl); if (p) { toast(`Virtual tour link: ${p}`, 'bad'); return } }
     for (const h of s.hours) {
       if (h.open && (!/^\d{2}:\d{2}$/.test(h.opens) || !/^\d{2}:\d{2}$/.test(h.closes))) { toast(`Please set opening and closing times for ${h.day}.`, 'bad'); return }
     }
@@ -85,7 +87,7 @@ export function SettingsForm({ initial, isAdmin }: { initial: S; isAdmin: boolea
         practiceName: s.practiceName, logo: s.logo, logoMedia: s.logoMedia ?? null, phone: s.phone.trim(), email: s.email.trim(),
         address: { ...s.address, crossStreet: (s.address.crossStreet || '').trim() }, parking: s.parking,
         serviceAreaLine: (s.serviceAreaLine || '').trim(), areaServed: (s.areaServed || '').trim(), abn: s.abn, hours: s.hours.map((h) => ({ day: h.day, open: h.open, opens: h.open ? h.opens : '', closes: h.open ? h.closes : '' })),
-        bookingUrl: s.bookingUrl.trim(), preferredFunds: s.preferredFunds, paymentAccepted: s.paymentAccepted,
+        bookingUrl: s.bookingUrl.trim(), virtualTourUrl: (s.virtualTourUrl || '').trim(), preferredFunds: s.preferredFunds, paymentAccepted: s.paymentAccepted,
         socials: s.socials, colours: s.colours, features: s.features,
         offer: { ...s.offer, price: String(s.offer.price).trim().replace(/^\$/, ''), popupDelay: Math.max(0, Number(s.offer.popupDelay) || 0) },
         reviews: { enabled: s.reviews.enabled, rating: s.reviews.rating.trim(), count: s.reviews.count.trim(), url: s.reviews.url.trim(), logo: s.reviews.logo, logoMedia: s.reviews.logoMedia ?? null },
@@ -140,6 +142,7 @@ export function SettingsForm({ initial, isAdmin }: { initial: S; isAdmin: boolea
           <TextInput label="Service area line" value={s.serviceAreaLine || ''} onChange={(v) => set({ serviceAreaLine: v })} help="One sentence, shown in the footer and on the contact section. Leave blank to hide it." />
           <TextInput label="Areas served (for Google)" value={s.areaServed || ''} onChange={(v) => set({ areaServed: v })} help="Suburbs and areas separated by commas, for example Newstead, New Farm, Teneriffe. Not shown on the page." />
           <TextInput label="Google Maps embed link" value={s.address.mapEmbed} onChange={(v) => setA({ mapEmbed: v.trim() })} help="The map on the contact section. Use the embed link from the practice's own Google Maps listing (Share > Embed a map, copy only the src address), so the map shows the Precision Dental pin, rating and reviews." />
+          <TextInput label="Virtual tour link (Matterport)" value={s.virtualTourUrl || ''} onChange={(v) => set({ virtualTourUrl: v.trim() })} placeholder="https://my.matterport.com/show/?m=..." help={TOUR_HELP} />
           <div className="row">
             <TextInput label="Map latitude" value={geo.lat} onChange={(v) => { setGeo({ ...geo, lat: v }); if (Number.isFinite(Number(v)) && v.trim() !== '' && v.trim() !== '-') setA({ latitude: Number(v) }) }} help="Used by Google Maps and search. Only change if the practice moves." />
             <TextInput label="Map longitude" value={geo.lng} onChange={(v) => { setGeo({ ...geo, lng: v }); if (Number.isFinite(Number(v)) && v.trim() !== '' && v.trim() !== '-') setA({ longitude: Number(v) }) }} />

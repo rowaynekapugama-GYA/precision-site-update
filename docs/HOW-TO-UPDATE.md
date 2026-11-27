@@ -289,6 +289,12 @@ corner of Wickham and Brookes Streets" belong in the Getting Here section of the
 The map on the contact section shows the Precision Dental Google listing, with View on Google Maps and
 Get directions under it. Both use Site Settings > Social media > Google Business Profile.
 
+The 3D tour on the Contact page comes from Site Settings > **Practice details** > **Virtual tour link
+(Matterport)**. To change the tour, open it in Matterport, press **Share**, copy the link (it starts with
+https://my.matterport.com/show/?m=), paste it into that box, save, and press **Publish website**. Only a
+Matterport link is accepted. Leave the box empty to take the tour off the page. The heading and the line of
+text above the tour are changed on the Contact page itself (Pages > Contact).
+
 ---
 
 ## Google reviews band

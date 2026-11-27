@@ -35,7 +35,7 @@ export interface Section {
   alt?: boolean
   pinned?: boolean
   hidden?: boolean
-  generated?: 'team' | 'articleIndex' | 'sitemapArticles' | 'beforeAfter'
+  generated?: 'team' | 'articleIndex' | 'sitemapArticles' | 'beforeAfter' | 'virtualTour'
   /** set on sections added by a content update (scripts/content-updates), so it is only added once */
   ref?: string
 }
@@ -180,6 +180,8 @@ export interface Settings {
   abn: string
   hours: HoursDay[]
   bookingUrl: string
+  /** Contact page 3D tour: a Matterport share link, blank hides the section (27 November 2026) */
+  virtualTourUrl?: string
   preferredFunds: string
   paymentAccepted: string
   socials: { facebook: string; instagram: string; youtube: string; linkedin: string; googleBusiness: string }
